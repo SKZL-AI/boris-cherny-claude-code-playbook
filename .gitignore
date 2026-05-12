@@ -1,0 +1,42 @@
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Editor
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Node (falls jemand HTML mit Build-Tools generiert)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Python (falls jemand Scripts schreibt)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Claude Code
+# Persönliche, nicht-geteilte Claude-Einstellungen
+.claude/CLAUDE.local.md
+.claude/.cache/
+.claude/sessions/
+
+# Logs (z.B. von Routine-Debugging)
+*.log
+logs/
+
+# Temp
+*.tmp
+*.bak
+/tmp/
+
+# Lokale Backups vor /regenerate-html
+index.html.bak
+TIPS.md.bak

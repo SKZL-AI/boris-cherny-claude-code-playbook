@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boris Cherny · Claude Code Playbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Geist:wght@300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0d0c0a; --bg-elevated:#15130f; --surface:#1a1813; --surface-2:#221f18;
+    --border:#2a261d; --border-strong:#3a3528;
+    --text:#ede8db; --text-muted:#9a9384; --text-dim:#615b50;
+    --accent:#d97757; --accent-dim:#a85a3f; --accent-soft:rgba(217,119,87,0.12);
+    --beginner:#8fb88a; --intermediate:#d4a25b; --advanced:#c4655a; --info:#7ba2b8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:'Geist',system-ui,sans-serif;font-weight:400;line-height:1.6;min-height:100vh;
+    background-image:
+      radial-gradient(ellipse at top left, rgba(217,119,87,0.06), transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(123,162,184,0.04), transparent 60%);
+    background-attachment:fixed;
+  }
+  body::before{
+    content:'';position:fixed;inset:0;pointer-events:none;z-index:1;opacity:0.03;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence baseFrequency='0.9' numOctaves='3'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+  }
+  .container{max-width:1200px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+
+  header{border-bottom:1px solid var(--border);padding:60px 0 80px;position:relative}
+  .tag-line{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:24px;display:flex;align-items:center;gap:12px}
+  .tag-line::before{content:'';width:24px;height:1px;background:var(--accent)}
+  h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(40px,7vw,84px);line-height:0.98;letter-spacing:-0.03em;margin-bottom:28px;font-variation-settings:"opsz" 144}
+  h1 em{font-style:italic;font-weight:400;color:var(--accent);font-variation-settings:"opsz" 144}
+  .lede{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(18px,2vw,22px);line-height:1.5;color:var(--text-muted);max-width:720px;font-variation-settings:"opsz" 24}
+  .meta-row{margin-top:40px;display:flex;flex-wrap:wrap;gap:32px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-dim)}
+  .meta-row span strong{color:var(--text);font-weight:500}
+
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);margin:60px 0}
+  .stat{background:var(--bg);padding:32px 24px}
+  .stat-num{font-family:'Fraunces',serif;font-weight:300;font-size:54px;line-height:1;color:var(--accent);font-variation-settings:"opsz" 144;letter-spacing:-0.02em}
+  .stat-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted);margin-top:12px}
+
+  .tldr{background:var(--surface);border:1px solid var(--border);padding:40px;margin-bottom:64px;position:relative}
+  .tldr::before{content:'TL;DR';position:absolute;top:-10px;left:32px;background:var(--bg);padding:0 12px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;color:var(--accent)}
+  .tldr p{margin-bottom:14px;color:var(--text-muted);font-size:15px}
+  .tldr p:last-child{margin-bottom:0}
+  .tldr strong{color:var(--text);font-weight:500}
+  .tldr code{font-family:'JetBrains Mono',monospace;font-size:13px;background:var(--surface-2);padding:2px 7px;border-radius:3px;color:var(--accent)}
+
+  .filter-bar{position:sticky;top:0;background:rgba(13,12,10,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:18px 24px;margin:0 -24px 48px;z-index:50}
+  .filter-bar-inner{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .filter-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-dim);margin-right:8px}
+  .chip{font-family:'JetBrains Mono',monospace;font-size:11px;padding:6px 12px;border:1px solid var(--border);background:transparent;color:var(--text-muted);cursor:pointer;transition:all 0.2s;letter-spacing:0.05em;user-select:none}
+  .chip:hover{border-color:var(--border-strong);color:var(--text)}
+  .chip.active{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+  .chip.diff-beg.active{background:var(--beginner);border-color:var(--beginner)}
+  .chip.diff-int.active{background:var(--intermediate);border-color:var(--intermediate);color:var(--bg)}
+  .chip.diff-adv.active{background:var(--advanced);border-color:var(--advanced)}
+
+  .theme-section{margin-bottom:80px;scroll-margin-top:100px}
+  .theme-header{display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:start;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--border)}
+  .theme-num{font-family:'Fraunces',serif;font-weight:300;font-size:64px;line-height:0.9;color:var(--accent);font-variation-settings:"opsz" 144;letter-spacing:-0.04em}
+  .theme-title{font-family:'Fraunces',serif;font-weight:400;font-size:34px;line-height:1.1;letter-spacing:-0.02em;margin-bottom:10px;font-variation-settings:"opsz" 72}
+  .theme-title em{font-style:italic;color:var(--accent)}
+  .theme-desc{color:var(--text-muted);font-size:15px;max-width:680px;font-family:'Fraunces',serif;font-weight:300;font-variation-settings:"opsz" 14}
+
+  .tip-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1px;background:var(--border);border:1px solid var(--border)}
+  .tip{background:var(--bg-elevated);padding:24px;position:relative;transition:background 0.2s;display:flex;flex-direction:column}
+  .tip:hover{background:var(--surface)}
+  .tip-meta{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:14px}
+  .tip-num{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-dim);letter-spacing:0.1em}
+  .diff{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.15em;padding:3px 8px;text-transform:uppercase;border:1px solid;white-space:nowrap}
+  .diff-beginner{color:var(--beginner);border-color:var(--beginner)}
+  .diff-intermediate{color:var(--intermediate);border-color:var(--intermediate)}
+  .diff-advanced{color:var(--advanced);border-color:var(--advanced)}
+  .tip h3{font-family:'Fraunces',serif;font-weight:500;font-size:18px;line-height:1.25;letter-spacing:-0.01em;margin-bottom:10px;color:var(--text);font-variation-settings:"opsz" 24}
+  .tip p{font-size:14px;color:var(--text-muted);line-height:1.55;flex-grow:1;margin-bottom:16px}
+  .tip p code{font-family:'JetBrains Mono',monospace;font-size:12px;background:var(--surface-2);padding:1px 5px;border-radius:2px;color:var(--accent)}
+  .tip-footer{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-dim);gap:8px}
+  .tip-source{color:var(--accent);text-decoration:none;border-bottom:1px dotted transparent;transition:border 0.15s}
+  .tip-source:hover{border-bottom-color:var(--accent)}
+  .tip.hidden{display:none}
+  .theme-section.empty{display:none}
+
+  .timeline-wrap{background:var(--surface);border:1px solid var(--border);padding:48px;margin-bottom:80px}
+  .timeline-wrap h2,.stages h2,.contested h2,.caveats h2{font-family:'Fraunces',serif;font-weight:400;font-size:34px;margin-bottom:8px;letter-spacing:-0.02em}
+  .timeline-wrap h2 em,.stages h2 em,.contested h2 em,.caveats h2 em{font-style:italic;color:var(--accent)}
+  .timeline-wrap > p,.stages > p,.contested > p,.caveats > p{color:var(--text-muted);margin-bottom:36px;font-family:'Fraunces',serif;font-weight:300;font-size:16px;max-width:720px}
+  .timeline{position:relative;padding-left:32px;border-left:1px solid var(--border-strong)}
+  .tl-entry{position:relative;padding-bottom:24px}
+  .tl-entry::before{content:'';position:absolute;left:-37px;top:6px;width:9px;height:9px;background:var(--bg);border:2px solid var(--accent);border-radius:50%}
+  .tl-entry.major::before{background:var(--accent);width:11px;height:11px;left:-38px}
+  .tl-date{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:0.05em;margin-bottom:4px}
+  .tl-event{color:var(--text);font-size:14px;line-height:1.5}
+  .tl-event code{font-family:'JetBrains Mono',monospace;font-size:12px;background:var(--surface-2);padding:1px 5px;color:var(--accent)}
+
+  .stages{margin-bottom:80px}
+  .stage-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--border);border:1px solid var(--border)}
+  .stage{background:var(--bg-elevated);padding:28px}
+  .stage-num{font-family:'Fraunces',serif;font-weight:300;font-size:48px;line-height:1;color:var(--accent);margin-bottom:8px;font-variation-settings:"opsz" 144}
+  .stage-title{font-family:'Fraunces',serif;font-weight:500;font-size:18px;margin-bottom:4px}
+  .stage-week{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-dim);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:16px}
+  .stage-body{font-size:13.5px;color:var(--text-muted);line-height:1.6;margin-bottom:14px}
+  .stage-body code{font-family:'JetBrains Mono',monospace;font-size:12px;background:var(--surface-2);padding:1px 5px;color:var(--accent)}
+  .stage-graduate{font-size:12px;color:var(--text-dim);padding-top:14px;border-top:1px solid var(--border);font-style:italic}
+  .stage-graduate strong{color:var(--accent);font-style:normal;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em}
+
+  .contested{border:1px solid var(--border);padding:48px;margin-bottom:80px}
+  .contest-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+  .contest{padding:20px;background:var(--surface);border-left:2px solid var(--info)}
+  .contest h4{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--info);margin-bottom:10px}
+  .contest p{font-size:13.5px;color:var(--text-muted);line-height:1.55}
+
+  .caveats{background:var(--surface);border:1px solid var(--border);padding:48px;margin-bottom:80px}
+  .caveats ul{list-style:none}
+  .caveats li{padding:14px 0 14px 28px;border-bottom:1px solid var(--border);font-size:14px;color:var(--text-muted);line-height:1.55;position:relative}
+  .caveats li:last-child{border-bottom:none}
+  .caveats li::before{content:'⚠';position:absolute;left:0;top:14px;color:var(--intermediate);font-size:13px}
+  .caveats li strong{color:var(--text);font-weight:500}
+  .caveats li code{font-family:'JetBrains Mono',monospace;font-size:12px;background:var(--bg);padding:1px 5px;color:var(--accent)}
+
+  footer{border-top:1px solid var(--border);padding:48px 0 60px;margin-top:60px;color:var(--text-dim);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em}
+  footer a{color:var(--accent);text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  .footer-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+
+  .toc{margin-bottom:60px;columns:2;column-gap:48px}
+  @media (max-width:680px){.toc{columns:1}}
+  .toc a{display:block;padding:8px 0;color:var(--text-muted);text-decoration:none;font-size:14px;border-bottom:1px solid var(--border);font-family:'Geist',sans-serif;transition:color 0.15s,padding-left 0.15s;break-inside:avoid}
+  .toc a:hover{color:var(--accent);padding-left:8px}
+  .toc a .num{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-dim);margin-right:12px}
+  .toc a:hover .num{color:var(--accent)}
+  .toc-title{font-family:'Fraunces',serif;font-size:26px;margin-bottom:20px;font-weight:400;letter-spacing:-0.02em}
+  .toc-title em{font-style:italic;color:var(--accent)}
+
+  @media (max-width:680px){
+    header{padding:40px 0 50px}
+    .theme-header{grid-template-columns:1fr;gap:8px}
+    .theme-num{font-size:36px}
+    .tldr,.timeline-wrap,.contested,.caveats{padding:28px}
+    .tip-grid,.stage-grid{grid-template-columns:1fr}
+    .meta-row{gap:18px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="tag-line">Field Notes · Stand Mai 2026</div>
+    <h1>Boris Cherny's<br>Claude Code <em>Playbook</em></h1>
+    <p class="lede">87 dokumentierte Tipps des Erfinders von Claude Code — aus X-Threads, Podcasts, Konferenzen und dem Anthropic-Engineering-Blog. Vollständig recherchiert, thematisch sortiert, mit Original-Quellen und Schwierigkeitsgrad.</p>
+    <div class="meta-row">
+      <span><strong>21</strong> Themen</span>
+      <span><strong>87+</strong> Tipps</span>
+      <span><strong>14</strong> Monate</span>
+      <span><strong>Quelle:</strong> @bcherny + Anthropic</span>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="stats">
+    <div class="stat"><div class="stat-num">150</div><div class="stat-label">PRs / Tag (Rekord)</div></div>
+    <div class="stat"><div class="stat-num">5+5</div><div class="stat-label">Parallele Claudes (CLI+Web)</div></div>
+    <div class="stat"><div class="stat-num">2–3×</div><div class="stat-label">Qualität durch Verifikation</div></div>
+    <div class="stat"><div class="stat-num">$6</div><div class="stat-label">Ø-Kosten / aktivem User / Tag</div></div>
+    <div class="stat"><div class="stat-num">259</div><div class="stat-label">Boris' PRs in 30 Tagen</div></div>
+  </section>
+
+  <section class="tldr">
+    <p>Boris Cherny ist der <strong>Erfinder und Head of Claude Code</strong> bei Anthropic. Er startete das Projekt im September 2024 als Side-Project; Launch war am 24. Februar 2025. Seine wichtigste einzelne Regel: <strong>"Give Claude a way to verify its work — it will 2–3× the quality."</strong></p>
+    <p>Sein Setup ist überraschend simpel: <strong>5 parallele Terminal-Tabs + 5–10 Web-Sessions auf claude.ai/code + mobile Sessions</strong>, immer zuerst im Plan-Mode, mit einer geteilten <code>CLAUDE.md</code>, Slash-Commands in <code>.claude/commands/</code>, Subagents in <code>.claude/agents/</code>, einem PostToolUse-Format-Hook und <code>/permissions</code> (nie <code>--dangerously-skip-permissions</code> außerhalb von Sandboxes).</p>
+    <p>Der Bogen seiner Tipps von Launch bis heute: <strong>"Chatbot im Terminal" → "Paralleler Execution-Engine" → "Autonomer, geplanter, sprachgesteuerter Agent"</strong>. Plan-Mode und CLAUDE.md (Q1 2026) → Hooks/Plugins (Feb 2026) → /simplify, /batch, Worktrees (Feb–Mär 2026) → /loop, /schedule, Code Review, /btw (Mär 2026) → Auto Mode, /focus, /go für Opus 4.7 (Apr 2026).</p>
+  </section>
+
+  <section>
+    <h2 class="toc-title">Inhaltsverzeichnis <em>— 21 Themen</em></h2>
+    <nav class="toc">
+      <a href="#t1"><span class="num">01</span>Parallele Ausführung</a>
+      <a href="#t2"><span class="num">02</span>Plan Mode</a>
+      <a href="#t3"><span class="num">03</span>CLAUDE.md</a>
+      <a href="#t4"><span class="num">04</span>Slash Commands</a>
+      <a href="#t5"><span class="num">05</span>Subagents</a>
+      <a href="#t6"><span class="num">06</span>Hooks</a>
+      <a href="#t7"><span class="num">07</span>Permissions &amp; Safety</a>
+      <a href="#t8"><span class="num">08</span>MCP &amp; Integrationen</a>
+      <a href="#t9"><span class="num">09</span>Modell &amp; Effort</a>
+      <a href="#t10"><span class="num">10</span>Verifikation</a>
+      <a href="#t11"><span class="num">11</span>Long-Running &amp; Recaps</a>
+      <a href="#t12"><span class="num">12</span>Prompting &amp; Specs</a>
+      <a href="#t13"><span class="num">13</span>Customization</a>
+      <a href="#t14"><span class="num">14</span>Headless / SDK</a>
+      <a href="#t15"><span class="num">15</span>Code Review</a>
+      <a href="#t16"><span class="num">16</span>Cost / ROI</a>
+      <a href="#t17"><span class="num">17</span>Form-Factor</a>
+      <a href="#t18"><span class="num">18</span>Migration &amp; Daten</a>
+      <a href="#t19"><span class="num">19</span>Lernen &amp; Onboarding</a>
+      <a href="#t20"><span class="num">20</span>Context Management</a>
+      <a href="#t21"><span class="num">21</span>Terminal Environment</a>
+    </nav>
+  </section>
+
+  <div class="filter-bar">
+    <div class="filter-bar-inner">
+      <span class="filter-label">Filter:</span>
+      <button class="chip active" data-filter="all">Alle</button>
+      <button class="chip diff-beg" data-filter="beginner">🟢 Beginner</button>
+      <button class="chip diff-int" data-filter="intermediate">🟡 Intermediate</button>
+      <button class="chip diff-adv" data-filter="advanced">🔴 Advanced</button>
+    </div>
+  </div>
+
+  <!-- T1: PARALLEL -->
+  <section class="theme-section" id="t1">
+    <div class="theme-header">
+      <div class="theme-num">01</div>
+      <div>
+        <h2 class="theme-title">Parallele <em>Ausführung</em></h2>
+        <p class="theme-desc">Der größte einzelne Produktivitäts-Hebel. Mehrere Claudes gleichzeitig laufen lassen — lokal, in Worktrees, in der Cloud.</p>
+      </div>
+    </div>
+    <div class="tip-grid">
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">01.01</span><span class="diff diff-intermediate">Intermediate</span></div><h3>5 Claudes in parallelen Terminal-Tabs</h3><p>Tabs durchnummeriert von 1–5. iTerm2 zeigt System-Notifications, sobald ein Claude Input braucht. Damit nie auf einen einzelnen Prozess warten.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">01.02</span><span class="diff diff-intermediate">Intermediate</span></div><h3>5–10 weitere Claudes auf claude.ai/code</h3><p>Übergabe local↔web mit <code>&amp;</code> oder <code>--teleport</code>. Boris startet Sessions morgens schon aus der iOS-App.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">01.03</span><span class="diff diff-advanced">Advanced</span></div><h3>3–5 git worktrees, ein Claude pro worktree</h3><p>"The single biggest productivity unlock." Team-Mitglieder nutzen Shell-Aliase <code>za, zb, zc</code> zum Springen; manche haben einen dedizierten "Analysis-Worktree" für Logs/BigQuery. Boris persönlich nutzt stattdessen mehrere Checkouts.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">01.04</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>claude --worktree</code> (oder <code>-w</code>)</h3><p>Eingebaute Worktree-Isolation. Worktree benennen oder Claude benennen lassen. Mit <code>--tmux</code> startet alles in einer tmux-Session.</p><div class="tip-footer"><span>20. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2025007393290272904" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">01.05</span><span class="diff diff-beginner">Beginner</span></div><h3>Worktree-Mode in der Desktop-App</h3><p>Code-Tab → Checkbox "worktree" aktivieren. Kein Terminal nötig.</p><div class="tip-footer"><span>20. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2025007393290272904" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">01.06</span><span class="diff diff-advanced">Advanced</span></div><h3>Subagents mit Worktree-Isolation</h3><p>Claude anweisen: "use worktrees for its agents". Stark für große batched Changes und Migrationen.</p><div class="tip-footer"><span>20. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2025007393290272904" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">01.07</span><span class="diff diff-advanced">Advanced</span></div><h3><code>isolation: worktree</code> im Agent-Frontmatter</h3><p>Custom-Subagent dauerhaft in eigenem Worktree laufen lassen. Setzen im YAML-Frontmatter der Agent-Definition.</p><div class="tip-footer"><span>20. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2025007393290272904" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">01.08</span><span class="diff diff-advanced">Advanced</span></div><h3>Non-git VCS via WorktreeCreate-Hook</h3><p>Mercurial, Perforce, SVN, Jujutsu: eigene <code>WorktreeCreate</code>- und <code>WorktreeRemove</code>-Hooks definieren.</p><div class="tip-footer"><span>20. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2025007393290272904" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">01.09</span><span class="diff diff-advanced">Advanced</span></div><h3>Dutzende Claudes via Worktrees</h3><p>O-Ton Boris: "I have dozens of Claudes running at all times." Skaliert ab dem Punkt, an dem du dich allein durchs Tab-Switching aufhältst.</p><div class="tip-footer"><span>29. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2038454336355999749" target="_blank">X-Thread ↗</a></div></article>
+    </div>
+  </section>
+
+  <!-- T2: PLAN MODE -->
+  <section class="theme-section" id="t2">
+    <div class="theme-header">
+      <div class="theme-num">02</div>
+      <div><h2 class="theme-title">Plan <em>Mode</em></h2><p class="theme-desc">Vor jedem komplexen Task zuerst denken lassen. Ein guter Plan one-shottet die Implementierung fast immer.</p></div>
+    </div>
+    <div class="tip-grid">
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">02.01</span><span class="diff diff-beginner">Beginner</span></div><h3>Jeden komplexen Task im Plan-Mode starten</h3><p>Shift+Tab zweimal. Plan mit Claude iterieren, dann auf Auto-Accept-Edits umschalten. Claude one-shottet meistens, wenn der Plan gut ist.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">02.02</span><span class="diff diff-beginner">Beginner</span></div><h3>"A good plan is really important"</h3><p>Denken in den Plan vorverlegen — Implementierung folgt fast immer one-shot. Front-loading reduziert Kontext-Verbrauch über die ganze Session.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">02.03</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Bei Problemen neu planen statt drücken</h3><p>"Don't keep pushing. Switch back to plan mode and re-plan." Wenn etwas schief läuft, frischen Kontext erzwingen.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">02.04</span><span class="diff diff-advanced">Advanced</span></div><h3>Zweiten Claude als "Staff Engineer" reviewen lassen</h3><p>Claude A schreibt Plan, Claude B reviewed ihn mit frischem Kontext — wie ein Senior-Review vor dem Coden.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">02.05</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Plan-Mode auch für Verifikations-Schritte</h3><p>Nicht nur die Implementierung planen — auch "wie verifiziere ich, dass es funktioniert" gehört in den Plan.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">02.06</span><span class="diff diff-beginner">Beginner</span></div><h3>Automatische Session-Namen nach Plan-Mode</h3><p>Claude leitet aus der Plan-Konversation einen sprechenden Session-Namen ab. Wiedererkennbar in Parallel-Setups.</p><div class="tip-footer"><span>13. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2032632596572811575" target="_blank">X-Thread ↗</a></div></article>
+    </div>
+  </section>
+
+  <!-- T3: CLAUDE.md -->
+  <section class="theme-section" id="t3">
+    <div class="theme-header"><div class="theme-num">03</div><div><h2 class="theme-title">CLAUDE<em>.md</em></h2><p class="theme-desc">Das institutionelle Gedächtnis deines Teams. Eine Markdown-Datei, die kompoundierende Verbesserungen ermöglicht.</p></div></div>
+    <div class="tip-grid">
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">03.01</span><span class="diff diff-beginner">Beginner</span></div><h3>Eine team-geteilte CLAUDE.md, in git eingecheckt</h3><p>Team trägt mehrfach pro Woche bei. Wird zur lebenden Doku der Codebase.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">03.02</span><span class="diff diff-beginner">Beginner</span></div><h3>Regel hinzufügen, sobald Claude einen Fehler macht</h3><p>"Anytime we see Claude do something incorrectly we add it to the CLAUDE.md." Compounding-Engineering im Kern.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">03.03</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Jedes Team pflegt seine eigene CLAUDE.md</h3><p>Cross-Team-CLAUDE.md-Ownership liegt bei jedem einzelnen Team. Lokales Wissen bleibt lokal.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">03.04</span><span class="diff diff-advanced">Advanced</span></div><h3>@.claude in PR-Kommentaren taggen</h3><p>Boris' Version von Dan Shippers "Compounding Engineering". Installiert via <code>/install-github-action</code>.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">03.05</span><span class="diff diff-beginner">Beginner</span></div><h3>"Update your CLAUDE.md so you don't make that mistake again"</h3><p>End-of-Correction-Prompt: lässt Claude die Regel für sich selbst schreiben.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">03.06</span><span class="diff diff-intermediate">Intermediate</span></div><h3>CLAUDE.md gnadenlos kürzen über die Zeit</h3><p>"Keep iterating until Claude's mistake rate measurably drops." Pruning ist genauso wichtig wie Hinzufügen.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">03.07</span><span class="diff diff-advanced">Advanced</span></div><h3>Notes-Verzeichnis pro Task, von CLAUDE.md referenziert</h3><p>Ein Engineer pflegt ein Notes-Verzeichnis pro Task, wird nach jedem PR aktualisiert. CLAUDE.md verweist darauf.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">03.08</span><span class="diff diff-intermediate">Intermediate</span></div><h3>CLAUDE.md-Varianten je nach Scope</h3><p><code>CLAUDE.md</code> (Projekt, in git), <code>CLAUDE.local.md</code> (gitignored, persönlich), <code>~/.claude/CLAUDE.md</code> (global), per Unterordner <code>a/b/CLAUDE.md</code> für Monorepos.</p><div class="tip-footer"><span>Jun 2025</span><span>AIEWF Talk</span></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">03.09</span><span class="diff diff-beginner">Beginner</span></div><h3>Memory ist nur eine Markdown-Datei</h3><p>"It's a file that has some stuff. And it's auto-read into context." Simpler als jeder Vector-Store.</p><div class="tip-footer"><span>07. Mai 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">03.10</span><span class="diff diff-beginner">Beginner</span></div><h3><code>#</code> voranstellen zum Merken</h3><p>"Add to Claude's memory by prepending # to something you want Claude Code to remember." Claude fragt nach Memory-Location (Projekt/User).</p><div class="tip-footer"><span>Jun 2025</span><span>AIEWF Talk</span></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">03.11</span><span class="diff diff-advanced">Advanced</span></div><h3>Auto-Memory + Auto-Dream</h3><p>Auto-Memory speichert Preferences/Korrekturen automatisch. Auto-Dream ist ein Subagent, der past Sessions periodisch review't und konsolidiert (REM-Sleep-Metapher).</p><div class="tip-footer"><span>25. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2036959638646866021" target="_blank">X (RT) ↗</a></div></article>
+    </div>
+  </section>
+
+  <!-- T4: SLASH COMMANDS -->
+  <section class="theme-section" id="t4">
+    <div class="theme-header"><div class="theme-num">04</div><div><h2 class="theme-title">Slash <em>Commands</em></h2><p class="theme-desc">Das Werkzeug, das wiederholte Prompts in einem Keystroke kapselt. Boris' "inner loop" der täglichen Arbeit.</p></div></div>
+    <div class="tip-grid">
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">04.01</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Slash Commands für jeden Inner-Loop-Workflow</h3><p>Spart wiederholtes Prompting. Stored in <code>.claude/commands/</code>, in git eingecheckt. Claude selbst kann sie auch nutzen.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">04.02</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>/commit-push-pr</code> dutzendfach pro Tag</h3><p>Inline-Bash für vorab-berechneten <code>git status</code> — vermeidet Model-Hin-und-Her.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">04.03</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>/feature-dev</code> als Schritt-für-Schritt-Guide</h3><p>"First ask me what exactly I want, build the specification, build a detailed plan, then a to-do list, walk through step-by-step."</p><div class="tip-footer"><span>Nov 2025</span><a class="tip-source" href="https://every.to/podcast/how-to-use-claude-code-like-the-people-who-built-it" target="_blank">AI &amp; I Podcast ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">04.04</span><span class="diff diff-beginner">Beginner</span></div><h3><code>/commit</code> — der grundlegendste Command</h3><p>Meist-genutztes Slash-Command bei Anthropic. Auto-runs save+push ohne Permission-Prompts.</p><div class="tip-footer"><span>Nov 2025</span><a class="tip-source" href="https://every.to/podcast/how-to-use-claude-code-like-the-people-who-built-it" target="_blank">AI &amp; I Podcast ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">04.05</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>/code-review</code> auf jedem PR</h3><p>Mensch approved den Merge, Claude macht den ersten Sweep. Standard im Anthropic-Team.</p><div class="tip-footer"><span>Nov 2025</span><a class="tip-source" href="https://every.to/podcast/how-to-use-claude-code-like-the-people-who-built-it" target="_blank">AI &amp; I Podcast ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">04.06</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Slash Commands sind Prompts, keine Tools</h3><p>"Slash commands are actually just like prompts. So they're not actually tools." Wichtig fürs mentale Modell.</p><div class="tip-footer"><span>07. Mai 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">04.07</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Lokale Commands vor MCP für simple Cases</h3><p>"If you just want something really simple and local… just use local commands for that." MCP nur, wenn nötig.</p><div class="tip-footer"><span>07. Mai 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">04.08</span><span class="diff diff-beginner">Beginner</span></div><h3><code>/init</code> generiert Starter-CLAUDE.md</h3><p>Analysiert Codebase, erkennt Build-Systeme, Tests, Code-Patterns. Erster Schritt in neuem Projekt.</p><div class="tip-footer"><span>Apr 2025</span><a class="tip-source" href="https://www.anthropic.com/engineering/claude-code-best-practices" target="_blank">Anthropic Blog ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">04.09</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>/techdebt</code> findet duplizierten Code</h3><p>Am Ende jeder Session laufen lassen. Community-Liebling unter den Custom-Commands.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">04.10</span><span class="diff diff-advanced">Advanced</span></div><h3>Context-Dump Slash Command</h3><p>Synct 7 Tage Slack + GDrive + Asana + GitHub in einen Prompt. Powerhouse-Setup eines Team-Engineers.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">04.11</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>/simplify</code> (built-in skill)</h3><p>Parallele Agents verbessern Code-Qualität und erzwingen CLAUDE.md-Compliance. Usage: "make this change then run /simplify".</p><div class="tip-footer"><span>27. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2027534984534544489" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">04.12</span><span class="diff diff-advanced">Advanced</span></div><h3><code>/batch</code> (built-in skill)</h3><p>Interviewt dich, fächert dann zu dutzenden/hunderten/tausenden Worktree-Agents auf. Beispiel: "/batch migrate src/ from Solid to React".</p><div class="tip-footer"><span>27. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2027534984534544489" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">04.13</span><span class="diff diff-advanced">Advanced</span></div><h3><code>/loop</code> für wiederkehrende lokale Tasks (bis 3 Tage)</h3><p>Boris' Setup: <code>/loop 5m /babysit</code>, <code>/loop 30m /slack-feedback</code>, <code>/loop /post-merge-sweeper</code>, <code>/loop 1h /pr-pruner</code>.</p><div class="tip-footer"><span>07. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2030193932404150413" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">04.14</span><span class="diff diff-advanced">Advanced</span></div><h3><code>/schedule</code> für Cloud-basierte Recurring Jobs</h3><p>Überlebt einen geschlossenen Laptop. Anthropic-Team nutzt es für auto CI-failure-resolution, Docs-Updates.</p><div class="tip-footer"><span>23. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2036555259997462541" target="_blank">X (RT) ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">04.15</span><span class="diff diff-beginner">Beginner</span></div><h3><code>/btw</code> für Side-Chain-Conversations</h3><p>Single-Turn, keine Tool-Calls, voller Kontext. "I use this all the time to answer quick questions while the agent works." Von Erik Schluntz als Side-Project.</p><div class="tip-footer"><span>10. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2031506296697131352" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">04.16</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>/branch</code> + <code>--resume &lt;id&gt; --fork-session</code></h3><p>Existierende Session in eine branched Conversation forken. Spart Re-Kontextualisierung.</p><div class="tip-footer"><span>29. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2038454336355999749" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">04.17</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>/effort</code> setzt Reasoning-Level</h3><p>low / medium / high / xhigh / max. Boris nutzt xhigh für die meisten Tasks, max für die härtesten. <strong>Max gilt nur für die aktuelle Session, andere Levels sind sticky.</strong></p><div class="tip-footer"><span>13. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2032632596572811575" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">04.18</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>/focus</code> Mode (CLI)</h3><p>Versteckt Zwischenarbeit, zeigt nur Endresultat. "I generally trust the model to run the right commands and edits."</p><div class="tip-footer"><span>16. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044847848035156457" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">04.19</span><span class="diff diff-advanced">Advanced</span></div><h3><code>/go</code> — Composite Skill</h3><p>Claude testet end-to-end (Bash, Browser oder Computer Use) → führt <code>/simplify</code> aus → öffnet einen PR. "Many of my prompts look like 'Claude do blah blah /go'."</p><div class="tip-footer"><span>16. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044847848035156457" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">04.20</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>/fewer-permission-prompts</code> Skill</h3><p>Scannt Session-History nach safe-but-prompted Commands; empfiehlt Allowlist-Erweiterung.</p><div class="tip-footer"><span>16. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044847848035156457" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">04.21</span><span class="diff diff-beginner">Beginner</span></div><h3><code>/voice</code> aktiviert Voice-Dictation</h3><p>Space-Bar im CLI halten, Voice-Button im Desktop, iOS-Dictation. <strong>"I do most of my coding by speaking to Claude, rather than typing."</strong></p><div class="tip-footer"><span>29. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2038454336355999749" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">04.22</span><span class="diff diff-beginner">Beginner</span></div><h3><code>/color</code> zum Color-Coden von Sessions</h3><p>Leichter, parallele Sessions auseinanderzuhalten.</p><div class="tip-footer"><span>13. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2032632602629386348" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">04.23</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>/statusline</code></h3><p>Zeigt Context-%, Git-Branch, Model, Cost. Jeder im Team hat seine eigene Statusline.</p><div class="tip-footer"><span>11. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2021700784019452195" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">04.24</span><span class="diff diff-advanced">Advanced</span></div><h3><code>/keybindings</code></h3><p>Jedes Key-Binding ist customizable, Settings live-reload. Stored in <code>~/.claude/keybindings.json</code>.</p><div class="tip-footer"><span>11. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2021700883873165435" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">04.25</span><span class="diff diff-advanced">Advanced</span></div><h3><code>/sandbox</code> für Open-Source-Sandbox</h3><p>File- und Network-Isolation. Modi: BashTool auto-allow, BashTool mit Prompts, off.</p><div class="tip-footer"><span>11. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2021700506465579443" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">04.26</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>/plugin</code> zum Marketplace-Browsen</h3><p>LSPs, MCPs, Skills, Agents, Hooks. Companies können eigenen Marketplace hosten.</p><div class="tip-footer"><span>11. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2021699862522364149" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">04.27</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>/agents</code> zum Erstellen von Custom Agents</h3><p>Markdown-Dateien in <code>.claude/agents/</code> ablegen. Frontmatter konfiguriert Tools/Model/System-Prompt.</p><div class="tip-footer"><span>11. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2021700144039903699" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">04.28</span><span class="diff diff-beginner">Beginner</span></div><h3><code>/terminal-setup</code> für Shift+Enter Newlines</h3><p>Für IDE-Terminal, Apple Terminal, Warp, Alacritty.</p><div class="tip-footer"><span>11. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2021699859359883608" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">04.29</span><span class="diff diff-beginner">Beginner</span></div><h3><code>/vim</code> für Vim-Mode-Editing</h3><p>Ein-Zeilen-Setup. Für Vim-User selbstverständlich.</p><div class="tip-footer"><span>11. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2021699859359883608" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">04.30</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>/teleport</code></h3><p>Holt eine Cloud-Session runter ins lokale Terminal (<code>claude --teleport</code>).</p><div class="tip-footer"><span>29. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2038454336355999749" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">04.31</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>/remote-control</code></h3><p>Steuert eine lokale Session von jedem Device aus. Boris hat "Enable Remote Control for all sessions" in <code>/config</code>.</p><div class="tip-footer"><span>29. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2038454336355999749" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">04.32</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>/compact &lt;hint&gt;</code> statt <code>/clear</code> mid-task</h3><p><code>/compact</code> ist lossy LLM-Summary, hält Momentum. <code>/clear</code> + Briefing ist hand-geschriebener Kontext. Regel: neuer Task = clear, related = compact.</p><div class="tip-footer"><span>15. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044548257058328723" target="_blank">X (RT) ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">04.33</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>/rewind</code> (oder double-Esc) statt Korrektur</h3><p>Kontext nicht mit failed attempts + Korrekturen verschmutzen — rewind und re-prompten mit dem Gelernten.</p><div class="tip-footer"><span>15. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044548257058328723" target="_blank">X (RT) ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">04.34</span><span class="diff diff-advanced">Advanced</span></div><h3>"Summarize from here" vor dem Rewind</h3><p>Claude eine Handoff-Message an sein zukünftiges Selbst schreiben lassen. Maximiert kontinuierliches Lernen über Rewinds hinweg.</p><div class="tip-footer"><span>15. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044548257058328723" target="_blank">X (RT) ↗</a></div></article>
+    </div>
+  </section>
+
+  <!-- T5: SUBAGENTS -->
+  <section class="theme-section" id="t5">
+    <div class="theme-header"><div class="theme-num">05</div><div><h2 class="theme-title">Sub<em>agents</em></h2><p class="theme-desc">Der Wert liegt nicht in Anthropomorphisierung — sondern in zwei voneinander unabhängigen Kontextfenstern.</p></div></div>
+    <div class="tip-grid">
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">05.01</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Subagents = Automation für PR-Workflows</h3><p>Stored in <code>.claude/agents/</code>. Wiederverwendbar im Team.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">05.02</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>code-simplifier</code> Agent</h3><p>Cleant Code nach Claude's Arbeit. Boris' Standard nach jeder Implementierung.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">05.03</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>verify-app</code> Agent</h3><p>Detaillierte Instruktionen für End-to-End-Testing. Verifikationsschritt als wiederverwendbarer Baustein.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">05.04</span><span class="diff diff-beginner">Beginner</span></div><h3>"use subagents" anhängen für mehr Compute</h3><p>Ein-Wort-Eskalation an jeden Prompt. Wirft mehr Compute auf das Problem.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">05.05</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Tasks an Subagents auslagern für sauberen Hauptkontext</h3><p>Hält das Window für wichtige Arbeit frei. Recherche-Heavy-Aufgaben sind perfekt dafür.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">05.06</span><span class="diff diff-advanced">Advanced</span></div><h3>5 parallele Exploration-Agents auf neuer Codebase</h3><p>"Use 5 subagents to explore the codebase" — läuft parallel. Schnellster Weg zum Verständnis.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">05.07</span><span class="diff diff-advanced">Advanced</span></div><h3>Permission-Requests an Opus-Subagent via Hook</h3><p>Hook scannt auf Prompt-Injection-Attacks, auto-approved die safen. Reduziert UI-Reibung massiv.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">05.08</span><span class="diff diff-advanced">Advanced</span></div><h3>Adversariales Subagent-Pattern für Code Review</h3><p>Boris spawnt Subagents für Style/History/Bugs als ersten Pass — dann <strong>5 weitere Subagents</strong>, die Löcher in die ersten Findings poken, um False Positives zu eliminieren.</p><div class="tip-footer"><span>Nov 2025</span><a class="tip-source" href="https://every.to/podcast/how-to-use-claude-code-like-the-people-who-built-it" target="_blank">AI &amp; I Podcast ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">05.09</span><span class="diff diff-advanced">Advanced</span></div><h3>Subagents = unkorrelierte Kontextfenster</h3><p>Der Wert ist nicht Anthropomorphisierung — sondern zwei Kontextfenster, die nichts voneinander wissen.</p><div class="tip-footer"><span>Nov 2025</span><a class="tip-source" href="https://every.to/podcast/how-to-use-claude-code-like-the-people-who-built-it" target="_blank">AI &amp; I Podcast ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">05.10</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Custom <code>--agent</code> Flag</h3><p><code>claude --agent=ReadOnly</code>. Agent .md-Frontmatter setzt Name, Color, Tools, Model, System-Prompt.</p><div class="tip-footer"><span>29. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2038454336355999749" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">05.11</span><span class="diff diff-advanced">Advanced</span></div><h3>Default-Agent setzen</h3><p><code>"agent"</code>-Feld in settings.json oder <code>--agent</code>-Flag. Team-spezifische Defaults durchsetzen.</p><div class="tip-footer"><span>11. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2021700144039903699" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">05.12</span><span class="diff diff-advanced">Advanced</span></div><h3>Parallele Subagents für Plan-Research</h3><p>"Can you research three separate ideas for how to do it? Do it in parallel. Use three agents to do it."</p><div class="tip-footer"><span>07. Mai 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
+    </div>
+  </section>
+
+  <!-- T6: HOOKS -->
+  <section class="theme-section" id="t6">
+    <div class="theme-header"><div class="theme-num">06</div><div><h2 class="theme-title"><em>Hooks</em></h2><p class="theme-desc">Deterministische Logik dort, wo das Modell allein zu unzuverlässig ist. Formatieren, Logging, Approvals.</p></div></div>
+    <div class="tip-grid">
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">06.01</span><span class="diff diff-intermediate">Intermediate</span></div><h3>PostToolUse Hook für Auto-Formatting</h3><p>Matcher <code>"Write|Edit"</code>, runs <code>bun run format || true</code>. Claude formatiert ~90% korrekt, Hook fängt die 10% ab, um CI-Failures zu vermeiden.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">06.02</span><span class="diff diff-advanced">Advanced</span></div><h3>SessionStart Hook</h3><p>Lädt dynamisch Kontext, wann immer Claude startet. Idealer Ort für aktuelle Branch-Infos.</p><div class="tip-footer"><span>29. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2038454336355999749" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">06.03</span><span class="diff diff-advanced">Advanced</span></div><h3>PreToolUse Hook</h3><p>Loggt jeden Bash-Command, den das Modell ausführt. Audit-Trail für sensible Repos.</p><div class="tip-footer"><span>29. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2038454336355999749" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">06.04</span><span class="diff diff-advanced">Advanced</span></div><h3>PermissionRequest Hook</h3><p>Routet Approval-Prompts nach WhatsApp/Slack/SMS. Boris approved Permissions vom Handy.</p><div class="tip-footer"><span>29. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2038454336355999749" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">06.05</span><span class="diff diff-advanced">Advanced</span></div><h3>Stop Hook hält Claude am Laufen</h3><p>Poke Claude, wenn er stoppt. Kann einen Agent kicken oder per Prompt entscheiden lassen, ob weitergemacht wird.</p><div class="tip-footer"><span>29. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2038454336355999749" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">06.06</span><span class="diff diff-advanced">Advanced</span></div><h3>Agent Stop Hook für lange Verifikation</h3><p>Deterministischer als Claude zu bitten, sich selbst zu verifizieren.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">06.07</span><span class="diff diff-advanced">Advanced</span></div><h3>PostCompact Hook</h3><p>Feuert, nachdem Claude seinen Kontext komprimiert. Nützlich für Re-Injection kritischer Instruktionen.</p><div class="tip-footer"><span>13. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2032632602629386348" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">06.08</span><span class="diff diff-advanced">Advanced</span></div><h3>WorktreeCreate / WorktreeRemove Hooks</h3><p>Für non-git VCS (Mercurial, Perforce, SVN, Jujutsu). Worktree-Logik selbst definieren.</p><div class="tip-footer"><span>20. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2025007393290272904" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">06.09</span><span class="diff diff-advanced">Advanced</span></div><h3>Ralph-Wiggum Plugin für lange Tasks</h3><p>Community-Plugin von @GeoffreyHuntley für unattended Cooking. Für mehrtägige Runs.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+    </div>
+  </section>
+
+  <!-- T7: PERMISSIONS -->
+  <section class="theme-section" id="t7">
+    <div class="theme-header"><div class="theme-num">07</div><div><h2 class="theme-title">Permissions &amp; <em>Safety</em></h2><p class="theme-desc">Pre-allow ist besser als überall überspringen. <code>--dangerously-skip-permissions</code> nur in Sandboxes.</p></div></div>
+    <div class="tip-grid">
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">07.01</span><span class="diff diff-beginner">Beginner</span></div><h3>Kein <code>--dangerously-skip-permissions</code> für Normal-Arbeit</h3><p>Stattdessen <code>/permissions</code> nutzen, um sichere Commands vorab zu allowen.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">07.02</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>.claude/settings.json</code> mit Team teilen</h3><p>Pre-allowed Perms in git eincheckcen. Onboarding wird zur Ein-Befehl-Sache.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">07.03</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Wildcard-Syntax für Permissions</h3><p><code>"Bash(bun run *)"</code>, <code>"Edit(/docs/**)"</code>. Praktisch für ganze Tool-Familien.</p><div class="tip-footer"><span>11. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2021700332292911228" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">07.04</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Auto Mode (Opus 4.7)</h3><p>Model-basierter Classifier auto-approved sichere Permission-Prompts. <strong>"No 👏 more 👏 permission prompts 👏"</strong>. Shift+Tab cycelt: Ask → Plan → Auto.</p><div class="tip-footer"><span>16. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044847848035156457" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">07.05</span><span class="diff diff-advanced">Advanced</span></div><h3><code>--permission-mode=dontAsk</code> in Sandboxes</h3><p>Boris nutzt das (oder <code>--dangerously-skip-permissions</code>) nur in Sandboxes für lange Runs.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">07.06</span><span class="diff diff-advanced">Advanced</span></div><h3>Open-Source-Sandbox-Runtime aktivieren</h3><p>Reduziert Prompts ohne <code>--dangerously-skip</code>.</p><div class="tip-footer"><span>11. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2021700506465579443" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">07.07</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Permission-System: Innenleben</h3><p>"Combo of prompt-injection detection, static analysis, sandboxing, and human oversight."</p><div class="tip-footer"><span>11. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2021700332292911228" target="_blank">X-Thread ↗</a></div></article>
+    </div>
+  </section>
+
+  <!-- T8: MCP -->
+  <section class="theme-section" id="t8">
+    <div class="theme-header"><div class="theme-num">08</div><div><h2 class="theme-title">MCP &amp; <em>Integrationen</em></h2><p class="theme-desc">Slack, BigQuery, Sentry, Docker. Claude geht über das eigene Repo hinaus.</p></div></div>
+    <div class="tip-grid">
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">08.01</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Slack MCP, eingecheckt in <code>.mcp.json</code></h3><p>Mit Team geteilt. Claude sucht und postet selbstständig.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">08.02</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>bq</code> CLI für BigQuery</h3><p>"Personally, I haven't written a line of SQL in 6+ months." Funktioniert mit jeder DB, die CLI/MCP/API hat.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">08.03</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Sentry für Error-Logs</h3><p>Zieht Error-Logs automatisch in Claude. Bug-Triage ohne Context-Switching.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">08.04</span><span class="diff diff-beginner">Beginner</span></div><h3>Slack-Bug-Thread reinpasten → "fix"</h3><p>Zero Context-Switching. Slack-Thread + ein Wort = Implementierung in Minuten.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">08.05</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Claude auf Docker-Logs ansetzen</h3><p>Überraschend stark im Troubleshooting verteilter Systeme.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">08.06</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Slack MCP für tägliche Summaries</h3><p><code>/loop every morning use the Slack MCP to give me a summary of top posts I was tagged in</code>.</p><div class="tip-footer"><span>07. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2030193932404150413" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">08.07</span><span class="diff diff-beginner">Beginner</span></div><h3>iMessage als Claude-Code-Channel</h3><p><code>/plugin install imessage@claude-plugins-official</code>. Claude von jedem Apple-Gerät via SMS texten.</p><div class="tip-footer"><span>25. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2036959638646866021" target="_blank">X-Thread ↗</a></div></article>
+    </div>
+  </section>
+
+  <!-- T9: MODEL -->
+  <section class="theme-section" id="t9">
+    <div class="theme-header"><div class="theme-num">09</div><div><h2 class="theme-title">Modell &amp; <em>Effort</em></h2><p class="theme-desc">Opus mit Thinking für fast alles. Stärker, langsamer, aber durch weniger Korrekturen am Ende meist schneller.</p></div></div>
+    <div class="tip-grid">
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">09.01</span><span class="diff diff-beginner">Beginner</span></div><h3>Opus 4.5 mit Thinking für alles</h3><p>"Even though it's bigger &amp; slower than Sonnet, since you have to steer it less and it's better at tool use, it is almost always faster in the end."</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">09.02</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Opus 4.6 1M als Default für Max/Team/Enterprise</h3><p>Pro/Sonnet-User opt-in via <code>/extra-usage</code>.</p><div class="tip-footer"><span>13. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2032514807388123255" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">09.03</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Opus 4.7 nutzt adaptives Thinking</h3><p>Modell entscheidet selbst, wann Thinking sinnvoll ist. Keine festen Budgets mehr.</p><div class="tip-footer"><span>16. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044847848035156457" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">09.04</span><span class="diff diff-beginner">Beginner</span></div><h3>"Think carefully and step-by-step" pusht Thinking</h3><p>Oder "Prioritize responding quickly", um Tokens zu sparen.</p><div class="tip-footer"><span>16. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044847848035156457" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">09.05</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Ultrathink-Triggerwörter (Legacy)</h3><p>think &lt; think hard &lt; think harder &lt; ultrathink — progressives Thinking-Budget. In CC v2 ersetzt durch <code>/effort</code>, ultrathink bleibt highlighted.</p><div class="tip-footer"><span>Apr 2025</span><a class="tip-source" href="https://www.anthropic.com/engineering/claude-code-best-practices" target="_blank">Anthropic Blog ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">09.06</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Opus 4.7: kürzere Antworten, weniger Auto-Tool-Use</h3><p>Wenn du Länge/Stil willst, explizit sagen. Wenn Claude die richtigen Tools nicht nutzt, sie benennen. Für "Refactor across 40 files": explizit Subagents anfordern.</p><div class="tip-footer"><span>Apr 2026</span><a class="tip-source" href="https://docs.claude.com" target="_blank">Anthropic Docs ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">09.07</span><span class="diff diff-advanced">Advanced</span></div><h3>4.7's höhere Treue zu "don't nitpick"</h3><p>Code-Review-Harnesses für ältere Modelle sehen evtl. niedrigeren Recall — keine Regression, Claude folgt Instruktionen treuer.</p><div class="tip-footer"><span>Apr 2026</span><a class="tip-source" href="https://docs.claude.com" target="_blank">Anthropic Docs ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">09.08</span><span class="diff diff-beginner">Beginner</span></div><h3>Default war Sonnet, Model ist überridable</h3><p>"We default to Sonnet for most everything… you can override the model if you want."</p><div class="tip-footer"><span>07. Mai 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">09.09</span><span class="diff diff-beginner">Beginner</span></div><h3>Plan/Think-Instruktionen direkt schreiben</h3><p>"If you want Claude to think, just tell it to think. Be like, you know, make a plan. Think hard. Don't write any code yet."</p><div class="tip-footer"><span>07. Mai 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
+    </div>
+  </section>
+
+  <!-- T10: VERIFICATION -->
+  <section class="theme-section" id="t10">
+    <div class="theme-header"><div class="theme-num">10</div><div><h2 class="theme-title">Verifikation <em>— die #1-Regel</em></h2><p class="theme-desc">Wenn du Boris nur eine einzige Sache mitnimmst: gib Claude einen Weg, seine eigene Arbeit zu prüfen. 2–3× mehr Qualität.</p></div></div>
+    <div class="tip-grid">
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">10.01</span><span class="diff diff-beginner">Beginner</span></div><h3>Verifikation = 2–3× Qualität</h3><p>Der wichtigste einzelne Tipp im ganzen Setup. Investiere zuerst hier.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">10.02</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Boris' claude.ai/code Change-Verifikation</h3><p>Claude öffnet Chrome-Extension, testet jeden UI-Change im Browser, iteriert bis UX gut ist. <strong>"Claude tests every single change I land to claude.ai/code."</strong></p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">10.03</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Verifikation variiert je Domain</h3><p>Bash, Test-Suite, Simulator, Browser, Computer-Use. Investiere in deren Robustheit.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">10.04</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Backend = Server/Service end-to-end laufen lassen</h3><p>Stelle sicher, dass Claude deinen Service starten kann.</p><div class="tip-footer"><span>16. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044847848035156457" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">10.05</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Frontend = Chromium-Extension</h3><p>Boris nutzt sie für jeden Web-Code-Change. Zuverlässiger als andere Browser-MCPs.</p><div class="tip-footer"><span>29. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2038454336355999749" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">10.06</span><span class="diff diff-advanced">Advanced</span></div><h3>Desktop-Apps = Computer Use</h3><p>Desktop-App bündelt automatic Server-Start + eingebautes Browser-Testing.</p><div class="tip-footer"><span>29. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2038454336355999749" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">10.07</span><span class="diff diff-intermediate">Intermediate</span></div><h3>"Grill me on these changes"-Pattern</h3><p>"Don't make a PR until I pass your test." Mach Claude zu deinem Reviewer.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">10.08</span><span class="diff diff-intermediate">Intermediate</span></div><h3>"Prove to me this works"</h3><p>Lass Claude Verhalten zwischen main und deinem Branch diffen.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">10.09</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Nach mittelmäßigem Fix</h3><p>"Knowing everything you know now, scrap this and implement the elegant solution."</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">10.10</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Code → Screenshot → Iterate</h3><p>Zeig Claude einen Mock, lass es Puppeteer nutzen zum Vergleichen und Iterieren.</p><div class="tip-footer"><span>07. Mai 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">10.11</span><span class="diff diff-beginner">Beginner</span></div><h3>Fehler früh erkennen</h3><p>"If the model is doing something wrong, it's better to identify that earlier and correct it earlier."</p><div class="tip-footer"><span>07. Mai 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
+    </div>
+  </section>
+
+  <!-- T11: LONG-RUNNING -->
+  <section class="theme-section" id="t11">
+    <div class="theme-header"><div class="theme-num">11</div><div><h2 class="theme-title">Long-Running &amp; <em>Recaps</em></h2><p class="theme-desc">Langfristige Tasks ohne den Laptop offen halten. Routines, Schedules, Recaps.</p></div></div>
+    <div class="tip-grid">
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">11.01</span><span class="diff diff-intermediate">Intermediate</span></div><h3>(a) Background-Agent zur Selbst-Verifikation</h3><p>Einfachste Option: Claude prompten, einen Background-Agent zum Verifizieren zu spawnen, wenn er fertig ist.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">11.02</span><span class="diff diff-advanced">Advanced</span></div><h3>(b) Agent Stop Hook für deterministische Verifikation</h3><p>Zuverlässiger als (a). Code statt Modell trifft die Entscheidung.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">11.03</span><span class="diff diff-advanced">Advanced</span></div><h3>(c) Ralph-Wiggum Plugin</h3><p>Community-Pattern für sehr lange Runs. Für mehrtägige unattended Cooking-Tasks.</p><div class="tip-footer"><span>02. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2007179832300581177" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">11.04</span><span class="diff diff-beginner">Beginner</span></div><h3>Recaps für lange Sessions</h3><p>Kurze Summary über das Done + Next. Nützlich beim Wiederkommen nach Minuten oder Stunden. Deaktivierbar in <code>/config</code>.</p><div class="tip-footer"><span>16. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044847848035156457" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">11.05</span><span class="diff diff-advanced">Advanced</span></div><h3>Routines (Research Preview)</h3><p>Schedule-, GitHub-Event- und API-Trigger. Läuft auf Anthropic-Infra. Laptop kann zu sein.</p><div class="tip-footer"><span>14. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">11.06</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Cross-Session-Continuity-Workaround</h3><p>"Tell Claude to write down the state of this session into this text doc… in your new session, tell Claude to read from that doc."</p><div class="tip-footer"><span>07. Mai 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
+    </div>
+  </section>
+
+  <!-- T12: PROMPTING -->
+  <section class="theme-section" id="t12">
+    <div class="theme-header"><div class="theme-num">12</div><div><h2 class="theme-title">Prompting &amp; <em>Spec-Qualität</em></h2><p class="theme-desc">Delegation schlägt Guidance. Behandle Claude wie einen Engineer, an den du delegierst.</p></div></div>
+    <div class="tip-grid">
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">12.01</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Delegation &gt; Guidance (Opus 4.7)</h3><p>"The model performs best if you treat it like an engineer you're delegating to, not a pair programmer you're guiding line by line."</p><div class="tip-footer"><span>16. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny" target="_blank">Cat Wu Post ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">12.02</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Full Task Context Upfront</h3><p>Goal + Constraints + Acceptance-Criteria — alle drei im ersten Turn.</p><div class="tip-footer"><span>16. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny" target="_blank">Cat Wu Post ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">12.03</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Detaillierte Specs, weniger Ambiguität</h3><p>"The more specific you are, the better the output."</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">12.04</span><span class="diff diff-advanced">Advanced</span></div><h3>Prototyp &gt; PRD</h3><p>"There's just no way we could have shipped this if we started with static mocks and Figma or if we started with a PRD." Stattdessen dutzende Working-Prototypes.</p><div class="tip-footer"><span>Feb 2026</span><a class="tip-source" href="https://newsletter.pragmaticengineer.com/p/building-claude-code-with-boris-cherny" target="_blank">Pragmatic Engineer ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">12.05</span><span class="diff diff-beginner">Beginner</span></div><h3>Nicht micromanagen, wie Claude einen Bug fixt</h3><p>"Paste the bug, say 'fix.' Don't micromanage how."</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">12.06</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Prototypen statt Design-Dokumente</h3><p>"I'll just ask Claude Code to prototype, like, three versions of it. And I'll try the feature and see which one I like better."</p><div class="tip-footer"><span>07. Mai 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
+    </div>
+  </section>
+
+  <!-- T13: CUSTOMIZATION -->
+  <section class="theme-section" id="t13">
+    <div class="theme-header"><div class="theme-num">13</div><div><h2 class="theme-title"><em>Customization</em></h2><p class="theme-desc">37 Settings, 84 Environment-Variablen. Mach es zu deinem Tool.</p></div></div>
+    <div class="tip-grid">
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">13.01</span><span class="diff diff-beginner">Beginner</span></div><h3>Spinner-Verbs customizen</h3><p>Star-Trek-themed Beispiel. settings.json in Source Control eincheckcen.</p><div class="tip-footer"><span>11. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2021701145023197516" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">13.02</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Output-Styles: Explanatory / Learning / Custom</h3><p>Claude erklärt Frameworks; coacht dich durch Changes hindurch.</p><div class="tip-footer"><span>11. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2021701379409273093" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">13.03</span><span class="diff diff-advanced">Advanced</span></div><h3>37 Settings + 84 Environment-Variablen</h3><p><code>"env"</code>-Feld in settings.json nutzen, um Wrapper-Scripts zu vermeiden.</p><div class="tip-footer"><span>11. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2021701636075458648" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">13.04</span><span class="diff diff-beginner">Beginner</span></div><h3>Claude antwortet in deiner Sprache</h3><p>Japanese, Spanish, German — beliebige Sprache konfigurierbar.</p><div class="tip-footer"><span>07. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2009072293826453669" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">13.05</span><span class="diff diff-intermediate">Intermediate</span></div><h3>settings.json in git eincheckcen</h3><p>Team profitiert von deinen Customizations. Support für Enterprise-weite Policies.</p><div class="tip-footer"><span>11. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2021701145023197516" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">13.06</span><span class="diff diff-intermediate">Intermediate</span></div><h3>NO_FLICKER Mode</h3><p>Experimentelles Renderer: kein Flicker/Jump, konstanter Memory/CPU, Mouse-Support, schönere Selection. <code>CLAUDE_CODE_NO_FLICKER=1 claude</code>.</p><div class="tip-footer"><span>01. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2037038538718667103" target="_blank">X-Thread ↗</a></div></article>
+    </div>
+  </section>
+
+  <!-- T14: HEADLESS / SDK -->
+  <section class="theme-section" id="t14">
+    <div class="theme-header"><div class="theme-num">14</div><div><h2 class="theme-title">Headless / <em>SDK</em></h2><p class="theme-desc">Claude als Unix-Utility, nicht als Chatbot. <code>cat foo.csv | claude -p "summarize"</code>.</p></div></div>
+    <div class="tip-grid">
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">14.01</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>claude -p</code> für non-interactive Mode</h3><p>Prompt in Quotes übergeben. Pipeline-friendly.</p><div class="tip-footer"><span>07. Mai 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">14.02</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Best für read-only Tests</h3><p>"That's the place where it works really well."</p><div class="tip-footer"><span>07. Mai 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">14.03</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Small Start, dann skalieren</h3><p>"Start small… test it on one test… iterate on your prompt. Then scale it up to 10."</p><div class="tip-footer"><span>07. Mai 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">14.04</span><span class="diff diff-advanced">Advanced</span></div><h3>Pre-Commit Hook mit <code>-p</code></h3><p>"Just add a line: <code>claude -p</code> and whatever instruction you have." (Unter ~5 Sek halten.)</p><div class="tip-footer"><span>07. Mai 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">14.05</span><span class="diff diff-advanced">Advanced</span></div><h3><code>--allow-tools</code> zum Scopen von Permissions</h3><p>Spezifische Tools für Batch-Operationen lockdownen.</p><div class="tip-footer"><span>07. Mai 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">14.06</span><span class="diff diff-advanced">Advanced</span></div><h3><code>--bare</code> Flag für 10× SDK-Startup</h3><p>Skippt Search nach lokaler CLAUDE.md/Settings/MCPs (Default wird in Zukunft auf --bare flippen).</p><div class="tip-footer"><span>29. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2038454336355999749" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">14.07</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>--add-dir</code> (oder <code>/add-dir</code>)</h3><p>Gibt Claude Zugriff auf zusätzliche Repos. Setzt <code>"additionalDirectories"</code> in settings.json für das Team.</p><div class="tip-footer"><span>29. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2038454336355999749" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">14.08</span><span class="diff diff-beginner">Beginner</span></div><h3><code>--name "&lt;session&gt;"</code></h3><p>Human-readable Session-Namen für parallele Arbeit.</p><div class="tip-footer"><span>13. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2032632602629386348" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">14.09</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>claude</code> ist Unix-Utility, kein Chatbot</h3><p>"You can pipe in… cat the CSV, pipe it into claude."</p><div class="tip-footer"><span>07. Mai 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">14.10</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Stack: React Ink + Commander.js + Bun</h3><p>"We're big fans of Ink… We're also, we use Bun. So big fans of Bun." Für eigene CLI-Tools übertragbar.</p><div class="tip-footer"><span>07. Mai 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
+    </div>
+  </section>
+
+  <!-- T15: CODE REVIEW -->
+  <section class="theme-section" id="t15">
+    <div class="theme-header"><div class="theme-num">15</div><div><h2 class="theme-title">Code <em>Review</em></h2><p class="theme-desc">Reviews waren der Bottleneck. Jetzt machen Agents den ersten Sweep — Mensch approved den Merge.</p></div></div>
+    <div class="tip-grid">
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">15.01</span><span class="diff diff-beginner">Beginner</span></div><h3>Automatic PR Review durch ein Agent-Team</h3><p>Jeder Agent fokussiert auf andere Concerns (Logic, Security, Performance), postet Inline-Kommentare.</p><div class="tip-footer"><span>09. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2031089411820228645" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">15.02</span><span class="diff diff-beginner">Beginner</span></div><h3>Reviews waren der Bottleneck</h3><p>"Code output per Anthropic engineer is up 200% this year, and reviews were the bottleneck."</p><div class="tip-footer"><span>09. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2031089411820228645" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">15.03</span><span class="diff diff-beginner">Beginner</span></div><h3>Boris nutzte es wochenlang vor Launch</h3><p>"It catches real bugs I wouldn't have noticed otherwise."</p><div class="tip-footer"><span>09. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2031089411820228645" target="_blank">X-Thread ↗</a></div></article>
+    </div>
+  </section>
+
+  <!-- T16: COST -->
+  <section class="theme-section" id="t16">
+    <div class="theme-header"><div class="theme-num">16</div><div><h2 class="theme-title">Cost &amp; <em>ROI</em></h2><p class="theme-desc">"It's an ROI question, not a cost question." Boris bricht mit der Cost-Cutting-Logik.</p></div></div>
+    <div class="tip-grid">
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">16.01</span><span class="diff diff-beginner">Beginner</span></div><h3>ROI-Frage, keine Cost-Frage</h3><p>"If you can make an engineer 50, 70% more productive, that's worth a lot."</p><div class="tip-footer"><span>07. Mai 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">16.02</span><span class="diff diff-beginner">Beginner</span></div><h3>~$6/Tag pro aktivem User</h3><p>"Currently, we're seeing costs around like $6 per day per active user." (Cat Wu, gleicher Podcast)</p><div class="tip-footer"><span>07. Mai 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">16.03</span><span class="diff diff-beginner">Beginner</span></div><h3>Manche Anthropic-Engineers &gt; $1.000/Monat</h3><p>Hauptsächlich für Code-Migrationen.</p><div class="tip-footer"><span>Nov 2025</span><a class="tip-source" href="https://every.to/podcast/how-to-use-claude-code-like-the-people-who-built-it" target="_blank">AI &amp; I Podcast ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">16.04</span><span class="diff diff-beginner">Beginner</span></div><h3>Teams unter-funden, Tokens unlimited geben</h3><p>"Don't try to cost-cut at the beginning. Start by giving engineers as many tokens as possible."</p><div class="tip-footer"><span>19. Feb 2026</span><a class="tip-source" href="https://www.lennysnewsletter.com/p/head-of-claude-code-what-happens" target="_blank">Lenny's Podcast ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">16.05</span><span class="diff diff-advanced">Advanced</span></div><h3>1-Stunden Prompt Cache</h3><p>Massive Kosten-Reduktion für wiederholte Multi-Turn-Agent-Arbeit.</p><div class="tip-footer"><span>13. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2043715713551212834" target="_blank">X-Thread ↗</a></div></article>
+    </div>
+  </section>
+
+  <!-- T17: FORM-FACTOR -->
+  <section class="theme-section" id="t17">
+    <div class="theme-header"><div class="theme-num">17</div><div><h2 class="theme-title">Form-Factor &amp; <em>Workflow</em></h2><p class="theme-desc">CLI, IDE, GitHub, Slack, Mobile, Web. Boris codet viel vom Handy aus.</p></div></div>
+    <div class="tip-grid">
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">17.01</span><span class="diff diff-beginner">Beginner</span></div><h3>Claude Code hat eine Mobile-App</h3><p>iOS und Android. Boris schreibt viel Code aus der iOS-App. Code-Tab links.</p><div class="tip-footer"><span>29. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2038454336355999749" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">17.02</span><span class="diff diff-advanced">Advanced</span></div><h3>Dispatch — Secure Remote Control</h3><p>"When I'm not coding, I'm dispatching." Nutzt MCPs/Browser/Computer mit deinen Permissions.</p><div class="tip-footer"><span>29. Mär 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2038454336355999749" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">17.03</span><span class="diff diff-beginner">Beginner</span></div><h3>VS Code / JetBrains / Cursor Extension</h3><p>Empfohlen für IDE-Nutzer: Inline-Diffs, @-Mentions, Plan-Review.</p><div class="tip-footer"><span>Anhaltend</span><a class="tip-source" href="https://docs.claude.com" target="_blank">Anthropic Docs ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">17.04</span><span class="diff diff-beginner">Beginner</span></div><h3>GitHub-App / Slack-App / Web</h3><p>"Every engineer is different and you can use Claude Code the way you want."</p><div class="tip-footer"><span>Apr 2026</span><a class="tip-source" href="https://www.threads.com/@boris_cherny" target="_blank">Threads ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">17.05</span><span class="diff diff-beginner">Beginner</span></div><h3>4 Modi der Claude-Code-Nutzung</h3><p>"From the terminal / From the IDE (as an extension) / As a GitHub app so you can @claude right in a GitHub issue comment / Via the SDK, using Claude as a Unix utility"</p><div class="tip-footer"><span>Jun 2025</span><span>AIEWF Talk</span></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">17.06</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Workflow zum Task anpassen</h3><p>"(explore › plan › confirm › code › commit) vs (tests › commit › code › iterate › commit) vs (code › screenshot › iterate)"</p><div class="tip-footer"><span>Jun 2025</span><span>AIEWF Talk</span></div></article>
+    </div>
+  </section>
+
+  <!-- T18: MIGRATION -->
+  <section class="theme-section" id="t18">
+    <div class="theme-header"><div class="theme-num">18</div><div><h2 class="theme-title">Migration &amp; <em>Daten</em></h2><p class="theme-desc">Partiell migrierte Codebases verwirren Menschen und Modelle gleichermaßen. Beende, was du beginnst.</p></div></div>
+    <div class="tip-grid">
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">18.01</span><span class="diff diff-advanced">Advanced</span></div><h3>Migrationen immer zu Ende führen</h3><p>"Always make sure that when you start a migration, you finish the migration." Partiell-migrierte Codebases verwirren Menschen und Modelle.</p><div class="tip-footer"><span>Feb 2026</span><a class="tip-source" href="https://newsletter.pragmaticengineer.com/p/building-claude-code-with-boris-cherny" target="_blank">Pragmatic Engineer ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">18.02</span><span class="diff diff-advanced">Advanced</span></div><h3><code>/batch</code> ist das Migration-Tool</h3><p>Interaktiv planen, dann zu dutzenden Worktree-Agents auffächern.</p><div class="tip-footer"><span>27. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2027534984534544489" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">18.03</span><span class="diff diff-intermediate">Intermediate</span></div><h3>BigQuery-Skill in Codebase eincheckcen</h3><p>Ganzes Team nutzt es für Analytics direkt aus Claude Code.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+    </div>
+  </section>
+
+  <!-- T19: LEARNING -->
+  <section class="theme-section" id="t19">
+    <div class="theme-header"><div class="theme-num">19</div><div><h2 class="theme-title">Lernen &amp; <em>Onboarding</em></h2><p class="theme-desc">Output-Styles, Visualisierungen, ASCII-Diagramme, Spaced Repetition. Claude als Lehrer.</p></div></div>
+    <div class="tip-grid">
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">19.01</span><span class="diff diff-beginner">Beginner</span></div><h3>Explanatory / Learning Output Style</h3><p>Claude erklärt das <em>Warum</em> hinter Changes. Bewusst onboarding-freundlich.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">19.02</span><span class="diff diff-beginner">Beginner</span></div><h3>Visual HTML-Presentation generieren</h3><p>"Surprisingly good slides!"</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">19.03</span><span class="diff diff-beginner">Beginner</span></div><h3>ASCII-Diagramme erfragen</h3><p>Von neuen Protokollen, Codebases, Architekturen.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">19.04</span><span class="diff diff-advanced">Advanced</span></div><h3>Spaced-Repetition-Learning-Skill</h3><p>Du erklärst dein Verständnis, Claude stellt Follow-up-Fragen, um Gaps zu füllen.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">19.05</span><span class="diff diff-beginner">Beginner</span></div><h3>Onboarding-Workflow bei Anthropic</h3><p>Neue Engineers nutzen Claude Code, um Codebases zu navigieren — "significantly improving ramp-up time."</p><div class="tip-footer"><span>Apr 2025</span><a class="tip-source" href="https://www.anthropic.com/engineering/claude-code-best-practices" target="_blank">Anthropic Blog ↗</a></div></article>
+    </div>
+  </section>
+
+  <!-- T20: CONTEXT MGMT -->
+  <section class="theme-section" id="t20">
+    <div class="theme-header"><div class="theme-num">20</div><div><h2 class="theme-title">Context <em>Management</em></h2><p class="theme-desc">Context-Rot ist real. Boris' Regel: Jeder Turn ist ein Branching-Point.</p></div></div>
+    <div class="tip-grid">
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">20.01</span><span class="diff diff-advanced">Advanced</span></div><h3>Auto-Compact-Threshold absenken</h3><p><code>CLAUDE_CODE_AUTO_COMPACT_WINDOW=400000 claude</code>, um Context-Rot im 1M-Modell zu umgehen.</p><div class="tip-footer"><span>15. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044548257058328723" target="_blank">X (RT) ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">20.02</span><span class="diff diff-advanced">Advanced</span></div><h3>Context-Rot startet bei 300–400k Tokens</h3><p>Lass intelligenz-sensitive Sessions nicht darüber hinaus driften.</p><div class="tip-footer"><span>15. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044548257058328723" target="_blank">X (RT) ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">20.03</span><span class="diff diff-advanced">Advanced</span></div><h3>"Dumb Zone" bei ~40% Kontext</h3><p>Newcomers: unter 40% halten, bei 60% einpacken. Erfahrene: unter 30%; auf 60% nur bei simplen Tasks.</p><div class="tip-footer"><span>15. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044548257058328723" target="_blank">X (RT) ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">20.04</span><span class="diff diff-advanced">Advanced</span></div><h3>Jeder Turn ist ein Branching-Point</h3><p>Pick Continue / <code>/rewind</code> / <code>/clear</code> / <code>/compact</code> / Subagent — je nach Kontext-Bedarf.</p><div class="tip-footer"><span>15. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044548257058328723" target="_blank">X (RT) ↗</a></div></article>
+      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">20.05</span><span class="diff diff-advanced">Advanced</span></div><h3>Agentic Search &gt; RAG</h3><p>"We landed on just agentic search… just using regular code searching, you know, glob, grep." Umgeht Indexing/Sync/Security-Probleme zum Preis von Latency und Tokens.</p><div class="tip-footer"><span>07. Mai 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
+    </div>
+  </section>
+
+  <!-- T21: TERMINAL -->
+  <section class="theme-section" id="t21">
+    <div class="theme-header"><div class="theme-num">21</div><div><h2 class="theme-title">Terminal <em>Environment</em></h2><p class="theme-desc">Ghostty + tmux + Voice-Dictation. Die Kleinigkeiten, die deine Velocity tatsächlich bewegen.</p></div></div>
+    <div class="tip-grid">
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">21.01</span><span class="diff diff-beginner">Beginner</span></div><h3>Ghostty Terminal</h3><p>Team-Liebling: synchronized Rendering, 24-bit Color, Unicode.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">21.02</span><span class="diff diff-intermediate">Intermediate</span></div><h3>tmux für ein Tab pro Task</h3><p>Terminal-Tabs nach Color-Coden und Namen organisieren.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">21.03</span><span class="diff diff-beginner">Beginner</span></div><h3>Voice-Dictation (fn x2 auf macOS)</h3><p>"You speak 3x faster than you type, and your prompts get way more detailed as a result."</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="timeline-wrap">
+    <h2>Chronologie <em>— Bestätigte Threads &amp; Announcements</em></h2>
+    <p>Vom Side-Project im September 2024 bis zum Webby-Award im April 2026.</p>
+    <div class="timeline">
+      <div class="tl-entry major"><div class="tl-date">Sep 2024</div><div class="tl-event">Boris startet Claude Code als Side-Project bei Anthropic.</div></div>
+      <div class="tl-entry"><div class="tl-date">Ende 2024</div><div class="tl-event">Internes Dogfooding. Robert (Kollege) ist erster Power-User via FileEdit-Tool.</div></div>
+      <div class="tl-entry major"><div class="tl-date">24. Feb 2025</div><div class="tl-event">Claude Code launcht als Research Preview neben Claude 3.7 Sonnet.</div></div>
+      <div class="tl-entry"><div class="tl-date">18.–19. Apr 2025</div><div class="tl-event">Anthropic Engineering Blog: "Claude Code: Best practices for agentic coding" (führt ultrathink-Keyword-Skala ein).</div></div>
+      <div class="tl-entry"><div class="tl-date">07. Mai 2025</div><div class="tl-event">Latent Space Podcast mit Cat Wu.</div></div>
+      <div class="tl-entry"><div class="tl-date">Jun 2025</div><div class="tl-event">AI Engineer World's Fair Keynote: "Claude Code &amp; the evolution of agentic coding."</div></div>
+      <div class="tl-entry"><div class="tl-date">Okt–Nov 2025</div><div class="tl-event">Boris hört auf, Code per Hand zu schreiben.</div></div>
+      <div class="tl-entry"><div class="tl-date">27. Dez 2025</div><div class="tl-event">Ein-Jahres-Retro: 259 PRs in 30 Tagen, alle mit Opus 4.5.</div></div>
+      <div class="tl-entry major"><div class="tl-date">02. Jan 2026</div><div class="tl-event"><strong>13-Tipp-Thread "How I use Claude Code"</strong> (104K Likes; kanonische Referenz).</div></div>
+      <div class="tl-entry"><div class="tl-date">07. Jan 2026</div><div class="tl-event">Claude Code 2.1.0 Announcement.</div></div>
+      <div class="tl-entry"><div class="tl-date">13. Jan 2026</div><div class="tl-event">"Robert with a terminal up" Origin-Story Post.</div></div>
+      <div class="tl-entry major"><div class="tl-date">31. Jan 2026</div><div class="tl-event"><strong>10 Team-Tipps Thread</strong> (8.5M Views).</div></div>
+      <div class="tl-entry"><div class="tl-date">11. Feb 2026</div><div class="tl-event"><strong>12 Customization-Tipps</strong> Thread.</div></div>
+      <div class="tl-entry"><div class="tl-date">19. Feb 2026</div><div class="tl-event">Lenny's Podcast Episode: "What happens after coding is solved".</div></div>
+      <div class="tl-entry"><div class="tl-date">20.–21. Feb 2026</div><div class="tl-event">Built-in git worktree Support (5 Tipps).</div></div>
+      <div class="tl-entry"><div class="tl-date">24. Feb 2026</div><div class="tl-event">"Happy 1st birthday to Claude Code".</div></div>
+      <div class="tl-entry"><div class="tl-date">25. Feb 2026</div><div class="tl-event">Anthropic akquiriert Vercept.</div></div>
+      <div class="tl-entry"><div class="tl-date">27.–28. Feb 2026</div><div class="tl-event"><code>/simplify</code> und <code>/batch</code> Announcement.</div></div>
+      <div class="tl-entry"><div class="tl-date">07. Mär 2026</div><div class="tl-event"><code>/loop</code> Announcement.</div></div>
+      <div class="tl-entry"><div class="tl-date">09. Mär 2026</div><div class="tl-event">Code Review Feature Launch.</div></div>
+      <div class="tl-entry"><div class="tl-date">13. Mär 2026</div><div class="tl-event">Opus 4.6 1M Default für Max/Team/Enterprise; <code>/effort max</code>, Voice-Mode, Remote-Control, PostCompact-Hook.</div></div>
+      <div class="tl-entry"><div class="tl-date">23.–25. Mär 2026</div><div class="tl-event">Auto Mode, <code>/schedule</code>, iMessage-Plugin, Auto-Memory/Dream.</div></div>
+      <div class="tl-entry major"><div class="tl-date">29.–30. Mär 2026</div><div class="tl-event"><strong>15 versteckte/unter-genutzte Features</strong> Thread (Anker-Tweet des Users).</div></div>
+      <div class="tl-entry"><div class="tl-date">01. Apr 2026</div><div class="tl-event">NO_FLICKER Mode Announcement.</div></div>
+      <div class="tl-entry"><div class="tl-date">13. Apr 2026</div><div class="tl-event">1-Stunden Prompt Cache Rollout.</div></div>
+      <div class="tl-entry"><div class="tl-date">14. Apr 2026</div><div class="tl-event">Routines (Boris RT).</div></div>
+      <div class="tl-entry major"><div class="tl-date">16. Apr 2026</div><div class="tl-event"><strong>6 Opus-4.7-Tipps</strong> Thread.</div></div>
+      <div class="tl-entry"><div class="tl-date">22. Apr 2026</div><div class="tl-event">Claude Code gewinnt Webby Award (AI Features &amp; Innovation).</div></div>
+      <div class="tl-entry"><div class="tl-date">23. Apr 2026</div><div class="tl-event">Quality Post-Mortem für v2.1.116+.</div></div>
+      <div class="tl-entry"><div class="tl-date">06. Mai 2026</div><div class="tl-event">Code w/ Claude SF: Rate-Limits verdoppelt, SpaceX 300MW Compute-Deal.</div></div>
+    </div>
+  </section>
+
+  <!-- STAGES -->
+  <section class="stages">
+    <h2>Staged Adoption <em>— Boris' eigene Empfehlung</em></h2>
+    <p>Vom Vanilla-Setup zum autonomen Agent-Stack. Klare Schwellen, ab wann du in die nächste Phase gehst.</p>
+    <div class="stage-grid">
+      <div class="stage">
+        <div class="stage-num">1</div>
+        <div class="stage-title">Vanilla</div>
+        <div class="stage-week">Woche 1</div>
+        <div class="stage-body">Claude Code installieren (CLI oder VS Code Extension). <code>/init</code> für Starter-CLAUDE.md. Plan-Mode (Shift+Tab zweimal) für jeden Task. Nicht customizen.</div>
+        <div class="stage-graduate"><strong>Graduate when:</strong> 5+ PRs geshippt, Claude macht den gleichen Fehler zweimal — Zeit für Regeln in CLAUDE.md.</div>
+      </div>
+      <div class="stage">
+        <div class="stage-num">2</div>
+        <div class="stage-title">Compounding Knowledge</div>
+        <div class="stage-week">Woche 2–3</div>
+        <div class="stage-body">CLAUDE.md wie Code behandeln: gnadenlos prunen, Regel hinzufügen bei jedem Fehler. 1–2 Slash-Commands für tägliche Workflows hinzufügen.</div>
+        <div class="stage-graduate"><strong>Graduate when:</strong> CLAUDE.md &gt; 1 Seite, Slash-Command-Count ~3.</div>
+      </div>
+      <div class="stage">
+        <div class="stage-num">3</div>
+        <div class="stage-title">Parallelism</div>
+        <div class="stage-week">Woche 4+</div>
+        <div class="stage-body">3–5 git worktrees öffnen, ein Claude in jedem. PostToolUse-Hook für Formatting. Sichere Commands mit <code>/permissions</code> pre-allowen, <code>.claude/settings.json</code> in git eincheckcen.</div>
+        <div class="stage-graduate"><strong>Graduate when:</strong> du frustriert bist, auf einen Claude zu warten.</div>
+      </div>
+      <div class="stage">
+        <div class="stage-num">4</div>
+        <div class="stage-title">Subagents</div>
+        <div class="stage-week">Monat 2+</div>
+        <div class="stage-body"><code>.claude/agents/code-simplifier.md</code> und <code>verify-app.md</code> hinzufügen. "Use 5 subagents to explore the codebase" auf neuen Repos. Adversariales Review-Pattern.</div>
+        <div class="stage-graduate"><strong>Graduate when:</strong> du mehr Zeit mit Switching zwischen Claudes verbringst als die Claudes mit Arbeit.</div>
+      </div>
+      <div class="stage">
+        <div class="stage-num">5</div>
+        <div class="stage-title">Autonomy</div>
+        <div class="stage-week">Monat 3+</div>
+        <div class="stage-body">Auto Mode (Opus 4.7), <code>/focus</code>, Recaps an. <code>/loop</code> für PR-Babysitting, Slack-Feedback. <code>/schedule</code> für Jobs, die geschlossene Laptops überleben. Chrome-Extension für Frontend-Verifikation. <code>/voice</code>.</div>
+        <div class="stage-graduate"><strong>Endstand:</strong> Claude Code ist kein Tool mehr — sondern der Compute-Budget deines Teams.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTESTED -->
+  <section class="contested">
+    <h2>Umstrittene <em>Empfehlungen</em></h2>
+    <p>Wo Boris' Setup von seinem eigenen Team abweicht — und wo du selbst entscheiden musst.</p>
+    <div class="contest-grid">
+      <div class="contest">
+        <h4>Worktrees vs. Checkouts</h4>
+        <p>Boris persönlich nutzt mehrere Checkouts. Der Rest des Teams bevorzugt Worktrees und hat dafür native Worktree-Support gebaut. Beide funktionieren — wähle nach mentalem Modell.</p>
+      </div>
+      <div class="contest">
+        <h4>MCP vs. CLI/Skills</h4>
+        <p>Boris nutzt Slack MCP. Sekundäre Quellen aus dem Team pushen zurück: "Für read-heavy Workflows ist ein well-crafted CLI-Skill oft simpler." Faustregel: lokal &amp; simpel → Slash Command. Externe Daten → MCP.</p>
+      </div>
+      <div class="contest">
+        <h4>Opus vs. Sonnet</h4>
+        <p>Boris nutzt Opus 4.5/4.6/4.7 mit Thinking für alles. Team-Default und Pro-Tier surface'n weiterhin Sonnet. Faustregel: weniger Steuerungsaufwand bei Opus = oft schneller, trotz höherer Latenz.</p>
+      </div>
+      <div class="contest">
+        <h4>Auto Mode vs. Explicit Permissions</h4>
+        <p>Auto Mode (Opus 4.7) auto-approved sichere Permissions. Sicherheitsbewusste Teams bevorzugen manuelles Approve via PermissionRequest-Hook. Sandboxes erlauben Mittelweg.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAVEATS -->
+  <section class="caveats">
+    <h2>Caveats <em>&amp; Hinweise</em></h2>
+    <p>Wichtige Einschränkungen für die ehrliche Einordnung dieser Tipps.</p>
+    <ul>
+      <li>Viele angekündigte Features sind <strong>noch im Rollout oder Plan-Tier-gated</strong> (Auto Mode = Max/Team/Enterprise; <code>/extra-usage</code> für 1M-Kontext auf Pro). Testen, nicht annehmen.</li>
+      <li>Das <strong>Latent Space Podcast-Datum</strong> wird als 7. Mai 2025 geführt; manche Recaps sagen 8. Mai — gleiche Episode.</li>
+      <li>"<strong>4% aller öffentlichen GitHub-Commits</strong>" und "<strong>200% Engineering-Produktivität</strong>" sind Boris' eigene Zahlen (Lenny's Podcast / Code-Review-Thread), nicht unabhängig auditiert. Direktional, nicht präzise.</li>
+      <li>Die <strong>Fan-Seite howborisusesclaudecode.com</strong> (von @CarolinaCherry) ist der vollständigste öffentliche Katalog (87 Tipps). Nicht von Anthropic affiliiert — jeder Tipp linkt zum primären @bcherny-Post.</li>
+      <li><strong>Ultrathink-Semantik wechselte zwischen CC v1 und v2.</strong> In v1 mappte die Keyword-Leiter auf literal Token-Budgets; in v2 ersetzt der On/Off-Thinking-Toggle (Tab) das Meiste. Ultrathink triggered weiterhin den Höchst-Effort-Pfad.</li>
+      <li>Boris verließ Anthropic <strong>kurz für Cursor Anfang 2025 und kam nach zwei Wochen zurück</strong> — diskutiert auf Lenny's Podcast. Kein Tipp, aber Kontext für seine Glaubwürdigkeit bei Trade-Off-Diskussionen.</li>
+      <li>Tipps zugeschrieben an <strong>Thariq, Cat Wu, Noah Z., Erik Schluntz</strong> u.a. aus dem Claude-Code-Team sind hier inkludiert, wenn Boris sie retweetet/endorsed hat oder sie in gemeinsamen Podcasts auftauchten.</li>
+      <li><strong>Kein Tipp in diesem Report kommt aus einer privaten/geleakten Quelle.</strong> Alles ist öffentliches X, öffentliche Podcasts, Anthropics öffentlicher Blog oder der Threads.net-Mirror.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>Boris Cherny Claude Code Playbook · Recherche-Stand Mai 2026<br>87 Tipps · 21 Themen · 14 Monate Dokumentation</div>
+      <div>Primärquellen: <a href="https://x.com/bcherny" target="_blank">x.com/bcherny</a> · <a href="https://howborisusesclaudecode.com" target="_blank">howborisusesclaudecode.com</a> · <a href="https://docs.claude.com" target="_blank">docs.claude.com</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const chips = document.querySelectorAll('.chip');
+  const tips = document.querySelectorAll('.tip');
+  const sections = document.querySelectorAll('.theme-section');
+  chips.forEach(chip=>{
+    chip.addEventListener('click',()=>{
+      chips.forEach(c=>c.classList.remove('active'));
+      chip.classList.add('active');
+      const filter = chip.dataset.filter;
+      tips.forEach(tip=>{
+        if(filter==='all' || tip.dataset.diff===filter) tip.classList.remove('hidden');
+        else tip.classList.add('hidden');
+      });
+      sections.forEach(sec=>{
+        const visible = sec.querySelectorAll('.tip:not(.hidden)').length;
+        if(visible===0) sec.classList.add('empty');
+        else sec.classList.remove('empty');
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
