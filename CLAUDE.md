@@ -4,7 +4,7 @@
 
 ## What this repo is
 
-A curated, German-language collection of all public Claude Code tips by **Boris Cherny** (Head of Claude Code at Anthropic). Maintained semi-automatically via Claude.ai Routines and Claude Code slash commands.
+A curated, English-language collection of all public Claude Code tips by **Boris Cherny** (Head of Claude Code at Anthropic). Maintained semi-automatically via Claude.ai Routines and Claude Code slash commands.
 
 ## File structure (source of truth)
 
@@ -31,10 +31,10 @@ A curated, German-language collection of all public Claude Code tips by **Boris 
 
 1. **TIPS.md is the source of truth.** Never edit `index.html` directly to add content — always update `TIPS.md` first, then regenerate via `/regenerate-html`.
 2. **Tip IDs are sticky.** Once a tip has ID `04.15`, it keeps that ID forever, even if reordered. New tips get the next free ID in their theme (e.g., `04.35`).
-3. **German prose, English source quotes preserved.** All descriptions in German. Verbatim quotes from Boris stay in English, in quotation marks, under 15 words.
+3. **English prose. Verbatim quotes from Boris stay in English.** All descriptions in English. Verbatim quotes from Boris stay in English, in quotation marks, under 15 words.
 4. **Every tip must have a verifiable source URL.** No tips from private sources, leaks, or unverified secondary repostings. If the original X-post is deleted, mark the tip with `[archived]` and link a Wayback Machine snapshot if available.
 5. **Difficulty levels are: `beginner`, `intermediate`, `advanced`.** No others.
-6. **Dates use `DD. MMM YYYY` format in German** (e.g., `02. Jan 2026`), and `YYYY-MM-DD` in the structured fields for sortability.
+6. **Dates use `YYYY-MM-DD` format everywhere** (e.g., `2026-01-02`).
 7. **IMPLEMENTATION-GUIDE.md tracks actionable tips only.** When adding a tip that Claude Code can execute (settings, commands, hooks, agents, MCP, permissions), also add it to `IMPLEMENTATION-GUIDE.md` in the appropriate section. Non-actionable tips (philosophy, workflow habits, cost/ROI) stay only in `TIPS.md`.
 
 ## Tip entry format in TIPS.md
@@ -43,12 +43,12 @@ A curated, German-language collection of all public Claude Code tips by **Boris 
 ### #04.35 — `<short-title>`
 - **Difficulty:** Intermediate
 - **Theme:** Slash Commands
-- **Date:** 2026-05-12 (`12. Mai 2026`)
+- **Date:** 2026-05-12
 - **Source:** [X-Thread](https://x.com/bcherny/status/XXXXXXXXXXXXXX)
 - **Author:** @bcherny *(or @other if reposted/endorsed by bcherny)*
 - **Quote:** "verbatim under 15 words"
 
-DE-Beschreibung: 1–3 Sätze, was der Tipp macht und warum er wichtig ist. Code-Beispiele in `inline code` falls relevant.
+Description: 1–3 sentences explaining what the tip does and why it matters. Code examples in `inline code` where relevant. No emojis in tip text.
 ```
 
 ## Slash commands available
@@ -69,11 +69,11 @@ See `.claude/commands/` for full prompt definitions.
 
 ## What NOT to do
 
-- ❌ Don't invent tips. If you can't verify it from a source URL, don't add it.
-- ❌ Don't paraphrase Boris's quotes into German. Keep the English verbatim.
-- ❌ Don't change tip IDs. Even if a tip is deprecated, leave the ID and mark `[deprecated]` in the title.
-- ❌ Don't edit `index.html` to add tips. Use `/regenerate-html`.
-- ❌ Don't translate technical terms that have no good German equivalent (Worktree, Subagent, Slash Command, Hook). Use the English term in italics.
+- Don't invent tips. If you can't verify it from a source URL, don't add it.
+- Don't paraphrase Boris's quotes. Keep the English verbatim.
+- Don't change tip IDs. Even if a tip is deprecated, leave the ID and mark `[deprecated]` in the title.
+- Don't edit `index.html` to add tips. Use `/regenerate-html`.
+- Don't translate technical terms that are standard in the community (Worktree, Subagent, Slash Command, Hook). Use the English term in italics.
 
 ## When in doubt
 

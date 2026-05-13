@@ -1,82 +1,82 @@
 # Contributing
 
-Vielen Dank fürs Interesse! Dieses Repo wächst primär automatisiert via Claude.ai Routines, aber manuelle Beiträge sind willkommen.
+Thank you for your interest! This repo grows primarily through automated Claude.ai Routines, but manual contributions are welcome.
 
-## Was du beitragen kannst
+## What you can contribute
 
-### 1. Neuer Tipp, den die Routine übersehen hat
+### 1. A new tip that the routine missed
 
-Wenn du einen öffentlichen Boris-Cherny-Tipp findest, der noch nicht im Repo ist:
+If you find a public Boris Cherny tip that is not yet in the repo:
 
-1. Fork das Repo
-2. Öffne mit Claude Code: `cd boris-cherny-claude-code-playbook && claude`
-3. Führe `/add-tip` aus — der Slash-Command interviewt dich strukturiert
-4. Pull Request mit Source-URL in der Beschreibung
+1. Fork the repo
+2. Open with Claude Code: `cd boris-cherny-claude-code-playbook && claude`
+3. Run `/add-tip` — the Slash Command walks you through a structured interview
+4. Submit a Pull Request with the source URL in the description
 
-**Kriterien für Aufnahme:**
-- Quelle muss öffentlich verifizierbar sein (X, Podcast, Blog, Konferenz-Aufnahme)
-- Autor: @bcherny oder Claude-Code-Team-Member endorsed von Boris
-- Konkret handlungs-relevant, kein reines Marketing/Status
+**Criteria for inclusion:**
+- Source must be publicly verifiable (X, podcast, blog, conference recording)
+- Author: @bcherny or a Claude Code team member endorsed by Boris
+- Concretely actionable, not pure marketing/status updates
 
-### 2. Korrektur eines existierenden Tipps
+### 2. Correction of an existing tip
 
-Wenn ein Tipp inhaltlich falsch ist, Source-URL tot, oder Übersetzung holprig:
+If a tip is factually incorrect, a source URL is dead, or the wording is off:
 
 1. Fork
-2. Editiere `TIPS.md` direkt
-3. **Wichtig:** ID NICHT ändern. Auch deprecated Tipps behalten ihre ID.
-4. Aktualisiere `index.html` via `/regenerate-html` oder manuell
-5. Pull Request mit Begründung
+2. Edit `TIPS.md` directly
+3. **Important:** Do NOT change the ID. Even deprecated tips keep their ID.
+4. Update `index.html` via `/regenerate-html` or manually
+5. Submit a Pull Request with a justification
 
-### 3. Übersetzungsverbesserungen
+### 3. Wording improvements
 
-Wenn dir bessere deutsche Formulierungen einfallen — gerne. Verbatim-Boris-Zitate bleiben aber Englisch.
+If you can think of better English phrasing — go ahead. Verbatim Boris quotes stay in their original English wording.
 
-### 4. Neues Theme
+### 4. New theme
 
-Sollte ein Boris-Tipp ein 22. Thema einführen (z.B. "Voice-Workflows"):
+If a Boris tip introduces a 22nd theme (e.g., "Voice Workflows"):
 
-1. Issue eröffnen mit dem Proposal: Theme-Name, Begründung, 2–3 Beispiel-Tipps
-2. Diskussion abwarten
-3. Bei Approval: PR mit Änderungen in `TIPS.md`, `README.md` (Tabelle), `index.html` (TOC + neue `<section>`)
+1. Open an Issue with the proposal: theme name, rationale, 2-3 example tips
+2. Wait for discussion
+3. Upon approval: submit a PR with changes to `TIPS.md`, `README.md` (table), `index.html` (TOC + new `<section>`)
 
-## Pull-Request-Checkliste
+## Pull Request checklist
 
-- [ ] Source-URL des Tipps in der PR-Beschreibung
-- [ ] Tipp-ID folgt dem Format `TT.NN` (Theme-Number . laufende Nummer)
-- [ ] Difficulty ist `beginner` | `intermediate` | `advanced` (keine anderen Werte)
-- [ ] Datum im Format `YYYY-MM-DD` in TIPS.md, `DD. MMM YYYY` in der Anzeige
-- [ ] Englische Verbatim-Zitate in Anführungszeichen, unter 15 Wörter
-- [ ] Deutsche Beschreibung 1–3 Sätze, kein Marketing-Speak
-- [ ] CHANGELOG-Eintrag in `CHANGELOG.md` oben hinzugefügt
-- [ ] `index.html` ist synchron mit `TIPS.md` (`/regenerate-html` gelaufen)
+- [ ] Source URL of the tip included in the PR description
+- [ ] Tip ID follows the format `TT.NN` (theme number . sequential number)
+- [ ] Difficulty is `beginner` | `intermediate` | `advanced` (no other values)
+- [ ] Date in `YYYY-MM-DD` format in TIPS.md, `DD. MMM YYYY` in the display
+- [ ] English verbatim quotes in quotation marks, under 15 words
+- [ ] English description 1-3 sentences, no marketing speak
+- [ ] CHANGELOG entry added at the top of `CHANGELOG.md`
+- [ ] `index.html` is in sync with `TIPS.md` (`/regenerate-html` has been run)
 
-## Was wir NICHT akzeptieren
+## What we do NOT accept
 
-- Tipps aus privaten Quellen (geleakte Slack-Screenshots, interne Anthropic-Dokumente)
-- Tipps anderer Personen, auch wenn die mit Boris zusammen arbeiten — außer Boris hat sie explizit retweetet/endorsed
-- KI-generierte Tipps, die "klingen wie Boris" aber nicht von ihm sind
-- Eigene Best-Practices, die kein Boris-Ursprung haben (mach dafür dein eigenes Repo)
+- Tips from private sources (leaked Slack screenshots, internal Anthropic documents)
+- Tips from other people, even if they work with Boris — unless Boris has explicitly retweeted/endorsed them
+- AI-generated tips that "sound like Boris" but are not from him
+- Your own best practices that have no Boris origin (create your own repo for those)
 
-## Stil-Guide
+## Style guide
 
-- **Deutsche Prosa**, technische Begriffe (Worktree, Subagent, Hook, Slash Command) auf Englisch in *kursiv* oder code-formatiert
-- **Knapp, kein Filler**. Boris ist direkt; das Repo sollte es auch sein.
-- **Code-Snippets in Backticks**: `inline` für Befehle, ```` ``` ```` für Blocks
-- **Keine Emojis im Tipp-Text** (außer im CHANGELOG wo sie strukturierend sind)
-- **Source-Links mit `↗`-Suffix** im HTML, plain Markdown-Links in TIPS.md
+- **English prose**, technical terms (Worktree, Subagent, Hook, Slash Command) in `code` formatting where appropriate
+- **Concise, no filler.** Boris is direct; the repo should be too.
+- **Code snippets in backticks**: `inline` for commands, ```` ``` ```` for blocks
+- **No emojis in tip text** (except in the CHANGELOG where they serve a structural purpose)
+- **Source links with `↗` suffix** in HTML, plain Markdown links in TIPS.md
 
-## Mit dem Maintainer Kontakt aufnehmen
+## Contacting the maintainer
 
-Owner dieses Repos: SAKIZLI.AI (Furkan Sakizli).
+Owner of this repo: SAKIZLI.AI (Furkan Sakizli).
 
-- Issues: für Fragen, Bug-Reports, Theme-Proposals
-- Direct: über das Profil von [@sakizli](https://github.com/sakizli) auf GitHub
+- Issues: for questions, bug reports, theme proposals
+- Direct: via the profile of [@sakizli](https://github.com/sakizli) on GitHub
 
-Für inhaltliche Fragen zu Claude Code selbst: nicht dieses Repo, sondern [Anthropic Docs](https://docs.claude.com) oder [Anthropic Support](https://support.claude.com).
+For questions about Claude Code itself: not this repo, but [Anthropic Docs](https://docs.claude.com) or [Anthropic Support](https://support.claude.com).
 
 ## Code of Conduct
 
-- Sei respektvoll. Streite über Inhalte, nicht über Personen.
-- Wenn jemand einen Tipp anders interpretiert — diskutiere im PR, nicht im Subtext.
-- Englisch und Deutsch sind beide OK in Issues/PRs.
+- Be respectful. Argue about content, not about people.
+- If someone interprets a tip differently — discuss it in the PR, not in subtext.
+- English is the primary language for Issues/PRs.

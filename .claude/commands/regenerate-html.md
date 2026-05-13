@@ -4,32 +4,32 @@ description: Rebuild index.html from TIPS.md, preserving the design
 
 # /regenerate-html — Rebuild Dashboard
 
-Synchronisiert `index.html` mit `TIPS.md`. Verwende dies, nachdem `TIPS.md` durch `/add-tip`, `/scan-x` oder die Routine geändert wurde.
+Synchronizes `index.html` with `TIPS.md`. Use this after `TIPS.md` has been changed by `/add-tip`, `/scan-x`, or the routine.
 
 ## Workflow
 
-### Schritt 1 — TIPS.md parsen
-Lies TIPS.md. Extrahiere:
-- Alle 21 Theme-Sections (`## NN — Theme Name`)
-- Alle Tipps pro Theme: ID, Titel, Difficulty, Date, Source-URL, Autor, Quote (optional), Beschreibung
+### Step 1 — Parse TIPS.md
+Read TIPS.md. Extract:
+- All 21 theme sections (`## NN — Theme Name`)
+- All tips per theme: ID, title, difficulty, date, source URL, author, quote (optional), description
 
-### Schritt 2 — index.html im Repo öffnen
-Lies die existierende `index.html`. Die Struktur ist:
-- `<header>` mit Stats und Meta
-- `<section class="theme-section" id="t<NN>">` für jede der 21 Themes
-- Innerhalb: `<div class="tip-grid">` mit `<article class="tip" data-diff="...">` pro Tipp
+### Step 2 — Open index.html in Repo
+Read the existing `index.html`. The structure is:
+- `<header>` with stats and meta
+- `<section class="theme-section" id="t<NN>">` for each of the 21 themes
+- Inside: `<div class="tip-grid">` with `<article class="tip" data-diff="...">` per tip
 - Timeline, Stages, Contested, Caveats, Footer
 
-**Wichtig:** Das CSS und JS am Anfang/Ende des Dokuments NICHT anfassen. Nur den `<main>`-Inhalt aktualisieren.
+**Important:** Do NOT touch the CSS and JS at the beginning/end of the document. Only update the `<main>` content.
 
-### Schritt 3 — Diff TIPS.md vs index.html
-Für jeden Tipp in TIPS.md:
-- Wenn die ID in index.html existiert → updaten (Inhalt überschreiben, Position nach ID-Reihenfolge)
-- Wenn die ID NICHT existiert → neues `<article>` ans Ende der entsprechenden Theme-Section anhängen
-- Wenn eine ID in index.html existiert, aber NICHT in TIPS.md → markiert als `[deprecated]`, NICHT löschen (Sticky IDs)
+### Step 3 — Diff TIPS.md vs index.html
+For each tip in TIPS.md:
+- If the ID exists in index.html → update (overwrite content, position by ID order)
+- If the ID does NOT exist → append new `<article>` at the end of the corresponding theme section
+- If an ID exists in index.html but NOT in TIPS.md → mark as `[deprecated]`, do NOT delete (sticky IDs)
 
-### Schritt 4 — Article-Template
-Pro Tipp ein `<article>`:
+### Step 4 — Article Template
+One `<article>` per tip:
 
 ```html
 <article class="tip" data-diff="<difficulty-lowercase>">
@@ -37,16 +37,16 @@ Pro Tipp ein `<article>`:
     <span class="tip-num"><TT.NN></span>
     <span class="diff diff-<difficulty-lowercase>"><Difficulty></span>
   </div>
-  <h3><Titel-aus-TIPS.md></h3>
-  <p><Beschreibung mit <code>inline</code> wenn Markdown-Code-Spans vorhanden.></p>
+  <h3><Title-from-TIPS.md></h3>
+  <p><Description with <code>inline</code> if Markdown code spans are present.></p>
   <div class="tip-footer">
-    <span><DD. MMM YYYY></span>
+    <span><DD Mon YYYY></span>
     <a class="tip-source" href="<URL>" target="_blank"><Source-Label> ↗</a>
   </div>
 </article>
 ```
 
-Source-Label-Mapping:
+Source label mapping:
 - x.com/* → "X-Thread ↗"
 - threadreaderapp.com/* → "X (Mirror) ↗"
 - latent.space → "Latent Space ↗"
@@ -57,51 +57,51 @@ Source-Label-Mapping:
 - docs.claude.com → "Anthropic Docs ↗"
 - threads.com → "Threads ↗"
 - howborisusesclaudecode.com → "How Boris Uses ↗"
-- AIEWF / no URL → Plain `<span>AIEWF Talk</span>` ohne Link
+- AIEWF / no URL → Plain `<span>AIEWF Talk</span>` without link
 
-### Schritt 5 — Header / Footer aktualisieren
-Im `<header>`:
-- `<span><strong>NNN+</strong> Tipps</span>` → tatsächliche `total_tips` aus YAML-Tracker
+### Step 5 — Update Header / Footer
+In `<header>`:
+- `<span><strong>NNN+</strong> Tips</span>` → actual `total_tips` from YAML tracker
 
-Im `<footer>`:
-- `NN Tipps · 21 Themen · NN Monate` → aktualisieren
-- `Last full audit: YYYY-MM-DD` → aktuelles Datum
+In `<footer>`:
+- `NN Tips · 21 Themes · NN Months` → update
+- `Last full audit: YYYY-MM-DD` → current date
 
-In den Stats-Cards: keine Änderung (Boris' eigene Stats sind statisch).
+In stats cards: no changes (Boris' own stats are static).
 
-### Schritt 6 — Validation
-Vor dem Speichern:
-- Zähle `<article class="tip">` — muss `total_tips` aus TIPS.md matchen
-- Prüfe ob alle 21 Themes vorhanden sind (`id="t1"` bis `id="t21"`)
-- Prüfe ob keine Theme-Section leer ist (nicht wahrscheinlich, aber check)
+### Step 6 — Validation
+Before saving:
+- Count `<article class="tip">` — must match `total_tips` from TIPS.md
+- Check all 21 themes are present (`id="t1"` through `id="t21"`)
+- Check no theme section is empty (unlikely, but verify)
 
-### Schritt 7 — Datei schreiben
-Schreibe die neue `index.html` an gleiche Stelle. Backup ist via git diff verfügbar.
+### Step 7 — Write File
+Write the new `index.html` to the same location. Backup is available via git diff.
 
-### Schritt 8 — Visuelle Verifikation (optional)
-Wenn der Nutzer ein Browser-MCP / Chrome-Extension hat: öffne `index.html` lokal und mache einen Screenshot. Vergleiche mit Erwartung.
+### Step 8 — Visual Verification (optional)
+If the user has a browser MCP / Chrome extension: open `index.html` locally and take a screenshot. Compare with expectation.
 
-Sonst nur kurzer Report:
+Otherwise just a brief report:
 ```
-✅ index.html regeneriert
-- N Tipps in HTML (matches TIPS.md)
-- 21 Theme-Sections
-- Header/Footer-Counts aktualisiert
-- File-Size: NNN KB
+✅ index.html regenerated
+- N tips in HTML (matches TIPS.md)
+- 21 theme sections
+- Header/footer counts updated
+- File size: NNN KB
 ```
 
-## Wichtig
+## Important
 
-- **Kein Auto-Commit.** Der Nutzer prüft das Diff selbst, dann committet.
-- **CSS/JS unangetastet.** Wenn das Design refactored werden soll, ist das ein separater Task.
-- **Sticky IDs.** Auch deprecated Tipps bleiben in index.html, nur mit `[deprecated]` Tag.
-- **Bei Schema-Drift:** Wenn TIPS.md ein unerwartetes Format hat (z.B. fehlt `**Difficulty:**`), abbrechen und melden — keine raten.
+- **No auto-commit.** The user checks the diff themselves, then commits.
+- **CSS/JS untouched.** If the design needs refactoring, that's a separate task.
+- **Sticky IDs.** Even deprecated tips stay in index.html, only with `[deprecated]` tag.
+- **On schema drift:** If TIPS.md has an unexpected format (e.g., missing `**Difficulty:**`), abort and report — don't guess.
 
-## Alternative: vollständig neu bauen
+## Alternative: Full Rebuild
 
-Wenn der Diff-Approach zu fehleranfällig wirkt (z.B. nach großem Refactoring), kannst du auch:
-1. Komplette `<main>` aus TIPS.md neu generieren
-2. CSS/JS aus alter index.html behalten
-3. Zusammenfügen
+If the diff approach seems too error-prone (e.g., after major refactoring), you can also:
+1. Generate complete `<main>` from TIPS.md from scratch
+2. Keep CSS/JS from old index.html
+3. Merge together
 
-Das ist robuster aber langsamer und produziert größere git-diffs.
+This is more robust but slower and produces larger git diffs.

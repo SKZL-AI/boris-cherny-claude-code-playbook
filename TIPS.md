@@ -8,93 +8,93 @@
 
 ---
 
-## 01 — Parallele Ausführung
+## 01 — Parallel Execution
 
-### #01.01 — 5 Claudes in parallelen Terminal-Tabs
-- **Difficulty:** Intermediate
-- **Date:** 2026-01-02 (`02. Jan 2026`)
-- **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
-- **Author:** @bcherny
-
-Tabs durchnummeriert 1–5. iTerm2 zeigt System-Notifications, sobald ein Claude Input braucht. Damit nie auf einen einzelnen Prozess warten.
-
-### #01.02 — 5–10 weitere Claudes auf claude.ai/code
+### #01.01 — 5 Claudes in Parallel Terminal Tabs
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-02
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 
-Übergabe local↔web mit `&` oder `--teleport`. Boris startet Sessions morgens schon aus der iOS-App.
+Tabs numbered 1–5. iTerm2 shows system notifications whenever a Claude needs input. Never wait on a single process.
 
-### #01.03 — 3–5 git worktrees, ein Claude pro worktree
+### #01.02 — 5–10 More Claudes on claude.ai/code
+- **Difficulty:** Intermediate
+- **Date:** 2026-01-02
+- **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
+- **Author:** @bcherny
+
+Hand off between local and web with `&` or `--teleport`. Boris starts sessions in the morning from the iOS app.
+
+### #01.03 — 3–5 Git Worktrees, One Claude per Worktree
 - **Difficulty:** Advanced
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 - **Quote:** "The single biggest productivity unlock"
 
-Team-Mitglieder nutzen Shell-Aliase `za, zb, zc` zum Springen. Manche haben einen dedizierten "Analysis-Worktree" für Logs/BigQuery. Boris persönlich nutzt stattdessen mehrere Checkouts.
+Team members use shell aliases `za, zb, zc` to jump between worktrees. Some have a dedicated "Analysis Worktree" for logs/BigQuery. Boris personally uses multiple checkouts instead.
 
-### #01.04 — `claude --worktree` (oder `-w`)
+### #01.04 — `claude --worktree` (or `-w`)
 - **Difficulty:** Intermediate
 - **Date:** 2026-02-20
 - **Source:** [X-Thread](https://x.com/bcherny/status/2025007393290272904)
 - **Author:** @bcherny
 
-Eingebaute Worktree-Isolation. Worktree benennen oder Claude benennen lassen. Mit `--tmux` startet alles in einer tmux-Session.
+Built-in worktree isolation. Name the worktree yourself or let Claude name it. With `--tmux` everything starts in a tmux session.
 
-### #01.05 — Worktree-Mode in der Desktop-App
+### #01.05 — Worktree Mode in the Desktop App
 - **Difficulty:** Beginner
 - **Date:** 2026-02-20
 - **Source:** [X-Thread](https://x.com/bcherny/status/2025007393290272904)
 - **Author:** @bcherny
 
-Code-Tab → Checkbox "worktree" aktivieren. Kein Terminal nötig.
+Code tab → enable "worktree" checkbox. No terminal needed.
 
-### #01.06 — Subagents mit Worktree-Isolation
+### #01.06 — Subagents with Worktree Isolation
 - **Difficulty:** Advanced
 - **Date:** 2026-02-20
 - **Source:** [X-Thread](https://x.com/bcherny/status/2025007393290272904)
 - **Author:** @bcherny
 
-Claude anweisen: "use worktrees for its agents". Stark für große batched Changes und Migrationen.
+Tell Claude: "use worktrees for its agents". Great for large batched changes and migrations.
 
-### #01.07 — `isolation: worktree` im Agent-Frontmatter
+### #01.07 — `isolation: worktree` in Agent Frontmatter
 - **Difficulty:** Advanced
 - **Date:** 2026-02-20
 - **Source:** [X-Thread](https://x.com/bcherny/status/2025007393290272904)
 - **Author:** @bcherny
 
-Custom-Subagent dauerhaft in eigenem Worktree laufen lassen. Setzen im YAML-Frontmatter der Agent-Definition.
+Run a custom subagent permanently in its own worktree. Set in the YAML frontmatter of the agent definition.
 
-### #01.08 — Non-git VCS via WorktreeCreate-Hook
+### #01.08 — Non-Git VCS via WorktreeCreate Hook
 - **Difficulty:** Advanced
 - **Date:** 2026-02-20
 - **Source:** [X-Thread](https://x.com/bcherny/status/2025007393290272904)
 - **Author:** @bcherny
 
-Mercurial, Perforce, SVN, Jujutsu: eigene `WorktreeCreate`- und `WorktreeRemove`-Hooks definieren.
+Mercurial, Perforce, SVN, Jujutsu: define custom `WorktreeCreate` and `WorktreeRemove` hooks.
 
-### #01.09 — Dutzende Claudes via Worktrees
+### #01.09 — Dozens of Claudes via Worktrees
 - **Difficulty:** Advanced
 - **Date:** 2026-03-29
 - **Source:** [X-Thread](https://x.com/bcherny/status/2038454336355999749)
 - **Author:** @bcherny
 - **Quote:** "I have dozens of Claudes running at all times"
 
-Skaliert ab dem Punkt, an dem du dich allein durchs Tab-Switching aufhältst.
+Scales from the point where tab-switching alone slows you down.
 
 ---
 
 ## 02 — Plan Mode
 
-### #02.01 — Jeden komplexen Task im Plan-Mode starten
+### #02.01 — Start Every Complex Task in Plan Mode
 - **Difficulty:** Beginner
 - **Date:** 2026-01-02
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 
-Shift+Tab zweimal. Plan mit Claude iterieren, dann auf Auto-Accept-Edits umschalten. Claude one-shottet meistens, wenn der Plan gut ist.
+Shift+Tab twice. Iterate the plan with Claude, then switch to auto-accept edits. Claude one-shots most of the time if the plan is good.
 
 ### #02.02 — "A good plan is really important"
 - **Difficulty:** Beginner
@@ -103,77 +103,77 @@ Shift+Tab zweimal. Plan mit Claude iterieren, dann auf Auto-Accept-Edits umschal
 - **Author:** @bcherny
 - **Quote:** "A good plan is really important"
 
-Denken in den Plan vorverlegen — Implementierung folgt fast immer one-shot. Front-loading reduziert Kontext-Verbrauch über die ganze Session.
+Front-load thinking into the plan — implementation almost always follows in one shot. Reduces context consumption across the entire session.
 
-### #02.03 — Bei Problemen neu planen statt drücken
+### #02.03 — Re-plan Instead of Pushing Through Problems
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 - **Quote:** "Don't keep pushing. Switch back to plan mode and re-plan"
 
-Wenn etwas schief läuft, frischen Kontext erzwingen.
+When something goes wrong, force a fresh context.
 
-### #02.04 — Zweiten Claude als "Staff Engineer" reviewen lassen
+### #02.04 — Have a Second Claude Review as "Staff Engineer"
 - **Difficulty:** Advanced
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 
-Claude A schreibt Plan, Claude B reviewed ihn mit frischem Kontext — wie ein Senior-Review vor dem Coden.
+Claude A writes the plan, Claude B reviews it with fresh context — like a senior review before coding.
 
-### #02.05 — Plan-Mode auch für Verifikations-Schritte
+### #02.05 — Use Plan Mode for Verification Steps Too
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 
-Nicht nur die Implementierung planen — auch "wie verifiziere ich, dass es funktioniert" gehört in den Plan.
+Don't just plan the implementation — also plan "how do I verify this works."
 
-### #02.06 — Automatische Session-Namen nach Plan-Mode
+### #02.06 — Automatic Session Names After Plan Mode
 - **Difficulty:** Beginner
 - **Date:** 2026-03-13
 - **Source:** [X-Thread](https://x.com/bcherny/status/2032632596572811575)
 - **Author:** @bcherny
 
-Claude leitet aus der Plan-Konversation einen sprechenden Session-Namen ab. Wiedererkennbar in Parallel-Setups.
+Claude derives a descriptive session name from the plan conversation. Recognizable in parallel setups.
 
 ---
 
 ## 03 — CLAUDE.md
 
-### #03.01 — Eine team-geteilte CLAUDE.md, in git eingecheckt
+### #03.01 — A Team-Shared CLAUDE.md, Checked into Git
 - **Difficulty:** Beginner
 - **Date:** 2026-01-02
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 
-Team trägt mehrfach pro Woche bei. Wird zur lebenden Doku der Codebase.
+The team contributes several times per week. Becomes a living documentation of the codebase.
 
-### #03.02 — Regel hinzufügen, sobald Claude einen Fehler macht
+### #03.02 — Add a Rule Whenever Claude Makes a Mistake
 - **Difficulty:** Beginner
 - **Date:** 2026-01-02
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 - **Quote:** "Anytime we see Claude do something incorrectly we add it to the CLAUDE.md"
 
-Compounding-Engineering im Kern.
+Core of compounding engineering.
 
-### #03.03 — Jedes Team pflegt seine eigene CLAUDE.md
+### #03.03 — Every Team Maintains Its Own CLAUDE.md
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-02
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 
-Cross-Team-CLAUDE.md-Ownership liegt bei jedem einzelnen Team. Lokales Wissen bleibt lokal.
+Cross-team CLAUDE.md ownership lies with each individual team. Local knowledge stays local.
 
-### #03.04 — @.claude in PR-Kommentaren taggen
+### #03.04 — Tag @.claude in PR Comments
 - **Difficulty:** Advanced
 - **Date:** 2026-01-02
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 
-Boris' Version von Dan Shippers "Compounding Engineering". Installiert via `/install-github-action`.
+Boris' version of Dan Shipper's "Compounding Engineering". Installed via `/install-github-action`.
 
 ### #03.05 — "Update your CLAUDE.md so you don't make that mistake again"
 - **Difficulty:** Beginner
@@ -182,48 +182,48 @@ Boris' Version von Dan Shippers "Compounding Engineering". Installiert via `/ins
 - **Author:** @bcherny
 - **Quote:** "Update your CLAUDE.md so you don't make that mistake again"
 
-End-of-Correction-Prompt: lässt Claude die Regel für sich selbst schreiben.
+End-of-correction prompt: lets Claude write the rule for itself.
 
-### #03.06 — CLAUDE.md gnadenlos kürzen über die Zeit
+### #03.06 — Ruthlessly Trim CLAUDE.md Over Time
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 
-"Keep iterating until Claude's mistake rate measurably drops." Pruning ist genauso wichtig wie Hinzufügen.
+"Keep iterating until Claude's mistake rate measurably drops." Pruning is just as important as adding.
 
-### #03.07 — Notes-Verzeichnis pro Task, von CLAUDE.md referenziert
+### #03.07 — Notes Directory per Task, Referenced from CLAUDE.md
 - **Difficulty:** Advanced
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 
-Ein Engineer pflegt ein Notes-Verzeichnis pro Task, wird nach jedem PR aktualisiert. CLAUDE.md verweist darauf.
+One engineer maintains a notes directory per task, updated after every PR. CLAUDE.md references it.
 
-### #03.08 — CLAUDE.md-Varianten je nach Scope
+### #03.08 — CLAUDE.md Variants by Scope
 - **Difficulty:** Intermediate
 - **Date:** 2025-06-15
 - **Source:** AIEWF Talk 2025
 - **Author:** @bcherny
 
-`CLAUDE.md` (Projekt, in git), `CLAUDE.local.md` (gitignored, persönlich), `~/.claude/CLAUDE.md` (global), per Unterordner `a/b/CLAUDE.md` für Monorepos.
+`CLAUDE.md` (project, in git), `CLAUDE.local.md` (gitignored, personal), `~/.claude/CLAUDE.md` (global), per-subfolder `a/b/CLAUDE.md` for monorepos.
 
-### #03.09 — Memory ist nur eine Markdown-Datei
+### #03.09 — Memory Is Just a Markdown File
 - **Difficulty:** Beginner
 - **Date:** 2025-05-07
 - **Source:** [Latent Space Podcast](https://www.latent.space/p/claude-code)
 - **Author:** @bcherny
 - **Quote:** "It's a file that has some stuff. And it's auto-read into context"
 
-Simpler als jeder Vector-Store.
+Simpler than any vector store.
 
-### #03.10 — `#` voranstellen zum Merken
+### #03.10 — Prepend `#` to Remember Something
 - **Difficulty:** Beginner
 - **Date:** 2025-06-15
 - **Source:** AIEWF Talk 2025
 - **Author:** @bcherny
 
-"Add to Claude's memory by prepending # to something you want Claude Code to remember." Claude fragt nach Memory-Location (Projekt/User).
+"Add to Claude's memory by prepending # to something you want Claude Code to remember." Claude asks about memory location (project/user).
 
 ### #03.11 — Auto-Memory + Auto-Dream
 - **Difficulty:** Advanced
@@ -231,29 +231,29 @@ Simpler als jeder Vector-Store.
 - **Source:** [X (RT)](https://x.com/bcherny/status/2036959638646866021)
 - **Author:** @thariq (RT @bcherny)
 
-Auto-Memory speichert Preferences/Korrekturen automatisch. Auto-Dream ist ein Subagent, der past Sessions periodisch reviewt und konsolidiert (REM-Sleep-Metapher).
+Auto-Memory saves preferences/corrections automatically. Auto-Dream is a subagent that periodically reviews and consolidates past sessions (REM sleep metaphor).
 
 ---
 
 ## 04 — Slash Commands
 
-### #04.01 — Slash Commands für jeden Inner-Loop-Workflow
+### #04.01 — Slash Commands for Every Inner-Loop Workflow
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-02
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 
-Stored in `.claude/commands/`, in git eingecheckt. Claude selbst kann sie auch nutzen.
+Stored in `.claude/commands/`, checked into git. Claude itself can use them too.
 
-### #04.02 — `/commit-push-pr` dutzendfach pro Tag
+### #04.02 — `/commit-push-pr` Dozens of Times per Day
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-02
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 
-Inline-Bash für vorab-berechneten `git status` — vermeidet Model-Hin-und-Her.
+Inline bash for pre-computed `git status` — avoids model back-and-forth.
 
-### #04.03 — `/feature-dev` als Schritt-für-Schritt-Guide
+### #04.03 — `/feature-dev` as a Step-by-Step Guide
 - **Difficulty:** Intermediate
 - **Date:** 2025-11-15
 - **Source:** [AI & I Podcast](https://every.to/podcast/how-to-use-claude-code-like-the-people-who-built-it)
@@ -261,54 +261,54 @@ Inline-Bash für vorab-berechneten `git status` — vermeidet Model-Hin-und-Her.
 
 "First ask me what exactly I want, build the specification, build a detailed plan, then a to-do list, walk through step-by-step."
 
-### #04.04 — `/commit` — der grundlegendste Command
+### #04.04 — `/commit` — The Most Basic Command
 - **Difficulty:** Beginner
 - **Date:** 2025-11-15
 - **Source:** [AI & I Podcast](https://every.to/podcast/how-to-use-claude-code-like-the-people-who-built-it)
 - **Author:** @bcherny
 
-Meist-genutztes Slash-Command bei Anthropic. Auto-runs save+push ohne Permission-Prompts.
+Most-used slash command at Anthropic. Auto-runs save+push without permission prompts.
 
-### #04.05 — `/code-review` auf jedem PR
+### #04.05 — `/code-review` on Every PR
 - **Difficulty:** Intermediate
 - **Date:** 2025-11-15
 - **Source:** [AI & I Podcast](https://every.to/podcast/how-to-use-claude-code-like-the-people-who-built-it)
 - **Author:** @bcherny
 
-Mensch approved den Merge, Claude macht den ersten Sweep. Standard im Anthropic-Team.
+Human approves the merge, Claude does the first sweep. Standard in the Anthropic team.
 
-### #04.06 — Slash Commands sind Prompts, keine Tools
+### #04.06 — Slash Commands Are Prompts, Not Tools
 - **Difficulty:** Intermediate
 - **Date:** 2025-05-07
 - **Source:** [Latent Space](https://www.latent.space/p/claude-code)
 - **Author:** @bcherny
 - **Quote:** "Slash commands are actually just like prompts"
 
-Wichtig fürs mentale Modell.
+Important for the mental model.
 
-### #04.07 — Lokale Commands vor MCP für simple Cases
+### #04.07 — Local Commands Before MCP for Simple Cases
 - **Difficulty:** Intermediate
 - **Date:** 2025-05-07
 - **Source:** [Latent Space](https://www.latent.space/p/claude-code)
 - **Author:** @bcherny
 
-"If you just want something really simple and local… just use local commands for that." MCP nur, wenn nötig.
+"If you just want something really simple and local… just use local commands for that." Use MCP only when needed.
 
-### #04.08 — `/init` generiert Starter-CLAUDE.md
+### #04.08 — `/init` Generates a Starter CLAUDE.md
 - **Difficulty:** Beginner
 - **Date:** 2025-04-18
 - **Source:** [Anthropic Blog](https://www.anthropic.com/engineering/claude-code-best-practices)
 - **Author:** @bcherny
 
-Analysiert Codebase, erkennt Build-Systeme, Tests, Code-Patterns. Erster Schritt in neuem Projekt.
+Analyzes the codebase, detects build systems, tests, code patterns. First step in any new project.
 
-### #04.09 — `/techdebt` findet duplizierten Code
+### #04.09 — `/techdebt` Finds Duplicated Code
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 
-Am Ende jeder Session laufen lassen. Community-Liebling unter den Custom-Commands.
+Run at the end of every session. Community favorite among custom commands.
 
 ### #04.10 — Context-Dump Slash Command
 - **Difficulty:** Advanced
@@ -316,48 +316,48 @@ Am Ende jeder Session laufen lassen. Community-Liebling unter den Custom-Command
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 
-Synct 7 Tage Slack + GDrive + Asana + GitHub in einen Prompt.
+Syncs 7 days of Slack + GDrive + Asana + GitHub into one prompt.
 
-### #04.11 — `/simplify` (built-in skill)
+### #04.11 — `/simplify` (Built-In Skill)
 - **Difficulty:** Intermediate
 - **Date:** 2026-02-27
 - **Source:** [X-Thread](https://x.com/bcherny/status/2027534984534544489)
 - **Author:** @bcherny
 
-Parallele Agents verbessern Code-Qualität und erzwingen CLAUDE.md-Compliance. Usage: "make this change then run /simplify".
+Parallel agents improve code quality and enforce CLAUDE.md compliance. Usage: "make this change then run /simplify".
 
-### #04.12 — `/batch` (built-in skill)
+### #04.12 — `/batch` (Built-In Skill)
 - **Difficulty:** Advanced
 - **Date:** 2026-02-27
 - **Source:** [X-Thread](https://x.com/bcherny/status/2027534984534544489)
 - **Author:** @bcherny
 
-Interviewt dich, fächert dann zu dutzenden/hunderten/tausenden Worktree-Agents auf. Beispiel: "/batch migrate src/ from Solid to React".
+Interviews you, then fans out to dozens/hundreds/thousands of worktree agents. Example: "/batch migrate src/ from Solid to React".
 
-### #04.13 — `/loop` für wiederkehrende lokale Tasks (bis 3 Tage)
+### #04.13 — `/loop` for Recurring Local Tasks (Up to 3 Days)
 - **Difficulty:** Advanced
 - **Date:** 2026-03-07
 - **Source:** [X-Thread](https://x.com/bcherny/status/2030193932404150413)
 - **Author:** @bcherny
 
-Boris' Setup: `/loop 5m /babysit`, `/loop 30m /slack-feedback`, `/loop /post-merge-sweeper`, `/loop 1h /pr-pruner`.
+Boris' setup: `/loop 5m /babysit`, `/loop 30m /slack-feedback`, `/loop /post-merge-sweeper`, `/loop 1h /pr-pruner`.
 
-### #04.14 — `/schedule` für Cloud-basierte Recurring Jobs
+### #04.14 — `/schedule` for Cloud-Based Recurring Jobs
 - **Difficulty:** Advanced
 - **Date:** 2026-03-23
 - **Source:** [X (RT)](https://x.com/bcherny/status/2036555259997462541)
 - **Author:** @noah-z (RT @bcherny)
 
-Überlebt einen geschlossenen Laptop. Anthropic-Team nutzt es für auto CI-failure-resolution, Docs-Updates.
+Survives a closed laptop. The Anthropic team uses it for auto CI-failure-resolution, docs updates.
 
-### #04.15 — `/btw` für Side-Chain-Conversations
+### #04.15 — `/btw` for Side-Chain Conversations
 - **Difficulty:** Beginner
 - **Date:** 2026-03-10
 - **Source:** [X-Thread](https://x.com/bcherny/status/2031506296697131352)
 - **Author:** @bcherny
 - **Quote:** "I use this all the time to answer quick questions while the agent works"
 
-Single-Turn, keine Tool-Calls, voller Kontext. Von Erik Schluntz als Side-Project gebaut.
+Single-turn, no tool calls, full context. Built by Erik Schluntz as a side project.
 
 ### #04.16 — `/branch` + `--resume <id> --fork-session`
 - **Difficulty:** Intermediate
@@ -365,15 +365,15 @@ Single-Turn, keine Tool-Calls, voller Kontext. Von Erik Schluntz als Side-Projec
 - **Source:** [X-Thread](https://x.com/bcherny/status/2038454336355999749)
 - **Author:** @bcherny
 
-Existierende Session in eine branched Conversation forken. Spart Re-Kontextualisierung.
+Fork an existing session into a branched conversation. Saves re-contextualization.
 
-### #04.17 — `/effort` setzt Reasoning-Level
+### #04.17 — `/effort` Sets Reasoning Level
 - **Difficulty:** Intermediate
 - **Date:** 2026-03-13
 - **Source:** [X-Thread](https://x.com/bcherny/status/2032632596572811575)
 - **Author:** @bcherny
 
-low / medium / high / xhigh / max. Boris nutzt xhigh für die meisten Tasks, max für die härtesten. Max gilt nur für die aktuelle Session, andere Levels sind sticky.
+low / medium / high / xhigh / max. Boris uses xhigh for most tasks, max for the hardest ones. Max applies only to the current session; other levels are sticky.
 
 ### #04.18 — `/focus` Mode (CLI)
 - **Difficulty:** Intermediate
@@ -382,7 +382,7 @@ low / medium / high / xhigh / max. Boris nutzt xhigh für die meisten Tasks, max
 - **Author:** @bcherny
 - **Quote:** "I generally trust the model to run the right commands and edits"
 
-Versteckt Zwischenarbeit, zeigt nur Endresultat.
+Hides intermediate work, shows only the final result.
 
 ### #04.19 — `/go` — Composite Skill
 - **Difficulty:** Advanced
@@ -391,7 +391,7 @@ Versteckt Zwischenarbeit, zeigt nur Endresultat.
 - **Author:** @bcherny
 - **Quote:** "Many of my prompts look like 'Claude do blah blah /go'"
 
-Claude testet end-to-end (Bash, Browser oder Computer Use) → führt `/simplify` aus → öffnet einen PR.
+Claude tests end-to-end (Bash, Browser, or Computer Use) → runs `/simplify` → opens a PR.
 
 ### #04.20 — `/fewer-permission-prompts` Skill
 - **Difficulty:** Intermediate
@@ -399,24 +399,24 @@ Claude testet end-to-end (Bash, Browser oder Computer Use) → führt `/simplify
 - **Source:** [X-Thread](https://x.com/bcherny/status/2044847848035156457)
 - **Author:** @bcherny
 
-Scannt Session-History nach safe-but-prompted Commands; empfiehlt Allowlist-Erweiterung.
+Scans session history for safe-but-prompted commands; recommends allowlist expansion.
 
-### #04.21 — `/voice` aktiviert Voice-Dictation
+### #04.21 — `/voice` Activates Voice Dictation
 - **Difficulty:** Beginner
 - **Date:** 2026-03-29
 - **Source:** [X-Thread](https://x.com/bcherny/status/2038454336355999749)
 - **Author:** @bcherny
 - **Quote:** "I do most of my coding by speaking to Claude, rather than typing"
 
-Space-Bar im CLI halten, Voice-Button im Desktop, iOS-Dictation.
+Hold spacebar in CLI, voice button in Desktop, iOS dictation.
 
-### #04.22 — `/color` zum Color-Coden von Sessions
+### #04.22 — `/color` for Color-Coding Sessions
 - **Difficulty:** Beginner
 - **Date:** 2026-03-13
 - **Source:** [X-Thread](https://x.com/bcherny/status/2032632602629386348)
 - **Author:** @bcherny
 
-Leichter, parallele Sessions auseinanderzuhalten.
+Makes it easier to tell parallel sessions apart.
 
 ### #04.23 — `/statusline`
 - **Difficulty:** Intermediate
@@ -424,7 +424,7 @@ Leichter, parallele Sessions auseinanderzuhalten.
 - **Source:** [X-Thread](https://x.com/bcherny/status/2021700784019452195)
 - **Author:** @bcherny
 
-Zeigt Context-%, Git-Branch, Model, Cost. Jeder im Team hat seine eigene Statusline.
+Shows context %, git branch, model, cost. Everyone on the team has their own statusline.
 
 ### #04.24 — `/keybindings`
 - **Difficulty:** Advanced
@@ -432,47 +432,47 @@ Zeigt Context-%, Git-Branch, Model, Cost. Jeder im Team hat seine eigene Statusl
 - **Source:** [X-Thread](https://x.com/bcherny/status/2021700883873165435)
 - **Author:** @bcherny
 
-Jedes Key-Binding ist customizable, Settings live-reload. Stored in `~/.claude/keybindings.json`.
+Every keybinding is customizable, settings live-reload. Stored in `~/.claude/keybindings.json`.
 
-### #04.25 — `/sandbox` für Open-Source-Sandbox
+### #04.25 — `/sandbox` for Open-Source Sandbox
 - **Difficulty:** Advanced
 - **Date:** 2026-02-11
 - **Source:** [X-Thread](https://x.com/bcherny/status/2021700506465579443)
 - **Author:** @bcherny
 
-File- und Network-Isolation. Modi: BashTool auto-allow, BashTool mit Prompts, off.
+File and network isolation. Modes: BashTool auto-allow, BashTool with prompts, off.
 
-### #04.26 — `/plugin` zum Marketplace-Browsen
+### #04.26 — `/plugin` for Marketplace Browsing
 - **Difficulty:** Intermediate
 - **Date:** 2026-02-11
 - **Source:** [X-Thread](https://x.com/bcherny/status/2021699862522364149)
 - **Author:** @bcherny
 
-LSPs, MCPs, Skills, Agents, Hooks. Companies können eigenen Marketplace hosten.
+LSPs, MCPs, Skills, Agents, Hooks. Companies can host their own marketplace.
 
-### #04.27 — `/agents` zum Erstellen von Custom Agents
+### #04.27 — `/agents` for Creating Custom Agents
 - **Difficulty:** Intermediate
 - **Date:** 2026-02-11
 - **Source:** [X-Thread](https://x.com/bcherny/status/2021700144039903699)
 - **Author:** @bcherny
 
-Markdown-Dateien in `.claude/agents/` ablegen. Frontmatter konfiguriert Tools/Model/System-Prompt.
+Markdown files in `.claude/agents/`. Frontmatter configures tools/model/system prompt.
 
-### #04.28 — `/terminal-setup` für Shift+Enter Newlines
+### #04.28 — `/terminal-setup` for Shift+Enter Newlines
 - **Difficulty:** Beginner
 - **Date:** 2026-02-11
 - **Source:** [X-Thread](https://x.com/bcherny/status/2021699859359883608)
 - **Author:** @bcherny
 
-Für IDE-Terminal, Apple Terminal, Warp, Alacritty.
+For IDE terminal, Apple Terminal, Warp, Alacritty.
 
-### #04.29 — `/vim` für Vim-Mode-Editing
+### #04.29 — `/vim` for Vim-Mode Editing
 - **Difficulty:** Beginner
 - **Date:** 2026-02-11
 - **Source:** [X-Thread](https://x.com/bcherny/status/2021699859359883608)
 - **Author:** @bcherny
 
-Ein-Zeilen-Setup. Für Vim-User selbstverständlich.
+One-line setup. Self-explanatory for Vim users.
 
 ### #04.30 — `/teleport`
 - **Difficulty:** Intermediate
@@ -480,7 +480,7 @@ Ein-Zeilen-Setup. Für Vim-User selbstverständlich.
 - **Source:** [X-Thread](https://x.com/bcherny/status/2038454336355999749)
 - **Author:** @bcherny
 
-Holt eine Cloud-Session runter ins lokale Terminal (`claude --teleport`).
+Pulls a cloud session down to your local terminal (`claude --teleport`).
 
 ### #04.31 — `/remote-control`
 - **Difficulty:** Intermediate
@@ -488,43 +488,43 @@ Holt eine Cloud-Session runter ins lokale Terminal (`claude --teleport`).
 - **Source:** [X-Thread](https://x.com/bcherny/status/2038454336355999749)
 - **Author:** @bcherny
 
-Steuert eine lokale Session von jedem Device aus. Boris hat "Enable Remote Control for all sessions" in `/config`.
+Controls a local session from any device. Boris has "Enable Remote Control for all sessions" in `/config`.
 
-### #04.32 — `/compact <hint>` statt `/clear` mid-task
+### #04.32 — `/compact <hint>` Instead of `/clear` Mid-Task
 - **Difficulty:** Intermediate
 - **Date:** 2026-04-15
 - **Source:** [X (RT Thariq)](https://x.com/bcherny/status/2044548257058328723)
 - **Author:** @thariq (RT @bcherny)
 
-`/compact` ist lossy LLM-Summary, hält Momentum. `/clear` + Briefing ist hand-geschriebener Kontext. Regel: neuer Task = clear, related = compact.
+`/compact` is a lossy LLM summary that maintains momentum. `/clear` + briefing is hand-written context. Rule: new task = clear, related = compact.
 
-### #04.33 — `/rewind` (oder double-Esc) statt Korrektur
+### #04.33 — `/rewind` (or Double-Esc) Instead of Correction
 - **Difficulty:** Intermediate
 - **Date:** 2026-04-15
 - **Source:** [X (RT Thariq)](https://x.com/bcherny/status/2044548257058328723)
 - **Author:** @thariq (RT @bcherny)
 
-Kontext nicht mit failed attempts + Korrekturen verschmutzen — rewind und re-prompten mit dem Gelernten.
+Don't pollute context with failed attempts + corrections — rewind and re-prompt with what you learned.
 
-### #04.34 — "Summarize from here" vor dem Rewind
+### #04.34 — "Summarize from here" Before Rewind
 - **Difficulty:** Advanced
 - **Date:** 2026-04-15
 - **Source:** [X (RT Thariq)](https://x.com/bcherny/status/2044548257058328723)
 - **Author:** @thariq (RT @bcherny)
 
-Claude eine Handoff-Message an sein zukünftiges Selbst schreiben lassen. Maximiert kontinuierliches Lernen über Rewinds hinweg.
+Have Claude write a handoff message to its future self. Maximizes continuous learning across rewinds.
 
 ---
 
 ## 05 — Subagents
 
-### #05.01 — Subagents = Automation für PR-Workflows
+### #05.01 — Subagents = Automation for PR Workflows
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-02
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 
-Stored in `.claude/agents/`. Wiederverwendbar im Team.
+Stored in `.claude/agents/`. Reusable across the team.
 
 ### #05.02 — `code-simplifier` Agent
 - **Difficulty:** Intermediate
@@ -532,7 +532,7 @@ Stored in `.claude/agents/`. Wiederverwendbar im Team.
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 
-Cleant Code nach Claude's Arbeit. Boris' Standard nach jeder Implementierung.
+Cleans up code after Claude's work. Boris' standard after every implementation.
 
 ### #05.03 — `verify-app` Agent
 - **Difficulty:** Intermediate
@@ -540,55 +540,55 @@ Cleant Code nach Claude's Arbeit. Boris' Standard nach jeder Implementierung.
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 
-Detaillierte Instruktionen für End-to-End-Testing. Verifikationsschritt als wiederverwendbarer Baustein.
+Detailed instructions for end-to-end testing. Verification step as a reusable building block.
 
-### #05.04 — "use subagents" anhängen für mehr Compute
+### #05.04 — Append "use subagents" for More Compute
 - **Difficulty:** Beginner
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 
-Ein-Wort-Eskalation an jeden Prompt. Wirft mehr Compute auf das Problem.
+One-word escalation on any prompt. Throws more compute at the problem.
 
-### #05.05 — Tasks an Subagents auslagern für sauberen Hauptkontext
+### #05.05 — Offload Tasks to Subagents to Keep Main Context Clean
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 
-Hält das Window für wichtige Arbeit frei. Recherche-Heavy-Aufgaben sind perfekt dafür.
+Keeps the window free for important work. Research-heavy tasks are perfect for this.
 
-### #05.06 — 5 parallele Exploration-Agents auf neuer Codebase
+### #05.06 — 5 Parallel Exploration Agents on a New Codebase
 - **Difficulty:** Advanced
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 
-"Use 5 subagents to explore the codebase" — läuft parallel. Schnellster Weg zum Verständnis.
+"Use 5 subagents to explore the codebase" — runs in parallel. Fastest way to understand a new codebase.
 
-### #05.07 — Permission-Requests an Opus-Subagent via Hook
+### #05.07 — Route Permission Requests to an Opus Subagent via Hook
 - **Difficulty:** Advanced
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 
-Hook scannt auf Prompt-Injection-Attacks, auto-approved die safen. Reduziert UI-Reibung massiv.
+Hook scans for prompt-injection attacks, auto-approves the safe ones. Massively reduces UI friction.
 
-### #05.08 — Adversariales Subagent-Pattern für Code Review
+### #05.08 — Adversarial Subagent Pattern for Code Review
 - **Difficulty:** Advanced
 - **Date:** 2025-11-15
 - **Source:** [AI & I Podcast](https://every.to/podcast/how-to-use-claude-code-like-the-people-who-built-it)
 - **Author:** @bcherny
 
-Boris spawnt Subagents für Style/History/Bugs als ersten Pass — dann 5 weitere Subagents, die Löcher in die ersten Findings poken, um False Positives zu eliminieren.
+Boris spawns subagents for style/history/bugs as a first pass — then 5 more subagents that poke holes in the initial findings to eliminate false positives.
 
-### #05.09 — Subagents = unkorrelierte Kontextfenster
+### #05.09 — Subagents = Uncorrelated Context Windows
 - **Difficulty:** Advanced
 - **Date:** 2025-11-15
 - **Source:** [AI & I Podcast](https://every.to/podcast/how-to-use-claude-code-like-the-people-who-built-it)
 - **Author:** @bcherny
 
-Der Wert ist nicht Anthropomorphisierung — sondern zwei Kontextfenster, die nichts voneinander wissen.
+The value isn't anthropomorphization — it's two context windows that know nothing of each other.
 
 ### #05.10 — Custom `--agent` Flag
 - **Difficulty:** Intermediate
@@ -596,17 +596,17 @@ Der Wert ist nicht Anthropomorphisierung — sondern zwei Kontextfenster, die ni
 - **Source:** [X-Thread](https://x.com/bcherny/status/2038454336355999749)
 - **Author:** @bcherny
 
-`claude --agent=ReadOnly`. Agent .md-Frontmatter setzt Name, Color, Tools, Model, System-Prompt.
+`claude --agent=ReadOnly`. Agent .md frontmatter sets name, color, tools, model, system prompt.
 
-### #05.11 — Default-Agent setzen
+### #05.11 — Set a Default Agent
 - **Difficulty:** Advanced
 - **Date:** 2026-02-11
 - **Source:** [X-Thread](https://x.com/bcherny/status/2021700144039903699)
 - **Author:** @bcherny
 
-`"agent"`-Feld in settings.json oder `--agent`-Flag. Team-spezifische Defaults durchsetzen.
+`"agent"` field in settings.json or `--agent` flag. Enforce team-specific defaults.
 
-### #05.12 — Parallele Subagents für Plan-Research
+### #05.12 — Parallel Subagents for Plan Research
 - **Difficulty:** Advanced
 - **Date:** 2025-05-07
 - **Source:** [Latent Space](https://www.latent.space/p/claude-code)
@@ -617,13 +617,13 @@ Der Wert ist nicht Anthropomorphisierung — sondern zwei Kontextfenster, die ni
 
 ## 06 — Hooks
 
-### #06.01 — PostToolUse Hook für Auto-Formatting
+### #06.01 — PostToolUse Hook for Auto-Formatting
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-02
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 
-Matcher `"Write|Edit"`, runs `bun run format || true`. Claude formatiert ~90% korrekt, Hook fängt die 10% ab.
+Matcher `"Write|Edit"`, runs `bun run format || true`. Claude formats ~90% correctly; the hook catches the 10%.
 
 ### #06.02 — SessionStart Hook
 - **Difficulty:** Advanced
@@ -631,7 +631,7 @@ Matcher `"Write|Edit"`, runs `bun run format || true`. Claude formatiert ~90% ko
 - **Source:** [X-Thread](https://x.com/bcherny/status/2038454336355999749)
 - **Author:** @bcherny
 
-Lädt dynamisch Kontext, wann immer Claude startet.
+Dynamically loads context whenever Claude starts.
 
 ### #06.03 — PreToolUse Hook
 - **Difficulty:** Advanced
@@ -639,7 +639,7 @@ Lädt dynamisch Kontext, wann immer Claude startet.
 - **Source:** [X-Thread](https://x.com/bcherny/status/2038454336355999749)
 - **Author:** @bcherny
 
-Loggt jeden Bash-Command. Audit-Trail für sensible Repos.
+Logs every bash command. Audit trail for sensitive repos.
 
 ### #06.04 — PermissionRequest Hook
 - **Difficulty:** Advanced
@@ -647,23 +647,23 @@ Loggt jeden Bash-Command. Audit-Trail für sensible Repos.
 - **Source:** [X-Thread](https://x.com/bcherny/status/2038454336355999749)
 - **Author:** @bcherny
 
-Routet Approval-Prompts nach WhatsApp/Slack/SMS.
+Routes approval prompts to WhatsApp/Slack/SMS.
 
-### #06.05 — Stop Hook hält Claude am Laufen
+### #06.05 — Stop Hook Keeps Claude Running
 - **Difficulty:** Advanced
 - **Date:** 2026-03-29
 - **Source:** [X-Thread](https://x.com/bcherny/status/2038454336355999749)
 - **Author:** @bcherny
 
-Poke Claude, wenn er stoppt. Kann einen Agent kicken oder per Prompt entscheiden, ob weitergemacht wird.
+Pokes Claude when it stops. Can kick an agent or decide via prompt whether to continue.
 
-### #06.06 — Agent Stop Hook für lange Verifikation
+### #06.06 — Agent Stop Hook for Extended Verification
 - **Difficulty:** Advanced
 - **Date:** 2026-01-02
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 
-Deterministischer als Claude zu bitten, sich selbst zu verifizieren.
+More deterministic than asking Claude to verify itself.
 
 ### #06.07 — PostCompact Hook
 - **Difficulty:** Advanced
@@ -671,7 +671,7 @@ Deterministischer als Claude zu bitten, sich selbst zu verifizieren.
 - **Source:** [X-Thread](https://x.com/bcherny/status/2032632602629386348)
 - **Author:** @bcherny
 
-Feuert nach Kontext-Kompression. Nützlich für Re-Injection kritischer Instruktionen.
+Fires after context compression. Useful for re-injecting critical instructions.
 
 ### #06.08 — WorktreeCreate / WorktreeRemove Hooks
 - **Difficulty:** Advanced
@@ -679,43 +679,43 @@ Feuert nach Kontext-Kompression. Nützlich für Re-Injection kritischer Instrukt
 - **Source:** [X-Thread](https://x.com/bcherny/status/2025007393290272904)
 - **Author:** @bcherny
 
-Für non-git VCS. Worktree-Logik selbst definieren.
+For non-git VCS. Define worktree logic yourself.
 
-### #06.09 — Ralph-Wiggum Plugin für lange Tasks
+### #06.09 — Ralph-Wiggum Plugin for Long Tasks
 - **Difficulty:** Advanced
 - **Date:** 2026-01-02
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @geoffreyhuntley (endorsed by @bcherny)
 
-Community-Plugin für unattended Cooking. Für mehrtägige Runs.
+Community plugin for unattended cooking. For multi-day runs.
 
 ---
 
 ## 07 — Permissions & Safety
 
-### #07.01 — Kein `--dangerously-skip-permissions` für Normal-Arbeit
+### #07.01 — No `--dangerously-skip-permissions` for Regular Work
 - **Difficulty:** Beginner
 - **Date:** 2026-01-02
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 
-Stattdessen `/permissions` nutzen, um sichere Commands vorab zu allowen.
+Use `/permissions` instead to pre-allow safe commands.
 
-### #07.02 — `.claude/settings.json` mit Team teilen
+### #07.02 — Share `.claude/settings.json` with the Team
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-02
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 
-Pre-allowed Perms in git einchecken. Onboarding wird zur Ein-Befehl-Sache.
+Check pre-allowed permissions into git. Onboarding becomes a one-command affair.
 
-### #07.03 — Wildcard-Syntax für Permissions
+### #07.03 — Wildcard Syntax for Permissions
 - **Difficulty:** Intermediate
 - **Date:** 2026-02-11
 - **Source:** [X-Thread](https://x.com/bcherny/status/2021700332292911228)
 - **Author:** @bcherny
 
-`"Bash(bun run *)"`, `"Edit(/docs/**)"`. Praktisch für ganze Tool-Familien.
+`"Bash(bun run *)"`, `"Edit(/docs/**)"`. Practical for entire tool families.
 
 ### #07.04 — Auto Mode (Opus 4.7)
 - **Difficulty:** Intermediate
@@ -723,7 +723,7 @@ Pre-allowed Perms in git einchecken. Onboarding wird zur Ein-Befehl-Sache.
 - **Source:** [X-Thread](https://x.com/bcherny/status/2044847848035156457)
 - **Author:** @bcherny
 
-Model-basierter Classifier auto-approved sichere Permission-Prompts. Shift+Tab cycelt: Ask → Plan → Auto.
+Model-based classifier auto-approves safe permission prompts. Shift+Tab cycles: Ask → Plan → Auto.
 
 ### #07.05 — `--permission-mode=dontAsk` in Sandboxes
 - **Difficulty:** Advanced
@@ -731,17 +731,17 @@ Model-basierter Classifier auto-approved sichere Permission-Prompts. Shift+Tab c
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 
-Boris nutzt das nur in Sandboxes für lange Runs.
+Boris uses this only in sandboxes for long runs.
 
-### #07.06 — Open-Source-Sandbox-Runtime aktivieren
+### #07.06 — Activate the Open-Source Sandbox Runtime
 - **Difficulty:** Advanced
 - **Date:** 2026-02-11
 - **Source:** [X-Thread](https://x.com/bcherny/status/2021700506465579443)
 - **Author:** @bcherny
 
-Reduziert Prompts ohne `--dangerously-skip`.
+Reduces prompts without `--dangerously-skip`.
 
-### #07.07 — Permission-System: Innenleben
+### #07.07 — Permission System: Inner Workings
 - **Difficulty:** Intermediate
 - **Date:** 2026-02-11
 - **Source:** [X-Thread](https://x.com/bcherny/status/2021700332292911228)
@@ -750,48 +750,48 @@ Reduziert Prompts ohne `--dangerously-skip`.
 
 ---
 
-## 08 — MCP & Integrationen
+## 08 — MCP & Integrations
 
-### #08.01 — Slack MCP, eingecheckt in `.mcp.json`
+### #08.01 — Slack MCP, Checked into `.mcp.json`
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-02
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 
-Mit Team geteilt. Claude sucht und postet selbstständig.
+Shared with the team. Claude searches and posts autonomously.
 
-### #08.02 — `bq` CLI für BigQuery
+### #08.02 — `bq` CLI for BigQuery
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 - **Quote:** "I haven't written a line of SQL in 6+ months"
 
-### #08.03 — Sentry für Error-Logs
+### #08.03 — Sentry for Error Logs
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-02
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 
-Zieht Error-Logs automatisch in Claude. Bug-Triage ohne Context-Switching.
+Pulls error logs automatically into Claude. Bug triage without context switching.
 
-### #08.04 — Slack-Bug-Thread reinpasten → "fix"
+### #08.04 — Paste Slack Bug Thread → "fix"
 - **Difficulty:** Beginner
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 
-Zero Context-Switching.
+Zero context switching.
 
-### #08.05 — Claude auf Docker-Logs ansetzen
+### #08.05 — Point Claude at Docker Logs
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 
-Überraschend stark im Troubleshooting verteilter Systeme.
+Surprisingly strong at troubleshooting distributed systems.
 
-### #08.06 — Slack MCP für tägliche Summaries
+### #08.06 — Slack MCP for Daily Summaries
 - **Difficulty:** Intermediate
 - **Date:** 2026-03-07
 - **Source:** [X-Thread](https://x.com/bcherny/status/2030193932404150413)
@@ -799,76 +799,76 @@ Zero Context-Switching.
 
 `/loop every morning use the Slack MCP to give me a summary of top posts I was tagged in`.
 
-### #08.07 — iMessage als Claude-Code-Channel
+### #08.07 — iMessage as a Claude Code Channel
 - **Difficulty:** Beginner
 - **Date:** 2026-03-25
 - **Source:** [X-Thread](https://x.com/bcherny/status/2036959638646866021)
 - **Author:** @bcherny
 
-`/plugin install imessage@claude-plugins-official`. Claude von jedem Apple-Gerät via SMS texten.
+`/plugin install imessage@claude-plugins-official`. Text Claude from any Apple device via SMS.
 
 ---
 
-## 09 — Modell & Effort
+## 09 — Model & Effort
 
-### #09.01 — Opus 4.5 mit Thinking für alles
+### #09.01 — Opus 4.5 with Thinking for Everything
 - **Difficulty:** Beginner
 - **Date:** 2026-01-02
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 - **Quote:** "Almost always faster in the end"
 
-Weniger Steuerung nötig, besser im Tool-Use.
+Less steering needed, better at tool use.
 
-### #09.02 — Opus 4.6 1M als Default für Max/Team/Enterprise
+### #09.02 — Opus 4.6 1M as Default for Max/Team/Enterprise
 - **Difficulty:** Intermediate
 - **Date:** 2026-03-13
 - **Source:** [X-Thread](https://x.com/bcherny/status/2032514807388123255)
 - **Author:** @bcherny
 
-Pro/Sonnet-User opt-in via `/extra-usage`.
+Pro/Sonnet users opt in via `/extra-usage`.
 
-### #09.03 — Opus 4.7 nutzt adaptives Thinking
+### #09.03 — Opus 4.7 Uses Adaptive Thinking
 - **Difficulty:** Intermediate
 - **Date:** 2026-04-16
 - **Source:** [X-Thread](https://x.com/bcherny/status/2044847848035156457)
 - **Author:** @bcherny
 
-Modell entscheidet selbst, wann Thinking sinnvoll ist. Keine festen Budgets mehr.
+The model decides for itself when thinking is useful. No more fixed budgets.
 
-### #09.04 — "Think carefully and step-by-step" pusht Thinking
+### #09.04 — "Think carefully and step-by-step" Pushes Thinking
 - **Difficulty:** Beginner
 - **Date:** 2026-04-16
 - **Source:** [X-Thread](https://x.com/bcherny/status/2044847848035156457)
 - **Author:** @bcherny
 
-Oder "Prioritize responding quickly", um Tokens zu sparen.
+Or "Prioritize responding quickly" to save tokens.
 
-### #09.05 — Ultrathink-Triggerwörter (Legacy)
+### #09.05 — Ultrathink Trigger Words (Legacy)
 - **Difficulty:** Intermediate
 - **Date:** 2025-04-18
 - **Source:** [Anthropic Blog](https://www.anthropic.com/engineering/claude-code-best-practices)
 - **Author:** @bcherny
 
-think < think hard < think harder < ultrathink. In CC v2 ersetzt durch `/effort`, ultrathink bleibt highlighted.
+think < think hard < think harder < ultrathink. In CC v2 replaced by `/effort`; ultrathink remains highlighted.
 
-### #09.06 — Opus 4.7: kürzere Antworten, weniger Auto-Tool-Use
+### #09.06 — Opus 4.7: Shorter Responses, Less Auto-Tool-Use
 - **Difficulty:** Intermediate
 - **Date:** 2026-04-16
 - **Source:** [Anthropic Docs](https://docs.claude.com)
 - **Author:** @bcherny
 
-Wenn du Länge/Stil willst, explizit sagen. Für Refactor across 40 files: explizit Subagents anfordern.
+If you want length/style, say so explicitly. For refactoring across 40 files: explicitly request subagents.
 
-### #09.07 — 4.7's höhere Treue zu "don't nitpick"
+### #09.07 — 4.7's Higher Fidelity to "Don't Nitpick"
 - **Difficulty:** Advanced
 - **Date:** 2026-04-16
 - **Source:** [Anthropic Docs](https://docs.claude.com)
 - **Author:** @bcherny
 
-Code-Review-Harnesses für ältere Modelle sehen evtl. niedrigeren Recall — keine Regression.
+Code review harnesses for older models may see lower recall — it's not a regression.
 
-### #09.08 — Default war Sonnet, Model ist überridable
+### #09.08 — Default Was Sonnet, Model Is Overridable
 - **Difficulty:** Beginner
 - **Date:** 2025-05-07
 - **Source:** [Latent Space](https://www.latent.space/p/claude-code)
@@ -876,7 +876,7 @@ Code-Review-Harnesses für ältere Modelle sehen evtl. niedrigeren Recall — ke
 
 "We default to Sonnet for most everything… you can override the model if you want."
 
-### #09.09 — Plan/Think-Instruktionen direkt schreiben
+### #09.09 — Write Plan/Think Instructions Directly
 - **Difficulty:** Beginner
 - **Date:** 2025-05-07
 - **Source:** [Latent Space](https://www.latent.space/p/claude-code)
@@ -885,74 +885,74 @@ Code-Review-Harnesses für ältere Modelle sehen evtl. niedrigeren Recall — ke
 
 ---
 
-## 10 — Verifikation
+## 10 — Verification
 
-### #10.01 — Verifikation = 2–3× Qualität
+### #10.01 — Verification = 2–3x Quality
 - **Difficulty:** Beginner
 - **Date:** 2026-01-02
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 - **Quote:** "Will 2–3x the quality of the final result"
 
-Der wichtigste einzelne Tipp im ganzen Setup.
+The single most important tip in the entire setup.
 
-### #10.02 — Boris' claude.ai/code Change-Verifikation
+### #10.02 — Boris' claude.ai/code Change Verification
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-02
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 - **Quote:** "Claude tests every single change I land to claude.ai/code"
 
-Claude öffnet Chrome-Extension, testet jeden UI-Change, iteriert bis UX gut ist.
+Claude opens the Chrome extension, tests every UI change, iterates until the UX is good.
 
-### #10.03 — Verifikation variiert je Domain
+### #10.03 — Verification Varies by Domain
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-02
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 
-Bash, Test-Suite, Simulator, Browser, Computer-Use. Investiere in deren Robustheit.
+Bash, test suite, simulator, browser, computer use. Invest in their robustness.
 
-### #10.04 — Backend = Server/Service end-to-end laufen lassen
+### #10.04 — Backend = Run Server/Service End-to-End
 - **Difficulty:** Intermediate
 - **Date:** 2026-04-16
 - **Source:** [X-Thread](https://x.com/bcherny/status/2044847848035156457)
 - **Author:** @bcherny
 
-Stelle sicher, dass Claude deinen Service starten kann.
+Make sure Claude can start your service.
 
-### #10.05 — Frontend = Chromium-Extension
+### #10.05 — Frontend = Chromium Extension
 - **Difficulty:** Intermediate
 - **Date:** 2026-03-29
 - **Source:** [X-Thread](https://x.com/bcherny/status/2038454336355999749)
 - **Author:** @bcherny
 
-Boris nutzt sie für jeden Web-Code-Change. Zuverlässiger als andere Browser-MCPs.
+Boris uses it for every web code change. More reliable than other browser MCPs.
 
-### #10.06 — Desktop-Apps = Computer Use
+### #10.06 — Desktop Apps = Computer Use
 - **Difficulty:** Advanced
 - **Date:** 2026-03-29
 - **Source:** [X-Thread](https://x.com/bcherny/status/2038454336355999749)
 - **Author:** @bcherny
 
-Desktop-App bündelt automatic Server-Start + eingebautes Browser-Testing.
+Desktop app bundles automatic server start + built-in browser testing.
 
-### #10.07 — "Grill me on these changes"-Pattern
+### #10.07 — "Grill Me on These Changes" Pattern
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 - **Quote:** "Don't make a PR until I pass your test"
 
-### #10.08 — "Prove to me this works"
+### #10.08 — "Prove to Me This Works"
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 
-Lass Claude Verhalten zwischen main und deinem Branch diffen.
+Have Claude diff the behavior between main and your branch.
 
-### #10.09 — Nach mittelmäßigem Fix
+### #10.09 — After a Mediocre Fix
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
@@ -965,9 +965,9 @@ Lass Claude Verhalten zwischen main und deinem Branch diffen.
 - **Source:** [Latent Space](https://www.latent.space/p/claude-code)
 - **Author:** @bcherny
 
-Zeig Claude einen Mock, lass es Puppeteer nutzen zum Vergleichen und Iterieren.
+Show Claude a mock, let it use Puppeteer to compare and iterate.
 
-### #10.11 — Fehler früh erkennen
+### #10.11 — Catch Errors Early
 - **Difficulty:** Beginner
 - **Date:** 2025-05-07
 - **Source:** [Latent Space](https://www.latent.space/p/claude-code)
@@ -978,21 +978,21 @@ Zeig Claude einen Mock, lass es Puppeteer nutzen zum Vergleichen und Iterieren.
 
 ## 11 — Long-Running & Recaps
 
-### #11.01 — (a) Background-Agent zur Selbst-Verifikation
+### #11.01 — (a) Background Agent for Self-Verification
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-02
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 
-Claude prompten, Background-Agent zu spawnen wenn fertig.
+Prompt Claude to spawn a background agent when done.
 
-### #11.02 — (b) Agent Stop Hook für deterministische Verifikation
+### #11.02 — (b) Agent Stop Hook for Deterministic Verification
 - **Difficulty:** Advanced
 - **Date:** 2026-01-02
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 
-Zuverlässiger als (a). Code statt Modell trifft die Entscheidung.
+More reliable than (a). Code, not the model, makes the decision.
 
 ### #11.03 — (c) Ralph-Wiggum Plugin
 - **Difficulty:** Advanced
@@ -1000,15 +1000,15 @@ Zuverlässiger als (a). Code statt Modell trifft die Entscheidung.
 - **Source:** [X-Thread](https://x.com/bcherny/status/2007179832300581177)
 - **Author:** @bcherny
 
-Community-Pattern für sehr lange Runs.
+Community pattern for very long runs.
 
-### #11.04 — Recaps für lange Sessions
+### #11.04 — Recaps for Long Sessions
 - **Difficulty:** Beginner
 - **Date:** 2026-04-16
 - **Source:** [X-Thread](https://x.com/bcherny/status/2044847848035156457)
 - **Author:** @bcherny
 
-Kurze Summary über Done + Next. Deaktivierbar in `/config`.
+Brief summary of done + next. Disableable in `/config`.
 
 ### #11.05 — Routines (Research Preview)
 - **Difficulty:** Advanced
@@ -1016,9 +1016,9 @@ Kurze Summary über Done + Next. Deaktivierbar in `/config`.
 - **Source:** [X](https://x.com/bcherny)
 - **Author:** @bcherny
 
-Schedule-, GitHub-Event- und API-Trigger. Läuft auf Anthropic-Infra.
+Schedule, GitHub event, and API triggers. Runs on Anthropic infrastructure.
 
-### #11.06 — Cross-Session-Continuity-Workaround
+### #11.06 — Cross-Session Continuity Workaround
 - **Difficulty:** Intermediate
 - **Date:** 2025-05-07
 - **Source:** [Latent Space](https://www.latent.space/p/claude-code)
@@ -1043,16 +1043,16 @@ Schedule-, GitHub-Event- und API-Trigger. Läuft auf Anthropic-Infra.
 - **Source:** [X (Cat Wu)](https://x.com/bcherny)
 - **Author:** @catwu (endorsed by @bcherny)
 
-Goal + Constraints + Acceptance-Criteria — alle drei im ersten Turn.
+Goal + constraints + acceptance criteria — all three in the first turn.
 
-### #12.03 — Detaillierte Specs, weniger Ambiguität
+### #12.03 — Detailed Specs, Less Ambiguity
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 - **Quote:** "The more specific you are, the better the output"
 
-### #12.04 — Prototyp > PRD
+### #12.04 — Prototype > PRD
 - **Difficulty:** Advanced
 - **Date:** 2026-02-19
 - **Source:** [Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/building-claude-code-with-boris-cherny)
@@ -1060,14 +1060,14 @@ Goal + Constraints + Acceptance-Criteria — alle drei im ersten Turn.
 
 "There's just no way we could have shipped this if we started with static mocks and Figma or if we started with a PRD."
 
-### #12.05 — Nicht micromanagen, wie Claude einen Bug fixt
+### #12.05 — Don't Micromanage How Claude Fixes a Bug
 - **Difficulty:** Beginner
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 - **Quote:** "Paste the bug, say 'fix.' Don't micromanage how"
 
-### #12.06 — Prototypen statt Design-Dokumente
+### #12.06 — Prototypes Instead of Design Documents
 - **Difficulty:** Intermediate
 - **Date:** 2025-05-07
 - **Source:** [Latent Space](https://www.latent.space/p/claude-code)
@@ -1079,45 +1079,45 @@ Goal + Constraints + Acceptance-Criteria — alle drei im ersten Turn.
 
 ## 13 — Customization
 
-### #13.01 — Spinner-Verbs customizen
+### #13.01 — Customize Spinner Verbs
 - **Difficulty:** Beginner
 - **Date:** 2026-02-11
 - **Source:** [X-Thread](https://x.com/bcherny/status/2021701145023197516)
 - **Author:** @bcherny
 
-Star-Trek-themed Beispiel. settings.json in Source Control einchecken.
+Star-Trek-themed example. Check settings.json into source control.
 
-### #13.02 — Output-Styles: Explanatory / Learning / Custom
+### #13.02 — Output Styles: Explanatory / Learning / Custom
 - **Difficulty:** Intermediate
 - **Date:** 2026-02-11
 - **Source:** [X-Thread](https://x.com/bcherny/status/2021701379409273093)
 - **Author:** @bcherny
 
-Claude erklärt Frameworks; coacht dich durch Changes hindurch.
+Claude explains frameworks; coaches you through changes.
 
-### #13.03 — 37 Settings + 84 Environment-Variablen
+### #13.03 — 37 Settings + 84 Environment Variables
 - **Difficulty:** Advanced
 - **Date:** 2026-02-11
 - **Source:** [X-Thread](https://x.com/bcherny/status/2021701636075458648)
 - **Author:** @bcherny
 
-`"env"`-Feld in settings.json nutzen, um Wrapper-Scripts zu vermeiden.
+Use the `"env"` field in settings.json to avoid wrapper scripts.
 
-### #13.04 — Claude antwortet in deiner Sprache
+### #13.04 — Claude Responds in Your Language
 - **Difficulty:** Beginner
 - **Date:** 2026-01-07
 - **Source:** [X-Thread](https://x.com/bcherny/status/2009072293826453669)
 - **Author:** @bcherny
 
-Japanese, Spanish, German — beliebige Sprache konfigurierbar.
+Japanese, Spanish, German — any language is configurable.
 
-### #13.05 — settings.json in git einchecken
+### #13.05 — Check settings.json into Git
 - **Difficulty:** Intermediate
 - **Date:** 2026-02-11
 - **Source:** [X-Thread](https://x.com/bcherny/status/2021701145023197516)
 - **Author:** @bcherny
 
-Team profitiert von Customizations. Support für Enterprise-weite Policies.
+Team benefits from customizations. Support for enterprise-wide policies.
 
 ### #13.06 — NO_FLICKER Mode
 - **Difficulty:** Intermediate
@@ -1125,28 +1125,28 @@ Team profitiert von Customizations. Support für Enterprise-weite Policies.
 - **Source:** [X-Thread](https://x.com/bcherny/status/2037038538718667103)
 - **Author:** @bcherny
 
-Experimentelles Renderer: kein Flicker/Jump, Mouse-Support. `CLAUDE_CODE_NO_FLICKER=1 claude`.
+Experimental renderer: no flicker/jump, mouse support. `CLAUDE_CODE_NO_FLICKER=1 claude`.
 
 ---
 
 ## 14 — Headless / SDK
 
-### #14.01 — `claude -p` für non-interactive Mode
+### #14.01 — `claude -p` for Non-Interactive Mode
 - **Difficulty:** Intermediate
 - **Date:** 2025-05-07
 - **Source:** [Latent Space](https://www.latent.space/p/claude-code)
 - **Author:** @bcherny
 
-Prompt in Quotes übergeben. Pipeline-friendly.
+Pass prompt in quotes. Pipeline-friendly.
 
-### #14.02 — Best für read-only Tests
+### #14.02 — Best for Read-Only Tests
 - **Difficulty:** Intermediate
 - **Date:** 2025-05-07
 - **Source:** [Latent Space](https://www.latent.space/p/claude-code)
 - **Author:** @bcherny
 - **Quote:** "Where it works really well"
 
-### #14.03 — Small Start, dann skalieren
+### #14.03 — Start Small, Then Scale
 - **Difficulty:** Intermediate
 - **Date:** 2025-05-07
 - **Source:** [Latent Space](https://www.latent.space/p/claude-code)
@@ -1154,37 +1154,37 @@ Prompt in Quotes übergeben. Pipeline-friendly.
 
 "Start small… test on one test… iterate on your prompt. Then scale to 10."
 
-### #14.04 — Pre-Commit Hook mit `-p`
+### #14.04 — Pre-Commit Hook with `-p`
 - **Difficulty:** Advanced
 - **Date:** 2025-05-07
 - **Source:** [Latent Space](https://www.latent.space/p/claude-code)
 - **Author:** @bcherny
 
-"Just add a line: `claude -p` and whatever instruction you have." Unter ~5 Sek halten.
+"Just add a line: `claude -p` and whatever instruction you have." Keep under ~5 seconds.
 
-### #14.05 — `--allow-tools` zum Scopen von Permissions
+### #14.05 — `--allow-tools` to Scope Permissions
 - **Difficulty:** Advanced
 - **Date:** 2025-05-07
 - **Source:** [Latent Space](https://www.latent.space/p/claude-code)
 - **Author:** @bcherny
 
-Spezifische Tools für Batch-Operationen lockdownen.
+Lock down specific tools for batch operations.
 
-### #14.06 — `--bare` Flag für 10× SDK-Startup
+### #14.06 — `--bare` Flag for 10x SDK Startup
 - **Difficulty:** Advanced
 - **Date:** 2026-03-29
 - **Source:** [X-Thread](https://x.com/bcherny/status/2038454336355999749)
 - **Author:** @bcherny
 
-Skippt Search nach lokaler CLAUDE.md/Settings/MCPs.
+Skips search for local CLAUDE.md/settings/MCPs.
 
-### #14.07 — `--add-dir` (oder `/add-dir`)
+### #14.07 — `--add-dir` (or `/add-dir`)
 - **Difficulty:** Intermediate
 - **Date:** 2026-03-29
 - **Source:** [X-Thread](https://x.com/bcherny/status/2038454336355999749)
 - **Author:** @bcherny
 
-Gibt Claude Zugriff auf zusätzliche Repos.
+Gives Claude access to additional repos.
 
 ### #14.08 — `--name "<session>"`
 - **Difficulty:** Beginner
@@ -1192,9 +1192,9 @@ Gibt Claude Zugriff auf zusätzliche Repos.
 - **Source:** [X-Thread](https://x.com/bcherny/status/2032632602629386348)
 - **Author:** @bcherny
 
-Human-readable Session-Namen für parallele Arbeit.
+Human-readable session names for parallel work.
 
-### #14.09 — `claude` ist Unix-Utility, kein Chatbot
+### #14.09 — `claude` Is a Unix Utility, Not a Chatbot
 - **Difficulty:** Intermediate
 - **Date:** 2025-05-07
 - **Source:** [Latent Space](https://www.latent.space/p/claude-code)
@@ -1208,28 +1208,28 @@ Human-readable Session-Namen für parallele Arbeit.
 - **Source:** [Latent Space](https://www.latent.space/p/claude-code)
 - **Author:** @bcherny
 
-Für eigene CLI-Tools übertragbar.
+Transferable for building your own CLI tools.
 
 ---
 
 ## 15 — Code Review
 
-### #15.01 — Automatic PR Review durch ein Agent-Team
+### #15.01 — Automatic PR Review by an Agent Team
 - **Difficulty:** Beginner
 - **Date:** 2026-03-09
 - **Source:** [X-Thread](https://x.com/bcherny/status/2031089411820228645)
 - **Author:** @bcherny
 
-Jeder Agent fokussiert auf andere Concerns (Logic, Security, Performance), postet Inline-Kommentare.
+Each agent focuses on different concerns (logic, security, performance), posts inline comments.
 
-### #15.02 — Reviews waren der Bottleneck
+### #15.02 — Reviews Were the Bottleneck
 - **Difficulty:** Beginner
 - **Date:** 2026-03-09
 - **Source:** [X-Thread](https://x.com/bcherny/status/2031089411820228645)
 - **Author:** @bcherny
 - **Quote:** "Code output per engineer is up 200% this year"
 
-### #15.03 — Boris nutzte es wochenlang vor Launch
+### #15.03 — Boris Used It for Weeks Before Launch
 - **Difficulty:** Beginner
 - **Date:** 2026-03-09
 - **Source:** [X-Thread](https://x.com/bcherny/status/2031089411820228645)
@@ -1240,53 +1240,53 @@ Jeder Agent fokussiert auf andere Concerns (Logic, Security, Performance), poste
 
 ## 16 — Cost / ROI
 
-### #16.01 — ROI-Frage, keine Cost-Frage
+### #16.01 — It's an ROI Question, Not a Cost Question
 - **Difficulty:** Beginner
 - **Date:** 2025-05-07
 - **Source:** [Latent Space](https://www.latent.space/p/claude-code)
 - **Author:** @bcherny
 - **Quote:** "An engineer 50, 70% more productive — that's worth a lot"
 
-### #16.02 — ~$6/Tag pro aktivem User
+### #16.02 — ~$6/Day per Active User
 - **Difficulty:** Beginner
 - **Date:** 2025-05-07
 - **Source:** [Latent Space](https://www.latent.space/p/claude-code)
 - **Author:** @catwu
 
-### #16.03 — Manche Anthropic-Engineers > $1.000/Monat
+### #16.03 — Some Anthropic Engineers > $1,000/Month
 - **Difficulty:** Beginner
 - **Date:** 2025-11-15
 - **Source:** [AI & I Podcast](https://every.to/podcast/how-to-use-claude-code-like-the-people-who-built-it)
 - **Author:** @bcherny
 
-Hauptsächlich für Code-Migrationen.
+Mainly for code migrations.
 
-### #16.04 — Teams unter-funden, Tokens unlimited geben
+### #16.04 — Underfund Teams, Give Unlimited Tokens
 - **Difficulty:** Beginner
 - **Date:** 2026-02-19
 - **Source:** [Lenny's Podcast](https://www.lennysnewsletter.com/p/head-of-claude-code-what-happens)
 - **Author:** @bcherny
 - **Quote:** "Start by giving engineers as many tokens as possible"
 
-### #16.05 — 1-Stunden Prompt Cache
+### #16.05 — 1-Hour Prompt Cache
 - **Difficulty:** Advanced
 - **Date:** 2026-04-13
 - **Source:** [X-Thread](https://x.com/bcherny/status/2043715713551212834)
 - **Author:** @bcherny
 
-Massive Kosten-Reduktion für wiederholte Multi-Turn-Agent-Arbeit.
+Massive cost reduction for repeated multi-turn agent work.
 
 ---
 
-## 17 — Form-Factor & Workflow
+## 17 — Form Factor & Workflow
 
-### #17.01 — Claude Code hat eine Mobile-App
+### #17.01 — Claude Code Has a Mobile App
 - **Difficulty:** Beginner
 - **Date:** 2026-03-29
 - **Source:** [X-Thread](https://x.com/bcherny/status/2038454336355999749)
 - **Author:** @bcherny
 
-iOS und Android. Boris schreibt viel Code aus der iOS-App.
+iOS and Android. Boris writes a lot of code from the iOS app.
 
 ### #17.02 — Dispatch — Secure Remote Control
 - **Difficulty:** Advanced
@@ -1295,7 +1295,7 @@ iOS und Android. Boris schreibt viel Code aus der iOS-App.
 - **Author:** @bcherny
 - **Quote:** "When I'm not coding, I'm dispatching"
 
-Nutzt MCPs/Browser/Computer mit deinen Permissions.
+Uses MCPs/browser/computer with your permissions.
 
 ### #17.03 — VS Code / JetBrains / Cursor Extension
 - **Difficulty:** Beginner
@@ -1303,9 +1303,9 @@ Nutzt MCPs/Browser/Computer mit deinen Permissions.
 - **Source:** [Anthropic Docs](https://docs.claude.com)
 - **Author:** @bcherny
 
-Empfohlen für IDE-Nutzer: Inline-Diffs, @-Mentions, Plan-Review.
+Recommended for IDE users: inline diffs, @-mentions, plan review.
 
-### #17.04 — GitHub-App / Slack-App / Web
+### #17.04 — GitHub App / Slack App / Web
 - **Difficulty:** Beginner
 - **Date:** 2026-04-15
 - **Source:** [Threads](https://www.threads.com/@boris_cherny)
@@ -1313,15 +1313,15 @@ Empfohlen für IDE-Nutzer: Inline-Diffs, @-Mentions, Plan-Review.
 
 "Every engineer is different and you can use Claude Code the way you want."
 
-### #17.05 — 4 Modi der Claude-Code-Nutzung
+### #17.05 — 4 Modes of Using Claude Code
 - **Difficulty:** Beginner
 - **Date:** 2025-06-15
 - **Source:** AIEWF Talk 2025
 - **Author:** @bcherny
 
-Terminal / IDE-Extension / GitHub-App / SDK als Unix-Utility.
+Terminal / IDE extension / GitHub app / SDK as Unix utility.
 
-### #17.06 — Workflow zum Task anpassen
+### #17.06 — Adapt the Workflow to the Task
 - **Difficulty:** Intermediate
 - **Date:** 2025-06-15
 - **Source:** AIEWF Talk 2025
@@ -1331,36 +1331,36 @@ Terminal / IDE-Extension / GitHub-App / SDK als Unix-Utility.
 
 ---
 
-## 18 — Migration & Daten
+## 18 — Migration & Data
 
-### #18.01 — Migrationen immer zu Ende führen
+### #18.01 — Always Finish Migrations
 - **Difficulty:** Advanced
 - **Date:** 2026-02-19
 - **Source:** [Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/building-claude-code-with-boris-cherny)
 - **Author:** @bcherny
 - **Quote:** "When you start a migration, finish the migration"
 
-Partiell-migrierte Codebases verwirren Menschen und Modelle.
+Partially-migrated codebases confuse humans and models alike.
 
-### #18.02 — `/batch` ist das Migration-Tool
+### #18.02 — `/batch` Is the Migration Tool
 - **Difficulty:** Advanced
 - **Date:** 2026-02-27
 - **Source:** [X-Thread](https://x.com/bcherny/status/2027534984534544489)
 - **Author:** @bcherny
 
-Interaktiv planen, dann zu dutzenden Worktree-Agents auffächern.
+Plan interactively, then fan out to dozens of worktree agents.
 
-### #18.03 — BigQuery-Skill in Codebase einchecken
+### #18.03 — Check BigQuery Skill into Codebase
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 
-Ganzes Team nutzt es für Analytics direkt aus Claude Code.
+The whole team uses it for analytics directly from Claude Code.
 
 ---
 
-## 19 — Lernen & Onboarding
+## 19 — Learning & Onboarding
 
 ### #19.01 — Explanatory / Learning Output Style
 - **Difficulty:** Beginner
@@ -1368,74 +1368,74 @@ Ganzes Team nutzt es für Analytics direkt aus Claude Code.
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 
-Claude erklärt das *Warum* hinter Changes.
+Claude explains the *why* behind changes.
 
-### #19.02 — Visual HTML-Presentation generieren
+### #19.02 — Generate Visual HTML Presentations
 - **Difficulty:** Beginner
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 - **Quote:** "Surprisingly good slides!"
 
-### #19.03 — ASCII-Diagramme erfragen
+### #19.03 — Request ASCII Diagrams
 - **Difficulty:** Beginner
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 
-Von neuen Protokollen, Codebases, Architekturen.
+For new protocols, codebases, architectures.
 
-### #19.04 — Spaced-Repetition-Learning-Skill
+### #19.04 — Spaced-Repetition Learning Skill
 - **Difficulty:** Advanced
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 
-Du erklärst dein Verständnis, Claude stellt Follow-up-Fragen.
+You explain your understanding, Claude asks follow-up questions.
 
-### #19.05 — Onboarding-Workflow bei Anthropic
+### #19.05 — Onboarding Workflow at Anthropic
 - **Difficulty:** Beginner
 - **Date:** 2025-04-18
 - **Source:** [Anthropic Blog](https://www.anthropic.com/engineering/claude-code-best-practices)
 - **Author:** @bcherny
 
-Neue Engineers nutzen Claude Code, um Codebases zu navigieren.
+New engineers use Claude Code to navigate codebases.
 
 ---
 
 ## 20 — Context Management
 
-### #20.01 — Auto-Compact-Threshold absenken
+### #20.01 — Lower the Auto-Compact Threshold
 - **Difficulty:** Advanced
 - **Date:** 2026-04-15
 - **Source:** [X (RT Thariq)](https://x.com/bcherny/status/2044548257058328723)
 - **Author:** @thariq (RT @bcherny)
 
-`CLAUDE_CODE_AUTO_COMPACT_WINDOW=400000 claude`, um Context-Rot im 1M-Modell zu umgehen.
+`CLAUDE_CODE_AUTO_COMPACT_WINDOW=400000 claude`, to avoid context rot in the 1M model.
 
-### #20.02 — Context-Rot startet bei 300–400k Tokens
+### #20.02 — Context Rot Starts at 300–400k Tokens
 - **Difficulty:** Advanced
 - **Date:** 2026-04-15
 - **Source:** [X (RT Thariq)](https://x.com/bcherny/status/2044548257058328723)
 - **Author:** @thariq (RT @bcherny)
 
-Lass intelligenz-sensitive Sessions nicht darüber hinaus driften.
+Don't let intelligence-sensitive sessions drift beyond that.
 
-### #20.03 — "Dumb Zone" bei ~40% Kontext
+### #20.03 — "Dumb Zone" at ~40% Context
 - **Difficulty:** Advanced
 - **Date:** 2026-04-15
 - **Source:** [X (RT Thariq)](https://x.com/bcherny/status/2044548257058328723)
 - **Author:** @thariq (RT @bcherny)
 
-Newcomers: unter 40% halten. Erfahrene: unter 30%; 60% nur bei simplen Tasks.
+Newcomers: stay under 40%. Experienced users: under 30%; 60% only for simple tasks.
 
-### #20.04 — Jeder Turn ist ein Branching-Point
+### #20.04 — Every Turn Is a Branching Point
 - **Difficulty:** Advanced
 - **Date:** 2026-04-15
 - **Source:** [X (RT Thariq)](https://x.com/bcherny/status/2044548257058328723)
 - **Author:** @thariq (RT @bcherny)
 
-Pick Continue / `/rewind` / `/clear` / `/compact` / Subagent.
+Pick continue / `/rewind` / `/clear` / `/compact` / subagent.
 
 ### #20.05 — Agentic Search > RAG
 - **Difficulty:** Advanced
@@ -1443,7 +1443,7 @@ Pick Continue / `/rewind` / `/clear` / `/compact` / Subagent.
 - **Source:** [Latent Space](https://www.latent.space/p/claude-code)
 - **Author:** @bcherny
 
-"Just using regular code searching, you know, glob, grep." Umgeht Indexing/Sync/Security-Probleme.
+"Just using regular code searching, you know, glob, grep." Avoids indexing/sync/security issues.
 
 ---
 
@@ -1455,17 +1455,17 @@ Pick Continue / `/rewind` / `/clear` / `/compact` / Subagent.
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 
-Team-Liebling: synchronized Rendering, 24-bit Color, Unicode.
+Team favorite: synchronized rendering, 24-bit color, Unicode.
 
-### #21.02 — tmux für ein Tab pro Task
+### #21.02 — tmux for One Tab per Task
 - **Difficulty:** Intermediate
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
 - **Author:** @bcherny
 
-Terminal-Tabs nach Color-Coden und Namen organisieren.
+Organize terminal tabs by color codes and names.
 
-### #21.03 — Voice-Dictation (fn x2 auf macOS)
+### #21.03 — Voice Dictation (fn x2 on macOS)
 - **Difficulty:** Beginner
 - **Date:** 2026-01-31
 - **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)

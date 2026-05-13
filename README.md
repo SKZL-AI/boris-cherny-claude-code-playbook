@@ -8,15 +8,15 @@
 
 # Boris Cherny Claude Code Playbook
 
-> Eine kuratierte, deutschsprachige Sammlung aller öffentlichen Claude-Code-Tipps von **Boris Cherny** ([@bcherny](https://x.com/bcherny)), Head of Claude Code bei Anthropic — automatisch aktualisiert via Claude.ai Routines.
+> A curated collection of all public Claude Code tips by **Boris Cherny** ([@bcherny](https://x.com/bcherny)), Head of Claude Code at Anthropic — automatically updated via Claude.ai Routines.
 
-**[→ Visuelles Dashboard ansehen (index.html)](./index.html)** &nbsp; · &nbsp; **[→ Vollständige Tipp-Liste (TIPS.md)](./TIPS.md)** &nbsp; · &nbsp; **[→ One-Shot Setup Guide (IMPLEMENTATION-GUIDE.md)](./IMPLEMENTATION-GUIDE.md)** &nbsp; · &nbsp; **[→ Changelog](./CHANGELOG.md)**
+**[View Visual Dashboard (index.html)](./index.html)** &nbsp; · &nbsp; **[Full Tip List (TIPS.md)](./TIPS.md)** &nbsp; · &nbsp; **[One-Shot Setup Guide (IMPLEMENTATION-GUIDE.md)](./IMPLEMENTATION-GUIDE.md)** &nbsp; · &nbsp; **[Changelog](./CHANGELOG.md)**
 
 ---
 
-## Schnellstart in 30 Sekunden
+## Quick Start in 30 Seconds
 
-### Option 1: Alles automatisch einrichten lassen
+### Option 1: Auto-configure everything
 ```bash
 git clone https://github.com/SKZL-AI/boris-cherny-claude-code-playbook.git
 cd boris-cherny-claude-code-playbook
@@ -24,185 +24,185 @@ cd boris-cherny-claude-code-playbook
 cat IMPLEMENTATION-GUIDE.md | claude -p "Execute all setup instructions for my project"
 ```
 
-### Option 2: Nur lesen
-Öffne [index.html](./index.html) lokal im Browser — oder lies [TIPS.md](./TIPS.md).
+### Option 2: Just read
+Open [index.html](./index.html) locally in your browser — or read [TIPS.md](./TIPS.md).
 
-### Option 3: Einzelne Tipps umsetzen
-Öffne [IMPLEMENTATION-GUIDE.md](./IMPLEMENTATION-GUIDE.md) und kopiere die Sections, die dich interessieren.
-
----
-
-## Warum dieses Repo?
-
-1. **Erste vollständige Sammlung** aller öffentlichen Boris-Cherny-Tipps an einem Ort — 132 Tipps, 21 Themen
-2. **Automatisch aktuell** — Claude.ai Routines scannen 2–3× täglich nach neuen Tipps
-3. **Sofort nutzbar** — [IMPLEMENTATION-GUIDE.md](./IMPLEMENTATION-GUIDE.md) lässt Claude Code dein Projekt in Minuten einrichten
-4. **Visuelles Dashboard** — Filter, Timeline, Schwierigkeitsgrade auf einen Blick
-5. **Deutsche Sprache** — Erste deutschsprachige Ressource für das Claude Code Ecosystem
+### Option 3: Cherry-pick individual tips
+Open [IMPLEMENTATION-GUIDE.md](./IMPLEMENTATION-GUIDE.md) and copy the sections you need.
 
 ---
 
-## Worum es geht
+## Why This Repo?
 
-Boris Cherny startete Claude Code im September 2024 als Side-Project bei Anthropic. Seit dem öffentlichen Launch am 24. Februar 2025 hat er regelmäßig Tipps, Workflows und Best Practices geteilt — auf X/Twitter, in Podcasts (Latent Space, Lenny's Podcast, AI & I, Pragmatic Engineer), auf Konferenzen (AI Engineer World's Fair) und im Anthropic-Engineering-Blog.
-
-Dieses Repo bündelt diese Tipps an einer Stelle, übersetzt sie ins Deutsche, klassifiziert nach Schwierigkeitsgrad und Thema, und hält sie über automatisierte X-Scans aktuell.
-
-**Aktuell:** 132 Tipps in 21 Themen, dokumentiert über 14 Monate.
-
----
-
-## TL;DR — Boris' Setup in drei Sätzen
-
-1. **Verifikation ist die #1-Regel:** "Give Claude a way to verify its work — it will 2–3× the quality." Wenn du nur eine Sache mitnimmst, dann diese.
-2. **Parallelität ist der größte Hebel:** 5 Claudes in Terminal-Tabs + 5–10 Web-Sessions + Mobile + Worktrees. "I have dozens of Claudes running at all times."
-3. **Plan-Mode → Auto-Accept:** Shift+Tab zweimal, mit Claude iterieren bis der Plan gut ist, dann durchlaufen lassen. Ein guter Plan one-shottet die Implementierung fast immer.
+1. **First complete collection** of all public Boris Cherny tips in one place — 132 tips, 21 themes
+2. **Automatically up-to-date** — Claude.ai Routines scan for new tips 2–3x daily
+3. **Instantly actionable** — [IMPLEMENTATION-GUIDE.md](./IMPLEMENTATION-GUIDE.md) lets Claude Code configure your project in minutes
+4. **Visual dashboard** — Filters, timeline, difficulty levels at a glance
+5. **Structured & searchable** — Every tip tagged by theme, difficulty, date, and source
 
 ---
 
-## Inhalt
+## What This Is About
 
-- **[TIPS.md](./TIPS.md)** — Alle 132 Tipps, strukturiert nach Themen und Schwierigkeit. Source of truth für die Automatisierung.
-- **[IMPLEMENTATION-GUIDE.md](./IMPLEMENTATION-GUIDE.md)** — ~70 actionable Tipps, strukturiert als ausführbare Instruktionen für Claude Code. One-shot Setup.
-- **[index.html](./index.html)** — Visuelles Dashboard mit Filter, Timeline, Stages und Caveats. Lokal öffnen oder auf GitHub Pages hosten.
-- **[CHANGELOG.md](./CHANGELOG.md)** — Welche Tipps wann hinzugefügt wurden.
-- **[CONTRIBUTING.md](./CONTRIBUTING.md)** — Wie du selbst Tipps beisteuerst.
-- **[routines/](./routines/)** — Setup-Anleitung und Prompts für Claude.ai Routines, die das Repo automatisch aktualisieren.
-- **[.claude/](./.claude/)** — Slash-Commands und Subagents für die lokale Arbeit mit Claude Code.
+Boris Cherny started Claude Code in September 2024 as a side project at Anthropic. Since the public launch on February 24, 2025, he has regularly shared tips, workflows, and best practices — on X/Twitter, in podcasts (Latent Space, Lenny's Podcast, AI & I, Pragmatic Engineer), at conferences (AI Engineer World's Fair), and on the Anthropic Engineering Blog.
+
+This repo collects those tips in one place, classifies them by difficulty and theme, and keeps them current through automated X scans.
+
+**Current:** 132 tips across 21 themes, documented over 14 months.
 
 ---
 
-## Die 21 Themen im Überblick
+## TL;DR — Boris' Setup in Three Sentences
 
-| # | Thema | Tipps | Boris' Kerngedanke |
+1. **Verification is the #1 rule:** "Give Claude a way to verify its work — it will 2–3x the quality." If you take away only one thing, make it this.
+2. **Parallelism is the biggest lever:** 5 Claudes in terminal tabs + 5–10 web sessions + mobile + worktrees. "I have dozens of Claudes running at all times."
+3. **Plan Mode → Auto-Accept:** Shift+Tab twice, iterate the plan with Claude, then let it run. A good plan one-shots the implementation almost every time.
+
+---
+
+## Contents
+
+- **[TIPS.md](./TIPS.md)** — All 132 tips, structured by theme and difficulty. Source of truth for automation.
+- **[IMPLEMENTATION-GUIDE.md](./IMPLEMENTATION-GUIDE.md)** — ~70 actionable tips structured as executable instructions for Claude Code. One-shot setup.
+- **[index.html](./index.html)** — Visual dashboard with filters, timeline, stages, and caveats. Open locally or host on GitHub Pages.
+- **[CHANGELOG.md](./CHANGELOG.md)** — Which tips were added when.
+- **[CONTRIBUTING.md](./CONTRIBUTING.md)** — How to contribute tips.
+- **[routines/](./routines/)** — Setup guide and prompts for Claude.ai Routines that auto-update the repo.
+- **[.claude/](./.claude/)** — Slash commands and subagents for local work with Claude Code.
+
+---
+
+## All 21 Themes at a Glance
+
+| # | Theme | Tips | Boris' Core Insight |
 |---|---|---:|---|
-| 01 | Parallele Ausführung | 9 | "The single biggest productivity unlock" |
+| 01 | Parallel Execution | 9 | "The single biggest productivity unlock" |
 | 02 | Plan Mode | 6 | "A good plan is really important" |
 | 03 | CLAUDE.md | 11 | "Anytime Claude does something wrong, we add it to the CLAUDE.md" |
-| 04 | Slash Commands | 34 | Inner-Loop-Automation für tägliche Workflows |
-| 05 | Subagents | 12 | Unkorrelierte Kontextfenster, nicht Anthropomorphisierung |
-| 06 | Hooks | 9 | Deterministische Logik wo das Modell unzuverlässig ist |
+| 04 | Slash Commands | 34 | Inner-loop automation for daily workflows |
+| 05 | Subagents | 12 | Uncorrelated context windows, not anthropomorphization |
+| 06 | Hooks | 9 | Deterministic logic where the model is unreliable |
 | 07 | Permissions & Safety | 7 | Pre-allow > skip; Sandbox > danger flag |
-| 08 | MCP & Integrationen | 7 | Slack, BigQuery, Sentry — Claude über das Repo hinaus |
-| 09 | Modell & Effort | 9 | Opus mit Thinking für alles (Boris) |
-| 10 | Verifikation | 11 | **Die #1-Regel: 2–3× Qualität durch Verifikation** |
-| 11 | Long-Running & Recaps | 6 | Routines, Schedules, Stop-Hooks |
+| 08 | MCP & Integrations | 7 | Slack, BigQuery, Sentry — Claude beyond the repo |
+| 09 | Model & Effort | 9 | Opus with Thinking for everything (Boris) |
+| 10 | Verification | 11 | **The #1 rule: 2–3x quality through verification** |
+| 11 | Long-Running & Recaps | 6 | Routines, Schedules, Stop Hooks |
 | 12 | Prompting & Specs | 6 | Delegation > Guidance |
-| 13 | Customization | 6 | 37 Settings, 84 Env-Variablen |
-| 14 | Headless / SDK | 10 | Claude als Unix-Utility |
-| 15 | Code Review | 3 | "Reviews waren der Bottleneck" |
+| 13 | Customization | 6 | 37 settings, 84 env variables |
+| 14 | Headless / SDK | 10 | Claude as a Unix utility |
+| 15 | Code Review | 3 | "Reviews were the bottleneck" |
 | 16 | Cost / ROI | 5 | "It's an ROI question, not a cost question" |
-| 17 | Form-Factor | 6 | CLI, IDE, GitHub, Slack, Mobile, Web |
-| 18 | Migration & Daten | 3 | Beende, was du beginnst |
-| 19 | Lernen & Onboarding | 5 | Explanatory Output Style |
-| 20 | Context Management | 5 | Context-Rot bei 300–400k Tokens |
+| 17 | Form Factor | 6 | CLI, IDE, GitHub, Slack, Mobile, Web |
+| 18 | Migration & Data | 3 | Finish what you start |
+| 19 | Learning & Onboarding | 5 | Explanatory Output Style |
+| 20 | Context Management | 5 | Context rot at 300–400k tokens |
 | 21 | Terminal Environment | 3 | Ghostty + tmux + Voice |
 
 ---
 
-## Staged Adoption — Boris' eigene Empfehlung
+## Staged Adoption — Boris' Own Recommendation
 
-| Phase | Wann | Was machen |
+| Phase | When | What to Do |
 |---|---|---|
-| **1. Vanilla** | Woche 1 | `/init`, Plan-Mode, nicht customizen |
-| **2. Compounding Knowledge** | Woche 2–3 | CLAUDE.md ausbauen, 1–2 Slash Commands |
-| **3. Parallelism** | Woche 4+ | 3–5 Worktrees, PostToolUse-Hook, geteilte settings.json |
-| **4. Subagents** | Monat 2+ | code-simplifier, verify-app, adversariales Review |
-| **5. Autonomy** | Monat 3+ | Auto Mode, `/loop`, `/schedule`, Voice, Chrome-Extension |
+| **1. Vanilla** | Week 1 | `/init`, Plan Mode, no customization |
+| **2. Compounding Knowledge** | Week 2–3 | Build CLAUDE.md, 1–2 slash commands |
+| **3. Parallelism** | Week 4+ | 3–5 worktrees, PostToolUse hook, shared settings.json |
+| **4. Subagents** | Month 2+ | code-simplifier, verify-app, adversarial review |
+| **5. Autonomy** | Month 3+ | Auto Mode, `/loop`, `/schedule`, Voice, Chrome Extension |
 
-Details und Übergangskriterien siehe [index.html](./index.html) oder [TIPS.md](./TIPS.md#staged-adoption).
-
----
-
-## Wichtige Chronologie-Punkte
-
-- **Sep 2024** — Boris startet Claude Code als Side-Project
-- **24. Feb 2025** — Claude Code Launch als Research Preview
-- **02. Jan 2026** — Canonical 13-Tipp-Thread "How I use Claude Code" (104K Likes)
-- **31. Jan 2026** — 10 Team-Tipps Thread (8.5M Views)
-- **29.–30. Mär 2026** — 15 versteckte Features Thread
-- **16. Apr 2026** — 6 Opus 4.7 Tipps Thread
-- **22. Apr 2026** — Claude Code gewinnt Webby Award
-
-Vollständige Chronologie: siehe [index.html](./index.html) oder [CHANGELOG.md](./CHANGELOG.md).
+Details and graduation criteria in [index.html](./index.html) or [TIPS.md](./TIPS.md).
 
 ---
 
-## Wie dieses Repo aktuell gehalten wird
+## Key Timeline
 
-Eine **Claude.ai Routine** scannt 2–3× täglich [@bcherny auf X](https://x.com/bcherny) sowie sekundäre Quellen (Threads.net, Anthropic-Blog, Threadreader-Mirror) nach neuen Tipps. Werden neue gefunden:
+- **Sep 2024** — Boris starts Claude Code as a side project
+- **Feb 24, 2025** — Claude Code public launch (Research Preview)
+- **Jan 2, 2026** — Canonical 13-tip thread "How I use Claude Code" (104K likes)
+- **Jan 31, 2026** — 10 team tips thread (8.5M views)
+- **Mar 29–30, 2026** — 15 hidden features thread
+- **Apr 16, 2026** — 6 Opus 4.7 tips thread
+- **Apr 22, 2026** — Claude Code wins Webby Award
 
-1. Tipp wird in [`TIPS.md`](./TIPS.md) eingefügt (richtige Theme-Section, neue ID)
-2. [`CHANGELOG.md`](./CHANGELOG.md) wird aktualisiert
-3. [`index.html`](./index.html) wird via `/regenerate-html` Slash-Command synchronisiert
-4. [`IMPLEMENTATION-GUIDE.md`](./IMPLEMENTATION-GUIDE.md) wird aktualisiert, falls der Tipp actionable ist
-5. Commit + Push auf GitHub via GitHub-Connector
-
-Setup-Anleitung: **[routines/setup.md](./routines/setup.md)**
-Routine-Prompts: **[routines/daily-scan.md](./routines/daily-scan.md)** und **[routines/weekly-verify.md](./routines/weekly-verify.md)**
+Full timeline in [index.html](./index.html) or [CHANGELOG.md](./CHANGELOG.md).
 
 ---
 
-## Wie du das selbst nutzt
+## How This Repo Stays Current
 
-### Schnellstart als Leser
+A **Claude.ai Routine** scans [@bcherny on X](https://x.com/bcherny) and secondary sources (Threads.net, Anthropic Blog, Threadreader mirrors) 2–3x daily for new tips. When new ones are found:
 
-Öffne [`index.html`](./index.html) lokal im Browser — Filter nach Schwierigkeit, Sprung zu Themen, alle Quellen verlinkt.
+1. Tip is inserted into [`TIPS.md`](./TIPS.md) (correct theme section, new ID)
+2. [`CHANGELOG.md`](./CHANGELOG.md) is updated
+3. [`index.html`](./index.html) is synced via `/regenerate-html` slash command
+4. [`IMPLEMENTATION-GUIDE.md`](./IMPLEMENTATION-GUIDE.md) is updated if the tip is actionable
+5. Commit + push to GitHub via GitHub Connector
 
-### Schnellstart als Claude Code User
+Setup guide: **[routines/setup.md](./routines/setup.md)**
+Routine prompts: **[routines/daily-scan.md](./routines/daily-scan.md)** and **[routines/weekly-verify.md](./routines/weekly-verify.md)**
+
+---
+
+## How to Use This
+
+### As a Reader
+
+Open [`index.html`](./index.html) locally in your browser — filter by difficulty, jump to themes, all sources linked.
+
+### As a Claude Code User
 
 ```bash
 git clone https://github.com/SKZL-AI/boris-cherny-claude-code-playbook.git
-# Kopiere IMPLEMENTATION-GUIDE.md in dein eigenes Projekt und führe sie aus:
-cp boris-cherny-claude-code-playbook/IMPLEMENTATION-GUIDE.md mein-projekt/
-cd mein-projekt
-claude  # Claude Code öffnen
+# Copy IMPLEMENTATION-GUIDE.md into your own project and run it:
+cp boris-cherny-claude-code-playbook/IMPLEMENTATION-GUIDE.md my-project/
+cd my-project
+claude  # Open Claude Code
 > Read IMPLEMENTATION-GUIDE.md and execute the setup instructions
 ```
 
-### Schnellstart als Fork-Maintainer
+### As a Fork Maintainer
 
 ```bash
 git clone https://github.com/SKZL-AI/boris-cherny-claude-code-playbook.git
 cd boris-cherny-claude-code-playbook
-claude  # Claude Code öffnen
+claude  # Open Claude Code
 > /add-tip
 ```
 
-Slash-Commands:
+Slash Commands:
 
-- `/add-tip` — Neuen Tipp strukturiert hinzufügen (interviewt dich Schritt für Schritt)
-- `/scan-x` — Manueller X-Scan nach neuen Tipps
-- `/verify-sources` — Alle Source-URLs prüfen
-- `/regenerate-html` — `index.html` aus `TIPS.md` neu bauen
+- `/add-tip` — Add a new tip interactively (walks you through step by step)
+- `/scan-x` — Manual X scan for new tips
+- `/verify-sources` — Check all source URLs
+- `/regenerate-html` — Rebuild `index.html` from `TIPS.md`
 
-Siehe [`.claude/commands/`](./.claude/commands/) für die vollständigen Prompts.
+See [`.claude/commands/`](./.claude/commands/) for full prompt definitions.
 
 ---
 
 ## Caveats
 
-- **Plan-Tier-gating:** Viele Features (Auto Mode, 1M-Kontext) sind Max/Team/Enterprise-only. Testen, nicht annehmen.
-- **Direktionale Zahlen:** "4% aller GitHub-Commits", "200% Engineering-Produktivität" sind Boris' eigene Angaben aus Podcasts, nicht unabhängig auditiert.
-- **Sekundärquellen:** Tipps zugeschrieben an Thariq, Cat Wu, Erik Schluntz u.a. aus dem Claude-Code-Team sind inkludiert, wenn Boris sie retweetet/endorsed hat.
-- **Kein Inhalt** in diesem Repo stammt aus privaten oder geleakten Quellen. Alles aus öffentlichem X, Podcasts, Anthropic-Blog oder dem Threads.net-Mirror.
-- **Ultrathink-Semantik** wechselte zwischen CC v1 und v2 — siehe [TIPS.md](./TIPS.md#09-modell--effort) für Details.
+- **Plan-tier gating:** Many features (Auto Mode, 1M context) are Max/Team/Enterprise only. Test, don't assume.
+- **Directional numbers:** "4% of all GitHub commits", "200% engineering productivity" are Boris' own claims from podcasts, not independently audited.
+- **Secondary sources:** Tips attributed to Thariq, Cat Wu, Erik Schluntz, and other Claude Code team members are included only when Boris retweeted/endorsed them.
+- **No content** in this repo comes from private or leaked sources. Everything from public X, podcasts, Anthropic Blog, or Threads.net mirrors.
+- **Ultrathink semantics** changed between CC v1 and v2 — see [TIPS.md](./TIPS.md) for details.
 
 ---
 
 ## Attribution
 
-Alle Tipps stammen ursprünglich von **Boris Cherny** (Anthropic) und dem Claude-Code-Team. Dieses Repo ist eine inoffizielle deutschsprachige Kuration. Nicht von Anthropic affiliiert.
+All tips originate from **Boris Cherny** (Anthropic) and the Claude Code team. This repo is an unofficial curation. Not affiliated with Anthropic.
 
-Primärquellen-Aggregator: [howborisusesclaudecode.com](https://howborisusesclaudecode.com) (von [@CarolinaCherry](https://x.com/CarolinaCherry)).
+Primary source aggregator: [howborisusesclaudecode.com](https://howborisusesclaudecode.com) (by [@CarolinaCherry](https://x.com/CarolinaCherry)).
 
-## Lizenz
+## License
 
-MIT (siehe [LICENSE](./LICENSE)). Die zugrundeliegenden Tipps sind geistiges Eigentum der jeweiligen Autoren. Diese Kuration darf frei kopiert und angepasst werden, vorausgesetzt die Quellenangaben bleiben erhalten.
+MIT (see [LICENSE](./LICENSE)). The underlying tips are intellectual property of their respective authors. This curation may be freely copied and adapted, provided source attributions are retained.
 
 ---
 
-Wenn dir dieses Repo hilft, [gib ihm einen ⭐](https://github.com/SKZL-AI/boris-cherny-claude-code-playbook) — das hilft anderen, es zu finden.
+If this repo helps you, [give it a star](https://github.com/SKZL-AI/boris-cherny-claude-code-playbook) — it helps others find it.
 
 ---
 

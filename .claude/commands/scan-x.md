@@ -4,20 +4,20 @@ description: Manually scan X for new Boris Cherny posts since last scan
 
 # /scan-x — Manual X Scan
 
-Manueller Trigger des X-Scans, wenn du nicht auf die nächste Routine warten willst (z.B. nach einem großen Anthropic-Event).
+Manual trigger of the X scan when you don't want to wait for the next routine (e.g., after a major Anthropic event).
 
 ## Workflow
 
-### Schritt 1 — last_scan_iso lesen
-Öffne TIPS.md, finde am Ende den YAML-Block:
+### Step 1 — Read last_scan_iso
+Open TIPS.md, find the YAML block at the bottom:
 ```yaml
 last_scan_iso: "..."
 last_scan_anchor_tweet_id: "..."
 ```
-Das ist der Cut-off.
+That's the cut-off.
 
-### Schritt 2 — Multi-Query X-Suche
-Verwende web_search mit folgenden Queries nacheinander:
+### Step 2 — Multi-Query X Search
+Use web_search with the following queries in sequence:
 1. `bcherny site:x.com`
 2. `bcherny Claude Code`
 3. `Boris Cherny Anthropic tip`
@@ -25,54 +25,54 @@ Verwende web_search mit folgenden Queries nacheinander:
 5. `site:threads.com boris_cherny`
 6. `howborisusesclaudecode latest tips`
 
-Für jede Query: filtere Ergebnisse nach Datum > `last_scan_iso`.
+For each query: filter results by date > `last_scan_iso`.
 
-### Schritt 3 — Kandidaten aggregieren
-Gruppiere die gefundenen Posts. Pro Post:
-- Tweet-ID (oder Äquivalent)
-- Datum
-- Vollständiger Text (web_fetch wenn nötig)
-- Klassifizierung: "tip" | "status" | "marketing" | "RT-no-comment"
+### Step 3 — Aggregate Candidates
+Group the found posts. Per post:
+- Tweet ID (or equivalent)
+- Date
+- Full text (web_fetch if needed)
+- Classification: "tip" | "status" | "marketing" | "RT-no-comment"
 
-Nur "tip"-Klassifizierte sind weiterzu verarbeiten.
+Only "tip"-classified entries move forward.
 
-### Schritt 4 — Präsentation an den Nutzer
-Zeige eine kompakte Tabelle:
+### Step 4 — Present to User
+Show a compact table:
 
 ```
-Gefunden seit <last_scan_iso>:
+Found since <last_scan_iso>:
 
-| # | Datum | Titel-Vorschlag | Theme-Vorschlag | Diff | Quelle |
+| # | Date | Suggested Title | Suggested Theme | Diff | Source |
 |---|---|---|---|---|---|
 | 1 | 2026-05-XX | ... | 04 Slash Commands | Int | x.com/... |
 | 2 | ... | ... | ... | ... | ... |
 ```
 
-Frage: "Welche soll ich aufnehmen? (1,2,3 / alle / keine)"
+Ask: "Which ones should I add? (1,2,3 / all / none)"
 
-### Schritt 5 — Für ausgewählte Tipps: Add-Workflow
-Für jeden ausgewählten Kandidaten: führe den `/add-tip`-Workflow ab Schritt 4 aus
-(Felder vorschlagen → Bestätigung → einfügen → CHANGELOG).
+### Step 5 — For Selected Tips: Add Workflow
+For each selected candidate: run the `/add-tip` workflow starting from Step 4
+(suggest fields → confirmation → insert → CHANGELOG).
 
-### Schritt 6 — Tracking-Metadata
-Am Ende des Scans (auch wenn keine Tipps aufgenommen wurden):
-- Aktualisiere `last_scan_iso` auf jetzt
-- Aktualisiere `last_scan_anchor_tweet_id` auf den NEUESTEN gefundenen Post
-  (nicht nur die aufgenommenen — sonst wird er bei nächster Routine erneut gefunden)
+### Step 6 — Update Tracking Metadata
+At the end of the scan (even if no tips were added):
+- Update `last_scan_iso` to now
+- Update `last_scan_anchor_tweet_id` to the NEWEST found post
+  (not just the added ones — otherwise it would be found again in the next routine)
 
-### Schritt 7 — HTML-Sync
-Wenn Tipps aufgenommen: `/regenerate-html` anbieten.
+### Step 7 — HTML Sync
+If tips were added: offer `/regenerate-html`.
 
-## Unterschied zu Daily-Scan-Routine
+## Difference from Daily Scan Routine
 
 | | Routine (daily-scan.md) | Slash Command (/scan-x) |
 |---|---|---|
-| Läuft | 2–3× täglich automatisch | Wenn du es triggerst |
-| Bestätigung | Auto-commit | Manueller Step pro Tipp |
-| Risiko | Kann False Positive einfügen | Du siehst alles vorher |
-| Wann nutzen | Normalbetrieb | Nach großen Threads, Events |
+| Runs | 2–3× daily automatically | When you trigger it |
+| Confirmation | Auto-commit | Manual step per tip |
+| Risk | May insert false positives | You see everything first |
+| When to use | Normal operation | After major threads, events |
 
 ## Edge Cases
 
-- Wenn die Routine schon heute gelaufen ist und ich nochmal scanne: gleiche Ergebnisse möglich, da `last_scan_iso` schon "weiter" ist. Das ist OK — es wird einfach "no new tips" zurückgeben.
-- Wenn ich einen Tipp manuell vor der Routine adde: die Routine sieht ihn nicht doppelt, weil der Tweet-Anker schon notiert ist (sobald ich `last_scan_anchor_tweet_id` setze).
+- If the routine already ran today and I scan again: same results possible, since `last_scan_iso` is already "ahead." That's OK — it will simply return "no new tips."
+- If I add a tip manually before the routine: the routine won't see it as a duplicate, because the tweet anchor is already recorded (once I set `last_scan_anchor_tweet_id`).

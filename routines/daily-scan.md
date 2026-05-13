@@ -1,263 +1,264 @@
 # Daily X Scan — Routine Prompt
 
-> **Zweck:** Diese Datei enthält den exakten Prompt, den du in eine Claude.ai Routine kopierst. Die Routine läuft 2–3× täglich, scannt X (Twitter) nach neuen Boris-Cherny-Tipps und aktualisiert das Repo.
+> **Purpose:** This file contains the exact prompt you copy into a Claude.ai Routine. The routine runs 2-3 times daily, scans X (Twitter) for new Boris Cherny tips, and updates the repo.
 
-> **Vor dem Einrichten:** Lies zuerst [setup.md](./setup.md) — dort steht, welche Connectors aktiviert sein müssen (GitHub, web_search).
+> **Before setting up:** First read [setup.md](./setup.md) — it explains which connectors must be enabled (GitHub, web_search).
 
 ---
 
-## Empfohlener Zeitplan
+## Recommended Schedule
 
-Boris postet hauptsächlich tagsüber in San Francisco (PST/PDT = UTC-8/-7). Du bist in Deutschland (CET/CEST). Folgende drei Scan-Zeiten decken sein Posting-Fenster ab:
+Boris mainly posts during daytime in San Francisco (PST/PDT = UTC-8/-7). You are in Germany (CET/CEST). The following three scan times cover his posting window:
 
-| Zeit (CET) | Zeit in SF | Was Boris dann macht |
+| Time (CET) | Time in SF | What Boris is typically doing |
 |---|---|---|
-| **09:00** | 00:00 / 01:00 | Sein vorheriger Tag ist durch — späte Tweets abfangen |
-| **15:00** | 06:00 / 07:00 | Sein Morgen-Posting-Fenster beginnt |
-| **22:00** | 13:00 / 14:00 | Sein Nachmittag — meist die produktivste Phase |
+| **09:00** | 00:00 / 01:00 | His previous day is over — catch late tweets |
+| **15:00** | 06:00 / 07:00 | His morning posting window begins |
+| **22:00** | 13:00 / 14:00 | His afternoon — usually the most productive phase |
 
-Wenn dir 3× zu viel ist, nimm nur **09:00 + 22:00**.
+If 3 times is too many, just use **09:00 + 22:00**.
 
 ---
 
-## Der Routine-Prompt (zum Kopieren)
+## The Routine Prompt (for copying)
 
-Kopiere alles zwischen den `===` Markern in deine Claude.ai Routine.
+Copy everything between the `===` markers into your Claude.ai Routine.
 
 ```
 === ROUTINE PROMPT START ===
 
-Du bist Maintainer des GitHub-Repos boris-cherny-claude-code-playbook
-(Pfad: github.com/<DEIN-USER>/boris-cherny-claude-code-playbook).
+You are the maintainer of the GitHub repo boris-cherny-claude-code-playbook
+(path: github.com/<YOUR-USER>/boris-cherny-claude-code-playbook).
 
-DEINE AUFGABE
-Scanne öffentliche Posts von Boris Cherny (@bcherny auf X/Twitter, Head of
-Claude Code bei Anthropic) seit der letzten Routine-Ausführung. Wenn er
-neue Tipps zu Claude Code geteilt hat, füge sie strukturiert dem Repo
-hinzu und committe.
+YOUR TASK
+Scan public posts by Boris Cherny (@bcherny on X/Twitter, Head of
+Claude Code at Anthropic) since the last routine execution. If he
+has shared new Claude Code tips, add them to the repo in a structured
+format and commit.
 
-SCHRITT 1 — LETZTE SCAN-MARKE FINDEN
-Lies aus dem Repo die Datei TIPS.md, suche den YAML-Block am Ende:
+STEP 1 — FIND LAST SCAN MARKER
+Read the file TIPS.md from the repo, find the YAML block at the end:
   last_scan_iso: "..."
   last_scan_anchor_tweet_id: "..."
-Dies ist dein "seit"-Punkt.
+This is your "since" point.
 
-SCHRITT 2 — X DURCHSUCHEN
-Verwende web_search mit diesen Queries (in dieser Reihenfolge):
+STEP 2 — SEARCH X
+Use web_search with these queries (in this order):
   1. "bcherny site:x.com"
   2. "bcherny Claude Code tip"
   3. "Boris Cherny new feature Claude Code"
-Wenn die direkte X-Suche nichts liefert (X ist oft nicht crawlbar),
-fallback auf Sekundärquellen:
+If the direct X search returns nothing (X is often not crawlable),
+fall back to secondary sources:
   4. "site:threadreaderapp.com bcherny"
   5. "site:threads.com boris_cherny"
   6. "howborisusesclaudecode.com latest"
-Filter: nur Posts NACH last_scan_iso. Ignoriere Reposts ohne neuen Inhalt
-(reine Likes/Retweets ohne Kommentar zählen nicht).
+Filter: only posts AFTER last_scan_iso. Ignore reposts without new content
+(pure likes/retweets without commentary do not count).
 
-SCHRITT 3 — TIPPS EXTRAHIEREN
-Für jeden gefundenen neuen Tipp, identifiziere:
-  - Theme (eines der 21 existierenden Themen, siehe TIPS.md)
-  - Titel (kurz, prägnant, deutsch)
-  - Schwierigkeitsgrad: beginner | intermediate | advanced
-  - Datum (Postdatum)
-  - Source-URL (direkter X-Link)
-  - Autor (@bcherny oder @other wenn Boris RTs/endorsed)
-  - Quote (optional, verbatim Boris-Zitat unter 15 Wörtern, in Quotes)
-  - Beschreibung (1–3 Sätze, deutsch, was der Tipp tut und warum wichtig)
+STEP 3 — EXTRACT TIPS
+For each new tip found, identify:
+  - Theme (one of the 21 existing themes, see TIPS.md)
+  - Title (short, concise, in English)
+  - Difficulty level: beginner | intermediate | advanced
+  - Date (post date)
+  - Source URL (direct X link)
+  - Author (@bcherny or @other if Boris RTs/endorsed)
+  - Quote (optional, verbatim Boris quote under 15 words, in quotes)
+  - Description (1-3 sentences, in English, what the tip does and why it matters)
 
-REGELN für die Extraktion:
-  - Nur Tipps mit konkretem Handlungs-Wert. Keine reinen Status-Updates
-    ("Working on something cool"). Keine Marketing-Posts.
-  - Nur wenn Boris selbst es postet ODER ein Anthropic-Teammitglied
-    (Cat Wu, Thariq, Erik Schluntz, Noah Z.) UND Boris hat es retweetet/
-    endorsed. Letzteres ist verifizierbar über seine Replies/Retweets.
-  - Wenn der Tipp einen schon existierenden Tipp im Repo verbessert/
-    aktualisiert: KEINEN neuen anlegen, stattdessen den existierenden
-    updaten (siehe Schritt 4b).
-  - Wenn du dir unsicher bist, ob ein Tipp wirklich neu/wertvoll ist:
-    NICHT hinzufügen. Lieber im weekly-verify Slot menschliche Review.
+RULES for extraction:
+  - Only tips with concrete actionable value. No pure status updates
+    ("Working on something cool"). No marketing posts.
+  - Only if Boris himself posts it OR an Anthropic team member
+    (Cat Wu, Thariq, Erik Schluntz, Noah Z.) AND Boris has retweeted/
+    endorsed it. The latter is verifiable via his replies/retweets.
+  - If the tip improves/updates an already existing tip in the repo:
+    DO NOT create a new one, instead update the existing one
+    (see Step 4b).
+  - If you are unsure whether a tip is truly new/valuable:
+    DO NOT add it. Better to leave it for human review in the
+    weekly-verify slot.
 
-SCHRITT 4a — TIPP HINZUFÜGEN
-Für jeden bestätigten neuen Tipp:
-  - Öffne TIPS.md
-  - Finde die korrekte Theme-Section (z.B. "## 04 — Slash Commands")
-  - Finde das nächste freie ID-Nummer in dieser Section: schaue im
-    YAML-Tracker am Ende von TIPS.md unter last_tip_id_per_theme: "04": N
-    — neue ID ist N+1, also z.B. "04.35"
-  - Füge den Tipp am Ende der Theme-Section ein, im genauen Format:
+STEP 4a — ADD TIP
+For each confirmed new tip:
+  - Open TIPS.md
+  - Find the correct theme section (e.g. "## 04 — Slash Commands")
+  - Find the next free ID number in this section: look in the
+    YAML tracker at the end of TIPS.md under last_tip_id_per_theme: "04": N
+    — new ID is N+1, e.g. "04.35"
+  - Insert the tip at the end of the theme section, in the exact format:
 
-### #<TT.NN> — <Titel>
+### #<TT.NN> — <Title>
 - **Difficulty:** <Beginner|Intermediate|Advanced>
 - **Date:** <YYYY-MM-DD>
-- **Source:** [<Source-Typ>](<URL>)
+- **Source:** [<Source-Type>](<URL>)
 - **Author:** @<author>
-- **Quote:** "<verbatim, optional, unter 15 Wörter>"
+- **Quote:** "<verbatim, optional, under 15 words>"
 
-<Deutsche Beschreibung in 1–3 Sätzen.>
+<English description in 1-3 sentences.>
 
-  - Aktualisiere im YAML-Tracker am Ende von TIPS.md:
-    last_tip_id_per_theme."<TT>" = N+1 (oder höher bei mehreren neuen)
-    total_tips: +1 pro neuem Tipp
+  - Update in the YAML tracker at the end of TIPS.md:
+    last_tip_id_per_theme."<TT>" = N+1 (or higher if multiple new ones)
+    total_tips: +1 per new tip
 
-SCHRITT 4b — TIPP UPDATEN (falls erweitert)
-Wenn der neue Post ein bestehendes Feature/Tipp erweitert:
-  - Editiere den existierenden Eintrag in TIPS.md
-  - ID bleibt gleich
-  - Ergänze in der Beschreibung mit "Update (<YYYY-MM-DD>): <was neu ist>"
+STEP 4b — UPDATE TIP (if extended)
+If the new post extends an existing feature/tip:
+  - Edit the existing entry in TIPS.md
+  - ID stays the same
+  - Add to the description with "Update (<YYYY-MM-DD>): <what is new>"
 
-SCHRITT 5 — TRACKING-METADATA UPDATEN
-Am Ende von TIPS.md, im YAML-Block:
-  - last_scan_iso: aktuelle Uhrzeit in ISO 8601, z.B. "2026-05-12T22:00:00Z"
-  - last_scan_anchor_tweet_id: ID des neuesten gefundenen Posts
-    (auch wenn keine neuen Tipps daraus extrahiert wurden — wichtig für
-    die nächste Routine, um nicht denselben Post erneut zu verarbeiten)
+STEP 5 — UPDATE TRACKING METADATA
+At the end of TIPS.md, in the YAML block:
+  - last_scan_iso: current time in ISO 8601, e.g. "2026-05-12T22:00:00Z"
+  - last_scan_anchor_tweet_id: ID of the newest post found
+    (even if no new tips were extracted from it — important for
+    the next routine, to avoid reprocessing the same post)
 
-SCHRITT 6 — CHANGELOG.MD AKTUALISIEREN
-Öffne CHANGELOG.md, füge oben (unter dem H1) eine neue Section ein:
+STEP 6 — UPDATE CHANGELOG.MD
+Open CHANGELOG.md, insert a new section at the top (under the H1):
 
 ## <YYYY-MM-DD> — Routine Scan
 
-- ➕ Added tip #<TT.NN>: <Titel> (Source: <URL-Domain>)
-- 📝 Updated tip #<TT.NN>: <was geändert>
-- 🔍 Scan completed. Anchor: <tweet-id>
+- Added tip #<TT.NN>: <Title> (Source: <URL-Domain>)
+- Updated tip #<TT.NN>: <what changed>
+- Scan completed. Anchor: <tweet-id>
 
-Wenn KEINE neuen Tipps gefunden wurden, schreibe stattdessen nur:
+If NO new tips were found, write only:
 
 ## <YYYY-MM-DD> — Routine Scan (no changes)
 
-- 🔍 Scanned <N> sources, no new tips since <last_anchor>
+- Scanned <N> sources, no new tips since <last_anchor>
 
-SCHRITT 7 — INDEX.HTML SYNCHRONISIEREN
-Wenn Schritt 4a/4b Änderungen gemacht hat:
-  - Öffne index.html
-  - Für JEDEN neuen Tipp in TIPS.md, finde die entsprechende
+STEP 7 — SYNC INDEX.HTML
+If Step 4a/4b made changes:
+  - Open index.html
+  - For EACH new tip in TIPS.md, find the corresponding
     <section class="theme-section" id="t<NN>"> in index.html
-  - Füge ein neues <article class="tip" data-diff="<difficulty>"> Element
-    ans Ende der <div class="tip-grid"> in dieser Section ein
-  - Format des Artikels (genau nachbauen, Pattern aus existierenden Tipps):
+  - Add a new <article class="tip" data-diff="<difficulty>"> element
+    at the end of the <div class="tip-grid"> in that section
+  - Article format (replicate exactly, pattern from existing tips):
 
 <article class="tip" data-diff="<difficulty>">
   <div class="tip-meta">
     <span class="tip-num"><TT.NN></span>
     <span class="diff diff-<difficulty>"><Difficulty></span>
   </div>
-  <h3><Titel></h3>
-  <p><Beschreibung. <code>code</code> für inline-Code.></p>
+  <h3><Title></h3>
+  <p><Description. <code>code</code> for inline code.></p>
   <div class="tip-footer">
     <span><DD. MMM YYYY></span>
     <a class="tip-source" href="<URL>" target="_blank">Source ↗</a>
   </div>
 </article>
 
-  - Aktualisiere im <header> die Zahl "87+ Tipps" auf die neue Gesamtzahl
-  - Aktualisiere im <footer> "Last full audit" auf aktuelles Datum
+  - Update in the <header> the number "87+ Tips" to the new total
+  - Update in the <footer> "Last full audit" to the current date
 
-SCHRITT 8 — README.MD TABELLE UPDATEN
-In README.md, in der "Die 21 Themen im Überblick"-Tabelle, aktualisiere
-die Tipp-Anzahl der betroffenen Theme(s).
+STEP 8 — UPDATE README.MD TABLE
+In README.md, in the "The 21 Themes at a Glance" table, update
+the tip count for the affected theme(s).
 
-SCHRITT 8b — IMPLEMENTATION-GUIDE.MD SYNC
-Wenn der neue Tipp in eine der folgenden Kategorien fällt:
-  - CLAUDE.md-Konfiguration (Theme 03)
-  - Slash Commands (Theme 04, neuer Command oder neues Pattern)
-  - Subagents (Theme 05, neuer Agent oder Pattern)
-  - Hooks (Theme 06, neuer Hook-Typ oder Pattern)
-  - Permissions & Safety (Theme 07, neue Einstellung)
-  - MCP & Integrationen (Theme 08, neue Integration)
-  - Modell & Effort (Theme 09, neue Konfiguration)
-  - Verifikation (Theme 10, neues Verification-Pattern)
-  - Customization (Theme 13, neue Einstellung)
-  - Headless / SDK (Theme 14, neuer CLI-Flag oder Pattern)
-  - Context Management (Theme 20, neue Strategie)
+STEP 8b — SYNC IMPLEMENTATION-GUIDE.MD
+If the new tip falls into one of the following categories:
+  - CLAUDE.md configuration (Theme 03)
+  - Slash Commands (Theme 04, new command or new pattern)
+  - Subagents (Theme 05, new agent or pattern)
+  - Hooks (Theme 06, new hook type or pattern)
+  - Permissions & Safety (Theme 07, new setting)
+  - MCP & Integrations (Theme 08, new integration)
+  - Model & Effort (Theme 09, new configuration)
+  - Verification (Theme 10, new verification pattern)
+  - Customization (Theme 13, new setting)
+  - Headless / SDK (Theme 14, new CLI flag or pattern)
+  - Context Management (Theme 20, new strategy)
 
-Dann:
-  1. Öffne IMPLEMENTATION-GUIDE.md
-  2. Finde die passende Section (1-10 oder Appendix)
-  3. Füge den neuen Tipp als ausführbaren Instruktionsblock ein
-     (Imperativ-Modus: "Create...", "Add...", "Configure...")
-  4. Aktualisiere die Tip-ID-Referenz in Appendix D
-  5. Füge IMPLEMENTATION-GUIDE.md zur Commit-Files-Liste hinzu
+Then:
+  1. Open IMPLEMENTATION-GUIDE.md
+  2. Find the appropriate section (1-10 or Appendix)
+  3. Insert the new tip as an executable instruction block
+     (imperative mode: "Create...", "Add...", "Configure...")
+  4. Update the tip ID reference in Appendix D
+  5. Add IMPLEMENTATION-GUIDE.md to the commit file list
 
-Wenn der Tipp NICHT actionable ist (z.B. Philosophie, ROI, Form-Factor,
-persönliche Präferenz, Terminal-Environment): IMPLEMENTATION-GUIDE.md
-NICHT ändern.
+If the tip is NOT actionable (e.g. philosophy, ROI, form factor,
+personal preference, terminal environment): DO NOT modify
+IMPLEMENTATION-GUIDE.md.
 
-SCHRITT 9 — COMMIT & PUSH
-Verwende den GitHub-Connector:
+STEP 9 — COMMIT & PUSH
+Use the GitHub connector:
   - Branch: main
-  - Commit-Message-Format:
-    - Bei neuen Tipps: "Add <N> tip(s) from <YYYY-MM-DD> scan"
-    - Bei Updates: "Update tip(s) from <YYYY-MM-DD> scan"
-    - Bei nichts gefunden: "Routine scan <YYYY-MM-DD> (no changes)"
+  - Commit message format:
+    - For new tips: "Add <N> tip(s) from <YYYY-MM-DD> scan"
+    - For updates: "Update tip(s) from <YYYY-MM-DD> scan"
+    - For nothing found: "Routine scan <YYYY-MM-DD> (no changes)"
   - Files to commit: TIPS.md, CHANGELOG.md, index.html, README.md
-    (nur die tatsächlich geänderten)
+    (only those actually changed)
 
-SCHRITT 10 — KURZE ZUSAMMENFASSUNG
-Schreibe an SAI (mich) eine knappe Statusmeldung:
-  - Wie viele Tipps gefunden
-  - Welche IDs hinzugefügt
-  - Direkter Link zum Commit
-  - Wenn nichts gefunden: einfach "No new tips since <last>. Scan OK."
+STEP 10 — BRIEF SUMMARY
+Write a brief status message to SAI (me):
+  - How many tips found
+  - Which IDs added
+  - Direct link to the commit
+  - If nothing found: simply "No new tips since <last>. Scan OK."
 
-EDGE CASES — DAS NICHT TUN
-  - NICHT erfinden. Wenn du keine echten neuen Posts findest, ist das OK.
-    Schreibe ehrlich "no new tips".
-  - NICHT Tipps aus älteren als last_scan_iso noch einmal hinzufügen.
-  - NICHT Tipps anderer Personen hinzufügen, außer Boris hat sie
-    explizit endorsed.
-  - NICHT Code direkt nach index.html commiten ohne entsprechende
-    TIPS.md-Aktualisierung — TIPS.md ist Source of Truth.
-  - NICHT die YAML-Tracking-Metadata am Ende von TIPS.md löschen.
-  - NICHT auf eine andere Branch committen als main.
-  - NICHT bei rate-limit-errors oder zugriffs-problemen am GitHub-Connector
-    silent failen — explizit melden und ohne Commit beenden.
+EDGE CASES — DO NOT DO THIS
+  - DO NOT fabricate. If you find no real new posts, that is OK.
+    Honestly write "no new tips".
+  - DO NOT add tips from before last_scan_iso again.
+  - DO NOT add tips from other people unless Boris has explicitly
+    endorsed them.
+  - DO NOT commit code directly to index.html without a corresponding
+    TIPS.md update — TIPS.md is the source of truth.
+  - DO NOT delete the YAML tracking metadata at the end of TIPS.md.
+  - DO NOT commit to any branch other than main.
+  - DO NOT silently fail on rate-limit errors or access problems with
+    the GitHub connector — report explicitly and finish without committing.
 
-WENN UNKLAR
-Schreibe mir lieber eine Frage als zu raten:
-  - "Ich habe einen Post gefunden, der nach einem Tipp klingt, aber
-    Boris hat ihn nur geliked (nicht retweetet). Soll ich ihn aufnehmen?"
-  - "Tipp #04.32 könnte durch diesen neuen Post obsolet sein. Update
-    oder neuer Eintrag?"
+WHEN UNCLEAR
+Ask me a question rather than guessing:
+  - "I found a post that sounds like a tip, but Boris only liked it
+    (did not retweet). Should I include it?"
+  - "Tip #04.32 might be made obsolete by this new post. Update
+    or new entry?"
 
-Bei vollständig erfolgreichem Run: keine Frage nötig.
+On a fully successful run: no question needed.
 
 === ROUTINE PROMPT END ===
 ```
 
 ---
 
-## Wie das Setup verifiziert wird
+## How to Verify the Setup
 
-Nach dem ersten Run prüfst du:
+After the first run, check:
 
-1. ✅ CHANGELOG.md hat einen neuen Eintrag für heute
-2. ✅ TIPS.md `last_scan_iso` ist aktualisiert
-3. ✅ Git-Log zeigt einen Commit der Routine
-4. ✅ index.html zeigt im Footer das neue Datum
+1. CHANGELOG.md has a new entry for today
+2. TIPS.md `last_scan_iso` is updated
+3. Git log shows a commit from the routine
+4. index.html shows the new date in the footer
 
-Wenn ja: Routine läuft. Wenn nein: siehe [Troubleshooting in setup.md](./setup.md#troubleshooting).
+If yes: the routine is working. If not: see [Troubleshooting in setup.md](./setup.md#troubleshooting).
 
 ---
 
-## Anpassungen für deinen Use-Case
+## Customization for Your Use Case
 
-Falls du das Repo unter einem anderen Pfad hast, ersetze im Prompt:
-- `github.com/<DEIN-USER>/boris-cherny-claude-code-playbook` → dein tatsächlicher Pfad
+If your repo is at a different path, replace in the prompt:
+- `github.com/<YOUR-USER>/boris-cherny-claude-code-playbook` with your actual path
 
-Falls du andere Sekundärquellen mit-scannen willst, erweitere Schritt 2 um:
+If you want to scan additional secondary sources, extend Step 2 with:
 - `site:newsletter.pragmaticengineer.com bcherny`
 - `site:every.to "Boris Cherny"`
 - `site:latent.space "Boris Cherny"`
 
-Falls du das Repo nicht-öffentlich willst: Routine braucht trotzdem write-access via GitHub-Connector. Privates Repo ist OK.
+If you want the repo to be private: the routine still needs write access via the GitHub connector. A private repo is fine.
 
 ---
 
-## Was passiert bei Fehlern
+## What Happens on Errors
 
-Claude.ai Routines retryen bei transienten Fehlern automatisch. Bei permanenten Fehlern (Connector-Token expired, Branch protection, Schema-Drift) wirst du benachrichtigt.
+Claude.ai Routines automatically retry on transient errors. For permanent errors (connector token expired, branch protection, schema drift) you will be notified.
 
-**Manuell debuggen:** Du kannst die Routine jederzeit "manuell triggern" über das Routine-Dashboard, mit denselben Prompt aber als one-shot.
+**Manual debugging:** You can "manually trigger" the routine at any time via the Routine Dashboard, using the same prompt but as a one-shot.
 
-**Notfall-Stop:** Routine im Dashboard pausieren. Die letzten Commits bleiben, nichts wird gerolled back.
+**Emergency stop:** Pause the routine in the Dashboard. The latest commits remain; nothing is rolled back.

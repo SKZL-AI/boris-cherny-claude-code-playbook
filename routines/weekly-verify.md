@@ -1,110 +1,110 @@
 # Weekly Verify — Routine Prompt
 
-> **Zweck:** Einmal wöchentlich alle Source-URLs in TIPS.md prüfen, Duplikate erkennen, Tracking-Metadata konsolidieren.
+> **Purpose:** Once a week, check all source URLs in TIPS.md, detect duplicates, and consolidate tracking metadata.
 
-> Diese Routine ergänzt [daily-scan.md](./daily-scan.md) — sie fügt KEINE neuen Tipps hinzu, sie pflegt nur das, was schon da ist.
-
----
-
-## Empfohlener Zeitplan
-
-**Sonntag 10:00 CET** — Cron: `0 9 * * 0` (UTC im Winter) / `0 8 * * 0` (UTC im Sommer)
-
-Ein Mal pro Woche reicht. Häufiger lohnt sich nicht — URLs sterben langsam.
+> This routine complements [daily-scan.md](./daily-scan.md) — it does NOT add new tips; it only maintains what is already there.
 
 ---
 
-## Der Routine-Prompt (zum Kopieren)
+## Recommended Schedule
+
+**Sunday 10:00 CET** — Cron: `0 9 * * 0` (UTC in winter) / `0 8 * * 0` (UTC in summer)
+
+Once per week is sufficient. Running it more often is not worthwhile — URLs die slowly.
+
+---
+
+## The Routine Prompt (Copy-Paste Ready)
 
 ```
 === WEEKLY VERIFY ROUTINE START ===
 
-Du bist Maintainer des GitHub-Repos boris-cherny-claude-code-playbook.
+You are the maintainer of the GitHub repo boris-cherny-claude-code-playbook.
 
-DEINE AUFGABE
-Wöchentliche Pflege des Repos. Drei Teilaufgaben:
-  A) Source-URLs verifizieren (sind sie noch erreichbar?)
-  B) Duplikate erkennen (haben zwei Tipps denselben Source gleichen Inhalt?)
-  C) Tracking-Metadata in TIPS.md konsolidieren
+YOUR TASK
+Weekly maintenance of the repo. Three subtasks:
+  A) Verify source URLs (are they still reachable?)
+  B) Detect duplicates (do two tips share the same source or identical content?)
+  C) Consolidate tracking metadata in TIPS.md
 
-KEINE neuen Tipps hinzufügen. Dafür ist die Daily-Scan-Routine.
+Do NOT add new tips. That is the job of the Daily Scan routine.
 
-TEIL A — URL-VERIFIKATION
+PART A — URL VERIFICATION
 
-1. Lies TIPS.md vollständig ein.
-2. Extrahiere alle Source-URLs (Markdown-Format: [text](url)).
-3. Für jede URL: web_fetch mit text_content_token_limit=500
-   (wir brauchen nur den Header, nicht den ganzen Inhalt).
-4. Klassifiziere:
-   - OK (200, normaler Inhalt)
-   - GONE (404, 410, oder explicit "deleted"/"suspended" Inhalt)
-   - REDIRECT (301/302 zu anderer Domain → notieren)
-   - PRIVATE (X account locked etc. — Tipp markieren, nicht löschen)
+1. Read TIPS.md in its entirety.
+2. Extract all source URLs (Markdown format: [text](url)).
+3. For each URL: web_fetch with text_content_token_limit=500
+   (we only need the header, not the full content).
+4. Classify:
+   - OK (200, normal content)
+   - GONE (404, 410, or explicit "deleted"/"suspended" content)
+   - REDIRECT (301/302 to a different domain → note it)
+   - PRIVATE (X account locked etc. — mark the tip, do not delete it)
 
-5. Für GONE URLs:
-   - Suche bei archive.org Wayback Machine nach Snapshot:
+5. For GONE URLs:
+   - Search archive.org Wayback Machine for a snapshot:
      web_fetch("https://web.archive.org/web/*/<ORIGINAL_URL>")
-   - Wenn Snapshot existiert: ersetze in TIPS.md die URL durch
-     die archive.org-Version. Markiere in der Beschreibung mit
-     "[Original-Tweet gelöscht, archive.org-Snapshot]".
-   - Wenn kein Snapshot: markiere den Tipp mit "[archived]" im Titel
-     (Format: "### #04.15 — [archived] /btw für Side-Chain-Conversations")
-     und ergänze die Beschreibung um "Original-Source nicht mehr erreichbar."
+   - If a snapshot exists: replace the URL in TIPS.md with
+     the archive.org version. Add a note in the description:
+     "[Original tweet deleted, archive.org snapshot]".
+   - If no snapshot exists: mark the tip with "[archived]" in the title
+     (Format: "### #04.15 — [archived] /btw for side-chain conversations")
+     and add "Original source no longer available." to the description.
 
-6. Für REDIRECT URLs:
-   - Wenn Redirect zu legitimer Anthropic/X-Domain: URL aktualisieren.
-   - Wenn Redirect zu Spam/Domain-Squatter: behandle wie GONE.
+6. For REDIRECT URLs:
+   - If redirecting to a legitimate Anthropic/X domain: update the URL.
+   - If redirecting to spam/domain squatter: treat as GONE.
 
-TEIL B — DUPLIKAT-ERKENNUNG
+PART B — DUPLICATE DETECTION
 
-1. Gruppiere alle Tipps nach Source-URL.
-2. Wenn 2+ Tipps dieselbe URL haben:
-   - Prüfe die Beschreibungen — sind sie wirklich verschieden?
-   - Falls ja: OK (ein Thread kann mehrere Tipps enthalten).
-   - Falls nein: identifiziere den kanonischen Tipp (älteste ID).
-     Markiere den anderen mit "[duplicate of #XX.YY]" im Titel und
-     füge Hinweis in Beschreibung ein. NICHT komplett löschen (IDs
-     bleiben sticky).
-3. Gruppiere alle Tipps nach Titel-Ähnlichkeit (z.B. beide enthalten
-   "/loop"). Wenn unterschiedliche Themes aber gleiche Substanz:
-   markiere für menschliche Review (kein Auto-Merge).
+1. Group all tips by source URL.
+2. If 2+ tips share the same URL:
+   - Check the descriptions — are they truly different?
+   - If yes: OK (a single thread can contain multiple tips).
+   - If no: identify the canonical tip (oldest ID).
+     Mark the other with "[duplicate of #XX.YY]" in the title and
+     add a note in the description. Do NOT delete entirely (IDs
+     remain sticky).
+3. Group all tips by title similarity (e.g., both contain
+   "/loop"). If different themes but same substance:
+   flag for human review (no auto-merge).
 
-TEIL C — TRACKING-METADATA KONSOLIDIEREN
+PART C — CONSOLIDATE TRACKING METADATA
 
-Am Ende von TIPS.md im YAML-Block:
-1. Zähle total_tips erneut (real count, ohne [archived]/[duplicate]).
-2. Aktualisiere last_tip_id_per_theme: höchste vergebene ID pro Theme.
-3. Setze last_verify_iso: aktuelle Uhrzeit ISO 8601.
-4. Wenn last_verify_iso noch nicht existiert, lege es an.
+At the end of TIPS.md in the YAML block:
+1. Recount total_tips (real count, excluding [archived]/[duplicate]).
+2. Update last_tip_id_per_theme: highest assigned ID per theme.
+3. Set last_verify_iso: current time in ISO 8601.
+4. If last_verify_iso does not yet exist, create it.
 
-TEIL D — IMPLEMENTATION-GUIDE.MD KONSISTENZ-CHECK
+PART D — IMPLEMENTATION-GUIDE.MD CONSISTENCY CHECK
 
-1. Lies IMPLEMENTATION-GUIDE.md vollständig ein.
-2. Für jede referenzierte Tip-ID (#XX.YY) in der Datei:
-   - Prüfe, ob die ID noch in TIPS.md existiert und aktiv ist
-   - Wenn [archived] oder [deprecated]: markiere den Eintrag in
-     IMPLEMENTATION-GUIDE.md mit "[archived]" oder entferne ihn
-3. Zähle die actionable Tips im Guide vs. die tatsächliche Anzahl
-   actionable Tips in TIPS.md (Heuristik: Themes 03-08, 10, 13, 14, 20
-   sind überwiegend actionable)
-4. Wenn die Differenz > 5: Flag für manuelle Review
-5. Report-Zeile hinzufügen (siehe REPORT FORMAT unten):
+1. Read IMPLEMENTATION-GUIDE.md in its entirety.
+2. For each referenced tip ID (#XX.YY) in the file:
+   - Check whether the ID still exists in TIPS.md and is active
+   - If [archived] or [deprecated]: mark the entry in
+     IMPLEMENTATION-GUIDE.md with "[archived]" or remove it
+3. Count the actionable tips in the guide vs. the actual number of
+   actionable tips in TIPS.md (heuristic: themes 03-08, 10, 13, 14, 20
+   are predominantly actionable)
+4. If the difference is > 5: flag for manual review
+5. Add a report line (see REPORT FORMAT below):
    - IMPL-GUIDE tips referenced: <N>
    - IMPL-GUIDE stale references: <N>
 
 REPORT FORMAT
 
-Schreibe in CHANGELOG.md oben (unter dem H1) eine neue Section:
+Write a new section at the top of CHANGELOG.md (below the H1):
 
 ## <YYYY-MM-DD> — Weekly Verify
 
 - ✅ URLs verified: <N OK> / <N total>
-- ⚠️ URLs migrated to archive.org: <N> (Tipps: #XX.YY, #XX.YY)
-- 🚫 URLs marked [archived] (no snapshot): <N> (Tipps: #XX.YY)
-- 🔁 Duplicates flagged: <N> (Tipps: #XX.YY)
+- ⚠️ URLs migrated to archive.org: <N> (Tips: #XX.YY, #XX.YY)
+- 🚫 URLs marked [archived] (no snapshot): <N> (Tips: #XX.YY)
+- 🔁 Duplicates flagged: <N> (Tips: #XX.YY)
 - 📊 Total active tips: <N>
 
-Wenn alles sauber ist:
+If everything is clean:
 
 ## <YYYY-MM-DD> — Weekly Verify (clean)
 
@@ -114,44 +114,44 @@ Wenn alles sauber ist:
 
 COMMIT
 
-- Files: TIPS.md, CHANGELOG.md (nur wenn Änderungen)
-- Commit-Message: "Weekly verify <YYYY-MM-DD>: <N> changes"
-  oder: "Weekly verify <YYYY-MM-DD>: clean"
+- Files: TIPS.md, CHANGELOG.md (only if changes were made)
+- Commit message: "Weekly verify <YYYY-MM-DD>: <N> changes"
+  or: "Weekly verify <YYYY-MM-DD>: clean"
 - Branch: main
 
 EDGE CASES
 
-- Wenn ein Tipp mehrfach archiviert/dupliziert wurde: nicht weiter
-  modifizieren, manuelle Review nötig. Erwähne in der CHANGELOG-Section
-  unter "🔧 Needs manual review:".
-- Wenn web_fetch persistent fehlschlägt (Rate-Limit, Captcha): brich
-  Teil A ab nach 10 Failures. Mache trotzdem Teil B und C.
-- Wenn TIPS.md syntaktisch broken ist (kaputte Markdown-Struktur):
-  KEINEN Commit machen, stattdessen alarmieren mit klarer Beschreibung
-  wo der Schaden ist.
+- If a tip has been archived/duplicated multiple times: do not
+  modify further, manual review required. Mention it in the CHANGELOG
+  section under "🔧 Needs manual review:".
+- If web_fetch persistently fails (rate limit, captcha): abort
+  Part A after 10 failures. Still proceed with Parts B and C.
+- If TIPS.md is syntactically broken (corrupted Markdown structure):
+  do NOT commit. Instead, alert with a clear description of
+  where the damage is.
 
 === WEEKLY VERIFY ROUTINE END ===
 ```
 
 ---
 
-## Was diese Routine NICHT macht
+## What This Routine Does NOT Do
 
-- **Keine neuen Tipps hinzufügen** — das ist Job der Daily-Scan-Routine.
-- **Kein index.html-Update** — bei Changes in TIPS.md läuft am nächsten Daily-Scan automatisch der HTML-Sync mit.
-- **Kein README-Update** — die README-Tabelle wird erst aktualisiert, wenn sich die Theme-Counts ändern, was via Daily-Scan passiert.
+- **Does not add new tips** — that is the job of the Daily Scan routine.
+- **Does not update index.html** — when there are changes in TIPS.md, the HTML sync runs automatically during the next Daily Scan.
+- **Does not update the README** — the README table is only updated when theme counts change, which happens via Daily Scan.
 
-## Warum eine separate Routine
+## Why a Separate Routine
 
-Trennung von Concerns:
-- Daily Scan = "find new stuff" (mit Risiko False Positive)
-- Weekly Verify = "validate existing stuff" (rein read-modify, kein Risiko neuer Inhalte)
+Separation of concerns:
+- Daily Scan = "find new stuff" (with risk of false positives)
+- Weekly Verify = "validate existing stuff" (purely read-modify, no risk of new content)
 
-Falls eine der beiden buggy wird, kannst du die andere weiterlaufen lassen.
+If one of the two becomes buggy, you can keep the other one running.
 
-## Bekannte Sonderfälle bei Boris' Quellen
+## Known Special Cases for Boris's Sources
 
-- **threadreaderapp.com** Mirrors sind oft langsamer aktualisiert. Wenn der Original-Tweet existiert aber Mirror down ist, ist das KEIN GONE.
-- **threads.com** (Meta's Threads-Mirror seiner X-Posts): Manchmal werden Posts dort gelöscht, im Original aber nicht. Cross-reference.
-- **howborisusesclaudecode.com**: Fan-Site, kein Anthropic. Wenn dort Tipps fehlen die im Repo sind: nicht löschen.
-- **AIEWF Talk 2025**: Nur als YouTube-Video archiviert. Wenn das Video weg ist, gibt es trotzdem oft Audio-Transkripte. Verwende die.
+- **threadreaderapp.com** mirrors are often updated more slowly. If the original tweet exists but the mirror is down, that is NOT a GONE case.
+- **threads.com** (Meta's Threads mirror of his X posts): Sometimes posts are deleted there but not in the original. Cross-reference.
+- **howborisusesclaudecode.com**: Fan site, not Anthropic. If tips are missing there that exist in the repo: do not delete.
+- **AIEWF Talk 2025**: Only archived as a YouTube video. If the video is gone, there are often still audio transcripts available. Use those.

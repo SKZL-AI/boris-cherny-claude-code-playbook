@@ -4,129 +4,129 @@ description: Add a new Boris Cherny tip to TIPS.md with full structured fields
 
 # /add-tip — Interactive Tip Addition
 
-Du bist im boris-cherny-claude-code-playbook Repo. Der Nutzer möchte einen neuen Tipp hinzufügen.
+You are in the boris-cherny-claude-code-playbook repo. The user wants to add a new tip.
 
 ## Workflow
 
-### Schritt 1 — Quelle erfragen
-Frage: "Wo hast du den Tipp gefunden? Bitte URL oder kurze Beschreibung."
+### Step 1 — Ask for Source
+Ask: "Where did you find the tip? Please provide a URL or brief description."
 
-Mögliche Quellen:
-- X/Twitter Post (URL gibt Tweet-ID)
-- Podcast (welcher, ggf. mit Timestamp)
+Possible sources:
+- X/Twitter post (URL provides tweet ID)
+- Podcast (which one, with timestamp if available)
 - Anthropic Blog (URL)
-- Konferenz-Talk (welcher)
-- Sekundärquelle (Newsletter, Blog) — dann original verify
+- Conference talk (which one)
+- Secondary source (newsletter, blog) — then verify original
 
-### Schritt 2 — Quelle prüfen (web_fetch)
-Lade die URL mit web_fetch. Verifiziere:
-- Ist der Autor @bcherny (oder Anthropic-Team-Member endorsed von Boris)?
-- Ist das wirklich ein Tipp / Workflow / Best Practice — kein reines Status-Update?
-- Datum des Posts identifizieren
+### Step 2 — Verify Source (web_fetch)
+Load the URL with web_fetch. Verify:
+- Is the author @bcherny (or an Anthropic team member endorsed by Boris)?
+- Is it actually a tip / workflow / best practice — not just a status update?
+- Identify the date of the post
 
-Wenn die Quelle nicht passt, sage es offen. Kein Tipp wird erfunden.
+If the source doesn't fit, say so openly. No tip is fabricated.
 
-### Schritt 3 — Theme zuordnen
-21 existierende Themen (Liste in TIPS.md):
-01 Parallele Ausführung | 02 Plan Mode | 03 CLAUDE.md | 04 Slash Commands |
-05 Subagents | 06 Hooks | 07 Permissions & Safety | 08 MCP & Integrationen |
-09 Modell & Effort | 10 Verifikation | 11 Long-Running & Recaps |
+### Step 3 — Assign Theme
+21 existing themes (list in TIPS.md):
+01 Parallel Execution | 02 Plan Mode | 03 CLAUDE.md | 04 Slash Commands |
+05 Subagents | 06 Hooks | 07 Permissions & Safety | 08 MCP & Integrations |
+09 Model & Effort | 10 Verification | 11 Long-Running & Recaps |
 12 Prompting & Specs | 13 Customization | 14 Headless / SDK |
-15 Code Review | 16 Cost / ROI | 17 Form-Factor | 18 Migration & Daten |
-19 Lernen & Onboarding | 20 Context Management | 21 Terminal Environment
+15 Code Review | 16 Cost / ROI | 17 Form-Factor | 18 Migration & Data |
+19 Learning & Onboarding | 20 Context Management | 21 Terminal Environment
 
-Wenn keines passt: frage den Nutzer, ob ein neues Theme angelegt werden soll
-(dann muss auch index.html, README.md, und der TOC erweitert werden — größeres Refactoring).
+If none fits: ask the user whether a new theme should be created
+(this also requires extending index.html, README.md, and the TOC — a larger refactoring).
 
-### Schritt 4 — Felder zusammenstellen
-Erstelle einen Vorschlag mit allen Feldern, zeige ihn dem Nutzer zur Bestätigung:
+### Step 4 — Assemble Fields
+Create a draft with all fields, show it to the user for confirmation:
 
 ```
-### #<TT.NN> — <Titel>
+### #<TT.NN> — <Title>
 - **Difficulty:** <Beginner|Intermediate|Advanced>
 - **Date:** <YYYY-MM-DD>
 - **Source:** [<Type>](<URL>)
 - **Author:** @<author>
 - **Quote:** "<optional verbatim, < 15 words>"
 
-<Deutsche Beschreibung, 1–3 Sätze.>
+<English description, 1–3 sentences.>
 ```
 
-ID-Vergabe: schaue im YAML-Tracker am Ende von TIPS.md unter
-`last_tip_id_per_theme."<TT>"` und nimm N+1.
+ID assignment: check the YAML tracker at the bottom of TIPS.md under
+`last_tip_id_per_theme."<TT>"` and use N+1.
 
-Schwierigkeits-Heuristik:
-- Beginner: Sofort umsetzbar, ohne Vorkenntnisse, kein Risiko
-- Intermediate: Setup nötig (Config-File, Hook), oder Tool-Kombination
-- Advanced: Mehrere Components, Custom-Code, Risiko bei falscher Anwendung
+Difficulty heuristic:
+- Beginner: Immediately actionable, no prerequisites, no risk
+- Intermediate: Setup needed (config file, hook), or tool combination
+- Advanced: Multiple components, custom code, risk if applied incorrectly
 
-### Schritt 5 — Nutzer-Bestätigung einholen
-Zeige den Entwurf und frage: "OK so? Soll ich einfügen?"
+### Step 5 — Get User Confirmation
+Show the draft and ask: "OK like this? Should I insert it?"
 
-Bei Korrekturen: iteriere. Bei OK: weiter zu Schritt 6.
+For corrections: iterate. On OK: proceed to Step 6.
 
-### Schritt 6 — TIPS.md einfügen
-- Theme-Section finden (z.B. `## 04 — Slash Commands`)
-- Vor der nächsten `---` Trennlinie einfügen
-- YAML-Tracker am Ende aktualisieren:
-  - `last_tip_id_per_theme."<TT>"` erhöhen
+### Step 6 — Insert into TIPS.md
+- Find the theme section (e.g., `## 04 — Slash Commands`)
+- Insert before the next `---` separator line
+- Update the YAML tracker at the bottom:
+  - Increment `last_tip_id_per_theme."<TT>"`
   - `total_tips` +1
 
-### Schritt 7 — CHANGELOG-Eintrag
-Oben in CHANGELOG.md (unter H1) einfügen:
+### Step 7 — CHANGELOG Entry
+Insert at the top of CHANGELOG.md (below H1):
 
 ```
 ## <YYYY-MM-DD> — Manual Addition (via /add-tip)
 
-- ➕ Added tip #<TT.NN>: <Titel>
+- Added tip #<TT.NN>: <Title>
   - Source: <URL>
   - Added by: SAI
 ```
 
-### Schritt 7b — IMPLEMENTATION-GUIDE.md prüfen
-Prüfe: Ist dieser Tipp actionable (kann Claude Code ihn ausführen/konfigurieren)?
+### Step 7b — Check IMPLEMENTATION-GUIDE.md
+Check: Is this tip actionable (can Claude Code execute/configure it)?
 
-Actionable-Kategorien:
-- CLAUDE.md-Setup (Theme 03)
+Actionable categories:
+- CLAUDE.md setup (Theme 03)
 - Slash Commands (Theme 04)
 - Subagents (Theme 05)
 - Hooks (Theme 06)
 - Permissions & Safety (Theme 07)
-- MCP & Integrationen (Theme 08)
-- Modell & Effort (Theme 09, nur Konfiguration)
-- Verifikation (Theme 10, nur Setup-Patterns)
+- MCP & Integrations (Theme 08)
+- Model & Effort (Theme 09, configuration only)
+- Verification (Theme 10, setup patterns only)
 - Customization (Theme 13)
 - Headless / SDK (Theme 14)
 - Context Management (Theme 20)
 
-Wenn ja: Frage den Nutzer:
-"Dieser Tipp ist actionable. Soll ich ihn auch in IMPLEMENTATION-GUIDE.md einpflegen? (Empfohlen: ja)"
+If yes: Ask the user:
+"This tip is actionable. Should I also add it to IMPLEMENTATION-GUIDE.md? (Recommended: yes)"
 
-Bei Ja:
-  1. Öffne IMPLEMENTATION-GUIDE.md
-  2. Finde die passende Section (1–10)
-  3. Füge den Tipp als ausführbaren Instruktionsblock ein
-  4. Aktualisiere die Tip-ID-Referenz in Appendix D
-  5. Füge IMPLEMENTATION-GUIDE.md zur Commit-Vorschlag-Liste hinzu
+If yes:
+  1. Open IMPLEMENTATION-GUIDE.md
+  2. Find the matching section (1–10)
+  3. Insert the tip as an executable instruction block
+  4. Update the tip ID reference in Appendix D
+  5. Add IMPLEMENTATION-GUIDE.md to the suggested commit file list
 
-Bei Nein: weiter zu Schritt 8.
+If no: proceed to Step 8.
 
-### Schritt 8 — Frage nach HTML-Sync
-Frage: "Soll ich auch index.html aktualisieren? (Empfohlen ja, sonst läuft das Dashboard out of sync.)"
+### Step 8 — Ask About HTML Sync
+Ask: "Should I also update index.html? (Recommended: yes, otherwise the dashboard goes out of sync.)"
 
-Bei Ja: führe `/regenerate-html` aus (siehe regenerate-html.md).
+If yes: run `/regenerate-html` (see regenerate-html.md).
 
-### Schritt 9 — Commit-Vorschlag
-Mache KEINEN automatischen Commit — der Nutzer kommittet selbst. Aber zeige den vorgeschlagenen Commit-Befehl:
+### Step 9 — Suggest Commit
+Do NOT auto-commit — the user commits themselves. But show the suggested commit command:
 
 ```bash
 git add TIPS.md CHANGELOG.md index.html
-git commit -m "Add tip #<TT.NN>: <Titel>"
+git commit -m "Add tip #<TT.NN>: <Title>"
 git push
 ```
 
-## Wichtig
+## Important
 
-- **Keine Eile.** Lieber langsam und korrekt als schnell und falsch.
-- **Im Zweifel nachfragen.** Bei mehrdeutigen Quellen, unklarer Difficulty, oder grenzwertigen Tipps — frage.
-- **Nichts erfinden.** Wenn die Quelle nicht wirklich einen Tipp enthält, beende den Workflow und erkläre warum.
+- **No rush.** Better slow and correct than fast and wrong.
+- **When in doubt, ask.** For ambiguous sources, unclear difficulty, or borderline tips — ask.
+- **Don't fabricate.** If the source doesn't actually contain a tip, end the workflow and explain why.
