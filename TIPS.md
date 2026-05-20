@@ -1479,8 +1479,8 @@ Organize terminal tabs by color codes and names.
 <!-- Automation reads from here. Do not delete. -->
 
 ```yaml
-last_scan_iso: "2026-05-12T20:00:00Z"
-last_scan_anchor_tweet_id: "2044847848035156457"
+last_scan_iso: "2026-05-20T12:00:00Z"
+last_scan_anchor_tweet_id: "2056755719941062919"
 last_tip_id_per_theme:
   "01": 9
   "02": 6

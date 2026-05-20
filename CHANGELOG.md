@@ -6,6 +6,14 @@ Newest entries first.
 
 ---
 
+## 2026-05-20 — Routine Scan (no changes)
+- Scanned 6 sources (x.com/bcherny, threadreaderapp, howborisusesclaudecode.com, medium, venturebeat, pasqualepillitteri.it), no new tips since anchor `2044847848035156457`
+- 4 posts found after last anchor: event greetings (Code with Claude London), stickers promo, and one pure RT (@ClaudeDevs /radio) — none meet tip criteria
+- Managed Agents features (Dreaming, Outcomes, Multiagent Orchestration) announced at Code with Claude London via official Anthropic blog, not Boris's personal X — excluded per sourcing rules
+- Scan completed. New anchor: `2056755719941062919`
+
+---
+
 ## 2026-05-13 — Implementation Guide + GitHub Launch
 
 - 🆕 **IMPLEMENTATION-GUIDE.md** created: ~70 actionable tips from TIPS.md as executable Claude Code instructions. 10 sections: CLAUDE.md Setup, Settings & Permissions, Slash Commands, Hooks, Subagents, MCP Integrations, Verification, Headless/SDK, Context Management, Automation. Plus 4 appendices (Env Vars, Settings Template, Checklist, Tip ID Reference). Language: English.
