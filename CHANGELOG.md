@@ -6,6 +6,14 @@ Newest entries first.
 
 ---
 
+## 2026-05-20 — Manual Scan (no changes)
+- Scanned 6 sources (x.com/bcherny, threadreaderapp.com, howborisusesclaudecode.com, Code w/ Claude 2026 conference, CNBC May 20 interview, Claude Code changelog), no new tips since anchor `2056755719941062919`
+- Conference keynote (May 19, London) referenced Agent View, /goal, and Routines — all launched in Week 20 (May 11–15) and already captured in prior scans; no new Boris X posts found
+- No Boris tweet IDs higher than current anchor detected across all sources
+- Scan completed. Anchor unchanged: `2056755719941062919`
+
+---
+
 ## 2026-05-20 — Routine Scan (no changes)
 - Scanned 6 sources (x.com/bcherny, threadreaderapp, howborisusesclaudecode.com, medium, venturebeat, pasqualepillitteri.it), no new tips since anchor `2044847848035156457`
 - 4 posts found after last anchor: event greetings (Code with Claude London), stickers promo, and one pure RT (@ClaudeDevs /radio) — none meet tip criteria
