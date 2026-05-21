@@ -7,6 +7,14 @@ Newest entries first.
 ---
 
 ## 2026-05-21 — Routine Scan (no changes)
+- Scanned 6 sources (x.com/bcherny, threadreaderapp.com/user/bcherny, howborisusesclaudecode.com, simonwillison.net code-w-claude-2026, MIT Technology Review May 21, bcherny Claude Code tip May 2026), no new tips since anchor `2056755719941062919`
+- No Boris tweet IDs higher than current anchor detected across all sources
+- All found tweet IDs ≤ anchor; Code Review / /btw / /simplify / /batch / Routines / Auto-Dream already captured in prior scans
+- Scan completed. Anchor unchanged: `2056755719941062919`
+
+---
+
+## 2026-05-21 — Routine Scan (no changes)
 - Scanned 8 sources (x.com/bcherny, threadreaderapp.com/user/bcherny, howborisusesclaudecode.com, borischerny.com, Code with Claude Extended London recap, InfoQ code-with-claude, simonwillison.net live blog, bcherny Claude Code tip May 2026), no new tips since anchor `2056755719941062919`
 - No Boris tweet IDs higher than current anchor detected across all sources
 - Scan completed. Anchor unchanged: `2056755719941062919`
