@@ -7,6 +7,13 @@ Newest entries first.
 ---
 
 ## 2026-05-22 — Routine Scan (no changes)
+- Scanned 6 sources (x.com/bcherny, threadreaderapp.com/user/bcherny, howborisusesclaudecode.com, threads.com/@boris_cherny, simonwillison.net code-w-claude-2026, bcherny Claude Code tip May 2026), no new tips since anchor `2056755719941062919`
+- All discovered tweet IDs ≤ anchor `2056755719941062919`; no posts from Boris Cherny after last scan cutoff
+- Scan completed. Anchor unchanged: `2056755719941062919`
+
+---
+
+## 2026-05-22 — Routine Scan (no changes)
 - Scanned 8 sources (x.com/bcherny, threadreaderapp.com/user/bcherny, howborisusesclaudecode.com, simonwillison.net code-w-claude-2026, MIT Technology Review, Lenny's Newsletter, bcherny Claude Code tip May 2026, threads.com/@boris_cherny), no new tips since anchor `2056755719941062919`
 - No Boris tweet IDs higher than current anchor detected across all sources (~36h since last scan)
 - Scan completed. Anchor unchanged: `2056755719941062919`
