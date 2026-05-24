@@ -6,6 +6,12 @@ Newest entries first.
 
 ---
 
+## 2026-05-24 — Routine Scan
+- Updated tip #07.04: Auto Mode — added multi-clauding framing and quote; Boris explicitly named auto mode his current #1 tip as "the key building block for multi-clauding" (Source: x.com)
+- Scan completed. Anchor: `2058519809214607704`
+
+---
+
 ## 2026-05-24 — Routine Scan (no changes)
 - Scanned 6 sources (x.com/bcherny, threadreaderapp.com/user/bcherny, howborisusesclaudecode.com, threads.com/@boris_cherny, bcherny Claude Code 2026, boris cherny claude code announcement May 24 2026), no new tips since anchor `2056755719941062919`
 - All discovered tweet IDs ≤ anchor `2056755719941062919`; no @bcherny posts after scan cutoff

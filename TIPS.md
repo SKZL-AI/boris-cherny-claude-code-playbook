@@ -722,8 +722,11 @@ Check pre-allowed permissions into git. Onboarding becomes a one-command affair.
 - **Date:** 2026-04-16
 - **Source:** [X-Thread](https://x.com/bcherny/status/2044847848035156457)
 - **Author:** @bcherny
+- **Quote:** "Auto mode means no more permission prompts"
 
 Model-based classifier auto-approves safe permission prompts. Shift+Tab cycles: Ask → Plan → Auto.
+
+Update (2026-05-24): Boris named this his current #1 tip, framing auto mode as "the key building block for multi-clauding": start one session, then immediately start another while the first runs — no permission prompts to interrupt either. Source: [X](https://x.com/bcherny/status/2058519809214607704)
 
 ### #07.05 — `--permission-mode=dontAsk` in Sandboxes
 - **Difficulty:** Advanced
@@ -1479,8 +1482,8 @@ Organize terminal tabs by color codes and names.
 <!-- Automation reads from here. Do not delete. -->
 
 ```yaml
-last_scan_iso: "2026-05-24T08:00:00Z"
-last_scan_anchor_tweet_id: "2056755719941062919"
+last_scan_iso: "2026-05-24T12:00:00Z"
+last_scan_anchor_tweet_id: "2058519809214607704"
 last_tip_id_per_theme:
   "01": 9
   "02": 6
