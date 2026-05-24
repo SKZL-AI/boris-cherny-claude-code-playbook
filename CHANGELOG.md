@@ -6,8 +6,8 @@ Newest entries first.
 
 ---
 
-## 2026-05-23 — Routine Scan (no changes)
-- Scanned 6 sources (x.com/bcherny, threadreaderapp.com/user/bcherny, howborisusesclaudecode.com, threads.com/@boris_cherny, bcherny Claude Code 2026, bcherny claude code tweet 2026-05-23), no new tips since anchor `2056755719941062919`
+## 2026-05-24 — Routine Scan (no changes)
+- Scanned 6 sources (x.com/bcherny, threadreaderapp.com/user/bcherny, howborisusesclaudecode.com, threads.com/@boris_cherny, bcherny Claude Code 2026, boris cherny claude code announcement May 24 2026), no new tips since anchor `2056755719941062919`
 - All discovered tweet IDs ≤ anchor `2056755719941062919`; no @bcherny posts after scan cutoff
 - Scan completed. Anchor unchanged: `2056755719941062919`
 
