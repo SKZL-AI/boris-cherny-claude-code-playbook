@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-05-26 — Manual Scan (no changes)
+- Scanned 8 sources: x.com/bcherny, threadreaderapp.com/user/bcherny, howborisusesclaudecode.com, threads.com/@boris_cherny, code.claude.com/docs/en/whats-new/2026-w19, code.claude.com/docs/en/whats-new/2026-w20, Claude.ai blog, bcherny/Claude Code May 2026 search
+- Found 1 tweet newer than anchor: `2058908741265711537` — a reply to @norisalsaadie/@lotfullah_ with link, not a standalone tip
+- Week 20 features (agent view, /goal, fast mode on Opus 4.7) not announced via verifiable @bcherny tweet; not added
+- No new tips to add. Anchor advanced: `2058908741265711537`
+- Scan completed. Anchor: `2058908741265711537`
+
+---
+
 ## 2026-05-26 — Routine Scan (no changes)
 - Scanned 6 sources (x.com/bcherny, threadreaderapp.com/user/bcherny, howborisusesclaudecode.com, threads.com/@boris_cherny, bcherny Claude Code May 2026, Boris Cherny Anthropic tip Claude Code 2026), no new tips since anchor `2058519809214607704`
 - All discovered tweet IDs ≤ anchor `2058519809214607704`; no @bcherny posts after 2026-05-25T17:00:00Z
