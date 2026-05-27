@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-05-27 — Routine Scan (no changes)
+- Scanned 6 sources: x.com/bcherny, threadreaderapp.com/user/bcherny, howborisusesclaudecode.com, threads.com/@boris_cherny, code.claude.com/docs/en/whats-new, bcherny Claude Code May 27 2026 search
+- No tweet IDs above anchor `2058908741265711537` found; @bcherny inactive since 2026-05-26
+- code.claude.com/docs/en/whats-new last entry: Week 20 (May 11–15, 2026) — no @bcherny-attributed posts found
+- No new tips to add. Anchor unchanged: `2058908741265711537`
+- Scan completed. Anchor: `2058908741265711537`
+
+---
+
 ## 2026-05-26 — Manual Scan (no changes)
 - Scanned 8 sources: x.com/bcherny, threadreaderapp.com/user/bcherny, howborisusesclaudecode.com, threads.com/@boris_cherny, code.claude.com/docs/en/whats-new/2026-w19, code.claude.com/docs/en/whats-new/2026-w20, Claude.ai blog, bcherny/Claude Code May 2026 search
 - Found 1 tweet newer than anchor: `2058908741265711537` — a reply to @norisalsaadie/@lotfullah_ with link, not a standalone tip
