@@ -6,6 +6,14 @@ Newest entries first.
 
 ---
 
+## 2026-05-28 — Routine Scan (no changes)
+- Scanned 6 sources: x.com/bcherny, threadreaderapp.com/user/bcherny, howborisusesclaudecode.com, threads.com/@boris_cherny, bcherny Claude Code tip search, Boris Cherny new feature Claude Code search
+- No tweet IDs above anchor `2058908741265711537` found; @bcherny inactive since 2026-05-26
+- No new tips to add. Anchor unchanged: `2058908741265711537`
+- Scan completed. Anchor: `2058908741265711537`
+
+---
+
 ## 2026-05-27 — Routine Scan (no changes) [2nd pass]
 - Scanned 5 sources: x.com/bcherny, threadreaderapp.com/user/bcherny (403), howborisusesclaudecode.com (403), bcherny Claude Code May 27 2026 search, Boris Cherny new feature Claude Code May 2026 search
 - No tweet IDs above anchor `2058908741265711537` found; @bcherny inactive since 2026-05-26
