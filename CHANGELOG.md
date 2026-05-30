@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-05-30 — Manual Scan (no changes)
+- Triggered manually via /scan-x at ~17:00 UTC
+- Queried 6 sources: x.com/bcherny, bcherny Claude Code tip 2026, Boris Cherny Anthropic new feature 2026, site:threadreaderapp.com bcherny, bcherny Claude Code May 2026, Boris Cherny Claude Code May 30 2026
+- No tweet IDs above anchor `2058908741265711537` found; all detected posts (Code with Claude London May 19, auto mode tip) already captured in prior scans
+- No new tips to add. Anchor unchanged: `2058908741265711537`
+- Scan completed. Anchor: `2058908741265711537`
+
+---
+
 ## 2026-05-30 — Routine Scan (no changes)
 - Scanned 10 sources: x.com/bcherny, threadreaderapp.com/user/bcherny, howborisusesclaudecode.com, threads.com/@boris_cherny, twitter-thread.com, code.claude.com/docs/en/whats-new, plus keyword searches for "bcherny Claude Code 2026", "bcherny Claude Code tip May 2026", "Boris Cherny Anthropic new feature 2026", "bcherny tweet 2026-05-30"
 - No tweet IDs above anchor `2058908741265711537` found; no Boris Cherny posts after 2026-05-29T18:00:00Z detected
