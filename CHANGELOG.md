@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-05-31 — Routine Scan (no changes)
+- Scanned 6 sources: x.com/bcherny, bcherny Claude Code 2026, Boris Cherny Anthropic tip Claude Code 2026, site:threadreaderapp.com bcherny, howborisusesclaudecode latest May 2026, bcherny x.com tweet May 31 2026
+- No tweet IDs above anchor `2058908741265711537` found; most recent detected post was ID `2056755719941062919` (Karpathy welcome, ~May 19) — predates last anchor
+- Claude Code docs Week 22 digest ends May 29, before last scan cutoff
+- No new tips to add. Anchor unchanged: `2058908741265711537`
+- Scan completed. Anchor: `2058908741265711537`
+
+---
+
 ## 2026-05-30 — Manual Scan (no changes)
 - Triggered manually via /scan-x at ~17:00 UTC
 - Queried 6 sources: x.com/bcherny, bcherny Claude Code tip 2026, Boris Cherny Anthropic new feature 2026, site:threadreaderapp.com bcherny, bcherny Claude Code May 2026, Boris Cherny Claude Code May 30 2026
