@@ -14,6 +14,7 @@ Newest entries first.
 
 ---
 
+
 ## 2026-05-31 — Routine Scan (no changes)
 - Scanned 6 sources: x.com/bcherny, bcherny Claude Code 2026, Boris Cherny Anthropic tip Claude Code 2026, site:threadreaderapp.com bcherny, howborisusesclaudecode latest May 2026, bcherny x.com tweet May 31 2026
 - No tweet IDs above anchor `2058908741265711537` found; most recent detected post was ID `2056755719941062919` (Karpathy welcome, ~May 19) — predates last anchor
@@ -39,7 +40,6 @@ Newest entries first.
 - Scan completed. Anchor: `2058908741265711537`
 
 ---
-
 
 ## 2026-05-29 — Routine Scan (no changes) [2nd pass]
 - Scanned 6 sources: x.com/bcherny, threadreaderapp.com/user/bcherny, howborisusesclaudecode.com, threads.com/@boris_cherny, plus keyword searches for "bcherny Claude Code 2026", "bcherny Claude Code tip 2026", "Boris Cherny Anthropic new feature 2026"
