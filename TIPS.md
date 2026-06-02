@@ -613,6 +613,15 @@ The value isn't anthropomorphization — it's two context windows that know noth
 - **Author:** @bcherny
 - **Quote:** "Research three separate ideas. Do it in parallel. Use three agents"
 
+### #05.13 — Dynamic Workflows for Large-Scale Migrations
+- **Difficulty:** Intermediate
+- **Date:** 2026-05-28
+- **Source:** [X](https://x.com/bcherny/status/2060048879274414090)
+- **Author:** @bcherny
+- **Quote:** "With dynamic workflows, Claude can now land that kind of work in days or weeks."
+
+Dynamic Workflows orchestrate dozens to hundreds of subagents from a JavaScript script Claude writes automatically for your task. Include the word `workflow` anywhere in a prompt to trigger one, or activate `/effort ultracode` to have Claude plan workflows automatically for every task in the session. Best suited for codebase-wide audits, 500-file migrations, framework swaps, and API deprecations that would otherwise occupy a team for a quarter.
+
 ---
 
 ## 06 — Hooks
@@ -1482,14 +1491,14 @@ Organize terminal tabs by color codes and names.
 <!-- Automation reads from here. Do not delete. -->
 
 ```yaml
-last_scan_iso: "2026-06-02T00:00:00Z"
-last_scan_anchor_tweet_id: "2058908741265711537"
+last_scan_iso: "2026-06-02T12:00:00Z"
+last_scan_anchor_tweet_id: "2060048879274414090"
 last_tip_id_per_theme:
   "01": 9
   "02": 6
   "03": 11
   "04": 34
-  "05": 12
+  "05": 13
   "06": 9
   "07": 7
   "08": 7
@@ -1506,7 +1515,7 @@ last_tip_id_per_theme:
   "19": 5
   "20": 5
   "21": 3
-total_tips: 132
+total_tips: 133
 ```
 
 <!-- End tracking metadata -->

@@ -6,6 +6,13 @@ Newest entries first.
 
 ---
 
+## 2026-06-02 — Routine Scan
+- Added tip #05.13: Dynamic Workflows for Large-Scale Migrations (Source: x.com/bcherny/status/2060048879274414090)
+- Tweet ID 2060048879274414090 (2026-05-28) was above anchor 2058908741265711537 — missed by earlier scans due to X crawl limits
+- Scan completed. Anchor: 2060048879274414090
+
+---
+
 ## 2026-06-02 — Routine Scan (no changes)
 - Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code 2026, Boris Cherny Anthropic tip Claude Code 2026, site:threadreaderapp.com bcherny (403), site:threads.com boris_cherny (403), howborisusesclaudecode latest tips 2026 (403)
 - No tweet IDs above anchor `2058908741265711537` found; highest seen was `2056755719941062919` (Karpathy welcome, ~May 19)
