@@ -6,6 +6,14 @@ Newest entries first.
 
 ---
 
+## 2026-06-04 — Routine Scan (no changes)
+- Scanned 8 sources: bcherny site:x.com 2026, bcherny Claude Code 2026, Boris Cherny Anthropic tip Claude Code 2026, site:threadreaderapp.com bcherny (403), howborisusesclaudecode.com (403), site:threads.com boris_cherny, bcherny x.com June 2026 Claude Code, "Boris Cherny" Claude Code tip June 2026
+- No tweet IDs above anchor `2060048879274414090` found; all results at or below existing anchor
+- No new tips to add. Anchor unchanged: `2060048879274414090`
+- Scan completed. Anchor: 2060048879274414090
+
+---
+
 ## 2026-06-03 — Manual Scan /scan-x (no changes)
 - Scanned 8 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic Claude Code new feature 2026, site:threadreaderapp.com bcherny (403), howborisusesclaudecode.com (403), releasebot.io (403), bcherny Claude Code June 2026, bcherny OR @bcherny Claude Code after:2026-06-03
 - All tweet IDs returned (highest: 2060048879274414090) are at or below the anchor — no new posts found
