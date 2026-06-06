@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-06-06 — Routine Scan (no changes)
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic keynote June 2026, site:threadreaderapp.com bcherny (403), howborisusesclaudecode.com (403), x.com/bcherny (403)
+- All tweet IDs found are at or below anchor `2060048879274414090` — no new posts since last scan
+- Claude Code changelog 2.1.166/2.1.167 (June 6) noted; no Boris X-post attribution to capture
+- No new tips to add. Anchor unchanged: `2060048879274414090`
+- Scan completed. Anchor: 2060048879274414090
+
+---
+
 ## 2026-06-05 — Routine Scan (no changes) [2nd run]
 - Scanned 6 sources: bcherny site:x.com Claude Code 2026, bcherny Claude Code tip June 2026, Boris Cherny new feature Claude Code June 2026, site:threadreaderapp.com bcherny 2026, bcherny x.com June 2026 Claude Code new tip, bcherny x.com status 206x
 - x.com and threadreaderapp.com return 403; howborisusesclaudecode.com returns 403
