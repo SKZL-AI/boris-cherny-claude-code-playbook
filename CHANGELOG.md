@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-06-06 — Routine Scan (no changes) [2nd run]
+- Scanned 10 sources: bcherny site:x.com Claude Code 2026, bcherny Claude Code tip 2026, Boris Cherny new feature Claude Code 2026, site:threadreaderapp.com bcherny (403), site:threads.net boris_cherny (403), howborisusesclaudecode.com (403), bcherny x.com June 2026 Claude Code, bcherny "Code w/ Claude" Tokyo June 2026, Claude Code changelog June 2026, bcherny "fallbackModel" OR "dynamic workflows"
+- x.com/bcherny, threadreaderapp.com, threads.net, howborisusesclaudecode.com all return 403
+- Anchor tweet `2060048879274414090` confirmed as bcherny's Dynamic Workflows announcement (already captured as tip #05.13)
+- Claude Code v2.1.166/2.1.167 (June 6) changelog noted; no Boris X-post attribution found for `fallbackModel` or other new settings
+- Code w/ Claude Tokyo (June 5–6) confirmed running; no session recap content indexed yet
+- All tweet IDs found remain at or below anchor — no new posts since 12:00Z scan
+- No new tips to add. Anchor unchanged: `2060048879274414090`
+- Scan completed. Anchor: 2060048879274414090
+
 ## 2026-06-06 — Routine Scan (no changes)
 - Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic keynote June 2026, site:threadreaderapp.com bcherny (403), howborisusesclaudecode.com (403), x.com/bcherny (403)
 - All tweet IDs found are at or below anchor `2060048879274414090` — no new posts since last scan
