@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-06-07 — Routine Scan (no changes)
+- Scanned 8 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic tip 2026, site:threadreaderapp.com bcherny 2026 (403), site:threads.com boris_cherny Claude Code 2026 (403), howborisusesclaudecode.com (403), bcherny "rate limits" June 2026, bcherny site:x.com after:2026-06-06
+- Two posts found after anchor `2060048879274414090`: tweet `2060390852619272526` (Salesforce case study share — marketing, no actionable tip) and tweet `2063028954546733462` (Claude Cowork rate-limits doubled — product announcement for separate Cowork product, not a Claude Code tip)
+- Threads post `DYATny3G3WZ` (Claude Code 5-hr rate limits doubled + peak-hours removed) classified as product announcement; no actionable developer tip
+- No new tips to add. Anchor advanced to newest found post: `2063028954546733462`
+- Scan completed. Anchor: 2063028954546733462
+
+---
+
 ## 2026-06-06 — Routine Scan (no changes) [2nd run]
 - Scanned 10 sources: bcherny site:x.com Claude Code 2026, bcherny Claude Code tip 2026, Boris Cherny new feature Claude Code 2026, site:threadreaderapp.com bcherny (403), site:threads.net boris_cherny (403), howborisusesclaudecode.com (403), bcherny x.com June 2026 Claude Code, bcherny "Code w/ Claude" Tokyo June 2026, Claude Code changelog June 2026, bcherny "fallbackModel" OR "dynamic workflows"
 - x.com/bcherny, threadreaderapp.com, threads.net, howborisusesclaudecode.com all return 403
