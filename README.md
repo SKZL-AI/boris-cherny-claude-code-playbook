@@ -1,9 +1,9 @@
-![Tips](https://img.shields.io/badge/Tips-133-blue)
+![Tips](https://img.shields.io/badge/Tips-134-blue)
 ![Themes](https://img.shields.io/badge/Themes-21-green)
 ![Auto-Updated](https://img.shields.io/badge/Auto--Updated-2--3x%20daily-orange)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-> **133 tips from the Head of Claude Code at Anthropic — auto-updated daily.**
+> **134 tips from the Head of Claude Code at Anthropic — auto-updated daily.**
 > *Feed the [Implementation Guide](./IMPLEMENTATION-GUIDE.md) to Claude Code and auto-configure your project in one shot.*
 
 # Boris Cherny Claude Code Playbook
@@ -34,7 +34,7 @@ Open [IMPLEMENTATION-GUIDE.md](./IMPLEMENTATION-GUIDE.md) and copy the sections 
 
 ## Why This Repo?
 
-1. **First complete collection** of all public Boris Cherny tips in one place — 133 tips, 21 themes
+1. **First complete collection** of all public Boris Cherny tips in one place — 134 tips, 21 themes
 2. **Automatically up-to-date** — Claude.ai Routines scan for new tips 2–3x daily
 3. **Instantly actionable** — [IMPLEMENTATION-GUIDE.md](./IMPLEMENTATION-GUIDE.md) lets Claude Code configure your project in minutes
 4. **Visual dashboard** — Filters, timeline, difficulty levels at a glance
@@ -48,7 +48,7 @@ Boris Cherny started Claude Code in September 2024 as a side project at Anthropi
 
 This repo collects those tips in one place, classifies them by difficulty and theme, and keeps them current through automated X scans.
 
-**Current:** 133 tips across 21 themes, documented over 14 months.
+**Current:** 134 tips across 21 themes, documented over 14 months.
 
 ---
 
@@ -62,7 +62,7 @@ This repo collects those tips in one place, classifies them by difficulty and th
 
 ## Contents
 
-- **[TIPS.md](./TIPS.md)** — All 133 tips, structured by theme and difficulty. Source of truth for automation.
+- **[TIPS.md](./TIPS.md)** — All 134 tips, structured by theme and difficulty. Source of truth for automation.
 - **[IMPLEMENTATION-GUIDE.md](./IMPLEMENTATION-GUIDE.md)** — ~70 actionable tips structured as executable instructions for Claude Code. One-shot setup.
 - **[index.html](./index.html)** — Visual dashboard with filters, timeline, stages, and caveats. Open locally or host on GitHub Pages.
 - **[CHANGELOG.md](./CHANGELOG.md)** — Which tips were added when.
@@ -79,7 +79,7 @@ This repo collects those tips in one place, classifies them by difficulty and th
 | 01 | Parallel Execution | 9 | "The single biggest productivity unlock" |
 | 02 | Plan Mode | 6 | "A good plan is really important" |
 | 03 | CLAUDE.md | 11 | "Anytime Claude does something wrong, we add it to the CLAUDE.md" |
-| 04 | Slash Commands | 34 | Inner-loop automation for daily workflows |
+| 04 | Slash Commands | 35 | Inner-loop automation for daily workflows |
 | 05 | Subagents | 12 | Uncorrelated context windows, not anthropomorphization |
 | 06 | Hooks | 9 | Deterministic logic where the model is unreliable |
 | 07 | Permissions & Safety | 7 | Pre-allow > skip; Sandbox > danger flag |
@@ -206,4 +206,4 @@ If this repo helps you, [give it a star](https://github.com/SKZL-AI/boris-cherny
 
 ---
 
-*Maintained by [SKZL-AI](https://github.com/SKZL-AI) · Last full audit: 2026-06-02*
+*Maintained by [SKZL-AI](https://github.com/SKZL-AI) · Last full audit: 2026-06-09*

@@ -514,6 +514,15 @@ Don't pollute context with failed attempts + corrections — rewind and re-promp
 
 Have Claude write a handoff message to its future self. Maximizes continuous learning across rewinds.
 
+### #04.35 — `/goal` for Autonomous Run-Until-Done Sessions
+- **Difficulty:** Advanced
+- **Date:** 2026-06-09
+- **Source:** [X](https://x.com/bcherny/status/2063792263067754658)
+- **Author:** @bcherny
+- **Quote:** "nudge Claude to keep going until it's done"
+
+The `/goal` command sets a completion condition; a lightweight model re-evaluates it after each turn and automatically starts another turn if the condition is not yet met. Eliminates the need to repeatedly type "keep going" across multi-hour sessions. Boris recommends it alongside auto mode and dynamic workflows for long-running Opus tasks.
+
 ---
 
 ## 05 — Subagents
@@ -1491,13 +1500,13 @@ Organize terminal tabs by color codes and names.
 <!-- Automation reads from here. Do not delete. -->
 
 ```yaml
-last_scan_iso: "2026-06-09T10:00:00Z"
-last_scan_anchor_tweet_id: "2063028954546733462"
+last_scan_iso: "2026-06-09T12:00:00Z"
+last_scan_anchor_tweet_id: "2064034799711588805"
 last_tip_id_per_theme:
   "01": 9
   "02": 6
   "03": 11
-  "04": 34
+  "04": 35
   "05": 13
   "06": 9
   "07": 7
@@ -1515,7 +1524,7 @@ last_tip_id_per_theme:
   "19": 5
   "20": 5
   "21": 3
-total_tips: 133
+total_tips: 134
 ```
 
 <!-- End tracking metadata -->

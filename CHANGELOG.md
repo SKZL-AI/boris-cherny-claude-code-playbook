@@ -6,6 +6,14 @@ Newest entries first.
 
 ---
 
+## 2026-06-09 — Routine Scan
+- Added tip #04.35: `/goal` for Autonomous Run-Until-Done Sessions (Source: x.com)
+- Tweet 2063792263067754658 (> anchor 2063028954546733462): Boris recommends `/goal` alongside auto mode and dynamic workflows for long-running Opus tasks
+- Scan also found tweet 2064034799711588805 (year-after-GA interview promo); content covers already-documented features; anchor updated
+- Scan completed. Anchor: 2064034799711588805
+
+---
+
 ## 2026-06-09 — Routine Scan (no changes)
 - Scanned 8 sources: bcherny site:x.com 2026, bcherny Claude Code tip June 2026, Boris Cherny new feature Claude Code June 2026, site:threadreaderapp.com bcherny 2026 (403), site:threads.com boris_cherny June 2026 (403), howborisusesclaudecode.com (403), bcherny x.com June 9 10 2026, bcherny billing change June 15 2026
 - All tweet IDs found are at or below anchor `2063028954546733462`; no posts from @bcherny after 2026-06-08T20:04:45Z detected
