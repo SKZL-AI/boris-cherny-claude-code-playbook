@@ -3,7 +3,7 @@
 > **Source of truth.** All other artifacts (`README.md`, `index.html`) derive from this file.
 > **Format:** One tip per H3 block. New tips inserted by `/add-tip` or by the Routine in `routines/daily-scan.md`.
 > **Last manual audit:** 2026-05-12
-> **Total tips:** 135 across 21 themes
+> **Total tips:** 136 across 21 themes
 > **Schema:** see `data/tips-schema.json`
 
 ---
@@ -904,6 +904,15 @@ Code review harnesses for older models may see lower recall — it's not a regre
 - **Author:** @bcherny
 - **Quote:** "If you want Claude to think, just tell it to think"
 
+### #09.10 — Fable 5: Best Model for Coding
+- **Difficulty:** Beginner
+- **Date:** 2026-06-09
+- **Source:** [X-Post](https://x.com/bcherny/status/2064402671898075579)
+- **Author:** @bcherny
+- **Quote:** "the best model I have used for coding, by a wide margin"
+
+Boris explicitly recommends Fable 5 (Mythos-class) as his top choice for coding work. Compared to previous Opus models, Fable 5 requires less prompting and steering, delivers better self-verification, supports longer sessions, and can be trusted with higher autonomy — meaning less babysitting per task.
+
 ---
 
 ## 10 — Verification
@@ -1508,8 +1517,8 @@ Organize terminal tabs by color codes and names.
 <!-- Automation reads from here. Do not delete. -->
 
 ```yaml
-last_scan_iso: "2026-06-10T12:00:00Z"
-last_scan_anchor_tweet_id: "2064327225504403752"
+last_scan_iso: "2026-06-10T15:00:00Z"
+last_scan_anchor_tweet_id: "2064431111154053187"
 last_tip_id_per_theme:
   "01": 9
   "02": 6
@@ -1519,7 +1528,7 @@ last_tip_id_per_theme:
   "06": 9
   "07": 7
   "08": 7
-  "09": 9
+  "09": 10
   "10": 11
   "11": 6
   "12": 6
@@ -1532,7 +1541,7 @@ last_tip_id_per_theme:
   "19": 5
   "20": 6
   "21": 3
-total_tips: 135
+total_tips: 136
 ```
 
 <!-- End tracking metadata -->

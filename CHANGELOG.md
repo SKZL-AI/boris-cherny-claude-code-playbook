@@ -7,6 +7,14 @@ Newest entries first.
 ---
 
 ## 2026-06-10 — Routine Scan
+- Added tip #09.10: Fable 5: Best Model for Coding (Source: x.com)
+- Tweet 2064402671898075579 (> anchor 2064327225504403752): Boris recommends Fable 5 as the best coding model by a wide margin — less prompting needed, better self-verification, longer sessions, higher autonomy
+- Also found tweet 2064431111154053187 (> anchor, truncated Fable 5 sentiment post); full text unverifiable — anchor updated, no tip added
+- Scan completed. Anchor: 2064431111154053187
+
+---
+
+## 2026-06-10 — Routine Scan
 - Added tip #20.06: Nested Subagents as Context Resets (depth ≤ 5) (Source: x.com)
 - Tweet 2064327225504403752 (> anchor 2064034799711588805): Boris announces nested subagent support capped at depth 5, motivated by context management — each subagent gets a fresh context window
 - Scan completed. Anchor: 2064327225504403752
