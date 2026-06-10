@@ -6,6 +6,13 @@ Newest entries first.
 
 ---
 
+## 2026-06-10 — Routine Scan
+- Added tip #20.06: Nested Subagents as Context Resets (depth ≤ 5) (Source: x.com)
+- Tweet 2064327225504403752 (> anchor 2064034799711588805): Boris announces nested subagent support capped at depth 5, motivated by context management — each subagent gets a fresh context window
+- Scan completed. Anchor: 2064327225504403752
+
+---
+
 ## 2026-06-09 — Routine Scan
 - Added tip #04.35: `/goal` for Autonomous Run-Until-Done Sessions (Source: x.com)
 - Tweet 2063792263067754658 (> anchor 2063028954546733462): Boris recommends `/goal` alongside auto mode and dynamic workflows for long-running Opus tasks

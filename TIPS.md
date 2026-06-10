@@ -3,7 +3,7 @@
 > **Source of truth.** All other artifacts (`README.md`, `index.html`) derive from this file.
 > **Format:** One tip per H3 block. New tips inserted by `/add-tip` or by the Routine in `routines/daily-scan.md`.
 > **Last manual audit:** 2026-05-12
-> **Total tips:** 132 across 21 themes
+> **Total tips:** 135 across 21 themes
 > **Schema:** see `data/tips-schema.json`
 
 ---
@@ -1466,6 +1466,14 @@ Pick continue / `/rewind` / `/clear` / `/compact` / subagent.
 
 "Just using regular code searching, you know, glob, grep." Avoids indexing/sync/security issues.
 
+### #20.06 — Nested Subagents as Context Resets (depth ≤ 5)
+- **Difficulty:** Advanced
+- **Date:** 2026-06-09
+- **Source:** [X-Post](https://x.com/bcherny/status/2064327225504403752)
+- **Author:** @bcherny
+
+Nested subagent support landed in Claude Code, capped at depth 5. The design goal is context management, not parallelism: each subagent gets its own fresh context window, so nesting lets a subagent offload work before its parent's context fills up.
+
 ---
 
 ## 21 — Terminal Environment
@@ -1500,8 +1508,8 @@ Organize terminal tabs by color codes and names.
 <!-- Automation reads from here. Do not delete. -->
 
 ```yaml
-last_scan_iso: "2026-06-09T12:00:00Z"
-last_scan_anchor_tweet_id: "2064034799711588805"
+last_scan_iso: "2026-06-10T12:00:00Z"
+last_scan_anchor_tweet_id: "2064327225504403752"
 last_tip_id_per_theme:
   "01": 9
   "02": 6
@@ -1522,9 +1530,9 @@ last_tip_id_per_theme:
   "17": 6
   "18": 3
   "19": 5
-  "20": 5
+  "20": 6
   "21": 3
-total_tips: 134
+total_tips: 135
 ```
 
 <!-- End tracking metadata -->
