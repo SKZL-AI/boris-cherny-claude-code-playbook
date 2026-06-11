@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-06-11 — Routine Scan (no changes)
+- Scanned 6 sources: bcherny site:x.com, bcherny Claude Code tip 2026, Boris Cherny new feature Claude Code June 2026, site:threadreaderapp.com bcherny, bcherny x.com June 11 2026, bcherny site:x.com status 2026 latest
+- No tweet IDs above anchor `2064431111154053187` found across all queries
+- Fortune article "Head of Claude Code hasn't written a line of code by hand in 8 months" (2026-06-11) is interview content, not a direct X post with actionable tips
+- No new tips to add. Anchor unchanged: `2064431111154053187`
+- Scan completed. Anchor: 2064431111154053187
+
+---
+
 ## 2026-06-11 — Manual Backfill (howborisusesclaudecode.com cross-reference)
 
 - ➕ Added tip #01.10: Auto Mode + Parallel Claudes
