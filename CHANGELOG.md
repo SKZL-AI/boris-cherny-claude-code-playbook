@@ -6,6 +6,19 @@ Newest entries first.
 
 ---
 
+## 2026-06-11 — Manual Backfill (howborisusesclaudecode.com cross-reference)
+
+- ➕ Added tip #01.10: Auto Mode + Parallel Claudes
+- ➕ Added tip #09.11: xhigh als Standard-Effort
+- ➕ Added tip #09.12: What Changed 4.6 → 4.7
+- ➕ Added tip #11.07: Task Completion Notifications
+- ➕ Added tip #13.07: Setup Scripts für Cloud Environments
+- ➕ Added tip #14.11: Agent View (`claude agents`)
+- ➕ Added tip #17.07: Desktop App Auto-Start Servers
+- 🔍 7 tips backfilled from howborisusesclaudecode.com cross-reference
+
+---
+
 ## 2026-06-11 — Routine Scan (no changes)
 - Scanned 7 sources: bcherny site:x.com, bcherny Claude Code 2026, Boris Cherny Anthropic tip Claude Code 2026, site:threadreaderapp.com bcherny, howborisusesclaudecode (403), Code w/ Claude Extended Tokyo June 11 2026, bcherny tweet June 11 2026
 - All tweet IDs found are at or below anchor `2064431111154053187`; no posts from @bcherny after 2026-06-10T15:00:00Z detected

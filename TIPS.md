@@ -3,7 +3,7 @@
 > **Source of truth.** All other artifacts (`README.md`, `index.html`) derive from this file.
 > **Format:** One tip per H3 block. New tips inserted by `/add-tip` or by the Routine in `routines/daily-scan.md`.
 > **Last manual audit:** 2026-05-12
-> **Total tips:** 136 across 21 themes
+> **Total tips:** 143 across 21 themes
 > **Schema:** see `data/tips-schema.json`
 
 ---
@@ -83,6 +83,14 @@ Mercurial, Perforce, SVN, Jujutsu: define custom `WorktreeCreate` and `WorktreeR
 - **Quote:** "I have dozens of Claudes running at all times"
 
 Scales from the point where tab-switching alone slows you down.
+
+### #01.10 — Auto Mode + Parallel Claudes (Kombi-Pattern)
+- **Difficulty:** Advanced
+- **Date:** 2026-04-16
+- **Source:** [X-Thread](https://x.com/bcherny/status/2044847848035156457)
+- **Author:** @bcherny
+
+Auto Mode kombiniert mit parallelen Sessions eliminiert Permission-Prompts über alle Instanzen hinweg. Ein Classifier bewertet jede Aktion automatisch — sichere Operationen werden durchgewunken, riskante geflaggt. Ermöglicht echtes unbeaufsichtigtes Arbeiten mit mehreren Claudes gleichzeitig.
 
 ---
 
@@ -913,6 +921,22 @@ Code review harnesses for older models may see lower recall — it's not a regre
 
 Boris explicitly recommends Fable 5 (Mythos-class) as his top choice for coding work. Compared to previous Opus models, Fable 5 requires less prompting and steering, delivers better self-verification, supports longer sessions, and can be trusted with higher autonomy — meaning less babysitting per task.
 
+### #09.11 — xhigh als Standard-Effort für Opus 4.7
+- **Difficulty:** Beginner
+- **Date:** 2026-04-16
+- **Source:** [X-Thread](https://x.com/bcherny/status/2044847848035156457)
+- **Author:** @bcherny
+
+Mit Opus 4.7 ist `xhigh` der neue Standard-Effort-Level. Für die meisten Tasks reicht xhigh. `max` nur für die härtesten Probleme verwenden — es gilt nur für die aktuelle Session und verbraucht deutlich mehr Tokens.
+
+### #09.12 — What Changed 4.6 → 4.7 (Migration Summary)
+- **Difficulty:** Beginner
+- **Date:** 2026-04-16
+- **Source:** [X-Thread](https://x.com/bcherny/status/2044847848035156457)
+- **Author:** @bcherny
+
+Drei zentrale Verhaltensänderungen von Opus 4.6 zu 4.7: (1) Kalibrierte Antwortlänge — weniger unnötig lange Outputs. (2) Weniger automatischer Tool-Einsatz — Claude fragt eher nach statt blind loszulegen. (3) Zurückhaltenderes Subagent-Spawning — weniger parallele Agents wenn nicht nötig.
+
 ---
 
 ## 10 — Verification
@@ -1056,6 +1080,14 @@ Schedule, GitHub event, and API triggers. Runs on Anthropic infrastructure.
 
 "Write down the state of this session into this text doc… in your new session, tell Claude to read from that doc."
 
+### #11.07 — Task Completion Notifications
+- **Difficulty:** Beginner
+- **Date:** 2026-04-16
+- **Source:** [X-Thread](https://x.com/bcherny/status/2044847848035156457)
+- **Author:** @bcherny
+
+Benachrichtigungen wenn Claude eine Aufgabe abschließt: Sound-Alerts, Stop-Hooks oder iTerm2-Notifications einrichten. Essentiell für autonomes Arbeiten — man muss nicht mehr ständig das Terminal im Blick haben.
+
 ---
 
 ## 12 — Prompting & Specs
@@ -1157,6 +1189,14 @@ Team benefits from customizations. Support for enterprise-wide policies.
 
 Experimental renderer: no flicker/jump, mouse support. `CLAUDE_CODE_NO_FLICKER=1 claude`.
 
+### #13.07 — Setup Scripts für Cloud Environments
+- **Difficulty:** Intermediate
+- **Date:** 2026-03-13
+- **Source:** [X-Thread](https://x.com/bcherny/status/2032632596572811575)
+- **Author:** @bcherny
+
+Setup-Bash-Skripte laufen automatisch bevor Claude in Cloud-Umgebungen startet. Ideal für Dependency-Installation, Environment-Variablen und Tool-Konfiguration in Remote-Sessions.
+
 ---
 
 ## 14 — Headless / SDK
@@ -1239,6 +1279,14 @@ Human-readable session names for parallel work.
 - **Author:** @bcherny
 
 Transferable for building your own CLI tools.
+
+### #14.11 — Agent View (`claude agents`)
+- **Difficulty:** Beginner
+- **Date:** 2026-05-11
+- **Source:** [Claude Blog](https://claude.com/blog/agent-view-in-claude-code)
+- **Author:** @bcherny
+
+`claude agents` zeigt alle laufenden Claude-Code-Sessions in einer einzigen CLI-Liste: welche arbeiten, welche auf Input warten, welche fertig sind. Ersetzt das manuelle Durchschalten zwischen Terminal-Tabs bei parallelem Arbeiten.
 
 ---
 
@@ -1358,6 +1406,14 @@ Terminal / IDE extension / GitHub app / SDK as Unix utility.
 - **Author:** @bcherny
 
 (explore › plan › confirm › code › commit) vs (tests › commit › code › iterate) vs (code › screenshot › iterate).
+
+### #17.07 — Desktop App Auto-Start Servers
+- **Difficulty:** Beginner
+- **Date:** 2026-03-29
+- **Source:** [X-Thread](https://x.com/bcherny/status/2038454336355999749)
+- **Author:** @bcherny
+
+Die Claude Desktop App kann Dev-Server automatisch starten und mit dem eingebauten Browser testen. Kein manuelles `npm start` mehr nötig — Claude erkennt den Stack und startet den passenden Server.
 
 ---
 
@@ -1520,7 +1576,7 @@ Organize terminal tabs by color codes and names.
 last_scan_iso: "2026-06-11T09:30:00Z"
 last_scan_anchor_tweet_id: "2064431111154053187"
 last_tip_id_per_theme:
-  "01": 9
+  "01": 10
   "02": 6
   "03": 11
   "04": 35
@@ -1528,20 +1584,20 @@ last_tip_id_per_theme:
   "06": 9
   "07": 7
   "08": 7
-  "09": 10
+  "09": 12
   "10": 11
-  "11": 6
+  "11": 7
   "12": 6
-  "13": 6
-  "14": 10
+  "13": 7
+  "14": 11
   "15": 3
   "16": 5
-  "17": 6
+  "17": 7
   "18": 3
   "19": 5
   "20": 6
   "21": 3
-total_tips: 136
+total_tips: 143
 ```
 
 <!-- End tracking metadata -->
