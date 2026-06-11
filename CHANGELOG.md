@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-06-11 — Routine Scan (no changes)
+- Scanned 7 sources: bcherny site:x.com, bcherny Claude Code 2026, Boris Cherny Anthropic tip Claude Code 2026, site:threadreaderapp.com bcherny, howborisusesclaudecode (403), Code w/ Claude Extended Tokyo June 11 2026, bcherny tweet June 11 2026
+- All tweet IDs found are at or below anchor `2064431111154053187`; no posts from @bcherny after 2026-06-10T15:00:00Z detected
+- Code with Claude Extended Tokyo (June 11) in progress; no Boris X posts propagated yet
+- No new tips to add. Anchor unchanged: `2064431111154053187`
+- Scan completed. Anchor: 2064431111154053187
+
+---
+
 ## 2026-06-10 — Routine Scan
 - Added tip #09.10: Fable 5: Best Model for Coding (Source: x.com)
 - Tweet 2064402671898075579 (> anchor 2064327225504403752): Boris recommends Fable 5 as the best coding model by a wide margin — less prompting needed, better self-verification, longer sessions, higher autonomy
