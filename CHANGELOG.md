@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-06-12 — Routine Scan (no changes) [2]
+- Scanned 7 sources: bcherny site:x.com 2026, bcherny Claude Code tip June 2026, Boris Cherny new feature Claude Code June 2026, site:threadreaderapp.com bcherny June 2026, bcherny x.com June 13/14 2026, "Code with Claude London" keynote, code.claude.com/docs/en/changelog
+- Anchor tweet `2064431111154053187` confirmed: all visible bcherny tweet IDs below anchor; latest changelog entry is 2.1.175 (June 12)
+- Code w/ Claude London was May 19 (pre-anchor); Tokyo was June 10 (pre-anchor) — both already scanned
+- Salesforce case-study tweet `2060390852619272526` reviewed and classified as marketing post (no actionable tip)
+- No new tips to add. Anchor unchanged: `2064431111154053187`
+- Scan completed. Anchor: 2064431111154053187
+
+---
+
 ## 2026-06-12 — Routine Scan (no changes)
 - Scanned 8 sources: bcherny site:x.com Claude Code 2026, bcherny Claude Code tip June 2026, Boris Cherny new feature Claude Code June 2026, site:threadreaderapp.com bcherny 2026, bcherny "Code with Claude Tokyo" June 2026, bcherny Agent SDK June 2026, code.claude.com/docs/en/changelog, code.claude.com/docs/en/whats-new
 - Anchor tweet `2064431111154053187` confirmed: "Fable 5 is the biggest step up I've felt in our models since Opus 4.5 back in November"
