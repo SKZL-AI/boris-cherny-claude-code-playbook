@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-06-12 — Routine Scan (no changes)
+- Scanned 8 sources: bcherny site:x.com Claude Code 2026, bcherny Claude Code tip June 2026, Boris Cherny new feature Claude Code June 2026, site:threadreaderapp.com bcherny 2026, bcherny "Code with Claude Tokyo" June 2026, bcherny Agent SDK June 2026, code.claude.com/docs/en/changelog, code.claude.com/docs/en/whats-new
+- Anchor tweet `2064431111154053187` confirmed: "Fable 5 is the biggest step up I've felt in our models since Opus 4.5 back in November"
+- No tweet IDs above anchor found; changelog latest entry is 2.1.173 (June 11); no new posts from @bcherny since last scan
+- Code with Claude Tokyo (June 10) produced no new Boris-specific X tips not yet captured
+- No new tips to add. Anchor unchanged: `2064431111154053187`
+- Scan completed. Anchor: 2064431111154053187
+
+---
+
 ## 2026-06-11 — Routine Scan (no changes)
 - Scanned 6 sources: bcherny site:x.com, bcherny Claude Code tip 2026, Boris Cherny new feature Claude Code June 2026, site:threadreaderapp.com bcherny, bcherny x.com June 11 2026, bcherny site:x.com status 2026 latest
 - No tweet IDs above anchor `2064431111154053187` found across all queries
