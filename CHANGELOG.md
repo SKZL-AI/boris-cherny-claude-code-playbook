@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-06-13 — Routine Scan (no changes) [2]
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic Claude Code new feature June 2026, site:threadreaderapp.com bcherny June 2026, bcherny plugins OR plugin Claude Code x.com 2026, Boris Cherny Claude Code new announcement today June 13 2026
+- Anchor tweet `2064431111154053187` confirmed: all found bcherny tweet IDs are below anchor (newest found: `2064402671898075579` Fable 5, already in repo at #09.10)
+- Fortune Brainstorm Tech articles (June 8–9) and develeap/opentools.ai sources returned 403; content was pre-anchor anyway
+- No new tips to add. Anchor unchanged: 2064431111154053187
+- Scan completed. Anchor: 2064431111154053187
+
+---
+
 ## 2026-06-13 — Routine Scan (no changes)
 - Scanned 9 sources: bcherny site:x.com 2026, bcherny Claude Code tip June 2026, Boris Cherny Anthropic tip June 2026, site:threadreaderapp.com bcherny 2026, site:threads.com boris_cherny, howborisusesclaudecode latest tips 2026, bcherny x.com June 13 2026, bcherny "credit pool" billing June 2026, Boris Cherny Fable 5 June 12 2026 tweet
 - Anchor tweet `2064431111154053187` confirmed: all found bcherny tweet IDs (e.g., `2064402671898075579` Fable 5 announcement, `2064034799711588805` 1-year anniversary) are below anchor — no new posts
