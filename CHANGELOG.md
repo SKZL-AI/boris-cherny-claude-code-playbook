@@ -6,6 +6,17 @@ Newest entries first.
 
 ---
 
+## 2026-06-13 — Routine Scan (no changes)
+- Scanned 9 sources: bcherny site:x.com 2026, bcherny Claude Code tip June 2026, Boris Cherny Anthropic tip June 2026, site:threadreaderapp.com bcherny 2026, site:threads.com boris_cherny, howborisusesclaudecode latest tips 2026, bcherny x.com June 13 2026, bcherny "credit pool" billing June 2026, Boris Cherny Fable 5 June 12 2026 tweet
+- Anchor tweet `2064431111154053187` confirmed: all found bcherny tweet IDs (e.g., `2064402671898075579` Fable 5 announcement, `2064034799711588805` 1-year anniversary) are below anchor — no new posts
+- "harness engineering" quote ("You're not supposed to prompt Claude. You're supposed to build a system that prompts itself.") found in secondary sources only; no verifiable direct X link — not added per rule: only tips with verifiable source URL
+- Claude Code changelog 2.1.176 (June 12): session titles in conversation language, `footerLinksRegexes` setting — changelog entries, not Boris tips
+- Billing change (June 15 credit pool split) has no associated Boris X tip
+- No new tips to add. Anchor unchanged: 2064431111154053187
+- Scan completed. Anchor: 2064431111154053187
+
+---
+
 ## 2026-06-12 — Routine Scan (no changes) [2]
 - Scanned 7 sources: bcherny site:x.com 2026, bcherny Claude Code tip June 2026, Boris Cherny new feature Claude Code June 2026, site:threadreaderapp.com bcherny June 2026, bcherny x.com June 13/14 2026, "Code with Claude London" keynote, code.claude.com/docs/en/changelog
 - Anchor tweet `2064431111154053187` confirmed: all visible bcherny tweet IDs below anchor; latest changelog entry is 2.1.175 (June 12)
