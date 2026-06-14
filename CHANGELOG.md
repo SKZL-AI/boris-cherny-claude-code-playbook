@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-06-14 — Routine Scan (no changes) [2]
+- Scanned 8 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic Claude Code new feature 2026, site:threadreaderapp.com bcherny 2026, Boris Cherny Claude Code June 2026 tip workflow, bcherny Opus 4.8 safe mode rate limits June 2026, Claude Code CHANGELOG 2.1.176 (latest version), bcherny tweet today June 14 2026
+- All found bcherny tweet IDs are at or below anchor `2064431111154053187` — no new posts since last scan
+- Anthropic Platform release notes: latest entry June 10, 2026; Claude Code CHANGELOG: latest is v2.1.176 (minor fixes, no tip-worthy Boris posts)
+- Note: bcherny tweet `2060048873440129073` (Opus 4.8 announcement, May 28) is missing from TIPS.md but pre-dates anchor — not added per scan rules
+- No new tips to add. Anchor unchanged: 2064431111154053187
+- Scan completed. Anchor: 2064431111154053187
+
+---
+
 ## 2026-06-14 — Routine Scan (no changes)
 - Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic Claude Code new feature June 2026, site:threadreaderapp.com bcherny 2026, bcherny x.com June 14 2026, bcherny tweet today June 14 2026
 - All found bcherny tweet IDs are at or below anchor `2064431111154053187` — no new posts since last scan
