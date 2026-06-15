@@ -6,6 +6,17 @@ Newest entries first.
 
 ---
 
+## 2026-06-15 — Routine Scan (no changes)
+- Scanned 8 sources: bcherny site:x.com 2026, bcherny Claude Code tip June 2026, Boris Cherny new feature Claude Code June 2026, site:threadreaderapp.com bcherny 2026, bcherny x.com status 2066/2065 (latest IDs), Boris Cherny Claude Code agents workflow June 2026, bcherny tweet today June 15 2026, bcherny x.com June 14 OR June 15 2026
+- All found bcherny tweet IDs are at or below anchor `2064431111154053187` — no new posts since last scan
+- Most recent tweet found in search: ID `2064402671898075579` (Fable 5 announcement, before anchor); ID `2064034799711588805` (one-year GA retrospective thread, before anchor)
+- Note: Fortune articles from June 8–11 (Brainstorm Tech conference) reference pre-anchor content already documented in TIPS.md
+- Secondary sources (howborisusesclaudecode.com, Fortune, Pragmatic Engineer, Medium, WebProNews) returned HTTP 403; no new verifiable tips
+- No new tips to add. Anchor unchanged: 2064431111154053187
+- Scan completed. Anchor: 2064431111154053187
+
+---
+
 ## 2026-06-14 — Routine Scan (no changes) [2]
 - Scanned 8 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic Claude Code new feature 2026, site:threadreaderapp.com bcherny 2026, Boris Cherny Claude Code June 2026 tip workflow, bcherny Opus 4.8 safe mode rate limits June 2026, Claude Code CHANGELOG 2.1.176 (latest version), bcherny tweet today June 14 2026
 - All found bcherny tweet IDs are at or below anchor `2064431111154053187` — no new posts since last scan
