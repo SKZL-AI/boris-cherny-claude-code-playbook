@@ -6,6 +6,17 @@ Newest entries first.
 
 ---
 
+## 2026-06-18 — Routine Scan (no changes)
+- Scanned 6 sources: bcherny site:x.com, bcherny Claude Code tip June 2026, Boris Cherny new feature Claude Code June 2026, site:threadreaderapp.com bcherny, site:threads.com boris_cherny June 2026, howborisusesclaudecode latest tips 2026
+- All found bcherny tweet IDs are at or below anchor `2064885111477219664` — no new posts since last scan
+- Claude Code What's New page shows Week 24 (June 8–12) as latest digest; Week 25 (June 15–19) not yet published
+- threadreaderapp.com and howborisusesclaudecode.com both returned HTTP 403; threads.com returned HTTP 403
+- "Doubled Cowork usage limits" tweet (2063028954546733462, June 5) confirmed as below anchor and correctly excluded as a temporary policy announcement (not an actionable tip)
+- No new tips to add. Anchor unchanged: 2064885111477219664
+- Scan completed. Anchor: 2064885111477219664
+
+---
+
 ## 2026-06-17 — Routine Scan (no changes) [2]
 - Scanned 6 sources: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny Anthropic Claude Code new feature, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode latest tips
 - Found 1 tweet ID above anchor: `2064885111477219664` — content unverifiable (X.com and threadreaderapp both returned HTTP 403; no cached snippet available in search results)
