@@ -6,6 +6,17 @@ Newest entries first.
 
 ---
 
+## 2026-06-19 — Routine Scan (no changes)
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code 2026, Boris Cherny Anthropic Claude Code tip June 2026, site:threadreaderapp.com bcherny 2026, howborisusesclaudecode latest, bcherny x.com June 19 2026
+- All found bcherny tweet IDs are at or below anchor `2064885111477219664` — no new posts since last scan
+- Claude Code What's New page confirms Week 24 (June 8–12) as latest published digest; Week 25 not yet published
+- howborisusesclaudecode.com returned HTTP 403; threadreaderapp.com returned no bcherny results
+- Fortune/Brainstorm Tech coverage (June 8–11) and Lenny's Newsletter confirmed already captured in prior scans
+- No new tips to add. Anchor unchanged: 2064885111477219664
+- Scan completed. Anchor: 2064885111477219664
+
+---
+
 ## 2026-06-18 — Routine Scan (no changes) [2]
 - Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic Claude Code new feature 2026, site:threadreaderapp.com bcherny 2026, howborisusesclaudecode latest, bcherny x.com after:2026-06-17
 - All found bcherny tweet IDs are at or below anchor `2064885111477219664` — no new posts since last scan
