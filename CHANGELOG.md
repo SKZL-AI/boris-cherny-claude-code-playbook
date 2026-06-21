@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-06-21 — Routine Scan (no changes) [2]
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny new feature Claude Code June 2026, site:threadreaderapp.com bcherny 2026, bcherny x.com tweet June 21 2026, site:x.com bcherny status 2068–2070 range
+- All found bcherny tweet IDs are at or below anchor `2068064304503660962` — no new posts since last scan
+- Claude Code What's New page confirms Week 24 (June 8–12) as latest published digest; Week 25 not yet live
+- howborisusesclaudecode.com, threadreaderapp.com, and x.com/bcherny all returned HTTP 403 (blocked)
+- No new tips to add. Anchor unchanged: 2068064304503660962
+- Scan completed. Anchor: 2068064304503660962
+
+---
+
 ## 2026-06-21 — Routine Scan
 - Added tip #17.08: Artifacts — Shareable Visual Pages from Your Session (Source: x.com/bcherny/status/2067700226669060207)
 - Skipped tweet 2068064304503660962 (Linear A use-case share, no actionable tip value)
