@@ -154,10 +154,10 @@
   <div class="container">
     <div class="tag-line">Field Notes · As of June 2026</div>
     <h1>Boris Cherny's<br>Claude Code <em>Playbook</em></h1>
-    <p class="lede">143 documented tips from the creator of Claude Code — from X threads, podcasts, conferences, and the Anthropic Engineering Blog. Fully researched, organized by theme, with original sources and difficulty level.</p>
+    <p class="lede">144 documented tips from the creator of Claude Code — from X threads, podcasts, conferences, and the Anthropic Engineering Blog. Fully researched, organized by theme, with original sources and difficulty level.</p>
     <div class="meta-row">
       <span><strong>21</strong> Themes</span>
-      <span><strong>143</strong> Tips</span>
+      <span><strong>144</strong> Tips</span>
       <span><strong>14</strong> Months</span>
       <span><strong>Source:</strong> @bcherny + Anthropic</span>
     </div>
@@ -236,7 +236,6 @@
       <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">01.07</span><span class="diff diff-advanced">Advanced</span></div><h3><code>isolation: worktree</code> in agent frontmatter</h3><p>Run custom subagent permanently in its own worktree. Set in the YAML frontmatter of the agent definition.</p><div class="tip-footer"><span>20. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2025007393290272904" target="_blank">X-Thread ↗</a></div></article>
       <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">01.08</span><span class="diff diff-advanced">Advanced</span></div><h3>Non-git VCS via WorktreeCreate Hook</h3><p>Mercurial, Perforce, SVN, Jujutsu: define your own <code>WorktreeCreate</code> and <code>WorktreeRemove</code> hooks.</p><div class="tip-footer"><span>20. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2025007393290272904" target="_blank">X-Thread ↗</a></div></article>
       <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">01.09</span><span class="diff diff-advanced">Advanced</span></div><h3>Dozens of Claudes via worktrees</h3><p>Boris verbatim: "I have dozens of Claudes running at all times." Scales from the point where tab-switching alone slows you down.</p><div class="tip-footer"><span>29. Mar 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2038454336355999749" target="_blank">X-Thread ↗</a></div></article>
-      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">01.10</span><span class="diff diff-advanced">Advanced</span></div><h3>Auto Mode + Parallel Claudes (Kombi-Pattern)</h3><p>Auto Mode kombiniert mit parallelen Sessions eliminiert Permission-Prompts über alle Instanzen hinweg. Ein Classifier bewertet jede Aktion automatisch — sichere Operationen werden durchgewunken, riskante geflaggt. Ermöglicht echtes unbeaufsichtigtes Arbeiten mit mehreren Claudes gleichzeitig.</p><div class="tip-footer"><span>16. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044847848035156457" target="_blank">X-Thread ↗</a></div></article>
     </div>
   </section>
 
@@ -312,18 +311,6 @@
       <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">04.32</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>/compact &lt;hint&gt;</code> instead of <code>/clear</code> mid-task</h3><p><code>/compact</code> is lossy LLM summary, maintains momentum. <code>/clear</code> + briefing is hand-written context. Rule: new task = clear, related = compact.</p><div class="tip-footer"><span>15. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044548257058328723" target="_blank">X (RT) ↗</a></div></article>
       <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">04.33</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>/rewind</code> (or double-Esc) instead of correction</h3><p>Don't pollute context with failed attempts + corrections — rewind and re-prompt with what you learned.</p><div class="tip-footer"><span>15. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044548257058328723" target="_blank">X (RT) ↗</a></div></article>
       <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">04.34</span><span class="diff diff-advanced">Advanced</span></div><h3>"Summarize from here" before rewind</h3><p>Have Claude write a handoff message to its future self. Maximizes continuous learning across rewinds.</p><div class="tip-footer"><span>15. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044548257058328723" target="_blank">X (RT) ↗</a></div></article>
-      <article class="tip" data-diff="advanced">
-  <div class="tip-meta">
-    <span class="tip-num">04.35</span>
-    <span class="diff diff-advanced">Advanced</span>
-  </div>
-  <h3><code>/goal</code> for Autonomous Run-Until-Done Sessions</h3>
-  <p>Set a completion condition and Claude re-evaluates it after each turn, automatically continuing until met. Eliminates the need to repeatedly type "keep going" across multi-hour sessions. Pair with auto mode and dynamic workflows for long-running Opus tasks.</p>
-  <div class="tip-footer">
-    <span>09. Jun 2026</span>
-    <a class="tip-source" href="https://x.com/bcherny/status/2063792263067754658" target="_blank">Source</a>
-  </div>
-</article>
     </div>
   </section>
 
@@ -404,9 +391,6 @@
       <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">09.07</span><span class="diff diff-advanced">Advanced</span></div><h3>4.7's higher fidelity to "don't nitpick"</h3><p>Code review harnesses for older models may see lower recall — not a regression, Claude follows instructions more faithfully.</p><div class="tip-footer"><span>Apr 2026</span><a class="tip-source" href="https://docs.claude.com" target="_blank">Anthropic Docs ↗</a></div></article>
       <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">09.08</span><span class="diff diff-beginner">Beginner</span></div><h3>Default was Sonnet, model is overridable</h3><p>"We default to Sonnet for most everything… you can override the model if you want."</p><div class="tip-footer"><span>07. May 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
       <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">09.09</span><span class="diff diff-beginner">Beginner</span></div><h3>Write Plan/Think instructions directly</h3><p>"If you want Claude to think, just tell it to think. Be like, you know, make a plan. Think hard. Don't write any code yet."</p><div class="tip-footer"><span>07. May 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
-      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">09.10</span><span class="diff diff-beginner">Beginner</span></div><h3>Fable 5: best model for coding</h3><p>Boris's explicit recommendation: less prompting needed, better self-verification, longer sessions, higher trust and autonomy than previous Opus models.</p><div class="tip-footer"><span>09. Jun 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2064402671898075579" target="_blank">X-Post ↗</a></div></article>
-      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">09.11</span><span class="diff diff-beginner">Beginner</span></div><h3>xhigh als Standard-Effort für Opus 4.7</h3><p>Mit Opus 4.7 ist <code>xhigh</code> der neue Standard-Effort-Level. Für die meisten Tasks reicht xhigh. <code>max</code> nur für die härtesten Probleme verwenden — es gilt nur für die aktuelle Session und verbraucht deutlich mehr Tokens.</p><div class="tip-footer"><span>16. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044847848035156457" target="_blank">X-Thread ↗</a></div></article>
-      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">09.12</span><span class="diff diff-beginner">Beginner</span></div><h3>What Changed 4.6 → 4.7 (Migration Summary)</h3><p>Drei zentrale Verhaltensänderungen von Opus 4.6 zu 4.7: (1) Kalibrierte Antwortlänge — weniger unnötig lange Outputs. (2) Weniger automatischer Tool-Einsatz — Claude fragt eher nach statt blind loszulegen. (3) Zurückhaltenderes Subagent-Spawning — weniger parallele Agents wenn nicht nötig.</p><div class="tip-footer"><span>16. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044847848035156457" target="_blank">X-Thread ↗</a></div></article>
     </div>
   </section>
 
@@ -438,7 +422,6 @@
       <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">11.04</span><span class="diff diff-beginner">Beginner</span></div><h3>Recaps for long sessions</h3><p>Short summary of done + next. Useful when returning after minutes or hours. Disableable in <code>/config</code>.</p><div class="tip-footer"><span>16. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044847848035156457" target="_blank">X-Thread ↗</a></div></article>
       <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">11.05</span><span class="diff diff-advanced">Advanced</span></div><h3>Routines (Research Preview)</h3><p>Schedule, GitHub event, and API triggers. Runs on Anthropic infra. Laptop can be closed.</p><div class="tip-footer"><span>14. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny" target="_blank">X-Thread ↗</a></div></article>
       <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">11.06</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Cross-session continuity workaround</h3><p>"Tell Claude to write down the state of this session into this text doc… in your new session, tell Claude to read from that doc."</p><div class="tip-footer"><span>07. May 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
-      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">11.07</span><span class="diff diff-beginner">Beginner</span></div><h3>Task Completion Notifications</h3><p>Benachrichtigungen wenn Claude eine Aufgabe abschließt: Sound-Alerts, Stop-Hooks oder iTerm2-Notifications einrichten. Essentiell für autonomes Arbeiten — man muss nicht mehr ständig das Terminal im Blick haben.</p><div class="tip-footer"><span>16. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044847848035156457" target="_blank">X-Thread ↗</a></div></article>
     </div>
   </section>
 
@@ -465,7 +448,6 @@
       <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">13.04</span><span class="diff diff-beginner">Beginner</span></div><h3>Claude responds in your language</h3><p>Japanese, Spanish, German — any language configurable.</p><div class="tip-footer"><span>07. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2009072293826453669" target="_blank">X-Thread ↗</a></div></article>
       <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">13.05</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Check settings.json into git</h3><p>Team benefits from your customizations. Support for enterprise-wide policies.</p><div class="tip-footer"><span>11. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2021701145023197516" target="_blank">X-Thread ↗</a></div></article>
       <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">13.06</span><span class="diff diff-intermediate">Intermediate</span></div><h3>NO_FLICKER Mode</h3><p>Experimental renderer: no flicker/jump, constant memory/CPU, mouse support, nicer selection. <code>CLAUDE_CODE_NO_FLICKER=1 claude</code>.</p><div class="tip-footer"><span>01. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2037038538718667103" target="_blank">X-Thread ↗</a></div></article>
-      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">13.07</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Setup Scripts für Cloud Environments</h3><p>Setup-Bash-Skripte laufen automatisch bevor Claude in Cloud-Umgebungen startet. Ideal für Dependency-Installation, Environment-Variablen und Tool-Konfiguration in Remote-Sessions.</p><div class="tip-footer"><span>13. Mar 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2032632596572811575" target="_blank">X-Thread ↗</a></div></article>
     </div>
   </section>
 
@@ -483,7 +465,6 @@
       <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">14.08</span><span class="diff diff-beginner">Beginner</span></div><h3><code>--name "&lt;session&gt;"</code></h3><p>Human-readable session names for parallel work.</p><div class="tip-footer"><span>13. Mar 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2032632602629386348" target="_blank">X-Thread ↗</a></div></article>
       <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">14.09</span><span class="diff diff-intermediate">Intermediate</span></div><h3><code>claude</code> is a Unix utility, not a chatbot</h3><p>"You can pipe in… cat the CSV, pipe it into claude."</p><div class="tip-footer"><span>07. May 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
       <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">14.10</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Stack: React Ink + Commander.js + Bun</h3><p>"We're big fans of Ink… We're also, we use Bun. So big fans of Bun." Transferable for your own CLI tools.</p><div class="tip-footer"><span>07. May 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
-      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">14.11</span><span class="diff diff-beginner">Beginner</span></div><h3>Agent View (<code>claude agents</code>)</h3><p><code>claude agents</code> zeigt alle laufenden Claude-Code-Sessions in einer einzigen CLI-Liste: welche arbeiten, welche auf Input warten, welche fertig sind. Ersetzt das manuelle Durchschalten zwischen Terminal-Tabs bei parallelem Arbeiten.</p><div class="tip-footer"><span>11. May 2026</span><a class="tip-source" href="https://claude.com/blog/agent-view-in-claude-code" target="_blank">Claude Blog ↗</a></div></article>
     </div>
   </section>
 
@@ -519,182 +500,7 @@
       <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">17.04</span><span class="diff diff-beginner">Beginner</span></div><h3>GitHub-App / Slack-App / Web</h3><p>"Every engineer is different and you can use Claude Code the way you want."</p><div class="tip-footer"><span>Apr 2026</span><a class="tip-source" href="https://www.threads.com/@boris_cherny" target="_blank">Threads ↗</a></div></article>
       <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">17.05</span><span class="diff diff-beginner">Beginner</span></div><h3>4 modes of Claude Code usage</h3><p>"From the terminal / From the IDE (as an extension) / As a GitHub app so you can @claude right in a GitHub issue comment / Via the SDK, using Claude as a Unix utility"</p><div class="tip-footer"><span>Jun 2025</span><span>AIEWF Talk</span></div></article>
       <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">17.06</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Adapt workflow to task</h3><p>"(explore › plan › confirm › code › commit) vs (tests › commit › code › iterate › commit) vs (code › screenshot › iterate)"</p><div class="tip-footer"><span>Jun 2025</span><span>AIEWF Talk</span></div></article>
-      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">17.07</span><span class="diff diff-beginner">Beginner</span></div><h3>Desktop App Auto-Start Servers</h3><p>Die Claude Desktop App kann Dev-Server automatisch starten und mit dem eingebauten Browser testen. Kein manuelles <code>npm start</code> mehr nötig — Claude erkennt den Stack und startet den passenden Server.</p><div class="tip-footer"><span>29. Mar 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2038454336355999749" target="_blank">X-Thread ↗</a></div></article>
-    </div>
-  </section>
-
-  <!-- T18: MIGRATION -->
-  <section class="theme-section" id="t18">
-    <div class="theme-header"><div class="theme-num">18</div><div><h2 class="theme-title">Migration &amp; <em>Data</em></h2><p class="theme-desc">Partially migrated codebases confuse humans and models alike. Finish what you start.</p></div></div>
-    <div class="tip-grid">
-      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">18.01</span><span class="diff diff-advanced">Advanced</span></div><h3>Always finish migrations</h3><p>"Always make sure that when you start a migration, you finish the migration." Partially migrated codebases confuse humans and models.</p><div class="tip-footer"><span>Feb 2026</span><a class="tip-source" href="https://newsletter.pragmaticengineer.com/p/building-claude-code-with-boris-cherny" target="_blank">Pragmatic Engineer ↗</a></div></article>
-      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">18.02</span><span class="diff diff-advanced">Advanced</span></div><h3><code>/batch</code> is the migration tool</h3><p>Plan interactively, then fan out to dozens of Worktree agents.</p><div class="tip-footer"><span>27. Feb 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2027534984534544489" target="_blank">X-Thread ↗</a></div></article>
-      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">18.03</span><span class="diff diff-intermediate">Intermediate</span></div><h3>Check BigQuery skill into codebase</h3><p>Entire team uses it for analytics directly from Claude Code.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
-    </div>
-  </section>
-
-  <!-- T19: LEARNING -->
-  <section class="theme-section" id="t19">
-    <div class="theme-header"><div class="theme-num">19</div><div><h2 class="theme-title">Learning &amp; <em>Onboarding</em></h2><p class="theme-desc">Output styles, visualizations, ASCII diagrams, spaced repetition. Claude as teacher.</p></div></div>
-    <div class="tip-grid">
-      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">19.01</span><span class="diff diff-beginner">Beginner</span></div><h3>Explanatory / Learning Output Style</h3><p>Claude explains the <em>why</em> behind changes. Deliberately onboarding-friendly.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
-      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">19.02</span><span class="diff diff-beginner">Beginner</span></div><h3>Generate visual HTML presentation</h3><p>"Surprisingly good slides!"</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
-      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">19.03</span><span class="diff diff-beginner">Beginner</span></div><h3>Request ASCII diagrams</h3><p>Of new protocols, codebases, architectures.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
-      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">19.04</span><span class="diff diff-advanced">Advanced</span></div><h3>Spaced repetition learning skill</h3><p>You explain your understanding, Claude asks follow-up questions to fill gaps.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
-      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">19.05</span><span class="diff diff-beginner">Beginner</span></div><h3>Onboarding workflow at Anthropic</h3><p>New engineers use Claude Code to navigate codebases — "significantly improving ramp-up time."</p><div class="tip-footer"><span>Apr 2025</span><a class="tip-source" href="https://www.anthropic.com/engineering/claude-code-best-practices" target="_blank">Anthropic Blog ↗</a></div></article>
-    </div>
-  </section>
-
-  <!-- T20: CONTEXT MGMT -->
-  <section class="theme-section" id="t20">
-    <div class="theme-header"><div class="theme-num">20</div><div><h2 class="theme-title">Context <em>Management</em></h2><p class="theme-desc">Context rot is real. Boris's rule: every turn is a branching point.</p></div></div>
-    <div class="tip-grid">
-      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">20.01</span><span class="diff diff-advanced">Advanced</span></div><h3>Lower auto-compact threshold</h3><p><code>CLAUDE_CODE_AUTO_COMPACT_WINDOW=400000 claude</code> to avoid context rot in 1M model.</p><div class="tip-footer"><span>15. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044548257058328723" target="_blank">X (RT) ↗</a></div></article>
-      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">20.02</span><span class="diff diff-advanced">Advanced</span></div><h3>Context rot starts at 300-400k tokens</h3><p>Don't let intelligence-sensitive sessions drift beyond that.</p><div class="tip-footer"><span>15. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044548257058328723" target="_blank">X (RT) ↗</a></div></article>
-      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">20.03</span><span class="diff diff-advanced">Advanced</span></div><h3>"Dumb zone" at ~40% context</h3><p>Newcomers: stay under 40%, wrap up at 60%. Experienced: under 30%; to 60% only for simple tasks.</p><div class="tip-footer"><span>15. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044548257058328723" target="_blank">X (RT) ↗</a></div></article>
-      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">20.04</span><span class="diff diff-advanced">Advanced</span></div><h3>Every turn is a branching point</h3><p>Pick Continue / <code>/rewind</code> / <code>/clear</code> / <code>/compact</code> / Subagent — depending on context needs.</p><div class="tip-footer"><span>15. Apr 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2044548257058328723" target="_blank">X (RT) ↗</a></div></article>
-      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">20.05</span><span class="diff diff-advanced">Advanced</span></div><h3>Agentic Search &gt; RAG</h3><p>"We landed on just agentic search… just using regular code searching, you know, glob, grep." Avoids indexing/sync/security issues at the cost of latency and tokens.</p><div class="tip-footer"><span>07. May 2025</span><a class="tip-source" href="https://www.latent.space/p/claude-code" target="_blank">Latent Space ↗</a></div></article>
-      <article class="tip" data-diff="advanced"><div class="tip-meta"><span class="tip-num">20.06</span><span class="diff diff-advanced">Advanced</span></div><h3>Nested Subagents as Context Resets (depth ≤ 5)</h3><p>Nested subagent support landed in Claude Code, capped at depth 5. The design goal is context management, not parallelism: each subagent gets its own fresh context window, so nesting lets a subagent offload work before its parent's context fills up.</p><div class="tip-footer"><span>09. Jun 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2064327225504403752" target="_blank">Source ↗</a></div></article>
-    </div>
-  </section>
-
-  <!-- T21: TERMINAL -->
-  <section class="theme-section" id="t21">
-    <div class="theme-header"><div class="theme-num">21</div><div><h2 class="theme-title">Terminal <em>Environment</em></h2><p class="theme-desc">Ghostty + tmux + voice dictation. The small things that actually move your velocity.</p></div></div>
-    <div class="tip-grid">
-      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">21.01</span><span class="diff diff-beginner">Beginner</span></div><h3>Ghostty Terminal</h3><p>Team favorite: synchronized rendering, 24-bit color, Unicode.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
-      <article class="tip" data-diff="intermediate"><div class="tip-meta"><span class="tip-num">21.02</span><span class="diff diff-intermediate">Intermediate</span></div><h3>tmux for one tab per task</h3><p>Organize terminal tabs by color-coding and names.</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
-      <article class="tip" data-diff="beginner"><div class="tip-meta"><span class="tip-num">21.03</span><span class="diff diff-beginner">Beginner</span></div><h3>Voice dictation (fn x2 on macOS)</h3><p>"You speak 3x faster than you type, and your prompts get way more detailed as a result."</p><div class="tip-footer"><span>31. Jan 2026</span><a class="tip-source" href="https://x.com/bcherny/status/2017742741636321619" target="_blank">X-Thread ↗</a></div></article>
-    </div>
-  </section>
-
-  <!-- TIMELINE -->
-  <section class="timeline-wrap">
-    <h2>Chronology <em>— Confirmed Threads &amp; Announcements</em></h2>
-    <p>From side project in September 2024 to Webby Award in April 2026.</p>
-    <div class="timeline">
-      <div class="tl-entry major"><div class="tl-date">Sep 2024</div><div class="tl-event">Boris starts Claude Code as side project at Anthropic.</div></div>
-      <div class="tl-entry"><div class="tl-date">Late 2024</div><div class="tl-event">Internal dogfooding. Robert (colleague) is first power user via FileEdit tool.</div></div>
-      <div class="tl-entry major"><div class="tl-date">24. Feb 2025</div><div class="tl-event">Claude Code launches as Research Preview alongside Claude 3.7 Sonnet.</div></div>
-      <div class="tl-entry"><div class="tl-date">18.–19. Apr 2025</div><div class="tl-event">Anthropic Engineering Blog: "Claude Code: Best practices for agentic coding" (introduces ultrathink keyword scale).</div></div>
-      <div class="tl-entry"><div class="tl-date">07. May 2025</div><div class="tl-event">Latent Space Podcast with Cat Wu.</div></div>
-      <div class="tl-entry"><div class="tl-date">Jun 2025</div><div class="tl-event">AI Engineer World's Fair Keynote: "Claude Code &amp; the evolution of agentic coding."</div></div>
-      <div class="tl-entry"><div class="tl-date">Oct–Nov 2025</div><div class="tl-event">Boris stops writing code by hand.</div></div>
-      <div class="tl-entry"><div class="tl-date">27. Dec 2025</div><div class="tl-event">One-year retro: 259 PRs in 30 days, all with Opus 4.5.</div></div>
-      <div class="tl-entry major"><div class="tl-date">02. Jan 2026</div><div class="tl-event"><strong>13-tip thread "How I use Claude Code"</strong> (104K likes; canonical reference).</div></div>
-      <div class="tl-entry"><div class="tl-date">07. Jan 2026</div><div class="tl-event">Claude Code 2.1.0 Announcement.</div></div>
-      <div class="tl-entry"><div class="tl-date">13. Jan 2026</div><div class="tl-event">"Robert with a terminal up" Origin-Story Post.</div></div>
-      <div class="tl-entry major"><div class="tl-date">31. Jan 2026</div><div class="tl-event"><strong>10 team tips thread</strong> (8.5M views).</div></div>
-      <div class="tl-entry"><div class="tl-date">11. Feb 2026</div><div class="tl-event"><strong>12 customization tips</strong> thread.</div></div>
-      <div class="tl-entry"><div class="tl-date">19. Feb 2026</div><div class="tl-event">Lenny's Podcast Episode: "What happens after coding is solved".</div></div>
-      <div class="tl-entry"><div class="tl-date">20.–21. Feb 2026</div><div class="tl-event">Built-in git worktree support (5 tips).</div></div>
-      <div class="tl-entry"><div class="tl-date">24. Feb 2026</div><div class="tl-event">"Happy 1st birthday to Claude Code".</div></div>
-      <div class="tl-entry"><div class="tl-date">25. Feb 2026</div><div class="tl-event">Anthropic acquires Vercept.</div></div>
-      <div class="tl-entry"><div class="tl-date">27.–28. Feb 2026</div><div class="tl-event"><code>/simplify</code> and <code>/batch</code> announcement.</div></div>
-      <div class="tl-entry"><div class="tl-date">07. Mar 2026</div><div class="tl-event"><code>/loop</code> announcement.</div></div>
-      <div class="tl-entry"><div class="tl-date">09. Mar 2026</div><div class="tl-event">Code Review Feature Launch.</div></div>
-      <div class="tl-entry"><div class="tl-date">13. Mar 2026</div><div class="tl-event">Opus 4.6 1M default for Max/Team/Enterprise; <code>/effort max</code>, Voice Mode, Remote Control, PostCompact Hook.</div></div>
-      <div class="tl-entry"><div class="tl-date">23.–25. Mar 2026</div><div class="tl-event">Auto Mode, <code>/schedule</code>, iMessage plugin, Auto-Memory/Dream.</div></div>
-      <div class="tl-entry major"><div class="tl-date">29.–30. Mar 2026</div><div class="tl-event"><strong>15 hidden/underused features</strong> thread (user's anchor tweet).</div></div>
-      <div class="tl-entry"><div class="tl-date">01. Apr 2026</div><div class="tl-event">NO_FLICKER Mode announcement.</div></div>
-      <div class="tl-entry"><div class="tl-date">13. Apr 2026</div><div class="tl-event">1-hour prompt cache rollout.</div></div>
-      <div class="tl-entry"><div class="tl-date">14. Apr 2026</div><div class="tl-event">Routines (Boris RT).</div></div>
-      <div class="tl-entry major"><div class="tl-date">16. Apr 2026</div><div class="tl-event"><strong>6 Opus-4.7 tips</strong> thread.</div></div>
-      <div class="tl-entry"><div class="tl-date">22. Apr 2026</div><div class="tl-event">Claude Code wins Webby Award (AI Features &amp; Innovation).</div></div>
-      <div class="tl-entry"><div class="tl-date">23. Apr 2026</div><div class="tl-event">Quality post-mortem for v2.1.116+.</div></div>
-      <div class="tl-entry"><div class="tl-date">06. May 2026</div><div class="tl-event">Code w/ Claude SF: Rate limits doubled, SpaceX 300MW compute deal.</div></div>
-    </div>
-  </section>
-
-  <!-- STAGES -->
-  <section class="stages">
-    <h2>Staged Adoption <em>— Boris's Own Recommendation</em></h2>
-    <p>From vanilla setup to autonomous agent stack. Clear thresholds for when to move to the next phase.</p>
-    <div class="stage-grid">
-      <div class="stage">
-        <div class="stage-num">1</div>
-        <div class="stage-title">Vanilla</div>
-        <div class="stage-week">Week 1</div>
-        <div class="stage-body">Install Claude Code (CLI or VS Code extension). <code>/init</code> for starter CLAUDE.md. Plan Mode (Shift+Tab twice) for every task. Don't customize.</div>
-        <div class="stage-graduate"><strong>Graduate when:</strong> 5+ PRs shipped, Claude makes the same mistake twice — time for rules in CLAUDE.md.</div>
-      </div>
-      <div class="stage">
-        <div class="stage-num">2</div>
-        <div class="stage-title">Compounding Knowledge</div>
-        <div class="stage-week">Week 2–3</div>
-        <div class="stage-body">Treat CLAUDE.md like code: ruthlessly prune, add rule on every mistake. Add 1–2 Slash Commands for daily workflows.</div>
-        <div class="stage-graduate"><strong>Graduate when:</strong> CLAUDE.md &gt; 1 page, Slash Command count ~3.</div>
-      </div>
-      <div class="stage">
-        <div class="stage-num">3</div>
-        <div class="stage-title">Parallelism</div>
-        <div class="stage-week">Week 4+</div>
-        <div class="stage-body">Open 3–5 git worktrees, one Claude in each. PostToolUse Hook for formatting. Pre-allow safe commands with <code>/permissions</code>, check <code>.claude/settings.json</code> into git.</div>
-        <div class="stage-graduate"><strong>Graduate when:</strong> you're frustrated waiting on one Claude.</div>
-      </div>
-      <div class="stage">
-        <div class="stage-num">4</div>
-        <div class="stage-title">Subagents</div>
-        <div class="stage-week">Month 2+</div>
-        <div class="stage-body">Add <code>.claude/agents/code-simplifier.md</code> and <code>verify-app.md</code>. "Use 5 subagents to explore the codebase" on new repos. Adversarial review pattern.</div>
-        <div class="stage-graduate"><strong>Graduate when:</strong> you spend more time switching between Claudes than Claudes spend working.</div>
-      </div>
-      <div class="stage">
-        <div class="stage-num">5</div>
-        <div class="stage-title">Autonomy</div>
-        <div class="stage-week">Month 3+</div>
-        <div class="stage-body">Auto Mode (Opus 4.7), <code>/focus</code>, recaps on. <code>/loop</code> for PR babysitting, Slack feedback. <code>/schedule</code> for jobs that survive closed laptops. Chrome extension for frontend verification. <code>/voice</code>.</div>
-        <div class="stage-graduate"><strong>End state:</strong> Claude Code is no longer a tool — it's your team's compute budget.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTESTED -->
-  <section class="contested">
-    <h2>Contested <em>Recommendations</em></h2>
-    <p>Where Boris's setup differs from his own team — and where you need to decide for yourself.</p>
-    <div class="contest-grid">
-      <div class="contest">
-        <h4>Worktrees vs. Checkouts</h4>
-        <p>Boris personally uses multiple checkouts. The rest of the team prefers worktrees and built native worktree support for it. Both work — choose by mental model.</p>
-      </div>
-      <div class="contest">
-        <h4>MCP vs. CLI/Skills</h4>
-        <p>Boris uses Slack MCP. Secondary sources from the team push back: "For read-heavy workflows, a well-crafted CLI skill is often simpler." Rule of thumb: local &amp; simple → Slash Command. External data → MCP.</p>
-      </div>
-      <div class="contest">
-        <h4>Opus vs. Sonnet</h4>
-        <p>Boris uses Opus 4.5/4.6/4.7 with Thinking for everything. Team default and Pro tier still surface Sonnet. Rule of thumb: less steering effort with Opus = often faster, despite higher latency.</p>
-      </div>
-      <div class="contest">
-        <h4>Auto Mode vs. Explicit Permissions</h4>
-        <p>Auto Mode (Opus 4.7) auto-approves safe permissions. Security-conscious teams prefer manual approval via PermissionRequest Hook. Sandboxes allow middle ground.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CAVEATS -->
-  <section class="caveats">
-    <h2>Caveats <em>&amp; Notes</em></h2>
-    <p>Important limitations for honest framing of these tips.</p>
-    <ul>
-      <li>Many announced features are <strong>still rolling out or plan-tier-gated</strong> (Auto Mode = Max/Team/Enterprise; <code>/extra-usage</code> for 1M context on Pro). Test, don't assume.</li>
-      <li>The <strong>Latent Space Podcast date</strong> is listed as May 7, 2025; some recaps say May 8 — same episode.</li>
-      <li>"<strong>4% of all public GitHub commits</strong>" and "<strong>200% engineering productivity</strong>" are Boris's own numbers (Lenny's Podcast / code review thread), not independently audited. Directional, not precise.</li>
-      <li>The <strong>fan site howborisusesclaudecode.com</strong> (by @CarolinaCherry) is the most complete public catalog (87 tips). Not Anthropic-affiliated — every tip links to the primary @bcherny post.</li>
-      <li><strong>Ultrathink semantics changed between CC v1 and v2.</strong> In v1, the keyword ladder mapped to literal token budgets; in v2, the on/off Thinking toggle (Tab) replaces most of it. Ultrathink still triggers the highest-effort path.</li>
-      <li>Boris left Anthropic <strong>briefly for Cursor in early 2025 and came back after two weeks</strong> — discussed on Lenny's Podcast. Not a tip, but context for his credibility in trade-off discussions.</li>
-      <li>Tips attributed to <strong>Thariq, Cat Wu, Noah Z., Erik Schluntz</strong> and others from the Claude Code team are included here if Boris retweeted/endorsed them or they appeared in shared podcasts.</li>
-      <li><strong>No tip in this report comes from a private/leaked source.</strong> Everything is public X, public podcasts, Anthropic's public blog, or the Threads.net mirror.</li>
-    </ul>
-  </section>
-
-</main>
-
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>Boris Cherny Claude Code Playbook · Research as of June 2026<br>143 tips · 21 themes · 14 months of documentation</div>
+      <div>Boris Cherny Claude Code Playbook · Research as of June 2026<br>144 tips · 21 themes · 14 months of documentation</div>
       <div>Primary sources: <a href="https://x.com/bcherny" target="_blank">x.com/bcherny</a> · <a href="https://howborisusesclaudecode.com" target="_blank">howborisusesclaudecode.com</a> · <a href="https://docs.claude.com" target="_blank">docs.claude.com</a></div>
     </div>
   </div>

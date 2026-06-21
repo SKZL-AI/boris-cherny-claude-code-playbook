@@ -6,6 +6,13 @@ Newest entries first.
 
 ---
 
+## 2026-06-21 — Routine Scan
+- Added tip #17.08: Artifacts — Shareable Visual Pages from Your Session (Source: x.com/bcherny/status/2067700226669060207)
+- Skipped tweet 2068064304503660962 (Linear A use-case share, no actionable tip value)
+- Scan completed. Anchor: 2068064304503660962
+
+---
+
 ## 2026-06-20 — Routine Scan (no changes) [2]
 - Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny new feature Claude Code June 2026, site:threadreaderapp.com bcherny 2026, bcherny tweet status 2065–2067 range site:x.com, Boris Cherny @bcherny Claude Code June 20 2026
 - All found bcherny tweet IDs are at or below anchor `2064885111477219664` — no new posts since last scan

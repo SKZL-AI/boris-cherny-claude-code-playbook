@@ -3,7 +3,7 @@
 > **Source of truth.** All other artifacts (`README.md`, `index.html`) derive from this file.
 > **Format:** One tip per H3 block. New tips inserted by `/add-tip` or by the Routine in `routines/daily-scan.md`.
 > **Last manual audit:** 2026-05-12
-> **Total tips:** 143 across 21 themes
+> **Total tips:** 144 across 21 themes
 > **Schema:** see `data/tips-schema.json`
 
 ---
@@ -83,14 +83,6 @@ Mercurial, Perforce, SVN, Jujutsu: define custom `WorktreeCreate` and `WorktreeR
 - **Quote:** "I have dozens of Claudes running at all times"
 
 Scales from the point where tab-switching alone slows you down.
-
-### #01.10 — Auto Mode + Parallel Claudes (Kombi-Pattern)
-- **Difficulty:** Advanced
-- **Date:** 2026-04-16
-- **Source:** [X-Thread](https://x.com/bcherny/status/2044847848035156457)
-- **Author:** @bcherny
-
-Auto Mode kombiniert mit parallelen Sessions eliminiert Permission-Prompts über alle Instanzen hinweg. Ein Classifier bewertet jede Aktion automatisch — sichere Operationen werden durchgewunken, riskante geflaggt. Ermöglicht echtes unbeaufsichtigtes Arbeiten mit mehreren Claudes gleichzeitig.
 
 ---
 
@@ -522,15 +514,6 @@ Don't pollute context with failed attempts + corrections — rewind and re-promp
 
 Have Claude write a handoff message to its future self. Maximizes continuous learning across rewinds.
 
-### #04.35 — `/goal` for Autonomous Run-Until-Done Sessions
-- **Difficulty:** Advanced
-- **Date:** 2026-06-09
-- **Source:** [X](https://x.com/bcherny/status/2063792263067754658)
-- **Author:** @bcherny
-- **Quote:** "nudge Claude to keep going until it's done"
-
-The `/goal` command sets a completion condition; a lightweight model re-evaluates it after each turn and automatically starts another turn if the condition is not yet met. Eliminates the need to repeatedly type "keep going" across multi-hour sessions. Boris recommends it alongside auto mode and dynamic workflows for long-running Opus tasks.
-
 ---
 
 ## 05 — Subagents
@@ -912,31 +895,6 @@ Code review harnesses for older models may see lower recall — it's not a regre
 - **Author:** @bcherny
 - **Quote:** "If you want Claude to think, just tell it to think"
 
-### #09.10 — Fable 5: Best Model for Coding
-- **Difficulty:** Beginner
-- **Date:** 2026-06-09
-- **Source:** [X-Post](https://x.com/bcherny/status/2064402671898075579)
-- **Author:** @bcherny
-- **Quote:** "the best model I have used for coding, by a wide margin"
-
-Boris explicitly recommends Fable 5 (Mythos-class) as his top choice for coding work. Compared to previous Opus models, Fable 5 requires less prompting and steering, delivers better self-verification, supports longer sessions, and can be trusted with higher autonomy — meaning less babysitting per task.
-
-### #09.11 — xhigh als Standard-Effort für Opus 4.7
-- **Difficulty:** Beginner
-- **Date:** 2026-04-16
-- **Source:** [X-Thread](https://x.com/bcherny/status/2044847848035156457)
-- **Author:** @bcherny
-
-Mit Opus 4.7 ist `xhigh` der neue Standard-Effort-Level. Für die meisten Tasks reicht xhigh. `max` nur für die härtesten Probleme verwenden — es gilt nur für die aktuelle Session und verbraucht deutlich mehr Tokens.
-
-### #09.12 — What Changed 4.6 → 4.7 (Migration Summary)
-- **Difficulty:** Beginner
-- **Date:** 2026-04-16
-- **Source:** [X-Thread](https://x.com/bcherny/status/2044847848035156457)
-- **Author:** @bcherny
-
-Drei zentrale Verhaltensänderungen von Opus 4.6 zu 4.7: (1) Kalibrierte Antwortlänge — weniger unnötig lange Outputs. (2) Weniger automatischer Tool-Einsatz — Claude fragt eher nach statt blind loszulegen. (3) Zurückhaltenderes Subagent-Spawning — weniger parallele Agents wenn nicht nötig.
-
 ---
 
 ## 10 — Verification
@@ -1080,14 +1038,6 @@ Schedule, GitHub event, and API triggers. Runs on Anthropic infrastructure.
 
 "Write down the state of this session into this text doc… in your new session, tell Claude to read from that doc."
 
-### #11.07 — Task Completion Notifications
-- **Difficulty:** Beginner
-- **Date:** 2026-04-16
-- **Source:** [X-Thread](https://x.com/bcherny/status/2044847848035156457)
-- **Author:** @bcherny
-
-Benachrichtigungen wenn Claude eine Aufgabe abschließt: Sound-Alerts, Stop-Hooks oder iTerm2-Notifications einrichten. Essentiell für autonomes Arbeiten — man muss nicht mehr ständig das Terminal im Blick haben.
-
 ---
 
 ## 12 — Prompting & Specs
@@ -1189,14 +1139,6 @@ Team benefits from customizations. Support for enterprise-wide policies.
 
 Experimental renderer: no flicker/jump, mouse support. `CLAUDE_CODE_NO_FLICKER=1 claude`.
 
-### #13.07 — Setup Scripts für Cloud Environments
-- **Difficulty:** Intermediate
-- **Date:** 2026-03-13
-- **Source:** [X-Thread](https://x.com/bcherny/status/2032632596572811575)
-- **Author:** @bcherny
-
-Setup-Bash-Skripte laufen automatisch bevor Claude in Cloud-Umgebungen startet. Ideal für Dependency-Installation, Environment-Variablen und Tool-Konfiguration in Remote-Sessions.
-
 ---
 
 ## 14 — Headless / SDK
@@ -1279,14 +1221,6 @@ Human-readable session names for parallel work.
 - **Author:** @bcherny
 
 Transferable for building your own CLI tools.
-
-### #14.11 — Agent View (`claude agents`)
-- **Difficulty:** Beginner
-- **Date:** 2026-05-11
-- **Source:** [Claude Blog](https://claude.com/blog/agent-view-in-claude-code)
-- **Author:** @bcherny
-
-`claude agents` zeigt alle laufenden Claude-Code-Sessions in einer einzigen CLI-Liste: welche arbeiten, welche auf Input warten, welche fertig sind. Ersetzt das manuelle Durchschalten zwischen Terminal-Tabs bei parallelem Arbeiten.
 
 ---
 
@@ -1407,197 +1341,31 @@ Terminal / IDE extension / GitHub app / SDK as Unix utility.
 
 (explore › plan › confirm › code › commit) vs (tests › commit › code › iterate) vs (code › screenshot › iterate).
 
-### #17.07 — Desktop App Auto-Start Servers
-- **Difficulty:** Beginner
-- **Date:** 2026-03-29
-- **Source:** [X-Thread](https://x.com/bcherny/status/2038454336355999749)
-- **Author:** @bcherny
-
-Die Claude Desktop App kann Dev-Server automatisch starten und mit dem eingebauten Browser testen. Kein manuelles `npm start` mehr nötig — Claude erkennt den Stack und startet den passenden Server.
-
----
-
-## 18 — Migration & Data
-
-### #18.01 — Always Finish Migrations
-- **Difficulty:** Advanced
-- **Date:** 2026-02-19
-- **Source:** [Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/building-claude-code-with-boris-cherny)
-- **Author:** @bcherny
-- **Quote:** "When you start a migration, finish the migration"
-
-Partially-migrated codebases confuse humans and models alike.
-
-### #18.02 — `/batch` Is the Migration Tool
-- **Difficulty:** Advanced
-- **Date:** 2026-02-27
-- **Source:** [X-Thread](https://x.com/bcherny/status/2027534984534544489)
-- **Author:** @bcherny
-
-Plan interactively, then fan out to dozens of worktree agents.
-
-### #18.03 — Check BigQuery Skill into Codebase
-- **Difficulty:** Intermediate
-- **Date:** 2026-01-31
-- **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
-- **Author:** @bcherny
-
-The whole team uses it for analytics directly from Claude Code.
-
----
-
-## 19 — Learning & Onboarding
-
-### #19.01 — Explanatory / Learning Output Style
-- **Difficulty:** Beginner
-- **Date:** 2026-01-31
-- **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
-- **Author:** @bcherny
-
-Claude explains the *why* behind changes.
-
-### #19.02 — Generate Visual HTML Presentations
-- **Difficulty:** Beginner
-- **Date:** 2026-01-31
-- **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
-- **Author:** @bcherny
-- **Quote:** "Surprisingly good slides!"
-
-### #19.03 — Request ASCII Diagrams
-- **Difficulty:** Beginner
-- **Date:** 2026-01-31
-- **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
-- **Author:** @bcherny
-
-For new protocols, codebases, architectures.
-
-### #19.04 — Spaced-Repetition Learning Skill
-- **Difficulty:** Advanced
-- **Date:** 2026-01-31
-- **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
-- **Author:** @bcherny
-
-You explain your understanding, Claude asks follow-up questions.
-
-### #19.05 — Onboarding Workflow at Anthropic
-- **Difficulty:** Beginner
-- **Date:** 2025-04-18
-- **Source:** [Anthropic Blog](https://www.anthropic.com/engineering/claude-code-best-practices)
-- **Author:** @bcherny
-
-New engineers use Claude Code to navigate codebases.
-
----
-
-## 20 — Context Management
-
-### #20.01 — Lower the Auto-Compact Threshold
-- **Difficulty:** Advanced
-- **Date:** 2026-04-15
-- **Source:** [X (RT Thariq)](https://x.com/bcherny/status/2044548257058328723)
-- **Author:** @thariq (RT @bcherny)
-
-`CLAUDE_CODE_AUTO_COMPACT_WINDOW=400000 claude`, to avoid context rot in the 1M model.
-
-### #20.02 — Context Rot Starts at 300–400k Tokens
-- **Difficulty:** Advanced
-- **Date:** 2026-04-15
-- **Source:** [X (RT Thariq)](https://x.com/bcherny/status/2044548257058328723)
-- **Author:** @thariq (RT @bcherny)
-
-Don't let intelligence-sensitive sessions drift beyond that.
-
-### #20.03 — "Dumb Zone" at ~40% Context
-- **Difficulty:** Advanced
-- **Date:** 2026-04-15
-- **Source:** [X (RT Thariq)](https://x.com/bcherny/status/2044548257058328723)
-- **Author:** @thariq (RT @bcherny)
-
-Newcomers: stay under 40%. Experienced users: under 30%; 60% only for simple tasks.
-
-### #20.04 — Every Turn Is a Branching Point
-- **Difficulty:** Advanced
-- **Date:** 2026-04-15
-- **Source:** [X (RT Thariq)](https://x.com/bcherny/status/2044548257058328723)
-- **Author:** @thariq (RT @bcherny)
-
-Pick continue / `/rewind` / `/clear` / `/compact` / subagent.
-
-### #20.05 — Agentic Search > RAG
-- **Difficulty:** Advanced
-- **Date:** 2025-05-07
-- **Source:** [Latent Space](https://www.latent.space/p/claude-code)
-- **Author:** @bcherny
-
-"Just using regular code searching, you know, glob, grep." Avoids indexing/sync/security issues.
-
-### #20.06 — Nested Subagents as Context Resets (depth ≤ 5)
-- **Difficulty:** Advanced
-- **Date:** 2026-06-09
-- **Source:** [X-Post](https://x.com/bcherny/status/2064327225504403752)
-- **Author:** @bcherny
-
-Nested subagent support landed in Claude Code, capped at depth 5. The design goal is context management, not parallelism: each subagent gets its own fresh context window, so nesting lets a subagent offload work before its parent's context fills up.
-
----
-
-## 21 — Terminal Environment
-
-### #21.01 — Ghostty Terminal
-- **Difficulty:** Beginner
-- **Date:** 2026-01-31
-- **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
-- **Author:** @bcherny
-
-Team favorite: synchronized rendering, 24-bit color, Unicode.
-
-### #21.02 — tmux for One Tab per Task
-- **Difficulty:** Intermediate
-- **Date:** 2026-01-31
-- **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
-- **Author:** @bcherny
-
-Organize terminal tabs by color codes and names.
-
-### #21.03 — Voice Dictation (fn x2 on macOS)
-- **Difficulty:** Beginner
-- **Date:** 2026-01-31
-- **Source:** [X-Thread](https://x.com/bcherny/status/2017742741636321619)
-- **Author:** @bcherny
-- **Quote:** "You speak 3x faster than you type"
-
----
-
-## Tracking Metadata
-
-<!-- Automation reads from here. Do not delete. -->
-
-```yaml
-last_scan_iso: "2026-06-20T18:30:00Z"
-last_scan_anchor_tweet_id: "2064885111477219664"
+last_scan_iso: "2026-06-21T00:00:00Z"
+last_scan_anchor_tweet_id: "2068064304503660962"
 last_tip_id_per_theme:
-  "01": 10
+  "01": 9
   "02": 6
   "03": 11
-  "04": 35
+  "04": 34
   "05": 13
   "06": 9
   "07": 7
   "08": 7
-  "09": 12
+  "09": 9
   "10": 11
-  "11": 7
+  "11": 6
   "12": 6
-  "13": 7
-  "14": 11
+  "13": 6
+  "14": 10
   "15": 3
   "16": 5
-  "17": 7
+  "17": 8
   "18": 3
   "19": 5
-  "20": 6
+  "20": 5
   "21": 3
-total_tips: 143
+total_tips: 144
 ```
 
 <!-- End tracking metadata -->
