@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-06-23 — Routine Scan (no changes)
+- Scanned 8 queries: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic tip Claude Code 2026, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode latest tips 2026, bcherny "Claude Code" June 23 2026, Boris Cherny Claude Code new post today June 23 2026
+- All found bcherny tweet IDs are at or below anchor `2068064304503660962` — no new posts since last scan
+- howborisusesclaudecode.com, threadreaderapp.com, threads.com, and x.com/bcherny all returned HTTP 403 (blocked)
+- Loop engineering discussion (BusinessToday, TechTimes June 22) already captured in prior scans; all trace back to June 2 / June 8 statements already in TIPS.md
+- No new tips to add. Anchor unchanged: 2068064304503660962
+- Scan completed. Anchor: 2068064304503660962
+
+---
+
 ## 2026-06-22 — Routine Scan (no changes) [2]
 - Scanned 10 queries: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny new feature Claude Code 2026, bcherny x.com June 22 2026, site:threadreaderapp.com bcherny 2026, bcherny "loop engineering" OR "/goal", bcherny "I don't prompt Claude anymore", bcherny Artifacts after June 22, "@bcherny" announcement June 22 2026, bcherny latest post today
 - Cross-checked secondary sources: BusinessToday 2026-06-22 (loop engineering article), TechTimes 2026-06-22, Addy Osmani loop engineering, The New Stack — all report on Boris statements from June 2 (WorkOS event) and June 8, already captured in prior scans
