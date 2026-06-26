@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-06-26 — Routine Scan (no changes) [2]
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic Claude Code new feature June 2026, site:threadreaderapp.com bcherny (403), site:threads.com boris_cherny (403), howborisusesclaudecode.com (403)
+- All found bcherny tweet IDs are at or below anchor `2068064304503660962` — no new posts since prior run at 08:00 UTC
+- X reported service issues on 2026-06-26; some posts may not be indexed yet
+- Most recent confirmed post remains `2068064304503660962` ("Cool way to use Claude Code: deciphering Linear A", June 19)
+- No new tips to add. Anchor unchanged: 2068064304503660962
+- Scan completed at 2026-06-26T12:00:00Z
+
+---
+
 ## 2026-06-26 — Routine Scan (no changes)
 - Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code 2026, Boris Cherny Anthropic tip 2026, site:threadreaderapp.com bcherny (403), site:threads.com boris_cherny, howborisusesclaudecode.com (403)
 - All found bcherny tweet IDs are at or below anchor `2068064304503660962` — no new posts since prior run at 20:03 UTC on June 25
