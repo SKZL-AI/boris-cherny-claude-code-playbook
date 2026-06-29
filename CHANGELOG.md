@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-06-29 — Routine Scan (no changes) [2]
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic Claude Code June 2026, site:threadreaderapp.com bcherny (403), site:threads.com boris_cherny (403), howborisusesclaudecode.com (403)
+- All found bcherny tweet IDs at or below anchor `2071379474277613732` — no new posts since prior run at 08:00 UTC
+- X.com direct fetches blocked (403); ThreadReaderApp blocked (403); howborisusesclaudecode.com blocked (403)
+- No new tips added. total_tips remains 144
+- Scan completed at 2026-06-29T12:00:00Z
+
+---
+
 ## 2026-06-29 — Routine Scan (no changes)
 - Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic Claude Code June 2026, site:threadreaderapp.com bcherny (403), site:threads.com boris_cherny (403), howborisusesclaudecode.com (403)
 - Found 1 new post above anchor: tweet `2071379474277613732` — "five archetypes on the Claude Code team" (Prototyper, Builder, Sweeper, Grower, Maintainer); classified as workforce/philosophy observation, not an actionable Claude Code how-to tip; not added
