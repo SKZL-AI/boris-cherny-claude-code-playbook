@@ -1341,7 +1341,7 @@ Terminal / IDE extension / GitHub app / SDK as Unix utility.
 
 (explore › plan › confirm › code › commit) vs (tests › commit › code › iterate) vs (code › screenshot › iterate).
 
-last_scan_iso: "2026-06-29T12:00:00Z"
+last_scan_iso: "2026-06-30T12:00:00Z"
 last_scan_anchor_tweet_id: "2071379474277613732"
 last_tip_id_per_theme:
   "01": 9
