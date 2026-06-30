@@ -3,7 +3,7 @@
 > **Source of truth.** All other artifacts (`README.md`, `index.html`) derive from this file.
 > **Format:** One tip per H3 block. New tips inserted by `/add-tip` or by the Routine in `routines/daily-scan.md`.
 > **Last manual audit:** 2026-05-12
-> **Total tips:** 144 across 21 themes
+> **Total tips:** 145 across 21 themes
 > **Schema:** see `data/tips-schema.json`
 
 ---
@@ -1341,8 +1341,17 @@ Terminal / IDE extension / GitHub app / SDK as Unix utility.
 
 (explore › plan › confirm › code › commit) vs (tests › commit › code › iterate) vs (code › screenshot › iterate).
 
-last_scan_iso: "2026-06-30T12:00:00Z"
-last_scan_anchor_tweet_id: "2071379474277613732"
+### #17.09 — Claude Desktop on Linux (Beta)
+- **Difficulty:** Beginner
+- **Date:** 2026-06-30
+- **Source:** [X-Thread](https://x.com/bcherny/status/2072000214634742243)
+- **Author:** @bcherny
+- **Quote:** "You asked, we listened. Claude Desktop on Linux is here!"
+
+Claude Desktop is now available in beta for Ubuntu 22.04+ and Debian 12+ (x86_64 and arm64) via an official apt repository. Linux users get the full Chat, Cowork, and Claude Code experience — parallel sessions, visual diff review, integrated terminal/editor, and live app preview — without relying on community workarounds. Computer Use and voice dictation are not yet included in the Linux beta.
+
+last_scan_iso: "2026-06-30T14:00:00Z"
+last_scan_anchor_tweet_id: "2072000214634742243"
 last_tip_id_per_theme:
   "01": 9
   "02": 6
@@ -1360,12 +1369,12 @@ last_tip_id_per_theme:
   "14": 10
   "15": 3
   "16": 5
-  "17": 8
+  "17": 9
   "18": 3
   "19": 5
   "20": 5
   "21": 3
-total_tips: 144
+total_tips: 145
 ```
 
 <!-- End tracking metadata -->

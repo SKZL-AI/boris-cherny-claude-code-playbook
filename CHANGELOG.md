@@ -6,6 +6,13 @@ Newest entries first.
 
 ---
 
+## 2026-06-30 — Routine Scan
+- Added tip #17.09: Claude Desktop on Linux (Beta) (Source: x.com/bcherny/status/2072000214634742243)
+- Anchor advanced to `2072000214634742243`
+- Scan completed at 2026-06-30T14:00:00Z
+
+---
+
 ## 2026-06-30 — Routine Scan (no changes)
 - Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic tip June 2026, site:threadreaderapp.com bcherny (403), site:threads.com boris_cherny (403), howborisusesclaudecode.com (403)
 - All found bcherny tweet IDs at or below anchor `2071379474277613732` — no new posts since prior run at 12:00 UTC

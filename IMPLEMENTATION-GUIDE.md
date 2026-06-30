@@ -2,7 +2,7 @@
 
 > **What this is:** ~70 actionable tips from Boris Cherny (Head of Claude Code, Anthropic) structured as executable instructions for Claude Code. Feed this file to Claude Code and it will auto-configure your project.
 >
-> **What this is NOT:** A reference document. For the full 144-tip collection (including philosophy, workflow habits, and team practices), see [TIPS.md](./TIPS.md).
+> **What this is NOT:** A reference document. For the full 145-tip collection (including philosophy, workflow habits, and team practices), see [TIPS.md](./TIPS.md).
 >
 > **Source:** All tips originate from Boris Cherny's public posts on X, podcasts, conferences, and the Anthropic blog. Tip IDs reference [TIPS.md](./TIPS.md) for full context and source URLs.
 
@@ -1044,5 +1044,5 @@ Every instruction in this guide traces back to a specific Boris Cherny tip in [T
 
 ---
 
-*Generated from [TIPS.md](./TIPS.md) (144 tips, 21 themes) · Version 1.0 · 2026-06-21*
+*Generated from [TIPS.md](./TIPS.md) (145 tips, 21 themes) · Version 1.0 · 2026-06-21*
 *Part of the [Boris Cherny Claude Code Playbook](https://github.com/SKZL-AI/boris-cherny-claude-code-playbook)*
