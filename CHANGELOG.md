@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-07-01 — Routine Scan (no changes) [2]
+- Scanned 8 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic Claude Code new feature July 2026, bcherny x.com July 2026 Claude Code, "bcherny" OR "Boris Cherny" Claude Code July 1 2026, site:threadreaderapp.com bcherny (403), site:threads.com boris_cherny (403), howborisusesclaudecode.com (403)
+- All found @bcherny tweet IDs at or below anchor `2072000214634742243` — no new posts since prior run at 08:00 UTC
+- X.com direct fetches blocked (403); ThreadReaderApp blocked (403); howborisusesclaudecode.com blocked (403); beginnersinai.org blocked (403); threads.com blocked (403)
+- No new tips added. total_tips remains 145
+- Scan completed at 2026-07-01T12:00:00Z
+
+---
+
 ## 2026-07-01 — Routine Scan (no changes)
 - Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic tip 2026, site:threadreaderapp.com bcherny (403), site:threads.com boris_cherny (403), howborisusesclaudecode.com (403)
 - All found @bcherny tweet IDs at or below anchor `2072000214634742243` — no new posts since prior run at 14:00 UTC on 2026-06-30
