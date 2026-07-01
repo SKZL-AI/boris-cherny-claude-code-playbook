@@ -6,6 +6,17 @@ Newest entries first.
 
 ---
 
+## 2026-07-01 — Routine Scan (no changes)
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic tip 2026, site:threadreaderapp.com bcherny (403), site:threads.com boris_cherny (403), howborisusesclaudecode.com (403)
+- All found @bcherny tweet IDs at or below anchor `2072000214634742243` — no new posts since prior run at 14:00 UTC on 2026-06-30
+- Notable: tweet `2071647677591466098` ("subagents run in background by default") surfaced in search but predates anchor; excluded per date-filter rule
+- Notable: Claude Sonnet 5 announced as new Claude Code default (@ClaudeDevs/@ClaudeCodeLog) — not from @bcherny directly; no Boris endorsement tweet found
+- X.com direct fetches blocked (403); ThreadReaderApp blocked (403); howborisusesclaudecode.com blocked (403)
+- No new tips added. total_tips remains 145
+- Scan completed at 2026-07-01T08:00:00Z
+
+---
+
 ## 2026-06-30 — Routine Scan
 - Added tip #17.09: Claude Desktop on Linux (Beta) (Source: x.com/bcherny/status/2072000214634742243)
 - Anchor advanced to `2072000214634742243`
