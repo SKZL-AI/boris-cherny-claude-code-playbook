@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-07-03 — Routine Scan (no changes)
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip July 2026, Boris Cherny Anthropic Claude Code new feature July 2026, bcherny x.com tweet July 3 2026, site:threadreaderapp.com bcherny (403), borischerny.com (403)
+- All found @bcherny tweet IDs at or below anchor `2072000214634742243` — no new posts since prior run at 16:00 UTC on 2026-07-02
+- Notable: tweet `2071647677591466098` ("subagents run in background by default", ~June 29) surfaced again but confirmed below anchor and already reviewed in 2026-07-01 scan
+- No new tips added. total_tips remains 145
+- Scan completed at 2026-07-03T08:00:00Z
+
+---
+
 ## 2026-07-02 — Routine Scan (no changes) [2]
 - Scanned 8 sources: bcherny site:x.com, bcherny Claude Code tip 2026, Boris Cherny new feature Claude Code July 2026, site:x.com/bcherny 2026 July, "bcherny" OR "Boris Cherny" Claude Code after:2026-07-02, site:threadreaderapp.com bcherny (403), howborisusesclaudecode.com (403), releasebot.io/updates/anthropic/claude-code (403)
 - All found @bcherny tweet IDs at or below anchor `2072000214634742243` — no new posts since prior run at 12:00 UTC on 2026-07-02
