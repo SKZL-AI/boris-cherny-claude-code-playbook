@@ -206,4 +206,4 @@ If this repo helps you, [give it a star](https://github.com/SKZL-AI/boris-cherny
 
 ---
 
-*Maintained by [SKZL-AI](https://github.com/SKZL-AI) · Last full audit: 2026-06-30*
+*Maintained by [SKZL-AI](https://github.com/SKZL-AI) · Last full audit: 2026-07-05*

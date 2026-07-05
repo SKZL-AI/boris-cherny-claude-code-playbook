@@ -1044,5 +1044,5 @@ Every instruction in this guide traces back to a specific Boris Cherny tip in [T
 
 ---
 
-*Generated from [TIPS.md](./TIPS.md) (145 tips, 21 themes) · Version 1.0 · 2026-06-21*
+*Generated from [TIPS.md](./TIPS.md) (145 tips, 21 themes) · Version 1.0 · 2026-07-05*
 *Part of the [Boris Cherny Claude Code Playbook](https://github.com/SKZL-AI/boris-cherny-claude-code-playbook)*
