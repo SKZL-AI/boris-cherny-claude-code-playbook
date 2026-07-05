@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-07-05 — Routine Scan (no changes)
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny new feature Claude Code July 2026, site:threadreaderapp.com bcherny, site:threads.com boris_cherny July 2026, Anthropic Claude Code update July 5 2026
+- All found @bcherny tweet IDs at or below anchor `2072777472970563995` — no new posts since prior run at 14:30 UTC on 2026-07-04
+- x.com/bcherny (403), threadreaderapp.com/user/bcherny (403), howborisusesclaudecode.com (403), releasebot.io (403)
+- No new tips added. total_tips remains 145
+- Scan completed at 2026-07-05T07:11:55Z. Anchor unchanged: 2072777472970563995
+
+---
+
 ## 2026-07-04 — Routine Scan (no changes) [2]
 - Scanned 8 sources: bcherny site:x.com 2026, bcherny Claude Code tip July 2026, Boris Cherny Anthropic Claude Code new feature July 2026, site:threadreaderapp.com bcherny, site:threads.com boris_cherny July 2026, howborisusesclaudecode.com latest tips July 2026, bcherny Claude Code July 1 2 3 2026 new tip, "boris cherny" OR "bcherny" site:x.com "July 2026"
 - Found tweet `2072777472970563995` (~2026-07-03 01:23 UTC): "Artifacts in Claude Code have been life changing. Excited to expand to Pro and Max!" — classified as announcement/reaction, no actionable tip value; anchor advanced to this ID
