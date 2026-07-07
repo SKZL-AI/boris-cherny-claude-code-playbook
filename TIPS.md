@@ -1350,7 +1350,7 @@ Terminal / IDE extension / GitHub app / SDK as Unix utility.
 
 Claude Desktop is now available in beta for Ubuntu 22.04+ and Debian 12+ (x86_64 and arm64) via an official apt repository. Linux users get the full Chat, Cowork, and Claude Code experience — parallel sessions, visual diff review, integrated terminal/editor, and live app preview — without relying on community workarounds. Computer Use and voice dictation are not yet included in the Linux beta.
 
-last_scan_iso: "2026-07-06T12:00:00Z"
+last_scan_iso: "2026-07-07T12:00:00Z"
 last_scan_anchor_tweet_id: "2072777472970563995"
 last_tip_id_per_theme:
   "01": 9
