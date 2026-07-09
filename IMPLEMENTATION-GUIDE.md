@@ -240,7 +240,7 @@ The team now shares permissions, env vars, and customizations. New members get t
 
 ## Section 3: Slash Commands
 
-*Implements tips: #04.01, #04.02, #04.03, #04.04, #04.05, #04.09, #04.10, #04.15, #04.17, #04.23*
+*Implements tips: #04.01, #04.02, #04.03, #04.04, #04.05, #04.09, #04.10, #04.15, #04.17, #04.23, #04.35*
 
 Slash commands are markdown files in `.claude/commands/`. They are prompts, not tools — Claude reads them as instructions. Check them into git for team sharing.
 
@@ -388,6 +388,20 @@ Use the built-in `/statusline` command to show:
 - Session cost
 
 Boris says every team member has their own statusline configuration.
+
+### 3.9 `/checkup` — Claude Code Health Maintenance
+
+Run the built-in `/checkup` command periodically to keep your setup healthy. It will:
+
+1. Remove unused skills, MCPs, and plugins (saves context window space)
+2. Deduplicate your local `CLAUDE.md` against the committed version
+3. Split an oversized root `CLAUDE.md` into nested per-folder files and skills
+4. Disable slow hooks that are blocking performance
+5. Update Claude Code to the latest version
+6. Enable auto mode by default
+7. Pre-approve frequently denied read-only commands
+
+Every proposed change is shown and confirmed before being applied. Run after major project changes or when you notice Claude Code feeling sluggish.
 
 ---
 
@@ -1032,7 +1046,7 @@ Every instruction in this guide traces back to a specific Boris Cherny tip in [T
 |---------|-------------------|
 | 1. CLAUDE.md Setup | #03.01, #03.02, #03.05, #03.07, #03.08, #03.09, #03.10 |
 | 2. Settings & Permissions | #07.01, #07.02, #07.03, #07.04, #13.01, #13.03, #13.05, #13.06, #20.01 |
-| 3. Slash Commands | #04.01, #04.02, #04.03, #04.04, #04.05, #04.09, #04.10, #04.15, #04.17, #04.23 |
+| 3. Slash Commands | #04.01, #04.02, #04.03, #04.04, #04.05, #04.09, #04.10, #04.15, #04.17, #04.23, #04.35 |
 | 4. Hooks | #06.01, #06.02, #06.03, #06.05, #06.06, #06.07 |
 | 5. Subagents | #05.01, #05.02, #05.03, #05.08, #05.10, #05.11 |
 | 6. MCP Integrations | #08.01, #08.06, #08.07 |

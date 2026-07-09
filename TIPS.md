@@ -514,13 +514,13 @@ Don't pollute context with failed attempts + corrections — rewind and re-promp
 
 Have Claude write a handoff message to its future self. Maximizes continuous learning across rewinds.
 
-### #04.35 — `/checkup` — Automated Environment Health Check
+### #04.35 — `/checkup` for Claude Code Health Maintenance
 - **Difficulty:** Beginner
 - **Date:** 2026-07-08
 - **Source:** [X-Thread](https://x.com/bcherny/status/2074997570317779038)
 - **Author:** @bcherny
 
-The `/checkup` skill audits your Claude Code environment and offers to fix common issues automatically: clean up unused skills/MCPs/plugins to save context, deduplicate your local CLAUDE.md against the checked-in version, break up a monolithic root CLAUDE.md into nested CLAUDE.md files and skills, turn off slow hooks, update Claude Code to the latest version, enable auto mode by default, and pre-approve frequently-denied read-only commands. Every suggested change is confirmed with you before being applied.
+The `/checkup` command performs a full health check on your Claude Code setup: removes unused skills, MCPs, and plugins to save context; deduplicates local `CLAUDE.md` against the checked-in version; splits an oversized root `CLAUDE.md` into nested per-folder files and skills; disables slow hooks; updates Claude Code to the latest version; enables auto mode by default; and pre-approves frequently denied read-only commands. Every proposed change is confirmed before it is applied.
 
 ---
 
@@ -1358,7 +1358,7 @@ Terminal / IDE extension / GitHub app / SDK as Unix utility.
 
 Claude Desktop is now available in beta for Ubuntu 22.04+ and Debian 12+ (x86_64 and arm64) via an official apt repository. Linux users get the full Chat, Cowork, and Claude Code experience — parallel sessions, visual diff review, integrated terminal/editor, and live app preview — without relying on community workarounds. Computer Use and voice dictation are not yet included in the Linux beta.
 
-last_scan_iso: "2026-07-09T00:00:00Z"
+last_scan_iso: "2026-07-09T12:00:00Z"
 last_scan_anchor_tweet_id: "2074997570317779038"
 last_tip_id_per_theme:
   "01": 9
