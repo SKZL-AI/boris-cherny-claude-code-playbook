@@ -6,6 +6,14 @@ Newest entries first.
 
 ---
 
+## 2026-07-10 — Routine Scan (no changes)
+- Scanned 8 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny new feature Claude Code July 2026, site:threadreaderapp.com bcherny 2026, site:threads.com boris_cherny July 2026, code.claude.com/docs/en/changelog (v2.1.206 July 9 — no X post from Boris), howborisusesclaudecode.com (403), releasebot.io (403)
+- All found @bcherny tweet IDs at or below anchor `2074997570317779038` — no new posts since 2026-07-09T12:00:00Z
+- No new tips added. total_tips remains 146
+- Scan completed at 2026-07-10T12:00:00Z. Anchor unchanged: 2074997570317779038
+
+---
+
 ## 2026-07-09 — Routine Scan
 - Added tip #04.35: `/checkup` — Automated Environment Health Check (Source: x.com/bcherny/status/2074997570317779038)
 - Also found tweet 2074247226038063316 ("1% done" / Claude Code origin story, Jul 7–8 2026) — classified as status/marketing, not added
