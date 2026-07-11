@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-07-11 — Routine Scan (no changes)
+- Scanned 8 sources: bcherny site:x.com Claude Code 2026, bcherny Claude Code tip July 2026, Boris Cherny Claude Code announcement July 2026, "x.com/bcherny/status/2075" Claude Code, bcherny x.com new post July 11 2026, site:threadreaderapp.com bcherny 2026, code.claude.com/docs/en/changelog (v2.1.207 July 11 / v2.1.206 July 10 — no X post from Boris for either), GitHub anthropics/claude-code releases
+- All found @bcherny tweet IDs at or below anchor `2074997570317779038` — no new posts since 2026-07-10T18:00:00Z
+- v2.1.207 (Jul 11): auto mode on Bedrock/Vertex/Foundry without opt-in, plugin security fix `${user_config.*}` — no Boris tweet found for these
+- No new tips added. total_tips remains 146
+- Scan completed at 2026-07-11T12:00:00Z. Anchor unchanged: 2074997570317779038
+
+---
+
 ## 2026-07-10 — Routine Scan (no changes) [18:00 UTC]
 - Scanned 9 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic new feature 2026, site:threadreaderapp.com bcherny 2026, site:threads.com boris_cherny July 2026, bcherny Claude Code after:2026-07-10, code.claude.com/docs/en/whats-new (latest entry Week 26, June 22–26), howborisusesclaudecode.com (403), releasebot.io (403)
 - All found @bcherny tweet IDs at or below anchor `2074997570317779038` — no new posts since 2026-07-10T12:00:00Z
