@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-07-13 — Routine Scan (no changes) [3rd run]
+- Scanned 8 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic Claude Code new feature July 2026, site:threadreaderapp.com bcherny (403), site:threads.com boris_cherny (403), howborisusesclaudecode.com (403), bcherny "Claude Code" after:2026-07-13, code.claude.com/docs/en/whats-new (Week 28 Jul 6–10 confirmed; Week 29 not yet published)
+- All found @bcherny tweet IDs at or below anchor `2074997570317779038` — no new Boris posts since 2026-07-13T12:00:00Z
+- Week 28 in-app browser (posted by @ClaudeDevs, no Boris endorsement found) — not added per sourcing rules
+- No new tips added. total_tips remains 146
+- Scan completed at 2026-07-13T18:00:00Z. Anchor unchanged: 2074997570317779038
+
+---
+
 ## 2026-07-13 — Routine Scan (no changes)
 - Scanned 6 sources: bcherny site:x.com Claude Code July 2026, bcherny Claude Code tip July 2026, Boris Cherny new feature Claude Code July 13 2026, site:x.com bcherny July 13 2026, bcherny x.com after:2026-07-12, code.claude.com/docs/en/whats-new (Week 28: Jul 6–10; Week 29 not yet published)
 - All found @bcherny tweet IDs at or below anchor `2074997570317779038` — no new Boris posts since 2026-07-12T15:00:00Z
