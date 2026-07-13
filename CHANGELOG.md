@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-07-13 — Routine Scan (no changes)
+- Scanned 6 sources: bcherny site:x.com Claude Code July 2026, bcherny Claude Code tip July 2026, Boris Cherny new feature Claude Code July 13 2026, site:x.com bcherny July 13 2026, bcherny x.com after:2026-07-12, code.claude.com/docs/en/whats-new (Week 28: Jul 6–10; Week 29 not yet published)
+- All found @bcherny tweet IDs at or below anchor `2074997570317779038` — no new Boris posts since 2026-07-12T15:00:00Z
+- releasebot.io confirms only Week 28 features (v2.1.202–v2.1.206) in July 2026 — /checkup already in TIPS.md as #04.35; in-app browser on Desktop sourced from @ClaudeDevs (no Boris endorsement found)
+- No new tips added. total_tips remains 146
+- Scan completed at 2026-07-13T12:00:00Z. Anchor unchanged: 2074997570317779038
+
+---
+
 ## 2026-07-12 — Routine Scan (no changes) [2nd run]
 - Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic new feature July 2026, site:threadreaderapp.com bcherny 2026 (403), site:threads.com boris_cherny July 2026, code.claude.com/docs/en/whats-new (Week 28: Jul 6–10 confirmed)
 - All found @bcherny tweet IDs at or below anchor `2074997570317779038` — no new Boris posts since 2026-07-12T12:00:00Z
