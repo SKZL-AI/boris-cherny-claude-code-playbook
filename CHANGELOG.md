@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-07-14 — Routine Scan (no changes)
+- Scanned 8 sources: bcherny site:x.com 2026, bcherny Claude Code tip July 2026, Boris Cherny Anthropic Claude Code new feature July 2026, site:threadreaderapp.com bcherny (403), site:threads.com boris_cherny July 2026, code.claude.com/docs/en/whats-new (Week 28 Jul 6–10; no Week 29 yet), bcherny screen reader/admin console search, bcherny post Jul 14–15 search
+- All found @bcherny tweet IDs at or below anchor `2074997570317779038` — no new Boris posts since 2026-07-13T18:00:00Z
+- July 14 changelog (v2.1.208–2.1.209): screen reader mode, vimInsertModeRemaps, CLAUDE_CODE_PROCESS_WRAPPER — bug-fix release, no personal Boris tip posts found
+- @ClaudeDevs in-app browser tweet (2075635283211772279) confirmed not from @bcherny, no Boris endorsement — not added
+- No new tips added. total_tips remains 146
+- Scan completed at 2026-07-14T12:00:00Z. Anchor unchanged: 2074997570317779038
+
+---
+
 ## 2026-07-13 — Routine Scan (no changes) [3rd run]
 - Scanned 8 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic Claude Code new feature July 2026, site:threadreaderapp.com bcherny (403), site:threads.com boris_cherny (403), howborisusesclaudecode.com (403), bcherny "Claude Code" after:2026-07-13, code.claude.com/docs/en/whats-new (Week 28 Jul 6–10 confirmed; Week 29 not yet published)
 - All found @bcherny tweet IDs at or below anchor `2074997570317779038` — no new Boris posts since 2026-07-13T12:00:00Z
