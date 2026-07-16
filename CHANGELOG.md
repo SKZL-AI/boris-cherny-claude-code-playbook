@@ -6,6 +6,17 @@ Newest entries first.
 
 ---
 
+## 2026-07-16 — Routine Scan (no changes)
+- Scanned 8 sources: bcherny site:x.com 2026, bcherny Claude Code tip July 2026, Boris Cherny new feature Claude Code July 2026, site:threadreaderapp.com bcherny (403), site:threads.com boris_cherny (403), howborisusesclaudecode.com (403), bcherny July 15–16 2026 targeted search, site:x.com bcherny status 2075/2076 search
+- All found @bcherny tweet IDs at or below anchor `2074997570317779038` — no new Boris posts since 2026-07-14T12:00:00Z
+- Claude Code 2.1.211 released July 15 (bug fixes only: --forward-subagent-text flag, always-allow rules to repo root, /loop resume fix, etc.) — changelog-only, no personal Boris tip posts found
+- x.com, threads.com, threadreaderapp.com, howborisusesclaudecode.com, lennysnewsletter.com all returned 403; no new content accessible
+- Lenny's newsletter "What happens after coding is solved" confirmed Feb 2026 — already past anchor
+- No new tips added. total_tips remains 146
+- Scan completed at 2026-07-16T00:00:00Z. Anchor unchanged: 2074997570317779038
+
+---
+
 ## 2026-07-14 — Routine Scan (no changes)
 - Scanned 8 sources: bcherny site:x.com 2026, bcherny Claude Code tip July 2026, Boris Cherny Anthropic Claude Code new feature July 2026, site:threadreaderapp.com bcherny (403), site:threads.com boris_cherny July 2026, code.claude.com/docs/en/whats-new (Week 28 Jul 6–10; no Week 29 yet), bcherny screen reader/admin console search, bcherny post Jul 14–15 search
 - All found @bcherny tweet IDs at or below anchor `2074997570317779038` — no new Boris posts since 2026-07-13T18:00:00Z
