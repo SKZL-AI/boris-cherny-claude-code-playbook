@@ -3,7 +3,7 @@
 > **Source of truth.** All other artifacts (`README.md`, `index.html`) derive from this file.
 > **Format:** One tip per H3 block. New tips inserted by `/add-tip` or by the Routine in `routines/daily-scan.md`.
 > **Last manual audit:** 2026-05-12
-> **Total tips:** 146 across 21 themes
+> **Total tips:** 147 across 21 themes
 > **Schema:** see `data/tips-schema.json`
 
 ---
@@ -232,6 +232,15 @@ Simpler than any vector store.
 - **Author:** @thariq (RT @bcherny)
 
 Auto-Memory saves preferences/corrections automatically. Auto-Dream is a subagent that periodically reviews and consolidates past sessions (REM sleep metaphor).
+
+### #03.12 — Encode Domain Knowledge as Agent-Ready Artifacts
+- **Difficulty:** Intermediate
+- **Date:** 2026-07-15
+- **Source:** [X-Thread](https://x.com/bcherny/status/2077460395279692197)
+- **Author:** @bcherny
+- **Quote:** "automate, and encode domain knowledge as infrastructure"
+
+Every team should write CLAUDE.md files, REVIEW.md review guides, skills, and inline docs so agents can work in the codebase with zero additional context from the prompter. Previously, automation was limited to what lint rules, types, and tests could express; CLAUDE.md-based infrastructure can now capture nearly all domain knowledge — architecture patterns, review criteria, team conventions, and more. This is the AI-era equivalent of the automation investments that made the best engineers 10x.
 
 ---
 
@@ -1358,12 +1367,12 @@ Terminal / IDE extension / GitHub app / SDK as Unix utility.
 
 Claude Desktop is now available in beta for Ubuntu 22.04+ and Debian 12+ (x86_64 and arm64) via an official apt repository. Linux users get the full Chat, Cowork, and Claude Code experience — parallel sessions, visual diff review, integrated terminal/editor, and live app preview — without relying on community workarounds. Computer Use and voice dictation are not yet included in the Linux beta.
 
-last_scan_iso: "2026-07-16T00:00:00Z"
-last_scan_anchor_tweet_id: "2074997570317779038"
+last_scan_iso: "2026-07-16T12:00:00Z"
+last_scan_anchor_tweet_id: "2077460395279692197"
 last_tip_id_per_theme:
   "01": 9
   "02": 6
-  "03": 11
+  "03": 12
   "04": 35
   "05": 13
   "06": 9
@@ -1382,7 +1391,7 @@ last_tip_id_per_theme:
   "19": 5
   "20": 5
   "21": 3
-total_tips: 146
+total_tips: 147
 ```
 
 <!-- End tracking metadata -->

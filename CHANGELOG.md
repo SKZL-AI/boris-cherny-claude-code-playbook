@@ -6,6 +6,13 @@ Newest entries first.
 
 ---
 
+## 2026-07-16 — Routine Scan [2nd run]
+- Added tip #03.12: Encode Domain Knowledge as Agent-Ready Artifacts (Source: x.com/bcherny/status/2077460395279692197)
+- Tweet ID 2077460395279692197 (Jul 15 2026) found — higher than previous anchor 2074997570317779038 — missed by earlier midnight run
+- Scan completed at 2026-07-16T12:00:00Z. Anchor updated: 2077460395279692197
+
+---
+
 ## 2026-07-16 — Routine Scan (no changes)
 - Scanned 8 sources: bcherny site:x.com 2026, bcherny Claude Code tip July 2026, Boris Cherny new feature Claude Code July 2026, site:threadreaderapp.com bcherny (403), site:threads.com boris_cherny (403), howborisusesclaudecode.com (403), bcherny July 15–16 2026 targeted search, site:x.com bcherny status 2075/2076 search
 - All found @bcherny tweet IDs at or below anchor `2074997570317779038` — no new Boris posts since 2026-07-14T12:00:00Z

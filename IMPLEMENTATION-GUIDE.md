@@ -2,7 +2,7 @@
 
 > **What this is:** ~70 actionable tips from Boris Cherny (Head of Claude Code, Anthropic) structured as executable instructions for Claude Code. Feed this file to Claude Code and it will auto-configure your project.
 >
-> **What this is NOT:** A reference document. For the full 146-tip collection (including philosophy, workflow habits, and team practices), see [TIPS.md](./TIPS.md).
+> **What this is NOT:** A reference document. For the full 147-tip collection (including philosophy, workflow habits, and team practices), see [TIPS.md](./TIPS.md).
 >
 > **Source:** All tips originate from Boris Cherny's public posts on X, podcasts, conferences, and the Anthropic blog. Tip IDs reference [TIPS.md](./TIPS.md) for full context and source URLs.
 
@@ -35,7 +35,7 @@ Don't implement everything at once. Follow this order:
 
 ## Section 1: CLAUDE.md Setup
 
-*Implements tips: #03.01, #03.02, #03.05, #03.07, #03.08, #03.09, #03.10*
+*Implements tips: #03.01, #03.02, #03.05, #03.07, #03.08, #03.09, #03.10, #03.12*
 
 CLAUDE.md is Claude Code's project memory — automatically read at session start. Boris calls it "compounding engineering": every mistake Claude makes becomes a rule that prevents future mistakes.
 
@@ -139,6 +139,39 @@ In any Claude Code session, prepend `#` to something you want Claude to remember
 ```
 
 Claude will ask whether to save to project memory (CLAUDE.md) or user memory (~/.claude/CLAUDE.md).
+
+### 1.7 Write REVIEW.md and Skills as Team Automation Infrastructure
+
+Encode domain knowledge that previously lived in reviewer heads as agent-readable artifacts. Create a `REVIEW.md` at the project root:
+
+```markdown
+# REVIEW.md
+
+## Code Review Criteria
+<!-- What every PR must satisfy before merge -->
+- All new API endpoints must include rate limiting
+- React components must use design-system tokens, not raw CSS values
+- DB queries must go through the repository layer, not direct ORM calls
+
+## Architecture Decisions
+<!-- Brief ADRs — link to full docs if needed -->
+- Use React Query for server state, Zustand for UI state
+- Prefer composition over inheritance in component design
+
+## Common Rejections
+<!-- Patterns that get PRs sent back — so Claude avoids them -->
+- Do not use console.log in production code
+- Do not import from sibling directories — use index barrels
+```
+
+Reference it from CLAUDE.md:
+
+```markdown
+## Review Standards
+See REVIEW.md for the code review checklist agents must follow before opening a PR.
+```
+
+Also invest in Skills (`.claude/commands/`) that encode repeated workflows. The goal: an agent cloned fresh into your repo can do meaningful work without any additional context from you. (#03.12)
 
 ---
 
@@ -1058,5 +1091,5 @@ Every instruction in this guide traces back to a specific Boris Cherny tip in [T
 
 ---
 
-*Generated from [TIPS.md](./TIPS.md) (146 tips, 21 themes) · Version 1.0 · 2026-07-09*
+*Generated from [TIPS.md](./TIPS.md) (147 tips, 21 themes) · Version 1.0 · 2026-07-09*
 *Part of the [Boris Cherny Claude Code Playbook](https://github.com/SKZL-AI/boris-cherny-claude-code-playbook)*
