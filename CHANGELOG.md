@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-07-17 — Routine Scan (no changes)
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip July 2026, Boris Cherny new feature Claude Code July 2026, bcherny x.com after:2026-07-16, bcherny "Claude Code" July 17 2026, bcherny tweet July 17 2026
+- All found @bcherny tweet IDs at or below anchor `2077460395279692197` — no new Boris posts since 2026-07-16T12:00:00Z
+- What's New page still shows Week 28 (July 6–10) as latest — no Week 29 published yet
+- threadreaderapp.com, howborisusesclaudecode.com returned 403; Bloomberg article (Jul 16) is paywalled and describes existing workflow practices already in TIPS.md
+- No new tips added. total_tips remains 147
+- Scan completed at 2026-07-17T12:00:00Z. Anchor unchanged: 2077460395279692197
+
+---
+
 ## 2026-07-16 — Routine Scan [2nd run]
 - Added tip #03.12: Encode Domain Knowledge as Agent-Ready Artifacts (Source: x.com/bcherny/status/2077460395279692197)
 - Tweet ID 2077460395279692197 (Jul 15 2026) found — higher than previous anchor 2074997570317779038 — missed by earlier midnight run
