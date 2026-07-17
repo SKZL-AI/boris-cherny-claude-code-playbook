@@ -3,7 +3,7 @@
 > **Source of truth.** All other artifacts (`README.md`, `index.html`) derive from this file.
 > **Format:** One tip per H3 block. New tips inserted by `/add-tip` or by the Routine in `routines/daily-scan.md`.
 > **Last manual audit:** 2026-05-12
-> **Total tips:** 147 across 21 themes
+> **Total tips:** 148 across 21 themes
 > **Schema:** see `data/tips-schema.json`
 
 ---
@@ -1305,6 +1305,14 @@ Mainly for code migrations.
 
 Massive cost reduction for repeated multi-turn agent work.
 
+### #16.06 — Measure AI Return in Engineering Hours, Not Token Burn
+- **Difficulty:** Beginner
+- **Date:** 2026-07-17
+- **Source:** [X-Thread](https://x.com/bcherny/status/2077929379661844559)
+- **Author:** @bcherny
+
+Boris outlines four steps of team AI adoption and warns that token consumption is a proxy for activity, not return. The right question: would this task have required engineering effort without AI, and if so, how many hours would it have cost? That delta — engineering hours saved — is the true ROI; the biggest payoff comes as Claude handles background maintenance and bug-fixing autonomously.
+
 ---
 
 ## 17 — Form Factor & Workflow
@@ -1367,8 +1375,8 @@ Terminal / IDE extension / GitHub app / SDK as Unix utility.
 
 Claude Desktop is now available in beta for Ubuntu 22.04+ and Debian 12+ (x86_64 and arm64) via an official apt repository. Linux users get the full Chat, Cowork, and Claude Code experience — parallel sessions, visual diff review, integrated terminal/editor, and live app preview — without relying on community workarounds. Computer Use and voice dictation are not yet included in the Linux beta.
 
-last_scan_iso: "2026-07-17T12:00:00Z"
-last_scan_anchor_tweet_id: "2077460395279692197"
+last_scan_iso: "2026-07-17T18:00:00Z"
+last_scan_anchor_tweet_id: "2077929379661844559"
 last_tip_id_per_theme:
   "01": 9
   "02": 6
@@ -1385,13 +1393,13 @@ last_tip_id_per_theme:
   "13": 6
   "14": 10
   "15": 3
-  "16": 5
+  "16": 6
   "17": 9
   "18": 3
   "19": 5
   "20": 5
   "21": 3
-total_tips: 147
+total_tips: 148
 ```
 
 <!-- End tracking metadata -->

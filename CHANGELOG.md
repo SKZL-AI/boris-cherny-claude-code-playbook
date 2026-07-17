@@ -6,6 +6,13 @@ Newest entries first.
 
 ---
 
+## 2026-07-17 — Routine Scan [2nd run]
+- Added tip #16.06: Measure AI Return in Engineering Hours, Not Token Burn (Source: x.com/bcherny/status/2077929379661844559)
+- Tweet ID 2077929379661844559 (Jul 17 2026 afternoon) found — higher than previous anchor 2077460395279692197 — missed by earlier noon run
+- Scan completed at 2026-07-17T18:00:00Z. Anchor updated: 2077929379661844559
+
+---
+
 ## 2026-07-17 — Routine Scan (no changes)
 - Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip July 2026, Boris Cherny new feature Claude Code July 2026, bcherny x.com after:2026-07-16, bcherny "Claude Code" July 17 2026, bcherny tweet July 17 2026
 - All found @bcherny tweet IDs at or below anchor `2077460395279692197` — no new Boris posts since 2026-07-16T12:00:00Z

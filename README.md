@@ -1,9 +1,9 @@
-![Tips](https://img.shields.io/badge/Tips-147-blue)
+![Tips](https://img.shields.io/badge/Tips-148-blue)
 ![Themes](https://img.shields.io/badge/Themes-21-green)
 ![Auto-Updated](https://img.shields.io/badge/Auto--Updated-2--3x%20daily-orange)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-> **147 tips from the Head of Claude Code at Anthropic — auto-updated daily.**
+> **148 tips from the Head of Claude Code at Anthropic — auto-updated daily.**
 > *Feed the [Implementation Guide](./IMPLEMENTATION-GUIDE.md) to Claude Code and auto-configure your project in one shot.*
 
 # Boris Cherny Claude Code Playbook
@@ -34,7 +34,7 @@ Open [IMPLEMENTATION-GUIDE.md](./IMPLEMENTATION-GUIDE.md) and copy the sections 
 
 ## Why This Repo?
 
-1. **First complete collection** of all public Boris Cherny tips in one place — 147 tips, 21 themes
+1. **First complete collection** of all public Boris Cherny tips in one place — 148 tips, 21 themes
 2. **Automatically up-to-date** — Claude.ai Routines scan for new tips 2–3x daily
 3. **Instantly actionable** — [IMPLEMENTATION-GUIDE.md](./IMPLEMENTATION-GUIDE.md) lets Claude Code configure your project in minutes
 4. **Visual dashboard** — Filters, timeline, difficulty levels at a glance
@@ -48,7 +48,7 @@ Boris Cherny started Claude Code in September 2024 as a side project at Anthropi
 
 This repo collects those tips in one place, classifies them by difficulty and theme, and keeps them current through automated X scans.
 
-**Current:** 147 tips across 21 themes, documented over 14 months.
+**Current:** 148 tips across 21 themes, documented over 14 months.
 
 ---
 
@@ -62,7 +62,7 @@ This repo collects those tips in one place, classifies them by difficulty and th
 
 ## Contents
 
-- **[TIPS.md](./TIPS.md)** — All 147 tips, structured by theme and difficulty. Source of truth for automation.
+- **[TIPS.md](./TIPS.md)** — All 148 tips, structured by theme and difficulty. Source of truth for automation.
 - **[IMPLEMENTATION-GUIDE.md](./IMPLEMENTATION-GUIDE.md)** — ~70 actionable tips structured as executable instructions for Claude Code. One-shot setup.
 - **[index.html](./index.html)** — Visual dashboard with filters, timeline, stages, and caveats. Open locally or host on GitHub Pages.
 - **[CHANGELOG.md](./CHANGELOG.md)** — Which tips were added when.
@@ -91,7 +91,7 @@ This repo collects those tips in one place, classifies them by difficulty and th
 | 13 | Customization | 6 | 37 settings, 84 env variables |
 | 14 | Headless / SDK | 10 | Claude as a Unix utility |
 | 15 | Code Review | 3 | "Reviews were the bottleneck" |
-| 16 | Cost / ROI | 5 | "It's an ROI question, not a cost question" |
+| 16 | Cost / ROI | 6 | "It's an ROI question, not a cost question" |
 | 17 | Form Factor | 9 | CLI, IDE, GitHub, Slack, Mobile, Web, Linux Desktop |
 | 18 | Migration & Data | 3 | Finish what you start |
 | 19 | Learning & Onboarding | 5 | Explanatory Output Style |
