@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-07-18 — Routine Scan (no changes)
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip July 2026, Boris Cherny new feature Claude Code July 2026, bcherny x.com after:2026-07-17, bcherny "New in Claude Code" screen reader artifacts fork, @bcherny tweet July 18 2026
+- All found @bcherny tweet IDs at or below anchor `2077929379661844559` — no new Boris posts since 2026-07-17T18:00:00Z
+- Week 29 What's New page (July 13–17) confirmed scanned; features therein have no associated post-anchor Boris tweet
+- Boris RT of @ClaudeDevs on Artifacts+MCP (ID 2077519049148260526) is pre-anchor and a commentless retweet — not added per rules
+- No new tips added. total_tips remains 148
+- Scan completed at 2026-07-18T12:00:00Z. Anchor unchanged: 2077929379661844559
+
+---
+
 ## 2026-07-17 — Routine Scan [2nd run]
 - Added tip #16.06: Measure AI Return in Engineering Hours, Not Token Burn (Source: x.com/bcherny/status/2077929379661844559)
 - Tweet ID 2077929379661844559 (Jul 17 2026 afternoon) found — higher than previous anchor 2077460395279692197 — missed by earlier noon run
