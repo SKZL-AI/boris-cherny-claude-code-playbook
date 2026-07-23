@@ -6,6 +6,17 @@ Newest entries first.
 
 ---
 
+## 2026-07-23 — Routine Scan (no changes)
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip July 2026, Boris Cherny new feature Claude Code July 2026, site:threadreaderapp.com bcherny July 2026, bcherny x.com tweet July 22–23 2026, Boris Cherny Claude Code announcement July 23 2026
+- All found @bcherny tweet IDs at or below anchor `2077929379661844559` — no new Boris posts since 2026-07-22T15:00:00Z
+- x.com, threadreaderapp.com, howborisusesclaudecode.com, bloomberg.com, emergingai.substack.com all returned 403 for direct fetches
+- Bloomberg interview (2026-07-20) and "Steps of AI Adoption" post (2026-07-16–17) pre-date last scan — already captured in prior entries
+- No tweet IDs above anchor surfaced from Boris himself across all queries
+- No new tips added. total_tips remains 148
+- Scan completed at 2026-07-23T06:00:00Z. Anchor unchanged: 2077929379661844559
+
+---
+
 ## 2026-07-22 — Routine Scan (no changes) [3rd run]
 - Scanned 5 sources: bcherny site:x.com 2026, bcherny Claude Code tip July 2026, Boris Cherny new feature Claude Code July 2026, site:threadreaderapp.com bcherny July 2026, site:threads.com boris_cherny July 2026
 - All found @bcherny tweet IDs at or below anchor `2077929379661844559` — no new Boris posts since last scan
