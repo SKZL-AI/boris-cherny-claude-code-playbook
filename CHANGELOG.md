@@ -6,6 +6,42 @@ Newest entries first.
 
 ---
 
+## 2026-07-24 — Routine Scan (no changes) [2nd run]
+- Scanned 10 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic Claude Code new feature July 2026, site:threadreaderapp.com bcherny 2026, site:threads.com boris_cherny July 2026, howborisusesclaudecode.com latest tips July 2026, direct tweet fetch for IDs 2064327225504403752 and 2074997570317779038, Boris Cherny Claude Code July 18–24 2026
+- All found @bcherny tweet IDs at or below anchor `2077929379661844559` — no new Boris posts since 2026-07-24T12:00:00Z
+- x.com, howborisusesclaudecode.com, bloomberg.com, threads.com, releasebot.io all returned 403 for direct fetches
+- code.claude.com/docs/en/whats-new confirms Week 29 (July 13–17) is the latest published; no Week 30 yet
+- Threads @boris_cherny /checkup post (DajNgi_EXbe) confirmed pre-dates anchor — already captured as #04.35
+- No tweet IDs above anchor confirmed from Boris himself across all queries
+- No new tips added. total_tips remains 148
+- Scan completed at 2026-07-24T20:00:00Z. Anchor unchanged: 2077929379661844559
+
+---
+
+## 2026-07-24 — Routine Scan (no changes)
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip July 2026, Boris Cherny new feature Claude Code July 2026, site:threadreaderapp.com bcherny 2026, site:threads.com boris_cherny July 2026, Boris Cherny Anthropic Claude Code announcement this week July 2026
+- All found @bcherny tweet IDs at or below anchor `2077929379661844559` — no new Boris posts since 2026-07-23T12:00:00Z
+- x.com, threadreaderapp.com, howborisusesclaudecode.com, bloomberg.com, threads.com all returned 403 for direct fetches
+- Week 30 docs page (2026-w30) returns 404 — not yet published; Week 29 (July 13–17) features (artifacts MCP connectors, screen reader mode) not personally attributed to @bcherny
+- Tweet ID 2064327225504403752 surfaced in search but content inaccessible via 403; no secondary source confirmed it as a tip-worthy Boris post
+- No tweet IDs above anchor confirmed from Boris himself across all queries
+- No new tips added. total_tips remains 148
+- Scan completed at 2026-07-24T12:00:00Z. Anchor unchanged: 2077929379661844559
+
+---
+
+## 2026-07-23 — Routine Scan (no changes) [2nd run]
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip July 2026, Boris Cherny new feature Claude Code July 2026, site:threadreaderapp.com bcherny July 2026, bcherny x.com tweet July 23 24 25 26 2026, bcherny x.com Claude Code skills cowork auto July 2026
+- All found @bcherny tweet IDs at or below anchor `2077929379661844559` — no new Boris posts since 2026-07-23T06:00:00Z
+- x.com, threadreaderapp.com, howborisusesclaudecode.com, releasebot.io all returned 403 for direct fetches
+- Week 30 docs page (2026-w30) returns 404 — not yet published
+- @ClaudeDevs tweet 2078511173759324328 (weekly limits +50% through Aug 19) is from org account, not @bcherny personally — no tip added
+- No tweet IDs above anchor surfaced from Boris himself across all queries
+- No new tips added. total_tips remains 148
+- Scan completed at 2026-07-23T12:00:00Z. Anchor unchanged: 2077929379661844559
+
+---
+
 ## 2026-07-23 — Routine Scan (no changes)
 - Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip July 2026, Boris Cherny new feature Claude Code July 2026, site:threadreaderapp.com bcherny July 2026, bcherny x.com tweet July 22–23 2026, Boris Cherny Claude Code announcement July 23 2026
 - All found @bcherny tweet IDs at or below anchor `2077929379661844559` — no new Boris posts since 2026-07-22T15:00:00Z
