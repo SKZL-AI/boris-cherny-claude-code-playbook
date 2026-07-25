@@ -3,7 +3,7 @@
 > **Source of truth.** All other artifacts (`README.md`, `index.html`) derive from this file.
 > **Format:** One tip per H3 block. New tips inserted by `/add-tip` or by the Routine in `routines/daily-scan.md`.
 > **Last manual audit:** 2026-05-12
-> **Total tips:** 148 across 21 themes
+> **Total tips:** 149 across 21 themes
 > **Schema:** see `data/tips-schema.json`
 
 ---
@@ -777,6 +777,15 @@ Reduces prompts without `--dangerously-skip`.
 - **Author:** @bcherny
 - **Quote:** "Combo of prompt-injection detection, static analysis, sandboxing, and human oversight"
 
+### #07.08 — Opus 5 + Auto Mode for Near-Zero Prompt Injection Risk
+- **Difficulty:** Intermediate
+- **Date:** 2026-07-24
+- **Source:** [X-Thread](https://x.com/bcherny/status/2080713091688583312)
+- **Author:** @bcherny
+- **Quote:** "Opus 5 is our least prompt injectable model yet"
+
+Opus 5 reduces attacker success on the Gray Swan indirect prompt injection benchmark from 5.5% (Opus 4.8) to 2.0%. When layered with prompt injection probes and Auto Mode in Claude Code, the combined defense drops the attack success rate to approximately zero — a significant security advancement Boris highlights as buried in the Opus 5 system card.
+
 ---
 
 ## 08 — MCP & Integrations
@@ -1375,8 +1384,8 @@ Terminal / IDE extension / GitHub app / SDK as Unix utility.
 
 Claude Desktop is now available in beta for Ubuntu 22.04+ and Debian 12+ (x86_64 and arm64) via an official apt repository. Linux users get the full Chat, Cowork, and Claude Code experience — parallel sessions, visual diff review, integrated terminal/editor, and live app preview — without relying on community workarounds. Computer Use and voice dictation are not yet included in the Linux beta.
 
-last_scan_iso: "2026-07-24T20:00:00Z"
-last_scan_anchor_tweet_id: "2077929379661844559"
+last_scan_iso: "2026-07-25T08:00:00Z"
+last_scan_anchor_tweet_id: "2080713091688583312"
 last_tip_id_per_theme:
   "01": 9
   "02": 6
@@ -1384,7 +1393,7 @@ last_tip_id_per_theme:
   "04": 35
   "05": 13
   "06": 9
-  "07": 7
+  "07": 8
   "08": 7
   "09": 9
   "10": 11
@@ -1399,7 +1408,7 @@ last_tip_id_per_theme:
   "19": 5
   "20": 5
   "21": 3
-total_tips: 148
+total_tips: 149
 ```
 
 <!-- End tracking metadata -->

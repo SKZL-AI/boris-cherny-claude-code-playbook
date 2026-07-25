@@ -2,7 +2,7 @@
 
 > **What this is:** ~70 actionable tips from Boris Cherny (Head of Claude Code, Anthropic) structured as executable instructions for Claude Code. Feed this file to Claude Code and it will auto-configure your project.
 >
-> **What this is NOT:** A reference document. For the full 148-tip collection (including philosophy, workflow habits, and team practices), see [TIPS.md](./TIPS.md).
+> **What this is NOT:** A reference document. For the full 149-tip collection (including philosophy, workflow habits, and team practices), see [TIPS.md](./TIPS.md).
 >
 > **Source:** All tips originate from Boris Cherny's public posts on X, podcasts, conferences, and the Anthropic blog. Tip IDs reference [TIPS.md](./TIPS.md) for full context and source URLs.
 
@@ -177,7 +177,7 @@ Also invest in Skills (`.claude/commands/`) that encode repeated workflows. The 
 
 ## Section 2: Settings & Permissions
 
-*Implements tips: #07.01, #07.02, #07.03, #07.04, #13.01, #13.03, #13.05, #13.06, #20.01*
+*Implements tips: #07.01, #07.02, #07.03, #07.04, #07.08, #13.01, #13.03, #13.05, #13.06, #20.01*
 
 ### 2.1 Create Team-Shared Settings
 
@@ -268,6 +268,20 @@ git commit -m "chore: add team-shared Claude Code settings"
 ```
 
 The team now shares permissions, env vars, and customizations. New members get the full setup on first `claude` session.
+
+### 2.6 Maximize Prompt Injection Protection with Opus 5 + Auto Mode
+
+*Implements tip: #07.08*
+
+Opus 5 is the most prompt-injection-resistant Claude model to date — attacker success on the Gray Swan benchmark fell from 5.5% (Opus 4.8) to 2.0%. Combined with Auto Mode in Claude Code and prompt injection probes, the attack success rate drops to ~0.
+
+To enable this layered defense:
+
+1. **Use Opus 5 as your model.** On Max, Team Premium, or API accounts, Opus 5 is the default. Verify with `/config` or check your account settings.
+2. **Enable Auto Mode.** Press Shift+Tab until the mode indicator shows `Auto`, or set `"defaultMode": "auto"` in `.claude/settings.json`.
+3. **Keep Claude Code updated.** Prompt injection probe improvements ship with each release — run `claude update` or keep the package current.
+
+For sensitive agentic workloads (long-running tasks, CI pipelines, automated routines), this combination is Boris's recommended security baseline.
 
 ---
 
@@ -1078,7 +1092,7 @@ Every instruction in this guide traces back to a specific Boris Cherny tip in [T
 | Section | Tip IDs Implemented |
 |---------|-------------------|
 | 1. CLAUDE.md Setup | #03.01, #03.02, #03.05, #03.07, #03.08, #03.09, #03.10 |
-| 2. Settings & Permissions | #07.01, #07.02, #07.03, #07.04, #13.01, #13.03, #13.05, #13.06, #20.01 |
+| 2. Settings & Permissions | #07.01, #07.02, #07.03, #07.04, #07.08, #13.01, #13.03, #13.05, #13.06, #20.01 |
 | 3. Slash Commands | #04.01, #04.02, #04.03, #04.04, #04.05, #04.09, #04.10, #04.15, #04.17, #04.23, #04.35 |
 | 4. Hooks | #06.01, #06.02, #06.03, #06.05, #06.06, #06.07 |
 | 5. Subagents | #05.01, #05.02, #05.03, #05.08, #05.10, #05.11 |
@@ -1091,5 +1105,5 @@ Every instruction in this guide traces back to a specific Boris Cherny tip in [T
 
 ---
 
-*Generated from [TIPS.md](./TIPS.md) (148 tips, 21 themes) · Version 1.0 · 2026-07-09*
+*Generated from [TIPS.md](./TIPS.md) (149 tips, 21 themes) · Version 1.0 · 2026-07-09*
 *Part of the [Boris Cherny Claude Code Playbook](https://github.com/SKZL-AI/boris-cherny-claude-code-playbook)*

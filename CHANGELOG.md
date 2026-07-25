@@ -6,6 +6,12 @@ Newest entries first.
 
 ---
 
+## 2026-07-25 — Routine Scan
+- Added tip #07.08: Opus 5 + Auto Mode for Near-Zero Prompt Injection Risk (Source: x.com/bcherny/status/2080713091688583312)
+- Scan completed at 2026-07-25T08:00:00Z. New anchor: 2080713091688583312
+
+---
+
 ## 2026-07-24 — Routine Scan (no changes) [2nd run]
 - Scanned 10 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic Claude Code new feature July 2026, site:threadreaderapp.com bcherny 2026, site:threads.com boris_cherny July 2026, howborisusesclaudecode.com latest tips July 2026, direct tweet fetch for IDs 2064327225504403752 and 2074997570317779038, Boris Cherny Claude Code July 18–24 2026
 - All found @bcherny tweet IDs at or below anchor `2077929379661844559` — no new Boris posts since 2026-07-24T12:00:00Z
