@@ -6,6 +6,18 @@ Newest entries first.
 
 ---
 
+## 2026-07-25 — Routine Scan (no changes) [2nd run]
+- Scanned 6 sources: bcherny site:x.com Claude Code 2026, bcherny Claude Code tip July 2026, Boris Cherny new feature Claude Code July 2026, site:threadreaderapp.com bcherny 2026, bcherny twitter x.com July 25 Claude, Boris Cherny Claude Code new feature announcement today 2026
+- All found @bcherny tweet IDs at or below anchor `2080713091688583312` — no new Boris posts since 2026-07-25T08:00:00Z
+- x.com, threadreaderapp.com, howborisusesclaudecode.com, threads.com, releasebot.io all returned 403 for direct fetches
+- code.claude.com changelog: July 25 entry is only "bug fixes and reliability improvements" (v2.1.220) — no tip-worthy feature
+- code.claude.com/docs/en/whats-new/2026-w30 returns 404 — not yet published; Week 29 (July 13–17) predates anchor
+- No tweet IDs above anchor confirmed from Boris himself across all queries
+- No new tips added. total_tips remains 149
+- Scan completed at 2026-07-25T10:00:00Z. Anchor unchanged: 2080713091688583312
+
+---
+
 ## 2026-07-25 — Routine Scan
 - Added tip #07.08: Opus 5 + Auto Mode for Near-Zero Prompt Injection Risk (Source: x.com/bcherny/status/2080713091688583312)
 - Scan completed at 2026-07-25T08:00:00Z. New anchor: 2080713091688583312
