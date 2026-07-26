@@ -6,6 +6,17 @@ Newest entries first.
 
 ---
 
+## 2026-07-26 — Routine Scan (no changes)
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny new feature Claude Code July 2026, site:threadreaderapp.com bcherny July 2026, site:threads.com boris_cherny July 2026, bcherny new Claude Code feature announcement today 2026
+- All found @bcherny tweet IDs at or below anchor `2080713091688583312` — no new Boris posts since 2026-07-25T10:00:00Z
+- x.com, threadreaderapp.com, howborisusesclaudecode.com, threads.com, claudelog.com all returned 403 for direct fetches
+- code.claude.com changelog consulted: v2.1.219 (July 24) adds DirectoryAdded hook, nested subagent depth-3, sandbox.network.strictAllowlist — no personal @bcherny tip post found for these
+- No tweet IDs above anchor confirmed from Boris himself across all queries
+- No new tips added. total_tips remains 149
+- Scan completed at 2026-07-26T10:00:00Z. Anchor unchanged: 2080713091688583312
+
+---
+
 ## 2026-07-25 — Routine Scan (no changes) [2nd run]
 - Scanned 6 sources: bcherny site:x.com Claude Code 2026, bcherny Claude Code tip July 2026, Boris Cherny new feature Claude Code July 2026, site:threadreaderapp.com bcherny 2026, bcherny twitter x.com July 25 Claude, Boris Cherny Claude Code new feature announcement today 2026
 - All found @bcherny tweet IDs at or below anchor `2080713091688583312` — no new Boris posts since 2026-07-25T08:00:00Z
