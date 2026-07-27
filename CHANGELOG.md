@@ -6,6 +6,17 @@ Newest entries first.
 
 ---
 
+## 2026-07-27 — Routine Scan (no changes) [2nd run]
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic tip July 2026, site:threadreaderapp.com bcherny 2026, site:threads.com boris_cherny, howborisusesclaudecode latest tips July 2026
+- Found 2 new tweet IDs above anchor (`2081100918934913351`, `2081102802303291600`) — both are social posts from YC Startup School 2026 (July 25–26, SF), not Claude Code tips
+- Tweet 2081100918934913351: "@garrytan Epic event. Thanks for the invite Garry!" — social/event, no tip content
+- Tweet 2081102802303291600: YC Startup School appearance post — social/event, no tip content
+- x.com, howborisusesclaudecode.com, threads.com, startuphub.ai, explainx.ai, ycombinator.com/library all returned 403 for direct fetches
+- No new actionable Claude Code tips identified. total_tips remains 149
+- Scan completed at 2026-07-27T12:00:00Z. Anchor updated: 2081102802303291600
+
+---
+
 ## 2026-07-27 — Routine Scan (no changes)
 - Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic Claude Code new feature July 2026, site:threadreaderapp.com bcherny July 2026, site:threads.com boris_cherny 2026, bcherny x.com tweet July 26 27 2026
 - All found @bcherny tweet IDs at or below anchor `2080713091688583312` — no new Boris posts since 2026-07-26T14:00:00Z
