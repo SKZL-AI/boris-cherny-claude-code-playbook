@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-07-28 — Routine Scan (no changes) [2nd run]
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny new feature Claude Code 2026, site:threadreaderapp.com bcherny 2026, site:threads.com boris_cherny 2026, howborisusesclaudecode latest tips July 2026
+- Found tweet 2081111942069096691 (above prior anchor) — "@mattshumer_ @Alphaschool This is cool" — social reply comment, no tip content
+- Pre-anchor tweets surfaced: 2080730786697990552 (RT @trq212 system prompt article), 2080731329990377755 (@nathanv246 CLAUDE.md comment tip) — both pre-date last_scan_iso and were outside anchor range; not added
+- x.com, howborisusesclaudecode.com, threads.com, threadreaderapp.com all returned 403 for direct fetches
+- No new actionable Claude Code tips identified. total_tips remains 149
+- Scan completed at 2026-07-28T12:00:00Z. Anchor updated: 2081111942069096691
+
+---
+
 ## 2026-07-28 — Routine Scan (no changes)
 - Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny new feature Claude Code 2026, site:threadreaderapp.com bcherny 2026, site:threads.com boris_cherny 2026 July, Boris Cherny Startup School 2026
 - Found @sdianahu tweet 2081791352065712350 (after anchor) referencing @bcherny YC Startup School talk — from Diana Hu, not Boris; no Boris retweet/endorsement confirmed
