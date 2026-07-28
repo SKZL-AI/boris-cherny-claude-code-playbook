@@ -6,6 +6,18 @@ Newest entries first.
 
 ---
 
+## 2026-07-28 — Routine Scan (no changes)
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny new feature Claude Code 2026, site:threadreaderapp.com bcherny 2026, site:threads.com boris_cherny 2026 July, Boris Cherny Startup School 2026
+- Found @sdianahu tweet 2081791352065712350 (after anchor) referencing @bcherny YC Startup School talk — from Diana Hu, not Boris; no Boris retweet/endorsement confirmed
+- YC Startup School 2026 (July 25–26): Boris spoke on "product overhang" / unhobbling — pre-dates anchor; already captured in last scan
+- "Inside Claude Code With Its Creator Boris Cherny" (YC Library) — Lightcone Podcast from Feb 2026, pre-existing content
+- x.com, howborisusesclaudecode.com, threads.com, ycombinator.com/library, startup.whatfinger.com, finance.biggo.com all returned 403 for direct fetches
+- No Boris tweets with ID > 2081102802303291600 found across all queries
+- No new actionable Claude Code tips identified. total_tips remains 149
+- Scan completed at 2026-07-28T00:00:00Z. Anchor unchanged: 2081102802303291600
+
+---
+
 ## 2026-07-27 — Routine Scan (no changes) [2nd run]
 - Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic tip July 2026, site:threadreaderapp.com bcherny 2026, site:threads.com boris_cherny, howborisusesclaudecode latest tips July 2026
 - Found 2 new tweet IDs above anchor (`2081100918934913351`, `2081102802303291600`) — both are social posts from YC Startup School 2026 (July 25–26, SF), not Claude Code tips
