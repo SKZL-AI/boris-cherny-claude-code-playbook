@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-07-30 — Routine Scan (no changes)
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip July 2026, Boris Cherny anthropic Claude Code announcement July 2026, site:threadreaderapp.com bcherny 2026, site:threads.com boris_cherny July 2026, howborisusesclaudecode latest
+- Found tweet 2081116450769731816 (above prior anchor 2081111942069096691) — "I did not write this.. please don't attribute stuff to me if it wasn't me 😅" — Boris disputing fraudulent PDFs attributed to him; no tip content
+- threads.com, howborisusesclaudecode.com, explainx.ai, finance.biggo.com, startup.whatfinger.com all returned 403 for direct fetches
+- "Steps of AI Adoption" article (July 16, 2026) — pre-dates last_scan_iso; not added
+- No new actionable Claude Code tips identified. total_tips remains 149
+- Scan completed at 2026-07-30T00:00:00Z. Anchor updated: 2081116450769731816
+
+---
+
 ## 2026-07-28 — Routine Scan (no changes) [2nd run]
 - Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny new feature Claude Code 2026, site:threadreaderapp.com bcherny 2026, site:threads.com boris_cherny 2026, howborisusesclaudecode latest tips July 2026
 - Found tweet 2081111942069096691 (above prior anchor) — "@mattshumer_ @Alphaschool This is cool" — social reply comment, no tip content
