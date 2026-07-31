@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-07-31 — Routine Scan (no changes)
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip July 2026, Boris Cherny new feature Claude Code July 2026, site:threadreaderapp.com bcherny 2026, site:threads.com boris_cherny 2026, howborisusesclaudecode.com latest
+- YC Startup School talk (July 25-26), 80% system prompt RT (@trq212), @nathanv246 CLAUDE.md reply — all pre-date anchor 2081116450769731816; not added
+- Claude Code changelog (latest: v2.1.220, July 25) — no Boris X posts found above anchor
+- No new actionable Claude Code tips identified. total_tips remains 149
+- Scan completed at 2026-07-31T00:00:00Z. Anchor unchanged: 2081116450769731816
+
+---
+
 ## 2026-07-30 — Routine Scan (no changes)
 - Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip July 2026, Boris Cherny anthropic Claude Code announcement July 2026, site:threadreaderapp.com bcherny 2026, site:threads.com boris_cherny July 2026, howborisusesclaudecode latest
 - Found tweet 2081116450769731816 (above prior anchor 2081111942069096691) — "I did not write this.. please don't attribute stuff to me if it wasn't me 😅" — Boris disputing fraudulent PDFs attributed to him; no tip content
