@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-07-31 — Routine Scan (no changes) [2nd run]
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip August 2026, Boris Cherny new feature Claude Code 2026, site:threadreaderapp.com bcherny 2026, x.com/bcherny profile, Claude Code changelog (v2.1.220, July 25)
+- No tweets with ID > 2081116450769731816 found; all articles reference pre-anchor content (Steps of AI Adoption Jul 16, @trq212 80% system prompt RT Jul 28, YC Startup School Jul 25)
+- BigGo Finance "We Deleted 80% of Claude Code's System Prompts" article and "Sabotage Yourself" article: both source from pre-anchor RT (2080730786697990552) already noted in prior scans
+- howborisusesclaudecode.com, threadreaderapp.com, x.com/bcherny, finance.biggo.com, lennysnewsletter.com all returned 403 for direct fetches
+- No new actionable Claude Code tips identified. total_tips remains 149
+- Scan completed at 2026-07-31T12:00:00Z. Anchor unchanged: 2081116450769731816
+
+---
+
 ## 2026-07-31 — Routine Scan (no changes)
 - Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip July 2026, Boris Cherny new feature Claude Code July 2026, site:threadreaderapp.com bcherny 2026, site:threads.com boris_cherny 2026, howborisusesclaudecode.com latest
 - YC Startup School talk (July 25-26), 80% system prompt RT (@trq212), @nathanv246 CLAUDE.md reply — all pre-date anchor 2081116450769731816; not added
