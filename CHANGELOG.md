@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-08-01 — Routine Scan (no changes)
+- Scanned 8 sources: bcherny site:x.com 2026, bcherny Claude Code 2026, Boris Cherny Anthropic Claude Code tip August 2026, site:threadreaderapp.com bcherny 2026, site:threads.com boris_cherny 2026, Boris Cherny Claude Code August 2026, bcherny tweet "2026-08", Boris Cherny Claude Code August 2026 new post tip
+- No tweet IDs > 2081116450769731816 found; YC Root Access/StartupHub/explainx.ai/Apple Podcasts/claudelog.com all returned 403 for direct fetches
+- All articles in results reference pre-anchor content (Steps of AI Adoption Jul 16, Startup School Jul 25–26, @trq212 system prompt RT Jul 28)
+- No new actionable Claude Code tips identified. total_tips remains 149
+- Scan completed at 2026-08-01T12:00:00Z. Anchor unchanged: 2081116450769731816
+
+---
+
 ## 2026-07-31 — Routine Scan (no changes) [2nd run]
 - Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip August 2026, Boris Cherny new feature Claude Code 2026, site:threadreaderapp.com bcherny 2026, x.com/bcherny profile, Claude Code changelog (v2.1.220, July 25)
 - No tweets with ID > 2081116450769731816 found; all articles reference pre-anchor content (Steps of AI Adoption Jul 16, @trq212 80% system prompt RT Jul 28, YC Startup School Jul 25)
