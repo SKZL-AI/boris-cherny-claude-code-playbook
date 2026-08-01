@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-08-01 — Routine Scan (no changes) [3rd run]
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic tip Claude Code August 2026, site:threadreaderapp.com bcherny 2026, site:threads.com boris_cherny August 2026, code.claude.com/docs/en/whats-new
+- No tweet IDs > 2081116450769731816 found; x.com, threads.com, howborisusesclaudecode.com all returned 403 for direct fetches
+- What's new index shows Week 29 (Jul 13–17) as most recent digest; no Week 30/31 yet published
+- All indexed content references pre-anchor material (Bloomberg article Aug 1 covers existing story; no new X posts indexed)
+- No new actionable Claude Code tips identified. total_tips remains 149
+- Scan completed at 2026-08-01T18:00:00Z. Anchor unchanged: 2081116450769731816
+
+---
 ## 2026-08-01 — Routine Scan (no changes)
 - Scanned 8 sources: bcherny site:x.com 2026, bcherny Claude Code 2026, Boris Cherny Anthropic Claude Code tip August 2026, site:threadreaderapp.com bcherny 2026, site:threads.com boris_cherny 2026, Boris Cherny Claude Code August 2026, bcherny tweet "2026-08", Boris Cherny Claude Code August 2026 new post tip
 - No tweet IDs > 2081116450769731816 found; YC Root Access/StartupHub/explainx.ai/Apple Podcasts/claudelog.com all returned 403 for direct fetches
