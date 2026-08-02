@@ -2,7 +2,7 @@
 
 > **What this is:** ~70 actionable tips from Boris Cherny (Head of Claude Code, Anthropic) structured as executable instructions for Claude Code. Feed this file to Claude Code and it will auto-configure your project.
 >
-> **What this is NOT:** A reference document. For the full 149-tip collection (including philosophy, workflow habits, and team practices), see [TIPS.md](./TIPS.md).
+> **What this is NOT:** A reference document. For the full 151-tip collection (including philosophy, workflow habits, and team practices), see [TIPS.md](./TIPS.md).
 >
 > **Source:** All tips originate from Boris Cherny's public posts on X, podcasts, conferences, and the Anthropic blog. Tip IDs reference [TIPS.md](./TIPS.md) for full context and source URLs.
 
@@ -172,6 +172,21 @@ See REVIEW.md for the code review checklist agents must follow before opening a 
 ```
 
 Also invest in Skills (`.claude/commands/`) that encode repeated workflows. The goal: an agent cloned fresh into your repo can do meaningful work without any additional context from you. (#03.12)
+
+### 1.7 Periodically Reset to Test New Models
+
+After every major model upgrade (e.g., when switching to a new Opus release), delete your `CLAUDE.md`, all Skills (`.claude/commands/`), and all Hooks — then run Claude without them. Observe where it fails and re-add rules only for those failure cases.
+
+```bash
+# Before deleting, make a backup
+cp CLAUDE.md CLAUDE.md.backup
+cp -r .claude/commands .claude/commands.backup
+# Then delete and test
+rm CLAUDE.md && rm -rf .claude/commands
+# After testing, restore only what the model still needs
+```
+
+Boris stripped 80%+ of Claude Code's own system prompt when Opus 5 shipped and found the model performed better without the scaffolding. (#03.13)
 
 ---
 
@@ -839,6 +854,20 @@ Boris' workflow for most changes:
 
 This chains implementation → verification → cleanup → delivery in one prompt.
 
+### 7.5 Outcomes-First Prompting (Anti-Hobbling)
+
+Frontier models are hobbled by over-specified prompts. Instead of dictating every step, state the desired outcome and exit criteria:
+
+```
+# Over-specified (hobbles the model):
+"1. Open the file. 2. Find the function. 3. Rename the variable. 4. Run tests. 5. Commit."
+
+# Outcomes-first (unlocks model capability):
+"Rename the `userId` variable to `accountId` throughout this module. Tests must pass. Don't change the public API surface."
+```
+
+The gap between what a frontier model can do and what an over-specified prompt lets it do is "product overhang." Remove unnecessary scaffolding and treat Claude like a capable colleague. (#12.07)
+
 ---
 
 ## Section 8: Headless / SDK Patterns
@@ -1105,5 +1134,5 @@ Every instruction in this guide traces back to a specific Boris Cherny tip in [T
 
 ---
 
-*Generated from [TIPS.md](./TIPS.md) (149 tips, 21 themes) · Version 1.0 · 2026-07-09*
+*Generated from [TIPS.md](./TIPS.md) (151 tips, 21 themes) · Version 1.0 · 2026-07-09*
 *Part of the [Boris Cherny Claude Code Playbook](https://github.com/SKZL-AI/boris-cherny-claude-code-playbook)*

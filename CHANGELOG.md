@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-08-02 — Routine Scan
+- Added tip #03.13: Reset CLAUDE.md, Skills & Hooks Every 6 Months (Source: ycombinator.com/library)
+- Added tip #12.07: Give Outcomes and Constraints, Not Step-by-Step Instructions (Source: ycombinator.com/library)
+- Both tips sourced from Boris Cherny's YC Startup School 2026 talk (2026-07-27); coverage gap identified in prior scans which had found but excluded the content as "pre-anchor"
+- Anchor updated to Diana Hu tweet 2081791352065712350 confirming the YC talk content (posted after prior anchor)
+- total_tips: 149 → 151
+- Scan completed at 2026-08-02T12:00:00Z. New anchor: 2081791352065712350
+
+---
+
 ## 2026-08-01 — Routine Scan (no changes) [3rd run]
 - Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic tip Claude Code August 2026, site:threadreaderapp.com bcherny 2026, site:threads.com boris_cherny August 2026, code.claude.com/docs/en/whats-new
 - No tweet IDs > 2081116450769731816 found; x.com, threads.com, howborisusesclaudecode.com all returned 403 for direct fetches

@@ -3,7 +3,7 @@
 > **Source of truth.** All other artifacts (`README.md`, `index.html`) derive from this file.
 > **Format:** One tip per H3 block. New tips inserted by `/add-tip` or by the Routine in `routines/daily-scan.md`.
 > **Last manual audit:** 2026-05-12
-> **Total tips:** 149 across 21 themes
+> **Total tips:** 151 across 21 themes
 > **Schema:** see `data/tips-schema.json`
 
 ---
@@ -241,6 +241,15 @@ Auto-Memory saves preferences/corrections automatically. Auto-Dream is a subagen
 - **Quote:** "automate, and encode domain knowledge as infrastructure"
 
 Every team should write CLAUDE.md files, REVIEW.md review guides, skills, and inline docs so agents can work in the codebase with zero additional context from the prompter. Previously, automation was limited to what lint rules, types, and tests could express; CLAUDE.md-based infrastructure can now capture nearly all domain knowledge — architecture patterns, review criteria, team conventions, and more. This is the AI-era equivalent of the automation investments that made the best engineers 10x.
+
+### #03.13 — Reset CLAUDE.md, Skills & Hooks Every 6 Months
+- **Difficulty:** Intermediate
+- **Date:** 2026-07-27
+- **Source:** [YC Startup School 2026](https://www.ycombinator.com/library/UN-boris-cherny-building-claude-code)
+- **Author:** @bcherny
+- **Quote:** "every 6 months, delete your claude.md file, delete your skills, and delete your hooks"
+
+Every major model upgrade reduces the scaffolding Claude needs. Boris advises periodically deleting `CLAUDE.md`, skills, and hooks, then observing what the model gets right without them — and only re-adding rules where it still fails. For Opus 5 specifically, the Claude Code team stripped over 80% of their own system prompt and found the model performed better without it.
 
 ---
 
@@ -1113,6 +1122,15 @@ Goal + constraints + acceptance criteria — all three in the first turn.
 
 "Ask Claude Code to prototype three versions of it. Try the feature and see which one I like better."
 
+### #12.07 — Give Outcomes and Constraints, Not Step-by-Step Instructions
+- **Difficulty:** Intermediate
+- **Date:** 2026-07-27
+- **Source:** [YC Startup School 2026](https://www.ycombinator.com/library/UN-boris-cherny-building-claude-code)
+- **Author:** @bcherny
+- **Quote:** "Over-specification is the #1 experienced-engineer mistake"
+
+Frontier models are routinely hobbled by prompts that enumerate every step rather than stating outcomes. Boris calls this gap "product overhang" — the difference between what the model can do and what overly prescriptive instructions let it do. The fix is to specify the desired result and exit criteria, not the process, and treat Claude like a capable colleague rather than a compiler.
+
 ---
 
 ## 13 — Customization
@@ -1384,12 +1402,12 @@ Terminal / IDE extension / GitHub app / SDK as Unix utility.
 
 Claude Desktop is now available in beta for Ubuntu 22.04+ and Debian 12+ (x86_64 and arm64) via an official apt repository. Linux users get the full Chat, Cowork, and Claude Code experience — parallel sessions, visual diff review, integrated terminal/editor, and live app preview — without relying on community workarounds. Computer Use and voice dictation are not yet included in the Linux beta.
 
-last_scan_iso: "2026-08-01T18:00:00Z"
-last_scan_anchor_tweet_id: "2081116450769731816"
+last_scan_iso: "2026-08-02T12:00:00Z"
+last_scan_anchor_tweet_id: "2081791352065712350"
 last_tip_id_per_theme:
   "01": 9
   "02": 6
-  "03": 12
+  "03": 13
   "04": 35
   "05": 13
   "06": 9
@@ -1398,7 +1416,7 @@ last_tip_id_per_theme:
   "09": 9
   "10": 11
   "11": 6
-  "12": 6
+  "12": 7
   "13": 6
   "14": 10
   "15": 3
@@ -1408,7 +1426,7 @@ last_tip_id_per_theme:
   "19": 5
   "20": 5
   "21": 3
-total_tips: 149
+total_tips: 151
 ```
 
 <!-- End tracking metadata -->
