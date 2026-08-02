@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-08-02 — Routine Scan (no changes) [2nd run]
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic Claude Code August 2026, site:threadreaderapp.com bcherny 2026, bcherny tweet August 2026 Claude Code, code.claude.com/docs/en/whats-new
+- All found tweet IDs below anchor 2081791352065712350; no tweet IDs > anchor found
+- What's new index still shows Week 29 (Jul 13–17) as most recent digest; no Week 30 yet published
+- howborisusesclaudecode.com returned 403; threadreaderapp returned no bcherny results
+- No new actionable Claude Code tips identified. total_tips remains 151
+- Scan completed at 2026-08-02T18:00:00Z. Anchor unchanged: 2081791352065712350
+
+---
+
 ## 2026-08-02 — Routine Scan
 - Added tip #03.13: Reset CLAUDE.md, Skills & Hooks Every 6 Months (Source: ycombinator.com/library)
 - Added tip #12.07: Give Outcomes and Constraints, Not Step-by-Step Instructions (Source: ycombinator.com/library)
