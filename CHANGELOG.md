@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-08-03 — Routine Scan (no changes)
+- Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic Claude Code August 2026, site:threadreaderapp.com bcherny 2026, site:threads.com boris_cherny August 2026, bcherny swift electron claude x.com
+- All found tweet IDs below anchor 2081791352065712350; no new Boris Cherny (@bcherny) posts with IDs > anchor identified
+- Daring Fireball article (2026-08-02) links to Swift/Electron rewrite story from YC Startup School talk — underlying Boris tweet predates anchor; already captured
+- howborisusesclaudecode.com and threadreaderapp.com returned 403; no new secondary sources
+- No new actionable Claude Code tips identified. total_tips remains 151
+- Scan completed at 2026-08-03T09:00:00Z. Anchor unchanged: 2081791352065712350
+
+---
+
 ## 2026-08-02 — Routine Scan (no changes) [2nd run]
 - Scanned 6 sources: bcherny site:x.com 2026, bcherny Claude Code tip 2026, Boris Cherny Anthropic Claude Code August 2026, site:threadreaderapp.com bcherny 2026, bcherny tweet August 2026 Claude Code, code.claude.com/docs/en/whats-new
 - All found tweet IDs below anchor 2081791352065712350; no tweet IDs > anchor found
