@@ -6,6 +6,13 @@ Newest entries first.
 
 ---
 
+## 2026-09-14 — Routine Scan (no changes) [2nd run]
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, bcherny Claude Code September 2026 (x.com and howborisusesclaudecode.com direct fetches blocked by network egress policy, as in prior runs — relied on WebSearch snippets only)
+- This is a same-day re-run: the prior scan completed at 2026-09-14T13:20:50Z with anchor 2098217571153838124, only ~6.5 hours before this run
+- Highest tweet ID found across all queries: 2097368503624085773, still below the existing anchor 2098217571153838124 — no posts newer than the anchor were surfaced
+- No new actionable Claude Code tips identified. total_tips remains 165
+- Scan completed at 2026-09-14T19:58:50Z. Anchor unchanged: 2098217571153838124
+
 ## 2026-09-14 — Routine Scan (no changes)
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, howborisusesclaudecode.com latest, plus follow-up queries to identify all @bcherny posts with tweet IDs above the prior anchor (2081791352065712350), covering the ~6-week gap since the last run
 - Candidate posts found after the anchor, all excluded: (1) status/2095590515765060076 — feedback request on an unshipped "Function Hooks" extensibility preview (behind `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1`), not yet a stable feature and posed as "would you use this?" rather than a tip; (2) status/2090649326032945591 and status/2091589188298891264 — opinion/debate posts ("Coding is solved, bugs are not yet solved" and a model-capability timeline), not actionable workflow tips; (3) status/2091591570982371454 — a reply clarifying Opus usage/verbosity, not a standalone tip; (4) status/2094864060609376748 and status/2094864064648536068 — Fable 5.1 model-release announcements, marketing rather than a Claude Code usage tip; (5) status/2097470212471922848 ("It's the little things") and status/2098217571153838124 (about responding to emails) — no Claude Code content
