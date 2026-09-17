@@ -6,6 +6,14 @@ Newest entries first.
 
 ---
 
+## 2026-09-17 — Routine Scan (no changes)
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus follow-up queries (Boris Cherny Claude Code September 2026, "bcherny" Claude Code new) — direct x.com and threadreaderapp.com fetches remain blocked by network egress policy, relied on WebSearch snippets only
+- Highest tweet ID surfaced across all queries: 2097368503624085773, still below the existing anchor 2098217571153838124 — no posts newer than the anchor were found
+- All other content surfaced (Code Review, `/checkup`, `/simplify`/`/batch`, plugins, the Anthropic anniversary conversation with @_catwu, general 2026 retrospectives) is pre-anchor and already captured or already excluded in prior scans
+- No new actionable Claude Code tips identified. total_tips remains 165
+- Note: the tracking metadata in TIPS.md lists `last_tip_id_per_theme` entries for themes 18–21 (16 tips) and a header claiming "21 themes," but the file's body only contains theme sections 01–17 (165 tip entries, matching `total_tips`). This mismatch predates this scan and was left untouched — flagged for human review rather than guessed at
+- Scan completed at 2026-09-17T13:20:00Z. Anchor unchanged: 2098217571153838124
+
 ## 2026-09-16 — Routine Scan (no changes)
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus follow-up queries (Boris Cherny Claude Code September 2026, "bcherny" Claude Code new, Boris Cherny Claude Code Anthropic announcement, Claude Code new feature launch this week bcherny) — direct x.com and threadreaderapp.com fetches remain blocked by network egress policy, relied on WebSearch snippets only
 - Highest tweet ID surfaced across all queries: 2097368503624085773, still below the existing anchor 2098217571153838124 — no posts newer than the anchor were found
