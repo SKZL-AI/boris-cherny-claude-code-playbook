@@ -6,6 +6,13 @@ Newest entries first.
 
 ---
 
+## 2026-09-19 — Routine Scan (no changes)
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest — direct x.com and howborisusesclaudecode.com fetches remain blocked by network egress policy, relied on WebSearch snippets only
+- Highest tweet ID surfaced across all queries: 2097368503624085773, still below the existing anchor 2098217571153838124 — no posts newer than the anchor were found
+- All other content surfaced (worktrees, Code Review, Plugins, "surprisingly vanilla" setup, Claude Desktop on Linux beta, AGENTS.md support release notes) is pre-anchor or unrelated release-notes content, already captured in prior scans or out of scope for tips
+- No new actionable Claude Code tips identified. total_tips remains 165
+- Scan completed at 2026-09-19T13:17:53Z. Anchor unchanged: 2098217571153838124
+
 ## 2026-09-18 — Routine Scan (no changes)
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest — direct x.com, threads.com, and howborisusesclaudecode.com fetches remain blocked by network egress policy, relied on WebSearch snippets only
 - Highest tweet ID surfaced across all queries: 2097368503624085773, still below the existing anchor 2098217571153838124 — no posts newer than the anchor were found
