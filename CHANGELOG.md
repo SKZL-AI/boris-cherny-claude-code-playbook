@@ -6,6 +6,28 @@ Newest entries first.
 
 ---
 
+## 2026-09-20 — Weekly Verify
+
+- URLs verified: 0 OK / 44 total — Part A could not run. All outbound fetches were blocked by the network egress proxy in this environment, confirmed across 7 test fetches spanning distinct domains (x.com, latent.space, anthropic.com, ycombinator.com, every.to, threads.com), and `web.archive.org` is not fetchable by Claude Code at all in this session (a hard tool restriction, not a proxy block). This matches the same limitation daily-scan routines have logged for months. No URL was reachable, so per the "persistent failure" edge case, Part A was aborted rather than continued call-by-call against 44 URLs guaranteed to fail the same way. No URL statuses were fabricated — none are recorded as OK/GONE/REDIRECT/PRIVATE this run.
+- URLs migrated to archive.org: 0 (not attempted — fetch blocked, no way to confirm a snapshot exists)
+- URLs marked [archived] (no snapshot): 0 (not attempted, same reason)
+- Duplicates flagged: 0 confirmed identical (all 24 URLs shared by 2+ tips were checked description-by-description; every shared URL is a multi-topic thread with genuinely distinct tip content — no `[duplicate of #XX.YY]` marking applied). 4 same-substance/different-theme pairs flagged below for human review per Part B.3 (no auto-merge).
+- Total active tips: 165 (recounted from TIPS.md body; unchanged from prior value, matches `total_tips` in tracking metadata)
+- IMPL-GUIDE tips referenced: 69 distinct tip IDs (65 resolve to real, active tips in TIPS.md)
+- IMPL-GUIDE stale references: 4 — `#20.01`–`#20.04`, cited in IMPLEMENTATION-GUIDE.md Section 9 ("Context Management"), but theme 20 does not exist anywhere in TIPS.md's body. Actionable-tip-count heuristic (themes 03-08,10,13,14,20): TIPS.md has 112 actionable tips vs. 65 valid guide references — a difference of 47 (> 5 threshold), flagged below.
+- `last_verify_iso` did not exist in TIPS.md's tracking metadata; created it (`2026-09-20T07:07:47Z`).
+
+**Needs manual review:**
+- **Pre-existing, reconfirmed:** TIPS.md's header claims "165 tips across 21 themes" and the tracking YAML lists `last_tip_id_per_theme` for themes `18`–`21`, but the file body only contains theme sections `01`–`17` (165 tips, matching `total_tips`). This was already flagged in the 2026-09-17 scan entry and left untouched again this run. New corroborating evidence found this run: IMPLEMENTATION-GUIDE.md Section 9 substantively documents "Context Management" and cites tips `#20.01`–`#20.04` by number, suggesting theme 20 had real content at some point rather than being a simple metadata typo. Recommend a human decide whether to reconstruct/re-source theme 20 (and 18/19/21) or strip the phantom entries from TIPS.md's metadata and IMPLEMENTATION-GUIDE.md Section 9.
+- **New:** Theme 17 has an unexplained ID gap — `#17.07` and `#17.08` do not exist in TIPS.md (section jumps from `#17.06` to `#17.09`), with no `[archived]`/`[deprecated]` marker accounting for them. Since tip IDs are sticky and per-theme, this looks like either lost content or a numbering skip; left untouched rather than guessed at.
+- **New:** 4 tips have no verifiable source URL, in violation of the "every tip must have a verifiable source URL" rule: `#03.08`, `#03.10`, `#17.05`, `#17.06` (all cite "AIEWF Talk 2025" with no link). Not fixed — fabricating a URL would violate the "don't invent tips/sources" rule.
+- **New — same-substance/cross-theme pairs (Part B.3, not auto-merged):**
+  - `#06.06` (Hooks — "Agent Stop Hook for Extended Verification") vs `#11.02` (Long-Running & Recaps — "(b) Agent Stop Hook for Deterministic Verification") — same source thread, same underlying tip presented in two themes.
+  - `#06.09` (Hooks — "Ralph-Wiggum Plugin for Long Tasks") vs `#11.03` (Long-Running & Recaps — "(c) Ralph-Wiggum Plugin") — same source thread, same underlying tip.
+  - `#07.02` (Permissions & Safety — "Share `.claude/settings.json` with the Team") vs `#13.05` (Customization — "Check settings.json into Git") — overlapping substance (both: commit settings.json for team benefit), different source URLs.
+  - `#04.25` (Slash Commands — "`/sandbox` for Open-Source Sandbox") vs `#07.06` (Permissions & Safety — "Activate the Open-Source Sandbox Runtime") — same source thread, same underlying feature from two angles.
+- **New:** IMPLEMENTATION-GUIDE.md's own intro and footer still say "the full 151-tip collection" / "Generated from TIPS.md (151 tips, 21 themes)" — stale now that TIPS.md holds 165 tips across (nominally) 17 real themes. Not edited this run since Part D's scope is tip-ID reference checking, not prose; flagging for a human/editorial pass.
+
 ## 2026-09-19 — Routine Scan (no changes)
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest — direct x.com and howborisusesclaudecode.com fetches remain blocked by network egress policy, relied on WebSearch snippets only
 - Highest tweet ID surfaced across all queries: 2097368503624085773, still below the existing anchor 2098217571153838124 — no posts newer than the anchor were found
