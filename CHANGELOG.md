@@ -6,6 +6,14 @@ Newest entries first.
 
 ---
 
+## 2026-09-20 — Routine Scan (no changes)
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus follow-up queries (bcherny fewer-permission-prompts/Opus 4.7 tips, "bcherny" Claude Code September 20 2026, Boris Cherny Claude Code this week announcement) via WebSearch
+- Highest tweet ID surfaced across all queries: 2097368503624085773, still below the existing anchor 2098217571153838124 — no posts newer than the anchor were found
+- All other content surfaced (worktrees, Code Review, Plugins, Opus 4.7 tips thread, `/fewer-permission-prompts`, Claude Desktop on Linux beta, YC/podcast retrospectives) is pre-anchor and already captured or out of scope for this scan's window
+- No new actionable Claude Code tips identified. total_tips remains 165
+- Scan completed at 2026-09-20T13:17:21Z. Anchor unchanged: 2098217571153838124
+
 ## 2026-09-20 — Weekly Verify
 
 - URLs verified: 0 OK / 44 total — Part A could not run. All outbound fetches were blocked by the network egress proxy in this environment, confirmed across 7 test fetches spanning distinct domains (x.com, latent.space, anthropic.com, ycombinator.com, every.to, threads.com), and `web.archive.org` is not fetchable by Claude Code at all in this session (a hard tool restriction, not a proxy block). This matches the same limitation daily-scan routines have logged for months. No URL was reachable, so per the "persistent failure" edge case, Part A was aborted rather than continued call-by-call against 44 URLs guaranteed to fail the same way. No URL statuses were fabricated — none are recorded as OK/GONE/REDIRECT/PRIVATE this run.
