@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-09-21 — Routine Scan (no changes)
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus a follow-up query (Boris Cherny Claude Code September 21 2026) via WebSearch
+- Direct WebFetch of x.com/bcherny, threadreaderapp.com/user/bcherny, and howborisusesclaudecode.com all failed with EGRESS_BLOCKED (network egress proxy denies these domains in this environment) — same limitation logged in prior scans, so findings rely on WebSearch snippets only
+- Highest tweet ID surfaced across all queries: 2097368503624085773, still below the existing anchor 2098217571153838124 — no posts newer than the anchor were found
+- All other content surfaced (worktrees, Code Review, Dynamic Workflows, Plugins, Agent View, prior retrospectives/podcasts) is pre-anchor and already captured or out of scope for this scan's window
+- No new actionable Claude Code tips identified. total_tips remains 165
+- Scan completed at 2026-09-21T13:18:29Z. Anchor unchanged: 2098217571153838124
+
 ## 2026-09-20 — Routine Scan (no changes)
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus follow-up queries (bcherny fewer-permission-prompts/Opus 4.7 tips, "bcherny" Claude Code September 20 2026, Boris Cherny Claude Code this week announcement) via WebSearch
