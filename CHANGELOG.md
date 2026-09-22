@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-09-22 — Routine Scan (no changes)
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus follow-up queries (Boris Cherny Claude Code "September 22, 2026", Boris Cherny Claude Code announcement this week, bcherny twitter today, Cat Wu Claude Code September 2026 tip bcherny retweet, Boris Cherny Claude Code new tip this week routine/hook/subagent) via WebSearch
+- Direct WebFetch of x.com/bcherny, threadreaderapp.com/user/bcherny, and howborisusesclaudecode.com all failed with EGRESS_BLOCKED (network egress proxy denies these domains in this environment) — same limitation logged in prior scans, so findings rely on WebSearch snippets only
+- Highest tweet ID surfaced across all queries: 2098217573276131577 (a reply on prototype-vs-production code quality), fractionally newer than the prior anchor 2098217571153838124 — snowflake-ID math places the two within the same sub-millisecond window, i.e. already covered by the prior scan's cutoff, not a genuinely new post. Content is a philosophical reply, not a concrete actionable tip, so nothing was extracted from it either way
+- All other content surfaced (worktrees, Code Review, Plugins, prototype vs. production quality bar, prior retrospectives/podcasts, an unrelated old repo-description snapshot) is pre-anchor and already captured or out of scope for this scan's window
+- No new actionable Claude Code tips identified. total_tips remains 165
+- Scan completed at 2026-09-22T13:19:09Z. Anchor updated (same-moment tweet, no reprocessing needed next time): 2098217573276131577
+
 ## 2026-09-21 — Routine Scan (no changes)
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus a follow-up query (Boris Cherny Claude Code September 21 2026) via WebSearch
