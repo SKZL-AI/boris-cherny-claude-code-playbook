@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-09-23 — Routine Scan
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus a follow-up query (Boris Cherny Opus 5.5 Lean TLA+ Claude Code verify bugs September 2026) via WebSearch
+- Direct WebFetch of x.com/bcherny, threadreaderapp.com/user/bcherny, and howborisusesclaudecode.com all failed with EGRESS_BLOCKED (network egress proxy denies these domains in this environment) — same limitation logged in prior scans, so findings rely on WebSearch snippets only
+- Found a genuine new post by @bcherny, confirmed via WebSearch snippet with matching title/URL: https://x.com/bcherny/status/2102543349102338309, posted 2026-09-23 — Boris used Opus 5.5 to formally verify the Claude Agent SDK with Lean (and sometimes TLA+), producing 16 PRs fixing bugs and race conditions from a couple of short prompts
+- Added tip #10.12: Formal Verification with Lean and TLA+ (Source: x.com)
+- total_tips: 165 → 166
+- Scan completed at 2026-09-23T13:18:48Z. Anchor updated: 2102543349102338309
+
 ## 2026-09-22 — Routine Scan (no changes)
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus follow-up queries (Boris Cherny Claude Code "September 22, 2026", Boris Cherny Claude Code announcement this week, bcherny twitter today, Cat Wu Claude Code September 2026 tip bcherny retweet, Boris Cherny Claude Code new tip this week routine/hook/subagent) via WebSearch

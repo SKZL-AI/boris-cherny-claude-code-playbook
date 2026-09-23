@@ -1021,6 +1021,15 @@ Show Claude a mock, let it use Puppeteer to compare and iterate.
 - **Author:** @bcherny
 - **Quote:** "Better to identify that earlier and correct it earlier"
 
+### #10.12 — Formal Verification with Lean and TLA+
+- **Difficulty:** Advanced
+- **Date:** 2026-09-23
+- **Source:** [X-Thread](https://x.com/bcherny/status/2102543349102338309)
+- **Author:** @bcherny
+- **Quote:** "I used Opus 5.5 to formally verify the Claude Agent SDK using Lean"
+
+Boris had Claude formally verify the Claude Agent SDK using the Lean proof assistant; a couple of short prompts produced 16 PRs fixing bugs and race conditions. He sometimes combines Lean with TLA+ to model data flow, concurrency, and state management, noting Claude is proficient in both even though he isn't.
+
 ---
 
 ## 11 — Long-Running & Recaps
@@ -1402,8 +1411,8 @@ Terminal / IDE extension / GitHub app / SDK as Unix utility.
 
 Claude Desktop is now available in beta for Ubuntu 22.04+ and Debian 12+ (x86_64 and arm64) via an official apt repository. Linux users get the full Chat, Cowork, and Claude Code experience — parallel sessions, visual diff review, integrated terminal/editor, and live app preview — without relying on community workarounds. Computer Use and voice dictation are not yet included in the Linux beta.
 
-last_scan_iso: "2026-09-22T13:19:09Z"
-last_scan_anchor_tweet_id: "2098217573276131577"
+last_scan_iso: "2026-09-23T13:18:48Z"
+last_scan_anchor_tweet_id: "2102543349102338309"
 last_verify_iso: "2026-09-20T07:07:47Z"
 last_tip_id_per_theme:
   "01": 9
@@ -1415,7 +1424,7 @@ last_tip_id_per_theme:
   "07": 8
   "08": 7
   "09": 9
-  "10": 11
+  "10": 12
   "11": 6
   "12": 7
   "13": 6
@@ -1427,7 +1436,7 @@ last_tip_id_per_theme:
   "19": 5
   "20": 5
   "21": 3
-total_tips: 165
+total_tips: 166
 ```
 
 <!-- End tracking metadata -->

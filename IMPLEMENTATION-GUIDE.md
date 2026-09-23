@@ -794,7 +794,7 @@ Claude pulls error logs automatically. Bug triage without context-switching.
 
 ## Section 7: Verification Setup
 
-*Implements tips: #10.01, #10.02, #10.03, #10.04, #10.05, #10.07, #10.08*
+*Implements tips: #10.01, #10.02, #10.03, #10.04, #10.05, #10.07, #10.08, #10.12*
 
 **This is Boris' #1 rule: "Give Claude a way to verify its work — it will 2-3x the quality of the final result."**
 
@@ -867,6 +867,18 @@ Frontier models are hobbled by over-specified prompts. Instead of dictating ever
 ```
 
 The gap between what a frontier model can do and what an over-specified prompt lets it do is "product overhang." Remove unnecessary scaffolding and treat Claude like a capable colleague. (#12.07)
+
+### 7.6 Formal Verification with Lean / TLA+ (Advanced)
+
+For code with tricky concurrency, race conditions, or state-management invariants, have Claude formally verify it instead of only testing it:
+
+```
+"Formally verify [module/service] using Lean. Model the invariants and check for
+race conditions, deadlocks, and violated state-management guarantees. Where a proof
+fails, propose and apply a fix."
+```
+
+TLA+ works well too, and the two can be combined — Lean for data-flow/state invariants, TLA+ for concurrency and protocol-level checks. You don't need to know either language: Claude is proficient in both. Boris used this on the Claude Agent SDK and a couple of short prompts produced 16 PRs fixing bugs and race conditions. (#10.12)
 
 ---
 
@@ -1126,7 +1138,7 @@ Every instruction in this guide traces back to a specific Boris Cherny tip in [T
 | 4. Hooks | #06.01, #06.02, #06.03, #06.05, #06.06, #06.07 |
 | 5. Subagents | #05.01, #05.02, #05.03, #05.08, #05.10, #05.11 |
 | 6. MCP Integrations | #08.01, #08.06, #08.07 |
-| 7. Verification | #10.01, #10.02, #10.03, #10.04, #10.05, #10.07, #10.08 |
+| 7. Verification | #10.01, #10.02, #10.03, #10.04, #10.05, #10.07, #10.08, #10.12 |
 | 8. Headless / SDK | #14.01, #14.04, #14.05, #14.06, #14.09 |
 | 9. Context Management | #20.01, #20.02, #20.03, #20.04 |
 | 10. Automation | #11.01, #11.02, #11.05, #11.06, #04.13, #04.14 |
@@ -1134,5 +1146,5 @@ Every instruction in this guide traces back to a specific Boris Cherny tip in [T
 
 ---
 
-*Generated from [TIPS.md](./TIPS.md) (151 tips, 21 themes) · Version 1.0 · 2026-07-09*
+*Generated from [TIPS.md](./TIPS.md) (152 tips, 21 themes) · Version 1.0 · 2026-07-09*
 *Part of the [Boris Cherny Claude Code Playbook](https://github.com/SKZL-AI/boris-cherny-claude-code-playbook)*
