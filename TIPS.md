@@ -1030,6 +1030,15 @@ Show Claude a mock, let it use Puppeteer to compare and iterate.
 
 Boris had Claude formally verify the Claude Agent SDK using the Lean proof assistant; a couple of short prompts produced 16 PRs fixing bugs and race conditions. He sometimes combines Lean with TLA+ to model data flow, concurrency, and state management, noting Claude is proficient in both even though he isn't.
 
+### #10.13 — Performance Verification Loop: RUM + CI Ceilings
+- **Difficulty:** Advanced
+- **Date:** 2026-09-23
+- **Source:** [X-Thread](https://x.com/bcherny/status/2102854267782705648)
+- **Author:** @bcherny
+- **Quote:** "Lots of juicy learnings & techniques in the blog post"
+
+To make claude.ai and the Desktop app roughly 3x faster in a two-week sprint, Boris' team had Claude trace and reproduce reported slow paths, ship fixes as review-sized PRs behind short-lived feature flags, then verify each one against real-user-monitoring data before ratcheting down a CI performance budget to lock in the win. The loop — reproduce, fix behind a flag, verify with real data, lock in via CI — let them merge 3,000+ changes with no customer-facing rollback.
+
 ---
 
 ## 11 — Long-Running & Recaps
@@ -1411,8 +1420,8 @@ Terminal / IDE extension / GitHub app / SDK as Unix utility.
 
 Claude Desktop is now available in beta for Ubuntu 22.04+ and Debian 12+ (x86_64 and arm64) via an official apt repository. Linux users get the full Chat, Cowork, and Claude Code experience — parallel sessions, visual diff review, integrated terminal/editor, and live app preview — without relying on community workarounds. Computer Use and voice dictation are not yet included in the Linux beta.
 
-last_scan_iso: "2026-09-23T13:18:48Z"
-last_scan_anchor_tweet_id: "2102543349102338309"
+last_scan_iso: "2026-09-24T13:19:36Z"
+last_scan_anchor_tweet_id: "2102854267782705648"
 last_verify_iso: "2026-09-20T07:07:47Z"
 last_tip_id_per_theme:
   "01": 9
@@ -1424,7 +1433,7 @@ last_tip_id_per_theme:
   "07": 8
   "08": 7
   "09": 9
-  "10": 12
+  "10": 13
   "11": 6
   "12": 7
   "13": 6
@@ -1436,7 +1445,7 @@ last_tip_id_per_theme:
   "19": 5
   "20": 5
   "21": 3
-total_tips: 166
+total_tips: 167
 ```
 
 <!-- End tracking metadata -->

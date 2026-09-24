@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-09-24 — Routine Scan
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus follow-up queries (bcherny twitter September 23 2026, blog post title/content lookup) via WebSearch
+- Direct WebFetch of x.com/bcherny failed with EGRESS_BLOCKED (network egress proxy denies this domain in this environment) — same limitation logged in prior scans, so findings rely on WebSearch snippets only
+- Found a genuine new post by @bcherny, confirmed via WebSearch snippet with matching title/URL: https://x.com/bcherny/status/2102854267782705648, posted 2026-09-23 — Boris links to Anthropic's blog post on how the team used Claude to trace, fix, and verify performance regressions (real-user-monitoring data + a ratcheting CI ceiling) to make claude.ai and the Desktop app ~3x faster in a two-week sprint
+- Added tip #10.13: Performance Verification Loop: RUM + CI Ceilings (Source: x.com)
+- total_tips: 166 → 167
+- Scan completed at 2026-09-24T13:19:36Z. Anchor updated: 2102854267782705648
+
 ## 2026-09-23 — Routine Scan
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus a follow-up query (Boris Cherny Opus 5.5 Lean TLA+ Claude Code verify bugs September 2026) via WebSearch
