@@ -6,6 +6,14 @@ Newest entries first.
 
 ---
 
+## 2026-09-25 — Routine Scan (no changes)
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus follow-up queries via WebSearch
+- Direct WebFetch of x.com, threadreaderapp.com, and threads.com all failed with EGRESS_BLOCKED (network egress proxy denies these domains) — same limitation as prior scans; findings rely on WebSearch snippets only
+- Candidate posts surfaced (status IDs 2097368503624085773, 2100259951398789487) all predate the current anchor (2102854267782705648) based on snowflake ID ordering — not new
+- No posts found after last_scan_iso (2026-09-24T13:19:36Z)
+- Scanned 6 sources, no new tips since 2102854267782705648
+
 ## 2026-09-24 — Routine Scan
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus follow-up queries (bcherny twitter September 23 2026, blog post title/content lookup) via WebSearch
