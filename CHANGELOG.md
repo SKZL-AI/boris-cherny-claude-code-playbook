@@ -6,6 +6,17 @@ Newest entries first.
 
 ---
 
+## 2026-09-26 — Routine Scan (no changes)
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus follow-up queries (Boris Cherny Claude Code September 25/26 2026, bcherny twitter today, Boris Cherny Claude Code announcement this week) via WebSearch
+- Direct WebFetch of x.com, threadreaderapp.com, and threads.com skipped per known EGRESS_BLOCKED limitation from prior scans — findings rely on WebSearch snippets only; no promising fetchable non-X URL with post-cutoff content appeared
+- Highest tweet ID surfaced across all queries: 2097368503624085773, still below the existing anchor 2102854267782705648 — no posts newer than the anchor were found
+- howborisusesclaudecode.com's own stats page shows last content update May 2, 2026 — no September update
+- One tangential item noted but not reported: an AMD/Anthropic partnership announcement (late Sept 2026) mentioning Boris on stage — a corporate announcement, not a verifiable bcherny-authored post with a status ID, and not an actionable Claude Code tip, so excluded per filter rules
+- All other content surfaced (worktrees/`/batch`, Code Review, Plugins, Dynamic Workflows, Agent View) is pre-anchor and already captured or out of scope for this scan's window
+- No new actionable Claude Code tips identified. total_tips remains 167
+- Scan completed at 2026-09-26T13:18:28Z. Anchor unchanged: 2102854267782705648
+
 ## 2026-09-25 — Routine Scan (no changes)
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus follow-up queries via WebSearch
