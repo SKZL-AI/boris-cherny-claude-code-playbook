@@ -6,6 +6,32 @@ Newest entries first.
 
 ---
 
+## 2026-09-27 — Weekly Verify
+
+- URLs verified: 2 OK / 45 total unique source URLs. Part A first confirmed via direct fetch that x.com remains blocked by the network egress proxy (`EGRESS_BLOCKED`), then tested one representative URL on every other third-party domain used anywhere in TIPS.md's sources: `www.latent.space`, `www.ycombinator.com`, `every.to`, `newsletter.pragmaticengineer.com`, `www.lennysnewsletter.com`, and `www.threads.com` — all seven domains failed identically with `EGRESS_BLOCKED`. This matches the same limitation logged in every prior daily-scan and weekly-verify run. Since a domain-level block guarantees the same result for every URL on that domain, the remaining 43 URLs on those seven domains were not fetched individually rather than issuing 43 calls certain to fail the same way (same "persistent failure" logic as the 2026-09-20 verify). No status was fabricated for any of them — they are simply unverified this run, not marked OK/GONE/PRIVATE.
+- The only reachable domains were Anthropic's own (`anthropic.com`, `docs.claude.com`), and both returned real content only after a permanent redirect — see below.
+- URLs migrated to archive.org: 0 (not attempted — GONE status requires confirming a 404/deleted tweet first, and x.com could not be fetched to check)
+- URLs marked `[archived]` (no snapshot): 0 (same reason — no GONE status could be confirmed this run)
+- Redirects updated to a legitimate Anthropic domain (content verified by fetch, per Part A.6): 5 tips across 2 redirects
+  - `#04.08`, `#09.05`: `https://www.anthropic.com/engineering/claude-code-best-practices` → `https://code.claude.com/docs/en/best-practices` (308 permanent redirect; fetched and confirmed it is the live "Best practices for Claude Code" doc)
+  - `#09.06`, `#09.07`, `#17.03`: `https://docs.claude.com` → `https://platform.claude.com/docs` (301 permanent redirect; fetched and confirmed it is the live Claude Platform/API docs home)
+- Duplicates flagged: 0 newly confirmed identical. Part B re-grouped every tip by source URL, including the two tips added since the last verify (`#10.12`, `#10.13`, both added 2026-09-23/24) — neither duplicates any existing tip. All URL-sharing groups from large multi-topic threads (e.g. the `2007179832300581177`, `2017742741636321619`, `2038454336355999749`, and Latent Space podcast URLs, each shared by 6–28 tips) were spot-checked again and remain genuinely distinct sub-topics of one thread — no `[duplicate of #XX.YY]` marking applied.
+- Total active tips: 167 (unchanged; recounted directly from TIPS.md's H3 headers, matches the `total_tips` tracking field)
+- `last_tip_id_per_theme` and `total_tips` in TIPS.md's tracking YAML were re-verified against the actual file body and are already accurate — no changes needed there. `last_verify_iso` updated to `2026-09-27T07:12:30Z`.
+- IMPL-GUIDE tips referenced: 71 distinct tip IDs (67 resolve to real, active tips in TIPS.md)
+- IMPL-GUIDE stale references: 4 — `#20.01`–`#20.04`, still cited in IMPLEMENTATION-GUIDE.md Section 9 ("Context Management"), but theme 20 still does not exist anywhere in TIPS.md's body (same pre-existing gap as every prior verify). Actionable-tip-count heuristic (themes 03-08,10,13,14,20): TIPS.md has 114 actionable tips vs. 67 valid guide references — a difference of 47 (> 5 threshold), flagged below.
+
+**Needs manual review (all carried over from 2026-09-20; none of these were introduced or resolved this run):**
+- Theme 20 (and 18/19/21) phantom entries: TIPS.md's tracking YAML still lists `last_tip_id_per_theme` for themes `18`–`21` and IMPLEMENTATION-GUIDE.md Section 9 still cites `#20.01`–`#20.04` by number, but no theme past `17` exists in TIPS.md's body. A human should decide whether to reconstruct theme 20 (and 18/19/21) or strip the phantom references from both files.
+- Theme 17 has an unexplained ID gap: `#17.07` and `#17.08` don't exist (jumps from `#17.06` to `#17.09`), with no `[archived]`/`[deprecated]` marker accounting for them.
+- 4 tips still have no verifiable source URL, violating the sourcing rule: `#03.08`, `#03.10`, `#17.05`, `#17.06` (all cite "AIEWF Talk 2025" with no link). Not fabricated a URL for them, per the "don't invent sources" rule.
+- 4 same-substance/cross-theme pairs remain flagged, not auto-merged (Part B.3):
+  - `#06.06` vs `#11.02` — same source thread, same underlying "Agent Stop Hook" tip, presented in two themes.
+  - `#06.09` vs `#11.03` — same source thread, same underlying "Ralph-Wiggum Plugin" tip.
+  - `#07.02` vs `#13.05` — overlapping substance (commit settings.json for team benefit), different source URLs.
+  - `#04.25` vs `#07.06` — same source thread, same underlying "open-source sandbox" feature from two angles.
+- IMPLEMENTATION-GUIDE.md's own intro/footer still say "the full 151-tip collection" / "153 tips, 21 themes" — stale prose (TIPS.md now holds 167 tips across 17 real theme sections). Outside Part D's ID-reference-checking scope; flagged for an editorial pass.
+
 ## 2026-09-26 — Routine Scan (no changes)
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus follow-up queries (Boris Cherny Claude Code September 25/26 2026, bcherny twitter today, Boris Cherny Claude Code announcement this week) via WebSearch

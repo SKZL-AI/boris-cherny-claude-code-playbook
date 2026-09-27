@@ -315,7 +315,7 @@ Important for the mental model.
 ### #04.08 — `/init` Generates a Starter CLAUDE.md
 - **Difficulty:** Beginner
 - **Date:** 2025-04-18
-- **Source:** [Anthropic Blog](https://www.anthropic.com/engineering/claude-code-best-practices)
+- **Source:** [Anthropic Blog](https://code.claude.com/docs/en/best-practices)
 - **Author:** @bcherny
 
 Analyzes the codebase, detects build systems, tests, code patterns. First step in any new project.
@@ -894,7 +894,7 @@ Or "Prioritize responding quickly" to save tokens.
 ### #09.05 — Ultrathink Trigger Words (Legacy)
 - **Difficulty:** Intermediate
 - **Date:** 2025-04-18
-- **Source:** [Anthropic Blog](https://www.anthropic.com/engineering/claude-code-best-practices)
+- **Source:** [Anthropic Blog](https://code.claude.com/docs/en/best-practices)
 - **Author:** @bcherny
 
 think < think hard < think harder < ultrathink. In CC v2 replaced by `/effort`; ultrathink remains highlighted.
@@ -902,7 +902,7 @@ think < think hard < think harder < ultrathink. In CC v2 replaced by `/effort`; 
 ### #09.06 — Opus 4.7: Shorter Responses, Less Auto-Tool-Use
 - **Difficulty:** Intermediate
 - **Date:** 2026-04-16
-- **Source:** [Anthropic Docs](https://docs.claude.com)
+- **Source:** [Anthropic Docs](https://platform.claude.com/docs)
 - **Author:** @bcherny
 
 If you want length/style, say so explicitly. For refactoring across 40 files: explicitly request subagents.
@@ -910,7 +910,7 @@ If you want length/style, say so explicitly. For refactoring across 40 files: ex
 ### #09.07 — 4.7's Higher Fidelity to "Don't Nitpick"
 - **Difficulty:** Advanced
 - **Date:** 2026-04-16
-- **Source:** [Anthropic Docs](https://docs.claude.com)
+- **Source:** [Anthropic Docs](https://platform.claude.com/docs)
 - **Author:** @bcherny
 
 Code review harnesses for older models may see lower recall — it's not a regression.
@@ -1382,7 +1382,7 @@ Uses MCPs/browser/computer with your permissions.
 ### #17.03 — VS Code / JetBrains / Cursor Extension
 - **Difficulty:** Beginner
 - **Date:** 2025-04-18
-- **Source:** [Anthropic Docs](https://docs.claude.com)
+- **Source:** [Anthropic Docs](https://platform.claude.com/docs)
 - **Author:** @bcherny
 
 Recommended for IDE users: inline diffs, @-mentions, plan review.
@@ -1422,7 +1422,7 @@ Claude Desktop is now available in beta for Ubuntu 22.04+ and Debian 12+ (x86_64
 
 last_scan_iso: "2026-09-26T13:18:28Z"
 last_scan_anchor_tweet_id: "2102854267782705648"
-last_verify_iso: "2026-09-20T07:07:47Z"
+last_verify_iso: "2026-09-27T07:12:30Z"
 last_tip_id_per_theme:
   "01": 9
   "02": 6
