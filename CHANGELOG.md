@@ -6,6 +6,13 @@ Newest entries first.
 
 ---
 
+## 2026-09-27 — Routine Scan (no changes)
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus follow-up queries (Boris Cherny Claude Code September 27 2026, bcherny twitter today, bcherny announcement this week) via WebSearch
+- Highest tweet ID surfaced across all queries: 2100259951398789487 (a Cowork-related post), still below the existing anchor 2102854267782705648 — no posts newer than the anchor were found
+- One vague mention of an "AMD and Anthropic partnership announcement ... this week" surfaced but carried no dated, ID-bearable source post and no concrete actionable Claude Code content — skipped per the no-fabrication rule rather than guessed at
+- howborisusesclaudecode.com still shows last content update May 2, 2026 — no September update
+
 ## 2026-09-27 — Weekly Verify
 
 - URLs verified: 2 OK / 45 total unique source URLs. Part A first confirmed via direct fetch that x.com remains blocked by the network egress proxy (`EGRESS_BLOCKED`), then tested one representative URL on every other third-party domain used anywhere in TIPS.md's sources: `www.latent.space`, `www.ycombinator.com`, `every.to`, `newsletter.pragmaticengineer.com`, `www.lennysnewsletter.com`, and `www.threads.com` — all seven domains failed identically with `EGRESS_BLOCKED`. This matches the same limitation logged in every prior daily-scan and weekly-verify run. Since a domain-level block guarantees the same result for every URL on that domain, the remaining 43 URLs on those seven domains were not fetched individually rather than issuing 43 calls certain to fail the same way (same "persistent failure" logic as the 2026-09-20 verify). No status was fabricated for any of them — they are simply unverified this run, not marked OK/GONE/PRIVATE.
