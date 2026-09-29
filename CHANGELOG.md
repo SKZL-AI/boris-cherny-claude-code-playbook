@@ -6,6 +6,14 @@ Newest entries first.
 
 ---
 
+## 2026-09-29 — Routine Scan (no changes)
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, howborisusesclaudecode.com latest, plus follow-up queries ("bcherny"/"Boris Cherny" Claude Code "September 29" 2026, Boris Cherny Claude Code announcement this week) via WebSearch
+- Direct WebFetch to x.com, threadreaderapp.com, and howborisusesclaudecode.com all returned `EGRESS_BLOCKED` (same persistent network-egress limitation as every prior run); WebSearch returned usable results for all queries, but only as third-party snippets/summaries, not primary timestamps
+- Every bcherny tweet ID surfaced in search snippets was below the existing anchor 2102854267782705648; one search's AI-generated summary loosely referenced a "Claude Code plugins" announcement as recent, but this refers to the plugins feature already covered by tip #04.26 (dated 2026-02-11) — no new, independently dated post could be confirmed
+- No post found could be verified as newer than the anchor — anchor left unchanged
+- Scan completed. Anchor: 2102854267782705648
+
 ## 2026-09-28 — Routine Scan (no changes)
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus follow-up queries targeting @bcherny, @_catwu, @trq212, @ErikSchluntz, @noahzweben via WebSearch
