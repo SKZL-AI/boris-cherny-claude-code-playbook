@@ -6,6 +6,14 @@ Newest entries first.
 
 ---
 
+## 2026-09-30 — Routine Scan (no changes)
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, via WebSearch; also attempted direct WebFetch of x.com/bcherny
+- Direct WebFetch to x.com returned `EGRESS_BLOCKED` (same persistent network-egress limitation as every prior run); WebSearch returned usable results for all 6 queries, but only as third-party snippets/summaries, not primary timestamps
+- Every bcherny tweet ID surfaced in search snippets was below the existing anchor 2102854267782705648 (newest found: 2100669598995816511, re: Claude Code Projects); howborisusesclaudecode.com's own tip archive is stale (last updated 2026-05-02, covers only through mid-July) and surfaced nothing newer
+- No post found could be verified as newer than the anchor — anchor left unchanged
+- Scan completed. Anchor: 2102854267782705648
+
 ## 2026-09-29 — Routine Scan (no changes)
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, howborisusesclaudecode.com latest, plus follow-up queries ("bcherny"/"Boris Cherny" Claude Code "September 29" 2026, Boris Cherny Claude Code announcement this week) via WebSearch
