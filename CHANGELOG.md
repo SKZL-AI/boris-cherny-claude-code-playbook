@@ -6,6 +6,14 @@ Newest entries first.
 
 ---
 
+## 2026-10-01 — Routine Scan (no changes)
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus follow-up date-targeted queries, via WebSearch
+- Direct WebFetch to x.com and threadreaderapp.com returned `EGRESS_BLOCKED` (same persistent network-egress limitation as every prior run); WebSearch returned usable results for all queries, but only as third-party snippets/summaries, not primary timestamps. Also found Claude Code v2.1.286 shipped 2026-09-30 (engineering changelog, not a bcherny post, so not eligible)
+- One item flagged uncertain, not added per "if unsure, don't add" rule: a bcherny reply ("Can't wait to see what you build.") on a plugin-submission-portal thread, https://x.com/bcherny/status/2103691327699550598 — numeric post ID is higher than the anchor, but secondary sources date the underlying announcement to 2026-09-25, before the cutoff, and no primary timestamp could be confirmed (x.com egress-blocked). Left for human/weekly-verify review.
+- No post found could be verified as newer than the anchor — anchor left unchanged
+- Scan completed. Anchor: 2102854267782705648
+
 ## 2026-09-30 — Routine Scan (no changes)
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, via WebSearch; also attempted direct WebFetch of x.com/bcherny
