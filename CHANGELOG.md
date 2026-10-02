@@ -6,6 +6,13 @@ Newest entries first.
 
 ---
 
+## 2026-10-02 — Routine Scan
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, via WebSearch (direct WebFetch to x.com returned `EGRESS_BLOCKED`, consistent with every prior run)
+- Added tip #13.07: Mods: Prompt-Built Customizations (Source: x.com) — Boris's post announcing Mods (https://x.com/bcherny/status/2105756563302723721), corroborated by independent third-party coverage (AGTP, Vox, nerdschalk.com, pasqualepillitteri.it) dating the Mods launch to 2026-10-02, the day after Claude Code v2.1.287 shipped. Tweet ID 2105756563302723721 is above the prior anchor 2102854267782705648
+- The previously-flagged uncertain item (bcherny reply "Can't wait to see what you build." at status/2103691327699550598) remains excluded — still dated before the cutoff by secondary sources, left for human/weekly-verify review
+- Scan completed. Anchor: 2105756563302723721
+
 ## 2026-10-01 — Routine Scan (no changes)
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus follow-up date-targeted queries, via WebSearch

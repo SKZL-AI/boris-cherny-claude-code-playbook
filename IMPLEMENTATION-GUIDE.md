@@ -192,7 +192,7 @@ Boris stripped 80%+ of Claude Code's own system prompt when Opus 5 shipped and f
 
 ## Section 2: Settings & Permissions
 
-*Implements tips: #07.01, #07.02, #07.03, #07.04, #07.08, #13.01, #13.03, #13.05, #13.06, #20.01*
+*Implements tips: #07.01, #07.02, #07.03, #07.04, #07.08, #13.01, #13.03, #13.05, #13.06, #13.07, #20.01*
 
 ### 2.1 Create Team-Shared Settings
 
@@ -284,7 +284,19 @@ git commit -m "chore: add team-shared Claude Code settings"
 
 The team now shares permissions, env vars, and customizations. New members get the full setup on first `claude` session.
 
-### 2.6 Maximize Prompt Injection Protection with Opus 5 + Auto Mode
+### 2.6 Mods: Prompt-Built Customizations
+
+*Implements tip: #13.07*
+
+Mods let you customize how Claude Code behaves and looks by prompting it — short TypeScript functions that hook into prompts, the UI, and actions. Create one by asking Claude directly, or write it by hand:
+
+```
+"Build a Claude Code mod that shows a toast notification whenever a background agent finishes."
+```
+
+Claude scaffolds a mod as a plugin-style function hook. Review what it generates before installing — mods run with the same permissions as Claude Code itself, so only install mods from sources you trust. Share a useful mod with your team by packaging it as a plugin (see Section 6).
+
+### 2.7 Maximize Prompt Injection Protection with Opus 5 + Auto Mode
 
 *Implements tip: #07.08*
 
@@ -1146,7 +1158,7 @@ Every instruction in this guide traces back to a specific Boris Cherny tip in [T
 | Section | Tip IDs Implemented |
 |---------|-------------------|
 | 1. CLAUDE.md Setup | #03.01, #03.02, #03.05, #03.07, #03.08, #03.09, #03.10 |
-| 2. Settings & Permissions | #07.01, #07.02, #07.03, #07.04, #07.08, #13.01, #13.03, #13.05, #13.06, #20.01 |
+| 2. Settings & Permissions | #07.01, #07.02, #07.03, #07.04, #07.08, #13.01, #13.03, #13.05, #13.06, #13.07, #20.01 |
 | 3. Slash Commands | #04.01, #04.02, #04.03, #04.04, #04.05, #04.09, #04.10, #04.15, #04.17, #04.23, #04.35 |
 | 4. Hooks | #06.01, #06.02, #06.03, #06.05, #06.06, #06.07 |
 | 5. Subagents | #05.01, #05.02, #05.03, #05.08, #05.10, #05.11 |

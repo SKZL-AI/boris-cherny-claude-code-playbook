@@ -1201,6 +1201,15 @@ Team benefits from customizations. Support for enterprise-wide policies.
 
 Experimental renderer: no flicker/jump, mouse support. `CLAUDE_CODE_NO_FLICKER=1 claude`.
 
+### #13.07 — Mods: Prompt-Built Customizations
+- **Difficulty:** Intermediate
+- **Date:** 2026-10-02
+- **Source:** [X-Thread](https://x.com/bcherny/status/2105756563302723721)
+- **Author:** @bcherny
+- **Quote:** "Mods are absolutely insane."
+
+Mods let you customize how Claude Code behaves and looks just by prompting it — short `TypeScript` functions hook into prompts, the UI, and actions, and can be written by hand or built by Claude itself. Since each engineer works differently, Boris frames Mods as removing the need for everyone to have an identical Claude Code experience; share a Mod with others by packaging it as a plugin.
+
 ---
 
 ## 14 — Headless / SDK
@@ -1420,8 +1429,8 @@ Terminal / IDE extension / GitHub app / SDK as Unix utility.
 
 Claude Desktop is now available in beta for Ubuntu 22.04+ and Debian 12+ (x86_64 and arm64) via an official apt repository. Linux users get the full Chat, Cowork, and Claude Code experience — parallel sessions, visual diff review, integrated terminal/editor, and live app preview — without relying on community workarounds. Computer Use and voice dictation are not yet included in the Linux beta.
 
-last_scan_iso: "2026-10-01T00:00:00Z"
-last_scan_anchor_tweet_id: "2102854267782705648"
+last_scan_iso: "2026-10-02T00:00:00Z"
+last_scan_anchor_tweet_id: "2105756563302723721"
 last_verify_iso: "2026-09-27T07:12:30Z"
 last_tip_id_per_theme:
   "01": 9
@@ -1436,7 +1445,7 @@ last_tip_id_per_theme:
   "10": 13
   "11": 6
   "12": 7
-  "13": 6
+  "13": 7
   "14": 10
   "15": 3
   "16": 6
@@ -1445,7 +1454,7 @@ last_tip_id_per_theme:
   "19": 5
   "20": 5
   "21": 3
-total_tips: 167
+total_tips: 168
 ```
 
 <!-- End tracking metadata -->

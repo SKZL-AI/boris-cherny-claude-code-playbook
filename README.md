@@ -88,7 +88,7 @@ This repo collects those tips in one place, classifies them by difficulty and th
 | 10 | Verification | 13 | **The #1 rule: 2–3x quality through verification** |
 | 11 | Long-Running & Recaps | 6 | Routines, Schedules, Stop Hooks |
 | 12 | Prompting & Specs | 7 | Delegation > Guidance |
-| 13 | Customization | 6 | 37 settings, 84 env variables |
+| 13 | Customization | 7 | 37 settings, 84 env variables, Mods |
 | 14 | Headless / SDK | 10 | Claude as a Unix utility |
 | 15 | Code Review | 3 | "Reviews were the bottleneck" |
 | 16 | Cost / ROI | 6 | "It's an ROI question, not a cost question" |
