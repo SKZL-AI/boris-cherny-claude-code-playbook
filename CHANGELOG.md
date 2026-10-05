@@ -6,6 +6,13 @@ Newest entries first.
 
 ---
 
+## 2026-10-05 — Routine Scan (no changes)
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus follow-up date-targeted queries, via WebSearch (direct WebFetch to x.com and threadreaderapp.com returned `EGRESS_BLOCKED`, consistent with every prior run)
+- All candidate posts found (Sonnet 5.5 performance tweet at status/2104638725317923228, Knuth Computer History Museum post at status/2102971275543216623, and others) carry tweet IDs below the existing anchor 2105756563302723721, i.e. predate the last scan
+- Several Claude Code CLI release items surfaced (v2.1.285 `allowedProviders`/`CLAUDE_CODE_DISABLE_WEB_FETCH`, v2.1.289 `agent.spawn`) but are only attributed to the @ClaudeCodeLog changelog bot, not to Boris Cherny or an endorsed Anthropic teammate — skipped per attribution rule, left for human/weekly-verify review
+- Scanned 6 sources, no new tips since 2105756563302723721
+
 ## 2026-10-02 — Routine Scan
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, via WebSearch (direct WebFetch to x.com returned `EGRESS_BLOCKED`, consistent with every prior run)
