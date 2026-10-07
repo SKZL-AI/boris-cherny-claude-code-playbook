@@ -6,6 +6,13 @@ Newest entries first.
 
 ---
 
+## 2026-10-07 — Routine Scan (no changes)
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus ~10 follow-up targeted queries, via WebSearch (direct WebFetch to x.com, threadreaderapp.com, howborisusesclaudecode.com, and techtwitter.com returned `EGRESS_BLOCKED`, consistent with every prior run)
+- All candidate posts found (by X snowflake-ID comparison) carry tweet IDs below the existing anchor 2105756563302723721, i.e. predate the last scan — newest verified real post found was status/2095590515765060076 (Claude Code extensibility/plugins teaser), still older than the anchor
+- Two search-summarization claims ("Sonnet 5.5 is 30% faster" post and an "Opus 5.5 + Lean formal verification of the Claude Agent SDK" post) could not be corroborated by any resolvable tweet URL on follow-up — treated as likely hallucinated and excluded rather than added
+- Scanned 6 primary sources + follow-ups, no new tips since 2105756563302723721
+
 ## 2026-10-05 — Routine Scan (no changes)
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus follow-up date-targeted queries, via WebSearch (direct WebFetch to x.com and threadreaderapp.com returned `EGRESS_BLOCKED`, consistent with every prior run)
