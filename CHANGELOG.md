@@ -6,6 +6,12 @@ Newest entries first.
 
 ---
 
+## 2026-10-08 — Routine Scan (no changes)
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip October 2026, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, via WebSearch
+- X/Twitter and threadreaderapp.com remain uncrawled by the search index (consistent with every prior run); all third-party coverage surfaced (Neuron, Inside.com.tw, various tip round-ups) references only already-covered material (Jan 2026 "How I use Claude Code" thread, Mar 2026 15-hidden-features thread, Apr 2026 Opus 4.7 tips) — nothing postdating the existing anchor 2105756563302723721
+- Scanned 6 sources, no new tips since 2105756563302723721
+
 ## 2026-10-07 — Routine Scan (no changes)
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus ~10 follow-up targeted queries, via WebSearch (direct WebFetch to x.com, threadreaderapp.com, howborisusesclaudecode.com, and techtwitter.com returned `EGRESS_BLOCKED`, consistent with every prior run)
