@@ -1149,6 +1149,8 @@ Goal + constraints + acceptance criteria — all three in the first turn.
 
 Frontier models are routinely hobbled by prompts that enumerate every step rather than stating outcomes. Boris calls this gap "product overhang" — the difference between what the model can do and what overly prescriptive instructions let it do. The fix is to specify the desired result and exit criteria, not the process, and treat Claude like a capable colleague rather than a compiler.
 
+Update (2026-10-06): Boris restated the point directly: "Talk to Claude the way you would a coworker." As models improve, elaborate scaffolding matters less — he suggests only three things are worth specifying: what you want done, how much effort to spend, and how Claude should verify it did the right thing. He demonstrated this with a casual, loosely-worded prompt asking Claude to build an interactive website companion for a podcast episode ("use lots of tokens," aim better than typical data journalism); Claude also produced the accompanying watercolor illustrations itself. ([X-Thread](https://x.com/bcherny/status/2107565388250874193), [X-Thread](https://x.com/bcherny/status/2107516876876362200))
+
 ---
 
 ## 13 — Customization
@@ -1429,8 +1431,8 @@ Terminal / IDE extension / GitHub app / SDK as Unix utility.
 
 Claude Desktop is now available in beta for Ubuntu 22.04+ and Debian 12+ (x86_64 and arm64) via an official apt repository. Linux users get the full Chat, Cowork, and Claude Code experience — parallel sessions, visual diff review, integrated terminal/editor, and live app preview — without relying on community workarounds. Computer Use and voice dictation are not yet included in the Linux beta.
 
-last_scan_iso: "2026-10-08T00:00:00Z"
-last_scan_anchor_tweet_id: "2105756563302723721"
+last_scan_iso: "2026-10-09T13:17:05Z"
+last_scan_anchor_tweet_id: "2108004023249088528"
 last_verify_iso: "2026-09-27T07:12:30Z"
 last_tip_id_per_theme:
   "01": 9

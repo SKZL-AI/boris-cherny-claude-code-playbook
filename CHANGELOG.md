@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-10-09 — Routine Scan
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip October 2026, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus follow-up date/content-targeted queries, via WebSearch (direct WebFetch to x.com and dnyuz.com returned DNS/egress failures, consistent with every prior run)
+- Found a new Boris thread dated 2026-10-06, tweet IDs 2107565388250874193 and 2107516876876362200 (both above the prior anchor 2105756563302723721), corroborated by independent secondary coverage (DNYUZ, Oct 7 2026): "Talk to Claude the way you would a coworker" — no need for elaborate scaffolding; specify what you want, how much effort to spend, and how Claude should verify its work. Demonstrated with a casual prompt that had Claude build an interactive podcast companion site, including its own watercolor illustrations.
+- This restates and extends the existing philosophy in tip #12.07 (give outcomes/constraints, not step-by-step instructions) rather than introducing a distinct new tip, so per the update rule it was folded into #12.07 instead of creating a new entry.
+- Updated tip #12.07: added "Update (2026-10-06)" paragraph with the verbatim "coworker" quote, the three-part prompt framework (what/effort/verification), and the podcast-companion-site example, with both source links
+- A separate post at status/2108004023249088528 ("Sometimes I read on flights...") is confirmed real (higher tweet ID, newer) but reads as a personal aside with no actionable Claude Code content — excluded per the no-status-updates rule, used only as the new scan anchor
+- Regenerated index.html via /regenerate-html to reflect the updated #12.07 description
+- Scan completed. Anchor: 2108004023249088528
+
 ## 2026-10-08 — Routine Scan (no changes)
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip October 2026, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, via WebSearch
