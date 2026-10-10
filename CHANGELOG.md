@@ -6,6 +6,13 @@ Newest entries first.
 
 ---
 
+## 2026-10-10 — Routine Scan (no changes)
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip October 2026, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus follow-up date-targeted queries, via WebSearch (direct WebFetch to x.com returned `ENOTFOUND`, consistent with every prior run)
+- Newest verified real posts found: status/2107565388250874193 and status/2107516876876362200 (Oct 6, 2026, the "Home Depot, Illustrated" podcast companion site thread) — both already below the existing anchor 2108004023249088528 and already folded into tip #12.07 in the 2026-10-09 scan
+- No post newer than the existing anchor was found
+- Scanned 6 sources, no new tips since 2108004023249088528
+
 ## 2026-10-09 — Routine Scan
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip October 2026, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus follow-up date/content-targeted queries, via WebSearch (direct WebFetch to x.com and dnyuz.com returned DNS/egress failures, consistent with every prior run)
