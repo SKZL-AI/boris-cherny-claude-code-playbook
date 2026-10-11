@@ -6,6 +6,14 @@ Newest entries first.
 
 ---
 
+## 2026-10-11 — Routine Scan (no changes)
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus date-targeted variants for Oct 10-11 2026, via WebSearch (direct WebFetch to x.com returned DNS/egress failure, consistent with every prior run)
+- Newest Boris Cherny tweet locatable via search is the existing anchor itself, status/2108004023249088528 (~Oct 8, 2026, "Sometimes I read on flights...") — no tweet with a higher ID or a date after the 2026-10-10T13:05:00Z marker was found
+- One candidate item (a "Mods" feature, reported via secondary sources around Sep 14/Oct 1) could not be corroborated with a resolvable tweet URL/ID despite targeted searches, so it was excluded per the no-guessing rule rather than added
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period
+- Scanned 6 primary sources + follow-ups, no new tips since 2108004023249088528
+
 ## 2026-10-10 — Routine Scan (no changes)
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip October 2026, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus follow-up date-targeted queries, via WebSearch (direct WebFetch to x.com returned `ENOTFOUND`, consistent with every prior run)
