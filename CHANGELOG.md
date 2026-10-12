@@ -6,6 +6,14 @@ Newest entries first.
 
 ---
 
+## 2026-10-12 — Routine Scan (no changes)
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, via WebSearch
+- `bcherny site:x.com` and the threadreaderapp.com/threads.com site-restricted searches returned no results from those domains at all (search index does not crawl x.com, threadreaderapp.com, or threads.com for this handle, consistent with every prior run)
+- All other results reference only already-covered material: the Jan 2, 2026 "How I use Claude Code" thread, the Mar 30, 2026 15-hidden-features thread, the Jun 2026 anniversary coverage, and the howborisusesclaudecode.com site overview — nothing postdating the existing anchor 2108004023249088528
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period
+- Scanned 6 sources, no new tips since 2108004023249088528
+
 ## 2026-10-11 — Routine Scan (no changes)
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus date-targeted variants for Oct 10-11 2026, via WebSearch (direct WebFetch to x.com returned DNS/egress failure, consistent with every prior run)
