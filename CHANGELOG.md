@@ -6,6 +6,14 @@ Newest entries first.
 
 ---
 
+## 2026-10-18 — Routine Scan (no changes)
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus date-targeted follow-ups for Oct 14-18 2026, via WebSearch (x.com, threadreaderapp.com, and threads.com remain uncrawled for this handle, consistent with every prior run; direct fetch of any x.com status URL is unreachable from this environment — DNS failure)
+- One candidate surfaced via an extended-mode follow-up search ("Boris Cherny Claude Code announcement this week"): a search snippet referenced a post at `x.com/bcherny/status/2111158313463525518` (ID above the existing anchor, snippet-dated ~Oct 16, 2026, around Anthropic's Oct 15, 2026 Code Review GA announcement) with a quote about Claude Code Review catching bugs on every PR. This could not be independently verified — the tweet itself is unreachable from this environment, and a direct search on the ID/content returned nothing corroborating. Per the no-fabrication / no-guessing rule, it was NOT added or used to update any tip, and NOT used to advance the anchor tweet ID, since its existence and exact wording are unconfirmed. If genuine, it would only restate already-covered content (#15.02, #15.03), not introduce a new tip.
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period
+- `last_scan_iso` advanced to 2026-10-18T13:19:23Z; `last_scan_anchor_tweet_id` left unchanged at 2108004023249088528 pending verification of the above candidate
+- Scanned 6 primary sources + follow-ups, no new tips since 2108004023249088528
+
 ## 2026-10-14 — Routine Scan (no changes)
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, via WebSearch
