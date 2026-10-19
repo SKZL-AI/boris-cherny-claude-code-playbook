@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-10-19 — Routine Scan (no changes)
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code October 2026, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, via WebSearch
+- x.com, threadreaderapp.com, and threads.com remain uncrawled for this handle, consistent with every prior run; all hits were unrelated namesakes or third-party tip-compilation sites referencing already-known older content (Mar 2026 "15 features" thread, Jan 2026 Threads post, etc.), nothing dated after the last anchor
+- The unverified Oct 16 candidate (`x.com/bcherny/status/2111158313463525518`) noted in the 2026-10-18 entry was re-checked; still no independent corroboration found, so it remains unconfirmed and unused, per the no-fabrication rule
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period
+- `last_scan_iso` advanced to 2026-10-19T13:21:54Z; `last_scan_anchor_tweet_id` left unchanged at 2108004023249088528
+- Scanned 6 primary sources, no new tips since 2108004023249088528
+
 ## 2026-10-18 — Routine Scan (no changes)
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, plus date-targeted follow-ups for Oct 14-18 2026, via WebSearch (x.com, threadreaderapp.com, and threads.com remain uncrawled for this handle, consistent with every prior run; direct fetch of any x.com status URL is unreachable from this environment — DNS failure)
