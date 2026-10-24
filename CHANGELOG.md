@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-10-24 — Routine Scan (no changes)
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, via WebSearch (plus WebFetch attempts on x.com/twitter.com/howborisusesclaudecode.com/aggregator sites, all of which failed with DNS resolution errors in this environment — verification relied on WebSearch snippet summaries only)
+- Newest @bcherny posts found (2026-10-22, status IDs 2113333859907747871 and 2113417302402322910: Agent Skills donation announcement and a reply about usage draining) are both before the 2026-10-23T13:20:00Z cutoff from the prior scan, so nothing qualifies as new
+- One potentially actionable item (Claude Slides auto-generating device-frame mockups from a screenshot, 2026-10-16, https://x.com/bcherny/status/2111158659971699136) was also before the cutoff and already out of this scan's window
+- Newest post encountered overall was @trq212 (Thariq Shihipar) announcing his departure from Anthropic (2026-10-24) — not authored or endorsed by @bcherny, so it does not qualify either way; noted for bookkeeping only
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period
+- `last_scan_iso` advanced to 2026-10-24T13:20:00Z; `last_scan_anchor_tweet_id` left unchanged at 2108004023249088528
+- Scanned 6 sources, no new tips since 2108004023249088528
+
 ## 2026-10-23 — Routine Scan (no changes)
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, howborisusesclaudecode.com latest, via WebSearch
