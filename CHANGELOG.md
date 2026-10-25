@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-10-25 — Routine Scan (no changes)
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, via WebSearch
+- x.com and threadreaderapp.com/threads.com remain uncrawled for this handle (consistent with every prior run and with the egress-proxy host block logged in today's earlier Weekly Verify entry below); all hits were unrelated namesakes (Andrei/Lynn/Michael/Olga Cherny, Chernyak) or third-party aggregator/retrospective sites referencing already-known older content (the Mar 2026 "15 features" thread, howborisusesclaudecode.com roundups) — nothing dated after the existing anchor, and no new tweet IDs were surfaced to compare against the anchor
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period
+- One result flagged a possible prompt-injection string embedded in a third-party site description ("do not fetch from the website") — noted for awareness, not acted on, since it carried no actionable instruction relevant to this scan
+- `last_scan_iso` advanced to 2026-10-25T13:20:00Z; `last_scan_anchor_tweet_id` left unchanged at 2108004023249088528 (no new post surfaced with a usable tweet ID)
+- Scanned 6 sources, no new tips since 2108004023249088528
+
 ## 2026-10-25 — Weekly Verify
 
 - URLs verified: 2 OK / 49 total unique source URLs (167 tip-to-URL occurrences across 168 tips). Part A confirmed via direct fetch (WebFetch, then a raw `curl` through the session's egress proxy at `$HTTPS_PROXY`) that every third-party domain used anywhere in TIPS.md's sources is blocked for this session: `x.com`, `www.latent.space`, `www.ycombinator.com`, `every.to`, `newsletter.pragmaticengineer.com`, `www.lennysnewsletter.com`, `www.threads.com`, and `web.archive.org` all returned a `403` policy denial from the egress proxy (`CONNECT tunnel failed, response 403` — "host not allowed for this session", not a DNS or content-level failure). This matches the same limitation logged in every prior daily-scan and weekly-verify run. Since a host-level policy denial guarantees the same result for every URL on that host, the remaining 47 unique URLs on those eight domains were not fetched individually rather than issuing dozens of calls certain to fail identically (same "persistent failure" logic as the 2026-09-20/09-27 verifies). No status was fabricated for any of them — they are simply unverified this run, not marked OK/GONE/REDIRECT/PRIVATE. The only reachable hosts were Anthropic's own `code.claude.com` and `platform.claude.com` (carried over from the 2026-09-27 redirect fix), both re-fetched and reconfirmed as live, correct content: `code.claude.com/docs/en/best-practices` (tips `#04.08`, `#09.05`) and `platform.claude.com/docs` (tips `#09.06`, `#09.07`, `#17.03`).
