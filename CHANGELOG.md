@@ -6,6 +6,14 @@ Newest entries first.
 
 ---
 
+## 2026-10-26 — Routine Scan (no changes)
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, via WebSearch
+- x.com, threadreaderapp.com, and threads.com remain uncrawled for this handle via web search (consistent with every prior run); all hits were either unrelated namesakes (Andrei/Lynn/Michael/Olga Cherny, Chernyak, Boris Chernyshov, Boris Chertok) or third-party aggregator/retrospective sites referencing already-known older content (the Mar 2026 "15 features" thread, a Jan 2026 Threads post, howborisusesclaudecode.com roundups) — nothing dated after the existing anchor, and no new tweet IDs were surfaced to compare against the anchor
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period
+- `last_scan_iso` advanced to 2026-10-26T13:36:09Z; `last_scan_anchor_tweet_id` left unchanged at 2108004023249088528 (no new post surfaced with a usable tweet ID)
+- Scanned 6 sources, no new tips since 2108004023249088528
+
 ## 2026-10-25 — Routine Scan (no changes)
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, via WebSearch
