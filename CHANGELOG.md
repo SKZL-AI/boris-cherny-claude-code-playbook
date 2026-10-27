@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-10-27 — Routine Scan (no changes)
+
+- Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, plus extra searches for recent bcherny posts, via WebSearch (WebFetch of x.com itself failed: DNS not resolvable from this session's egress proxy)
+- `site:x.com`, `threadreaderapp.com`, and `threads.com` remain uncrawled directly; broader queries (no `site:` operator) did surface cached X search-snippet results this run, including two tweets with IDs newer than the previous anchor (2108004023249088528) but dated *before* `last_scan_iso` (2026-10-26T13:36:09Z): `status/2111158313463525518` ("I could not imagine being productive without Claude Code Review... catches almost every bug", ~Oct 16 2026) and `status/2113333859907747871` ("Agent Skills started as an experiment in Claude Code... donated to the Agentic AI Foundation, next to MCP", ~Oct 22 2026). Per the routine's explicit rule — do not add tips from before `last_scan_iso` — neither was added today; flagging both here for human review / the weekly-verify pass, since they look like genuine, previously-unseen, actionable tips (Code Review workflow; Agent Skills → Agentic AI Foundation donation) that earlier daily scans missed due to search-engine coverage gaps on X content, not because they were already evaluated and rejected
+- No posts found dated after 2026-10-26T13:36:09Z (i.e., nothing strictly newer than the last scan point)
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period
+- `last_scan_iso` advanced to 2026-10-27T13:32:04Z; `last_scan_anchor_tweet_id` advanced to 2113333859907747871 (newest post ID found this run, per Step 5 — to avoid re-surfacing the same already-flagged tweets as "new" in tomorrow's scan; see note above for why they weren't turned into tips)
+- Scanned 6 sources, no new tips since 2108004023249088528
+
 ## 2026-10-26 — Routine Scan (no changes)
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, howborisusesclaudecode.com latest, via WebSearch
