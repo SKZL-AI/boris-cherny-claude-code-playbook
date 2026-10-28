@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-10-28 — Routine Scan (no changes)
+
+- Scanned per routine order: `bcherny site:x.com`, `bcherny Claude Code tip`, `Boris Cherny new feature Claude Code`, `site:threadreaderapp.com bcherny`, `site:threads.com boris_cherny`, `howborisusesclaudecode.com latest`, plus extra recency queries ("Boris Cherny October 28 2026 Claude Code"), via WebSearch
+- Direct WebFetch of `x.com/bcherny` failed again: DNS not resolvable from this session's egress proxy (consistent with prior days)
+- All search results surfaced only previously-known material: workflow threads from January, February, March, and June 2026, the `howborisusesclaudecode.com` tip compilation, and generic bio/profile pages. No post dated after `last_scan_iso` (2026-10-27T13:32:04Z) was found.
+- The two tweets flagged for human review in the 2026-10-27 entry (`status/2111158313463525518` on Claude Code Review, `status/2113333859907747871` on Agent Skills → Agentic AI Foundation) were not re-surfaced as new; no evidence of edits or reposts after 2026-10-27T13:32:04Z. They remain open items for human/weekly-verify review.
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period
+- `last_scan_iso` advanced to 2026-10-28T13:22:06Z; `last_scan_anchor_tweet_id` unchanged at 2113333859907747871 (no newer post ID found this run)
+- Scanned 7 sources, no new tips since 2113333859907747871
+
 ## 2026-10-27 — Routine Scan (no changes)
 
 - Scanned per routine order: bcherny site:x.com, bcherny Claude Code tip, Boris Cherny new feature Claude Code, site:threadreaderapp.com bcherny, site:threads.com boris_cherny, plus extra searches for recent bcherny posts, via WebSearch (WebFetch of x.com itself failed: DNS not resolvable from this session's egress proxy)
