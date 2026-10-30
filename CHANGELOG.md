@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-10-30 — Routine Scan (no changes)
+
+- Scanned per routine order: `bcherny site:x.com`, `bcherny Claude Code tip`, `Boris Cherny new feature Claude Code`, `site:threadreaderapp.com bcherny`, `site:threads.com boris_cherny`, `howborisusesclaudecode.com latest`, plus extra recency-targeted queries (`Boris Cherny Claude Code October 30 2026`, `bcherny tweet October 2026`, `"Boris Cherny" Claude Code this week`, `Claude Code new feature announcement October 29 2026`), via WebSearch
+- Direct WebFetch of `x.com/bcherny` failed again: `ENOTFOUND`, DNS not resolvable from this session's egress proxy (consistent with every prior run)
+- All search results surfaced only previously-known material: the Jan 2026 terminal-workflow thread, the Feb 11 Thread Reader thread (hooks/plugins/skills), the howborisusesclaudecode.com 53-tip tracker (launched March 2026, no update mentioned), and April/May/June 2026 podcast/interview coverage. No post dated after `last_scan_iso` (2026-10-29T13:35:58Z) was found.
+- The two tweets flagged for human review on 2026-10-27 (`status/2111158313463525518` on Claude Code Review, `status/2113333859907747871` on Agent Skills → Agentic AI Foundation) were correctly not resurfaced as new — they predate the current `last_scan_iso` and remain open items for human/weekly-verify review.
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period
+- `last_scan_iso` advanced to 2026-10-30T13:40:21Z; `last_scan_anchor_tweet_id` unchanged at 2113333859907747871 (no newer post ID found this run)
+- Scanned 10 sources, no new tips since 2113333859907747871
+
 ## 2026-10-29 — Routine Scan (no changes)
 
 - Scanned per routine order: `bcherny site:x.com`, `bcherny Claude Code tip`, `Boris Cherny new feature Claude Code`, `site:threadreaderapp.com bcherny`, `site:threads.com boris_cherny`, `howborisusesclaudecode.com latest`, via WebSearch
