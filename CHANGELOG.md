@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-10-31 — Routine Scan (no changes)
+
+- Scanned per routine order: `bcherny site:x.com`, `bcherny Claude Code tip`, `Boris Cherny new feature Claude Code`, `site:threadreaderapp.com bcherny`, `site:threads.com boris_cherny`, `howborisusesclaudecode.com latest`, plus extra recency-targeted queries for Oct 30–31, 2026 activity, via WebSearch
+- Direct WebFetch of `x.com/bcherny` failed again: DNS not resolvable from this session's egress proxy (consistent with every prior run)
+- All verifiable `@bcherny` posts surfaced by search (e.g. `status/2111158659971699136` "Claude Slides", `status/2111158313463525518` Claude Code Review, `status/2111207278653399460`, `status/2107565388250874193`, `status/2105756563302723721` Mods) carry tweet IDs lower than the current anchor (2113333859907747871). No post dated after `last_scan_iso` (2026-10-30T13:40:21Z) was found.
+- One unverified candidate flagged for human review, NOT added: third-party account `@Lummox_eth` (`status/2114718890349502772`) paraphrases an alleged Boris Cherny tip ("Claude Code needs a failing test before another prompt") ahead of an "Opus 5.5" release. This is a secondhand claim, not Boris's own post — `x.com` was unreachable to verify his original wording, confirm his own endorsement, or confirm the post date relative to the cutoff. Per the no-fabrication/conservative rule, this was dropped rather than added.
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period
+- `last_scan_iso` advanced to 2026-10-31T13:44:52Z; `last_scan_anchor_tweet_id` unchanged at 2113333859907747871 (no newer verified post ID found this run)
+- Scanned 8 sources, no new tips since 2113333859907747871
+
 ## 2026-10-30 — Routine Scan (no changes)
 
 - Scanned per routine order: `bcherny site:x.com`, `bcherny Claude Code tip`, `Boris Cherny new feature Claude Code`, `site:threadreaderapp.com bcherny`, `site:threads.com boris_cherny`, `howborisusesclaudecode.com latest`, plus extra recency-targeted queries (`Boris Cherny Claude Code October 30 2026`, `bcherny tweet October 2026`, `"Boris Cherny" Claude Code this week`, `Claude Code new feature announcement October 29 2026`), via WebSearch
