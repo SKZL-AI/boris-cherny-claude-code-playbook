@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-11-01 — Routine Scan (no changes)
+
+- Scanned per routine order: `bcherny site:x.com`, `Boris Cherny Claude Code tip`, `site:threadreaderapp.com bcherny`, `site:threads.com boris_cherny`, `howborisusesclaudecode.com latest`, plus recency-targeted queries for Oct 30 – Nov 1, 2026 activity and "Boris Cherny Claude Code announcement this week", via WebSearch.
+- Direct WebFetch of `x.com/bcherny` failed: `getaddrinfo ENOTFOUND x.com` — this session's network policy blocks the host outright (DNS-level, not content-level), consistent with every prior run.
+- All verifiable `@bcherny` posts surfaced by search (e.g. `status/2111158313463525518` Claude Code Review, `status/2105756563302723721` Mods, `status/2100669598995816511` Projects, `status/2100259951398789487`, `status/2095590515765060076`, `status/2074247226038063316`, `status/2007179832300581177`) carry tweet IDs lower than the current anchor (`2113333859907747871`). No post dated after `last_scan_iso` (2026-10-31T13:44:52Z) was found.
+- One unverified secondary claim flagged for human review, NOT added: an unrated blog (htx.com) reported a Claude plan change ("5-hour limit abolished") allegedly confirmed by Boris Cherny, but (a) it is a billing/plan change, not a Claude Code workflow tip, and (b) the claim could not be verified against his own wording since `x.com` is unreachable. Dropped per the no-fabrication rule.
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period.
+- `last_scan_iso` advanced to 2026-11-01T13:17:39Z; `last_scan_anchor_tweet_id` unchanged at 2113333859907747871 (no newer verified post ID found this run).
+
 ## 2026-11-01 — Weekly Verify
 
 - URLs verified: 2 OK / 49 total unique source URLs (168 tips, same as 2026-10-25 — no tips added by daily scans in the interim, all six 2026-10-26→10-31 routine scans logged "no changes"). Part A re-confirmed via raw `curl` through this session's egress proxy (`$HTTPS_PROXY`) that every third-party domain cited anywhere in TIPS.md is still policy-blocked for this session: `x.com`, `www.latent.space`, `www.ycombinator.com`, `every.to`, `newsletter.pragmaticengineer.com`, `www.lennysnewsletter.com`, `www.threads.com`, `threadreaderapp.com`, and `web.archive.org` all returned `403` (`CONNECT tunnel failed, response 403` — a session network-policy denial, not a DNS or content-level failure). This is identical to every prior weekly-verify run since at least 2026-09-20. The only reachable hosts remain Anthropic's own `code.claude.com` and `platform.claude.com`, both re-fetched and reconfirmed live with correct content: `code.claude.com/docs/en/best-practices` (tips `#04.08`, `#09.05`) and `platform.claude.com/docs` (tips `#09.06`, `#09.07`, `#17.03`). The remaining 47 unique URLs were not fetched individually — a host-level policy block guarantees the same result for every URL on that host — and are left unverified rather than assigned a fabricated status.
