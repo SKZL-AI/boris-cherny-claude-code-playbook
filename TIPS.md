@@ -1433,7 +1433,7 @@ Claude Desktop is now available in beta for Ubuntu 22.04+ and Debian 12+ (x86_64
 
 last_scan_iso: "2026-10-31T13:44:52Z"
 last_scan_anchor_tweet_id: "2113333859907747871"
-last_verify_iso: "2026-10-25T07:13:28Z"
+last_verify_iso: "2026-11-01T07:13:42Z"
 last_tip_id_per_theme:
   "01": 9
   "02": 6

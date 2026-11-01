@@ -6,6 +6,30 @@ Newest entries first.
 
 ---
 
+## 2026-11-01 — Weekly Verify
+
+- URLs verified: 2 OK / 49 total unique source URLs (168 tips, same as 2026-10-25 — no tips added by daily scans in the interim, all six 2026-10-26→10-31 routine scans logged "no changes"). Part A re-confirmed via raw `curl` through this session's egress proxy (`$HTTPS_PROXY`) that every third-party domain cited anywhere in TIPS.md is still policy-blocked for this session: `x.com`, `www.latent.space`, `www.ycombinator.com`, `every.to`, `newsletter.pragmaticengineer.com`, `www.lennysnewsletter.com`, `www.threads.com`, `threadreaderapp.com`, and `web.archive.org` all returned `403` (`CONNECT tunnel failed, response 403` — a session network-policy denial, not a DNS or content-level failure). This is identical to every prior weekly-verify run since at least 2026-09-20. The only reachable hosts remain Anthropic's own `code.claude.com` and `platform.claude.com`, both re-fetched and reconfirmed live with correct content: `code.claude.com/docs/en/best-practices` (tips `#04.08`, `#09.05`) and `platform.claude.com/docs` (tips `#09.06`, `#09.07`, `#17.03`). The remaining 47 unique URLs were not fetched individually — a host-level policy block guarantees the same result for every URL on that host — and are left unverified rather than assigned a fabricated status.
+- URLs migrated to archive.org: 0 (not attempted — `web.archive.org` itself is blocked this session, and no GONE status could be confirmed on the blocked hosts to begin with)
+- URLs marked `[archived]` (no snapshot): 0 (same reason)
+- Duplicates flagged: 0. Part B regrouped all 168 tips by source URL (47 unique URLs; 24 shared by 2+ tips, from 2 to 28 tips each) and compared description/quote text programmatically: no exact-duplicate description text exists anywhere in the file. No `[duplicate of #XX.YY]` marking applied. The same 4 same-substance/cross-theme pairs from prior runs remain open, unresolved, no auto-merge (see manual review below).
+- Total active tips: 168 (recounted directly from TIPS.md's `### #` H3 headers; matches `total_tips` in the tracking YAML — unchanged since 2026-10-25).
+- `last_tip_id_per_theme` and `total_tips` recomputed from the file body (max ID per theme, 01–17) and are already accurate — no changes needed. `last_verify_iso` updated to `2026-11-01T07:13:42Z` (the only edit made to TIPS.md this run).
+- IMPL-GUIDE tips referenced: 72 distinct tip IDs (68 resolve to real, active tips in TIPS.md)
+- IMPL-GUIDE stale references: 4 — `#20.01`–`#20.04`, still cited in IMPLEMENTATION-GUIDE.md Section 9 ("Context Management"), but theme 20 still does not exist anywhere in TIPS.md's body (same pre-existing gap as every prior verify). Actionable-tip-count heuristic (themes 03-08,10,13,14,20 — themes 03,04,05,06,07,08,10,13,14 total 115 actionable tips in TIPS.md) vs. 68 valid guide references: a difference of 47 (> 5 threshold), flagged below.
+
+**Needs manual review (all carried over unresolved from 2026-09-20/09-27/10-25; none introduced or resolved this run):**
+- Theme 20 (and 18/19/21) phantom entries: TIPS.md's tracking YAML lists `last_tip_id_per_theme` for themes `18`–`21`, and the document header still claims "165 across 21 themes," but no theme past `17` exists anywhere in TIPS.md's body, and this has been true since the repo's very first commit (verified against git history back to the Initial Release). IMPLEMENTATION-GUIDE.md Section 9 still cites `#20.01`–`#20.04` by number. A human should decide whether to reconstruct themes 18–21 or strip the phantom references from both files and fix the stale header count.
+- The tracking-metadata block at the end of TIPS.md opens with no ` ```yaml ` fence but closes with a lone ` ``` ` — an unpaired code fence present since the Initial Release commit. Not new corruption and doesn't affect parsing of the real `### #XX.YY` tip entries, but worth a cosmetic fix.
+- Theme 17 has an unexplained ID gap: `#17.07` and `#17.08` don't exist (jumps from `#17.06` to `#17.09`), with no `[archived]`/`[deprecated]` marker accounting for them.
+- 4 tips still have no verifiable source URL, violating the sourcing rule: `#03.08`, `#03.10`, `#17.05`, `#17.06` (all cite "AIEWF Talk 2025" with no link).
+- 4 same-substance/cross-theme pairs remain flagged, not auto-merged (Part B.3):
+  - `#06.06` vs `#11.02` — same source thread, same underlying "Agent Stop Hook" tip, presented in two themes.
+  - `#06.09` vs `#11.03` — same source thread, same underlying "Ralph-Wiggum Plugin" tip.
+  - `#07.02` vs `#13.05` — overlapping substance (commit settings.json for team benefit), different source URLs.
+  - `#04.25` vs `#07.06` — same source thread, same underlying "open-source sandbox" feature from two angles.
+- IMPLEMENTATION-GUIDE.md's own intro/footer still say "~70 actionable tips... the full 151-tip collection" / "Generated from TIPS.md (153 tips, 21 themes) · Version 1.0 · 2026-07-09" — stale prose (TIPS.md now holds 168 tips across 17 real theme sections). Outside Part D's ID-reference-checking scope; flagged for an editorial pass.
+- Root cause for Part A's recurring 0/47 coverage: this session's network policy denies every non-Anthropic host used as a tip source. Resolving this requires a human to add those domains (or a broader access level) under the environment's Network access settings — see `https://code.claude.com/docs/en/cloud-environments#network-access` — not something fixable from inside a routine run.
+
 ## 2026-10-31 — Routine Scan (no changes)
 
 - Scanned per routine order: `bcherny site:x.com`, `bcherny Claude Code tip`, `Boris Cherny new feature Claude Code`, `site:threadreaderapp.com bcherny`, `site:threads.com boris_cherny`, `howborisusesclaudecode.com latest`, plus extra recency-targeted queries for Oct 30–31, 2026 activity, via WebSearch
