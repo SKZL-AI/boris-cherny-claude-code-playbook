@@ -6,6 +6,14 @@ Newest entries first.
 
 ---
 
+## 2026-11-02 — Routine Scan (no changes)
+
+- Scanned per routine order: `bcherny site:x.com`, `bcherny Claude Code tip`, `Boris Cherny new feature Claude Code`, `site:threadreaderapp.com bcherny`, `site:threads.com boris_cherny`, `howborisusesclaudecode.com latest`, via WebSearch.
+- Direct WebFetch of `threadreaderapp.com` and `howborisusesclaudecode.com` failed: `getaddrinfo ENOTFOUND` for both — this session's network policy blocks these hosts outright (DNS-level, not content-level), consistent with every prior run; `x.com` was not attempted directly this run since prior runs already established the same DNS-level block.
+- WebSearch results were all secondary/aggregator coverage (gitbook, substack, Medium, Chinese/Korean blogs, Reddit mirrors, etc.) describing posts and threads already dated well before `last_scan_iso` (2026-11-01T13:17:39Z) — e.g. the Jan 3/13/31 and Feb 11 2026 tip threads, an Oct 2025 Plugins release, and an untimestamped "15 features" Chinese recap with no verifiable date. No post with a confirmed date after `last_scan_iso` was found.
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period.
+- `last_scan_iso` advanced to 2026-11-02T13:59:42Z; `last_scan_anchor_tweet_id` unchanged at 2113333859907747871 (no newer verified post ID found this run).
+
 ## 2026-11-01 — Routine Scan (no changes)
 
 - Scanned per routine order: `bcherny site:x.com`, `Boris Cherny Claude Code tip`, `site:threadreaderapp.com bcherny`, `site:threads.com boris_cherny`, `howborisusesclaudecode.com latest`, plus recency-targeted queries for Oct 30 – Nov 1, 2026 activity and "Boris Cherny Claude Code announcement this week", via WebSearch.
