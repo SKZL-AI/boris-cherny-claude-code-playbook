@@ -6,6 +6,13 @@ Newest entries first.
 
 ---
 
+## 2026-11-08 — Routine Scan (no changes)
+
+- Scanned per routine order: `bcherny site:x.com`, `bcherny Claude Code tip`, `Boris Cherny new feature Claude Code November 2026`, `site:threadreaderapp.com bcherny`, `site:threads.com boris_cherny`, `howborisusesclaudecode.com latest`, via WebSearch (direct X/Threads/Thread Reader App searches return no crawlable primary-source content, as in every prior run).
+- All results were secondary/aggregator coverage (gitbook, Medium, Substack, Product Hunt, Reddit mirrors, Korean/Japanese/Chinese/Italian blogs, Thread Reader profile snippets, dev.to) describing posts and threads already dated well before `last_scan_iso` (2026-11-07T13:16:41Z) — e.g. the Jan 2026 parallel-sessions thread, the Feb 11 2026 customization thread, the March 2026 "15 hidden features" thread, and the June 8 2026 one-year-anniversary post. No post with a confirmed date after `last_scan_iso` was found.
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period.
+- `last_scan_iso` advanced to 2026-11-08T13:16:44Z; `last_scan_anchor_tweet_id` unchanged at 2113333859907747871 (no newer verified post ID found this run).
+
 ## 2026-11-08 — Weekly Verify
 
 - URLs verified: 2 OK / 46 total unique source URLs (168 tips — unchanged since 2026-11-01; all seven 2026-11-02→11-07 routine scans logged "no changes"). Part A re-confirmed via raw `curl` through this session's egress proxy (`$HTTPS_PROXY`) that every third-party domain cited in TIPS.md is still policy-blocked for this session: `x.com`, `www.latent.space`, `www.ycombinator.com`, `every.to`, `newsletter.pragmaticengineer.com`, `www.lennysnewsletter.com`, `www.threads.com`, and `web.archive.org` all returned `403` (`CONNECT tunnel failed, response 403` — a session network-policy denial, not a DNS or content-level failure, confirmed via `/__agentproxy/status`). Identical to every weekly-verify run since at least 2026-09-20. The only reachable hosts remain Anthropic's own `code.claude.com` (200) and `platform.claude.com` (307, same-domain redirect to `/docs/en/home`, content live) — re-fetched and reconfirmed live, covering tips `#04.08`, `#09.05`, `#09.06`, `#09.07`, `#17.03`. The remaining 44 unique URLs were not fetched individually — a host-level policy block guarantees the same result for every URL on that host — and are left unverified rather than assigned a fabricated status.
