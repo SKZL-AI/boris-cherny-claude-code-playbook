@@ -6,6 +6,13 @@ Newest entries first.
 
 ---
 
+## 2026-11-12 — Routine Scan (no changes)
+
+- Scanned per routine order via WebSearch: `bcherny site:x.com`, `bcherny Claude Code tip`, `Boris Cherny new feature Claude Code`, then fallback `bcherny November 2026`, `site:threadreaderapp.com bcherny`, `Boris Cherny Claude Code November 12 2026` (direct X search returns no crawlable primary-source content, consistent with every prior run).
+- All results were secondary/aggregator coverage (gitbook, Rattibha, blockchain.news, dev.to, interview pieces) describing posts and threads already dated well before `last_scan_iso` (2026-11-11T13:17:03Z) — e.g. the Jan 2026 parallel-sessions thread, Feb 2026 worktree/feature threads, and a July 2026 interview. No post with a confirmed date after `last_scan_iso` was found.
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period.
+- `last_scan_iso` advanced to 2026-11-12T13:17:55Z; `last_scan_anchor_tweet_id` unchanged at 2113333859907747871 (no newer verified post ID found this run).
+
 ## 2026-11-11 — Routine Scan (no changes)
 
 - Scanned per routine order via WebSearch: `bcherny site:x.com`, `bcherny Claude Code tip`, `Boris Cherny new feature Claude Code November 2026`, then fallback `site:threadreaderapp.com bcherny`, `site:threads.com boris_cherny`, `howborisusesclaudecode.com latest` (direct X/Threads search returns no crawlable primary-source content, consistent with every prior run).
