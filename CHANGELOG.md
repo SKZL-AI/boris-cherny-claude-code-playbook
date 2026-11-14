@@ -6,6 +6,14 @@ Newest entries first.
 
 ---
 
+## 2026-11-14 — Routine Scan (no changes)
+
+- Scanned 6 sources, no new tips since 2113333859907747871.
+- Searches run: `bcherny site:x.com`, `bcherny Claude Code tip`, `Boris Cherny new feature Claude Code`, then fallback `site:threadreaderapp.com bcherny`, `site:threads.com boris_cherny`, `howborisusesclaudecode.com latest` (plus `bcherny November 2026`). Direct X search returns no crawlable primary-source content, consistent with every prior run.
+- All results were secondary/aggregator coverage (recycled roundup articles, blockchain.news/news.smol.ai/rattibha.com mirrors — the latter three blocked by this session's network allowlist) describing posts already dated well before `last_scan_iso` (2026-11-13T13:18:54Z) — nothing found newer than a July 2026 item.
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period.
+- `last_scan_iso` advanced to 2026-11-14T13:17:27Z; `last_scan_anchor_tweet_id` unchanged at 2113333859907747871 (no newer verified post ID found this run).
+
 ## 2026-11-13 — Routine Scan (no changes)
 
 - Scanned per routine order via WebSearch: `bcherny site:x.com`, `bcherny Claude Code tip`, `Boris Cherny new feature Claude Code`, then fallback `Boris Cherny Claude Code November 2026`, `site:threadreaderapp.com bcherny` (direct X search returns no crawlable primary-source content, consistent with every prior run).
