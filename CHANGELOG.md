@@ -6,6 +6,14 @@ Newest entries first.
 
 ---
 
+## 2026-11-15 — Routine Scan (no changes)
+
+- Scanned 6 sources, no new tips since 2113333859907747871.
+- Searches run per routine order: `bcherny site:x.com`, `bcherny Claude Code tip`, `Boris Cherny new feature Claude Code`, then fallback `site:threadreaderapp.com bcherny`, `site:threads.com boris_cherny`, `howborisusesclaudecode.com latest` (plus an extended `bcherny Claude Code November 2026` check). Direct X search returns no crawlable primary-source content; a direct `WebFetch` of `x.com/bcherny` failed with `ENOTFOUND` (host outside this session's allowed network domains), consistent with every prior run.
+- All results were secondary/aggregator coverage (blog roundups, Thread Reader mirrors, newsletter summaries) describing posts already dated well before `last_scan_iso` (2026-11-14T13:17:27Z) — nothing found newer than the existing catalog.
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period.
+- `last_scan_iso` advanced to 2026-11-15T13:16:23Z; `last_scan_anchor_tweet_id` unchanged at 2113333859907747871 (no newer verified post ID found this run).
+
 ## 2026-11-15 — Weekly Verify
 
 - URLs verified: 2 OK / 46 total unique source URLs (168 tips — unchanged since 2026-11-01; all seven 2026-11-08→11-14 daily scans logged "no changes", `last_scan_anchor_tweet_id` still 2113333859907747871). Part A re-confirmed via raw `curl` through this session's egress proxy (`$HTTPS_PROXY`) and via the `WebFetch` tool that every third-party domain cited in TIPS.md remains policy-blocked for this session: `x.com` (WebFetch: `ENOTFOUND`), `www.latent.space`, `www.ycombinator.com`, `every.to`, `newsletter.pragmaticengineer.com`, `www.lennysnewsletter.com`, `www.threads.com`, and `web.archive.org` all returned `403 CONNECT tunnel failed` via curl (a session network-policy denial per `/__agentproxy/status`, not a DNS or content-level failure) — identical to every weekly-verify run since at least 2026-09-20. The only reachable hosts remain Anthropic's own `code.claude.com` (200, content re-confirmed live via WebFetch) and `platform.claude.com` (307, same-domain redirect, live) — covering tips `#04.08`, `#09.05`, `#09.06`, `#09.07`, `#17.03`. The remaining 44 unique URLs were not fetched individually — a host-level policy block guarantees the same result for every URL on that host — and are left unverified rather than assigned a fabricated status.
