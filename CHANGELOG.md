@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-11-16 — Routine Scan (no changes)
+
+- Scanned 7 sources, no new tips since 2113333859907747871.
+- Searches run per routine order via `WebSearch`: `bcherny site:x.com`, `bcherny Claude Code tip`, `Boris Cherny new feature Claude Code`, then fallback `site:threadreaderapp.com bcherny`, `site:threads.com boris_cherny`, `howborisusesclaudecode.com latest`, plus an extended `Boris Cherny Claude Code November 2026` check. `tip-scout` subagent could not be spawned this run (its frontmatter lists tools `web_search`/`web_fetch`, which don't resolve to any available tool — a pre-existing config bug, not fixed here since it's out of scope for a routine scan); searches were run directly instead, applying the same filter/author rules.
+- `x.com`, `threadreaderapp.com`, `threads.com`, and other primary/mirror hosts remain unreachable for direct `WebFetch` in this session (`ENOTFOUND` — outside the session's allowed network domains), consistent with every prior run; confirmed again this run against `edition.cnn.com` and `pasqualepillitteri.it`, found via search but also unreachable.
+- Search results surfaced only (a) secondary aggregator/blog coverage of posts already well before the anchor (worktrees, `/simplify`, `/batch`, `/teleport`, Agent Teams, Desktop server previews, mobile Code-tab review, parallel sessions, plan mode, CLAUDE.md upkeep, voice input — all already present in TIPS.md, verified by direct grep), and (b) two Nov 15, 2026 biographical profile pieces (CNN, pasqualepillitteri.it) about Boris Cherny that are not primary posts and, per their own search summaries, contain no new concrete actionable tip beyond the existing `/loop` tip (#04.13) already in TIPS.md.
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period.
+- `last_scan_iso` advanced to 2026-11-16T13:17:36Z; `last_scan_anchor_tweet_id` unchanged at 2113333859907747871 (no newer verified post ID found this run).
+
 ## 2026-11-15 — Routine Scan (no changes)
 
 - Scanned 6 sources, no new tips since 2113333859907747871.
