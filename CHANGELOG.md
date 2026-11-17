@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-11-17 — Routine Scan (no changes)
+
+- Scanned 7 sources, no new tips since 2113333859907747871.
+- Searches run per routine order via `WebSearch`: `bcherny site:x.com`, `bcherny Claude Code tip`, `Boris Cherny new feature Claude Code`, then fallback `site:threadreaderapp.com bcherny`, `site:threads.com boris_cherny`, `howborisusesclaudecode.com latest`, plus an extended `Boris Cherny Claude Code November 2026` check.
+- All results were secondary/aggregator coverage (blog roundups, Thread Reader profile listing, newsletter summaries, a CNN profile dated 2026-11-15) describing posts and themes already present in TIPS.md (parallel sessions/worktrees, plan mode, CLAUDE.md upkeep, voice dictation, `/simplify`, `/batch`, `/loop`, Teleport, Agent Teams, mobile Code-tab review, Desktop server previews) — nothing dated after `last_scan_iso` (2026-11-16T13:17:36Z) found. The one direct X post URL surfaced (`x.com/bcherny/status/2007179832300581177`) has a lower snowflake ID than the current anchor, confirming it predates the anchor.
+- `x.com`, `threadreaderapp.com`, `threads.com` remain unreachable for direct `WebFetch` in this session (outside the session's allowed network domains), consistent with every prior run; only `WebSearch` summaries were available, not primary post text.
+- `howborisusesclaudecode.com` ("142+ Tips") is a third-party aggregator, not a verifiable primary/endorsed source per repo rules — not used for attribution.
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period.
+- `last_scan_iso` advanced to 2026-11-17T13:17:03Z; `last_scan_anchor_tweet_id` unchanged at 2113333859907747871 (no newer verified post ID found this run).
+
 ## 2026-11-16 — Routine Scan (no changes)
 
 - Scanned 7 sources, no new tips since 2113333859907747871.
