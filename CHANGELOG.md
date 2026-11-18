@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-11-18 — Routine Scan (no changes)
+
+- Scanned 5 sources, no new tips since 2113333859907747871.
+- Searches run per routine order via `WebSearch`: `bcherny site:x.com`, `bcherny Claude Code tip`, `Boris Cherny new feature Claude Code`, plus extended checks `Boris Cherny Claude Code November 2026` and `site:threadreaderapp.com bcherny November 2026`.
+- The `tip-scout` subagent again failed to spawn (its frontmatter tools `web_search`/`web_fetch` don't resolve to any available tool — the same pre-existing config bug noted in the 2026-11-16 entry, still out of scope to fix during a routine scan); searches were run directly instead, applying the same filter/author rules.
+- All results were secondary/aggregator coverage (blog roundups, a Nov 15 CNN profile, newsletter summaries, Thread Reader profile listing) describing posts and themes already present in TIPS.md (parallel sessions/worktrees, plan mode, CLAUDE.md upkeep, voice dictation, `/simplify`, `/batch`, `/loop`, Teleport, Agent Teams, mobile Code-tab review, Desktop server previews) — nothing dated after `last_scan_iso` (2026-11-17T13:17:03Z) found.
+- `x.com`, `threadreaderapp.com`, and `threads.com` remain unreachable for direct `WebFetch` in this session, consistent with every prior run; only `WebSearch` summaries were available, not primary post text.
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period.
+- `last_scan_iso` advanced to 2026-11-18T13:17:11Z; `last_scan_anchor_tweet_id` unchanged at 2113333859907747871 (no newer verified post ID found this run).
+
 ## 2026-11-17 — Routine Scan (no changes)
 
 - Scanned 7 sources, no new tips since 2113333859907747871.
