@@ -6,6 +6,16 @@ Newest entries first.
 
 ---
 
+## 2026-11-19 — Routine Scan (no changes)
+
+- Scanned 6 sources, no new tips since 2113333859907747871.
+- Searches run per routine order via `WebSearch`: `bcherny site:x.com`, `bcherny Claude Code tip`, `Boris Cherny new feature Claude Code`, plus extended checks `site:threadreaderapp.com bcherny`, `Boris Cherny Claude Code November 19 2026`, and `howborisusesclaudecode.com latest`.
+- All results were secondary/aggregator coverage (blog roundups, Thread Reader profile listing, newsletter summaries, biographical profiles, a `/boris` skill listing) describing posts and themes already present in TIPS.md (parallel sessions/worktrees, plan mode, CLAUDE.md upkeep, voice dictation, `/simplify`, `/batch`, `/loop`, Teleport, Agent Teams, mobile Code-tab review, Desktop server previews) — nothing dated after `last_scan_iso` (2026-11-18T13:17:11Z) found.
+- `x.com`, `threadreaderapp.com`, and `threads.com` remain unreachable for direct `WebFetch` in this session, consistent with every prior run; only `WebSearch` summaries were available, not primary post text.
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period.
+- Housekeeping: the 2026-11-18 scan commit had been made on a detached `HEAD` and was not reachable from the local `main` branch pointer (though it was already present on `origin/main`). Fast-forwarded local `main` to include it; no content was changed or lost.
+- `last_scan_iso` advanced to 2026-11-19T13:16:49Z; `last_scan_anchor_tweet_id` unchanged at 2113333859907747871 (no newer verified post ID found this run).
+
 ## 2026-11-18 — Routine Scan (no changes)
 
 - Scanned 5 sources, no new tips since 2113333859907747871.
