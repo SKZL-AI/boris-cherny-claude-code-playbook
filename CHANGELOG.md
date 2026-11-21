@@ -6,6 +6,14 @@ Newest entries first.
 
 ---
 
+## 2026-11-21 — Routine Scan (no changes)
+
+- Scanned 6 sources, no new tips since 2113333859907747871.
+- Searches run per routine order via `WebSearch`: `bcherny site:x.com`, `bcherny Claude Code tip`, `Boris Cherny new feature Claude Code`, plus fallback checks `bcherny twitter November 2026 Claude Code`, `site:threadreaderapp.com bcherny`, and `howborisusesclaudecode.com latest`.
+- All results were secondary/aggregator coverage (blog roundups, Thread Reader profile listing, Rattibha mirrors, newsletter/podcast summaries, a Nov 14-15 2026 Pragmatic Engineer/CNN interview recap) describing posts and themes already present in TIPS.md (parallel sessions/worktrees, plan mode, CLAUDE.md upkeep, hooks/customization thread, voice dictation, `/simplify`, `/batch`, Teleport) — nothing dated after `last_scan_iso` (2026-11-20T13:17:00Z) found.
+- `x.com` and `threadreaderapp.com` remain unreachable for direct primary-source fetch in this session, consistent with every prior run; only `WebSearch` summaries were available, not primary post text.
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period.
+
 ## 2026-11-20 — Routine Scan (no changes)
 
 - Scanned 6 sources, no new tips since 2113333859907747871.
