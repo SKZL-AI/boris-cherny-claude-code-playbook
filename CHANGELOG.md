@@ -6,6 +6,24 @@ Newest entries first.
 
 ---
 
+## 2026-11-22 — Weekly Verify
+
+- URLs verified: 2 OK / 46 total unique source URLs (168 tips, unchanged since 2026-11-01; all seven 2026-11-15→11-21 daily scans logged "no changes", `last_scan_anchor_tweet_id` still 2113333859907747871). Part A re-tested every distinct domain cited in TIPS.md directly via `WebFetch` this run (not assumed from history): `x.com`, `www.latent.space`, `www.ycombinator.com`, `every.to`, `www.threads.com`, `newsletter.pragmaticengineer.com`, and `www.lennysnewsletter.com` all failed with `getaddrinfo ENOTFOUND` (DNS-level — outside this session's allowed network domains, not a content-level 404/410), and `web.archive.org` failed outright ("Claude Code is unable to fetch from web.archive.org"). The only reachable hosts remain Anthropic's own `code.claude.com` (200, content live and current — now documents Claude Fable 5.2/Opus 5.5/Sonnet 5.5/Haiku 5.5) and `platform.claude.com` (content live, redirects to `/docs/en/home`) — covering tips `#04.08`, `#09.05`, `#09.06`, `#09.07`, `#17.03`. The remaining 44 unique URLs on blocked hosts were not fetched individually — a host-level DNS block guarantees the same result for every URL on that host — and are left unverified rather than assigned a fabricated status.
+- URLs migrated to archive.org: 0 (not attempted — `web.archive.org` is unreachable this session, and no GONE status could be confirmed on the blocked hosts to begin with, so no migration trigger exists)
+- URLs marked `[archived]` (no snapshot): 0 (same reason — PART A never reached a confirmed-GONE URL)
+- Duplicates flagged: 0. Part B re-parsed all 168 tips programmatically, grouped by source URL (46 unique URLs; 23 shared by 2+ tips, from 2 to 28 tips each) and compared description text: no exact-duplicate non-empty description exists anywhere in the file, globally or within any shared-URL group. No `[duplicate of #XX.YY]` marking applied. The same 4 same-substance/cross-theme pairs from every prior run remain open, unresolved, no auto-merge (see manual review below).
+- Total active tips: 168 (recounted directly from TIPS.md's `### #` H3 headers via script; matches `total_tips` in the tracking YAML — unchanged since 2026-11-01). No tip carries `[archived]`/`[duplicate]`/`[deprecated]` in its title.
+- `last_tip_id_per_theme` and `total_tips` recomputed from the file body (max ID per theme, 01–17) and are already accurate — no changes needed. `last_verify_iso` updated to `2026-11-22T07:11:05Z` (the only edit made to TIPS.md this run).
+- IMPL-GUIDE tips referenced: 72 distinct tip IDs (68 resolve to real, active tips in TIPS.md)
+- IMPL-GUIDE stale references: 4 — `#20.01`–`#20.04`, still cited in IMPLEMENTATION-GUIDE.md Section 9 ("Context Management"), but theme 20 still does not exist anywhere in TIPS.md's body (same pre-existing gap as every prior verify). Actionable-tip-count heuristic (themes 03-08,10,13,14,20 — 115 actionable tips in TIPS.md) vs. 68 valid guide references: a difference of 47 (> 5 threshold), flagged below. No tip is `[archived]`/`[deprecated]` in TIPS.md this run, so no IMPLEMENTATION-GUIDE.md entries required that marking.
+
+**Needs manual review (all carried over unresolved from 2026-09-20 through 2026-11-15; none introduced or resolved this run):**
+- Theme 20 (and 18/19/21) phantom entries: TIPS.md's tracking YAML lists `last_tip_id_per_theme` for themes `18`–`21`, but no theme past `17` exists anywhere in TIPS.md's body, and this has been true since the repo's very first commit. IMPLEMENTATION-GUIDE.md Section 9 still cites `#20.01`–`#20.04` by number. A human should decide whether to reconstruct themes 18–21 or strip the phantom references from both files.
+- The tracking-metadata block at the end of TIPS.md opens with no ` ```yaml ` fence but closes with a lone ` ``` ` — an unpaired code fence present since the Initial Release commit. Not new corruption and doesn't affect parsing of the real `### #XX.YY` tip entries, but worth a cosmetic fix.
+- Theme 17 has an unexplained ID gap: `#17.07` and `#17.08` don't exist (jumps from `#17.06` to `#17.09`), with no `[archived]`/`[deprecated]` marker accounting for them.
+- 4 tips have no verifiable source URL: `#03.08`, `#03.10`, `#17.05`, `#17.06` (all cite "AIEWF Talk 2025" with no link). Not fixed — fabricating a URL would violate the "don't invent tips/sources" rule.
+- 4 same-substance/cross-theme pairs (Part B.3, not auto-merged): `#06.06` vs `#11.02` (Agent Stop Hook, same source thread); `#06.09` vs `#11.03` (Ralph-Wiggum Plugin, same source thread); `#07.02` vs `#13.05` (commit settings.json for team benefit, different URLs); `#04.25` vs `#07.06` (open-source sandbox, same source thread, two angles).
+
 ## 2026-11-21 — Routine Scan (no changes)
 
 - Scanned 6 sources, no new tips since 2113333859907747871.
