@@ -24,6 +24,14 @@ Newest entries first.
 - 4 tips have no verifiable source URL: `#03.08`, `#03.10`, `#17.05`, `#17.06` (all cite "AIEWF Talk 2025" with no link). Not fixed — fabricating a URL would violate the "don't invent tips/sources" rule.
 - 4 same-substance/cross-theme pairs (Part B.3, not auto-merged): `#06.06` vs `#11.02` (Agent Stop Hook, same source thread); `#06.09` vs `#11.03` (Ralph-Wiggum Plugin, same source thread); `#07.02` vs `#13.05` (commit settings.json for team benefit, different URLs); `#04.25` vs `#07.06` (open-source sandbox, same source thread, two angles).
 
+## 2026-11-22 — Routine Scan (no changes)
+
+- Scanned 6 sources, no new tips since 2113333859907747871.
+- Searches run per routine order via `WebSearch`: `bcherny site:x.com`, `bcherny Claude Code tip November 2026`, `Boris Cherny new feature Claude Code`, plus fallback checks `site:threadreaderapp.com bcherny`, `site:threads.com boris_cherny`, and `howborisusesclaudecode.com latest`.
+- All results were secondary/aggregator coverage (blog roundups, Thread Reader profile listing, Rattibha mirrors, Hacker News submission history, Product Hunt/skill-directory listings, newsletter summaries) describing posts and themes already present in TIPS.md (parallel sessions/worktrees, plan mode, CLAUDE.md upkeep, Opus 5 prompt-injection defenses, `/simplify`, `/batch`, Teleport, voice dictation) — nothing dated after `last_scan_iso` (2026-11-21T13:16:22Z) found. The most recent dated item any source surfaced (howborisusesclaudecode.com "Part 7") is from 2026-03-13, well before the anchor.
+- `x.com`, `threadreaderapp.com`, and `threads.com` remain unreachable for direct primary-source fetch in this session (the `site:threads.com` query did not honor the site restriction and returned no threads.com results at all), consistent with every prior run; only `WebSearch` summaries were available, not primary post text.
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period.
+
 ## 2026-11-21 — Routine Scan (no changes)
 
 - Scanned 6 sources, no new tips since 2113333859907747871.
