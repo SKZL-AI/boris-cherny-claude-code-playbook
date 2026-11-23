@@ -6,6 +6,14 @@ Newest entries first.
 
 ---
 
+## 2026-11-23 — Routine Scan (no changes)
+
+- Scanned 6 sources, no new tips since 2113333859907747871.
+- Searches run per routine order via `WebSearch`/`WebFetch`: `bcherny site:x.com Claude Code`, `Boris Cherny Claude Code tip November 2026`, `"bcherny" OR "Boris Cherny" twitter November 22 2026`, plus fallback checks `site:threadreaderapp.com bcherny`, `bcherny x.com status November 2026 Claude Code`, and direct fetch attempts on `x.com/bcherny`, `threadreaderapp.com/user/bcherny`, `en.rattibha.com/bcherny/recent`.
+- `x.com`, `threadreaderapp.com`, and `en.rattibha.com` remain unreachable for direct primary-source fetch in this session (DNS-level failures), consistent with every prior run; only search-index summaries were available. Every dated, sourceable item any search surfaced (auto-mode thread, Jan 2026 workflow thread, Jan 31 2026 team-tips thread, Mar 2026 hidden-features thread) has a status ID lower than the anchor, confirming it predates `last_scan_iso` (2026-11-22T13:17:45Z). Mid-November news profiles (CNN, NewsBytes) contain no new actionable, sourceable tip.
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period.
+- Anchor left unchanged (no newer post identified); `last_scan_iso` advanced to 2026-11-23T13:18:00Z.
+
 ## 2026-11-22 — Weekly Verify
 
 - URLs verified: 2 OK / 46 total unique source URLs (168 tips, unchanged since 2026-11-01; all seven 2026-11-15→11-21 daily scans logged "no changes", `last_scan_anchor_tweet_id` still 2113333859907747871). Part A re-tested every distinct domain cited in TIPS.md directly via `WebFetch` this run (not assumed from history): `x.com`, `www.latent.space`, `www.ycombinator.com`, `every.to`, `www.threads.com`, `newsletter.pragmaticengineer.com`, and `www.lennysnewsletter.com` all failed with `getaddrinfo ENOTFOUND` (DNS-level — outside this session's allowed network domains, not a content-level 404/410), and `web.archive.org` failed outright ("Claude Code is unable to fetch from web.archive.org"). The only reachable hosts remain Anthropic's own `code.claude.com` (200, content live and current — now documents Claude Fable 5.2/Opus 5.5/Sonnet 5.5/Haiku 5.5) and `platform.claude.com` (content live, redirects to `/docs/en/home`) — covering tips `#04.08`, `#09.05`, `#09.06`, `#09.07`, `#17.03`. The remaining 44 unique URLs on blocked hosts were not fetched individually — a host-level DNS block guarantees the same result for every URL on that host — and are left unverified rather than assigned a fabricated status.
