@@ -6,6 +6,14 @@ Newest entries first.
 
 ---
 
+## 2026-11-24 — Routine Scan (no changes)
+
+- Scanned 6 sources, no new tips since 2113333859907747871.
+- Searches run per routine order via `WebSearch`: `bcherny site:x.com`, `bcherny Claude Code tip`, `Boris Cherny new feature Claude Code`, plus fallback checks `site:threadreaderapp.com bcherny`, `site:threads.com boris_cherny`, and `howborisusesclaudecode.com latest`.
+- Every dated, sourceable item any search surfaced (worktree thread, Jan 2026 workflow thread, hidden-features thread, customization thread) has a status ID lower than the anchor, confirming it predates `last_scan_iso` (2026-11-23T13:18:00Z). No post-anchor primary-source content was found; results were third-party mirrors/summaries of already-catalogued threads.
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period.
+- Anchor left unchanged (no newer post identified); `last_scan_iso` advanced to 2026-11-24T00:00:00Z.
+
 ## 2026-11-23 — Routine Scan (no changes)
 
 - Scanned 6 sources, no new tips since 2113333859907747871.
