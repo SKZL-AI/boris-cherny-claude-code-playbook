@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-11-25 — Routine Scan (no changes)
+
+- Scanned 6 sources, no new tips since 2113333859907747871.
+- Searches run per routine order via `WebSearch`: `bcherny site:x.com`, `bcherny Claude Code tip`, `Boris Cherny new feature Claude Code`, plus fallback checks `site:threadreaderapp.com bcherny`, `site:threads.com boris_cherny`, and `howborisusesclaudecode.com latest`.
+- Direct `WebFetch` attempts on `en.rattibha.com/bcherny/recent`, `blockchain.news/ainews/source/bcherny`, and `threadreaderapp.com/user/bcherny` all failed with `getaddrinfo ENOTFOUND` (DNS-level — outside this session's allowed network domains), consistent with every prior run; only search-index summaries were available.
+- Every dated, sourceable item any search surfaced (worktree thread, Jan 2026 workflow thread, Jan 31 2026 team-tips thread, hidden-features thread, `/simplify` and `/batch` skills announcement) is either already catalogued in TIPS.md or predates `last_scan_iso` (2026-11-24T00:00:00Z); no post-anchor primary-source content was found.
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period.
+- Anchor left unchanged (no newer post identified); `last_scan_iso` advanced to 2026-11-25T00:00:00Z.
+
 ## 2026-11-24 — Routine Scan (no changes)
 
 - Scanned 6 sources, no new tips since 2113333859907747871.
