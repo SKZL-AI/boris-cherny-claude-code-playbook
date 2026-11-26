@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-11-26 — Routine Scan (no changes)
+
+- Scanned 6 sources, no new tips since 2113333859907747871.
+- Searches run per routine order via `WebSearch`: `bcherny site:x.com`, `bcherny Claude Code tip`, `Boris Cherny new feature Claude Code`, plus fallback checks `site:threadreaderapp.com bcherny`, `site:threads.com boris_cherny`, and `howborisusesclaudecode.com latest`; also tried `bcherny twitter November 2026`.
+- Direct `WebFetch` attempts on `en.rattibha.com/bcherny/recent`, `x.com/bcherny`, and `news.smol.ai/tags/bcherny` all failed with `getaddrinfo ENOTFOUND` (DNS-level — outside this session's allowed network domains), consistent with every prior run; only search-index summaries were available.
+- Newest dated item surfaced: a Nov 14 2026 Korean recap of an older Pragmatic Engineer interview (no new actionable content, not a primary X post). All other sourceable items (worktree thread, `/simplify`/`/batch` announcement, hidden-features thread, phone/`/teleport` workflow, Agent Teams) are already catalogued in TIPS.md or predate `last_scan_iso` (2026-11-25T00:00:00Z).
+- No retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period.
+- Anchor left unchanged (no newer post identified); `last_scan_iso` advanced to 2026-11-26T00:00:00Z.
+
 ## 2026-11-25 — Routine Scan (no changes)
 
 - Scanned 6 sources, no new tips since 2113333859907747871.
