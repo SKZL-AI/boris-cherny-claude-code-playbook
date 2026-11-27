@@ -6,6 +6,15 @@ Newest entries first.
 
 ---
 
+## 2026-11-27 — Routine Scan (no changes)
+
+- Scanned 6 sources, no new tips found strictly after `last_scan_iso` (2026-11-26T00:00:00Z).
+- Searches run per routine order via `WebSearch`: `bcherny site:x.com`, `bcherny Claude Code tip`, `Boris Cherny new feature Claude Code`, plus fallback checks `site:threadreaderapp.com bcherny`, `site:threads.com boris_cherny`, and `howborisusesclaudecode.com latest`; also ran targeted follow-ups (`"x.com/bcherny/status" 2026`, date-scoped searches for Nov 26/27, and a direct query for the MCP-skills post).
+- Direct `WebFetch` on `x.com/bcherny` failed with `getaddrinfo ENOTFOUND` (DNS-level — outside this session's allowed network domains), consistent with every prior run; only search-index summaries were available.
+- **Flag for human review:** Search surfaced a genuine, well-corroborated @bcherny post — "Really excited about this one. MCP servers can now ship with their own skills, so Claude Code knows how to use them out of the box." ([X-Thread](https://x.com/bcherny/status/2125292098165612585), dated 2026-11-24, the day MCP turned two; corroborated by claude.com, DEV Community, and FourWeekMBA coverage of Claude Code 2.1.332's "skills over MCP" feature). Its tweet ID (`2125292098165612585`) is numerically newer than the anchor recorded by the 2026-11-25/26 routine runs (`2113333859907747871`), suggesting it was missed by those scans despite predating this run's `last_scan_iso` window. Per routine rules this run does not backdate-add it (`DO NOT add tips from before last_scan_iso again`); recommend `/verify-sources` or manual `/add-tip` review to decide whether to add it (candidate theme: 08 — MCP & Integrations).
+- No other retweets/endorsements of Cat Wu, Thariq, Erik Schluntz, or Noah Z. found for this period.
+- Anchor advanced to `2125292098165612585` (the newest verified post found, to prevent further reprocessing); `last_scan_iso` advanced to 2026-11-27T00:00:00Z.
+
 ## 2026-11-26 — Routine Scan (no changes)
 
 - Scanned 6 sources, no new tips since 2113333859907747871.
